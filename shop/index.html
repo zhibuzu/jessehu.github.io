@@ -24,6 +24,10 @@
 
         <!--iconfont-->
         <link rel="stylesheet" href="http://at.alicdn.com/t/font_r754ezzppzdj9k9.css">
+
+        <!--lightbox-->
+        <link href="https://cdn.bootcss.com/lightbox2/2.9.0/css/lightbox.min.css" rel="stylesheet">
+        <script src="https://cdn.bootcss.com/lightbox2/2.9.0/js/lightbox.min.js"></script>
         <script>
             $(document)
                 .ready(function() {
@@ -95,23 +99,8 @@
             height: 2.5em;
             margin-top: -1px;
         }
-
-        /*iconfont*/
-        .iconfont {
-            font-family: "iconfont" !important;
-            font-style: normal;
-            -webkit-font-smoothing: antialiased;
-            -webkit-text-stroke-width: .2px;
-            -moz-osx-font-smoothing: grayscale;
-        }
-        i.iconfont {
-            position: relative;
-            display: inline-block;
-            font-style: normal;
-            vertical-align: middle;
-            background-repeat: no-repeat;
-            background-position: center;
-            background-size: 100% auto;
+        #products-box .ui.card .image {
+            cursor: pointer;
         }
 
         .swiper-container {
@@ -309,7 +298,7 @@
                         <div class="ui three column grid">
                             <div class="column">
                                 <div class="ui card">
-                                    <div class="image"><img src="https://semantic-ui.com/images/avatar2/large/kristy.png" alt="" title=""></div>
+                                    <a class="image" href="https://semantic-ui.com/images/avatar2/large/kristy.png" data-lightbox="image-1" data-title="My caption"><img src="https://semantic-ui.com/images/avatar2/large/kristy.png" alt="" title=""></a>
                                     <div class="content">
                                         <a href="" class="header">product 1product 1product 1product 1</a>
                                         <div class="meta"><span class="date">category 1</span></div>
@@ -332,7 +321,7 @@
                             </div>
                             <div class="column">
                                 <div class="ui card">
-                                    <div class="image"><img src="https://semantic-ui.com/images/avatar2/large/kristy.png" alt="" title=""></div>
+                                    <a class="image" href="https://semantic-ui.com/images/avatar2/large/kristy.png" data-lightbox="image-2" data-title="My caption"><img src="https://semantic-ui.com/images/avatar2/large/kristy.png" alt="" title=""></a>
                                     <div class="content">
                                         <a href="" class="header">product 1product 1product 1product 1</a>
                                         <div class="meta"><span class="date">category 1</span></div>
@@ -355,7 +344,7 @@
                             </div>
                             <div class="column">
                                 <div class="ui card">
-                                    <div class="image"><img src="https://semantic-ui.com/images/avatar2/large/kristy.png" alt="" title=""></div>
+                                    <a class="image" href="https://semantic-ui.com/images/avatar2/large/kristy.png" data-lightbox="image-2" data-title="My caption"><img src="https://semantic-ui.com/images/avatar2/large/kristy.png" alt="" title=""></a>
                                     <div class="content">
                                         <a href="" class="header">product 1product 1product 1product 1</a>
                                         <div class="meta"><span class="date">category 1</span></div>
@@ -378,7 +367,7 @@
                             </div>
                             <div class="column">
                                 <div class="ui card">
-                                    <div class="image"><img src="https://semantic-ui.com/images/avatar2/large/kristy.png" alt="" title=""></div>
+                                    <a class="image" href="https://semantic-ui.com/images/avatar2/large/kristy.png" data-lightbox="image-2" data-title="My caption"><img src="https://semantic-ui.com/images/avatar2/large/kristy.png" alt="" title=""></a>
                                     <div class="content">
                                         <a href="" class="header">product 1product 1product 1product 1</a>
                                         <div class="meta"><span class="date">category 1</span></div>
@@ -401,7 +390,7 @@
                             </div>
                             <div class="column">
                                 <div class="ui card">
-                                    <div class="image"><img src="https://semantic-ui.com/images/avatar2/large/kristy.png" alt="" title=""></div>
+                                    <a class="image" href="https://semantic-ui.com/images/avatar2/large/kristy.png" data-lightbox="image-2" data-title="My caption"><img src="https://semantic-ui.com/images/avatar2/large/kristy.png" alt="" title=""></a>
                                     <div class="content">
                                         <a href="" class="header">product 1product 1product 1product 1</a>
                                         <div class="meta"><span class="date">category 1</span></div>
@@ -456,9 +445,7 @@
             </div>
             </div>
         </div>
-            
         </div>
-
         <script>
             var swiper = new Swiper('.swiper-container', {
                 autoplay: 2000,
@@ -468,6 +455,35 @@
                 spaceBetween: 30,
                 effect: 'fade'
             });
+
+            var photos = {
+                "title": "product photos", //相册标题
+                "id": 123, //相册id
+                "start": 0, //初始显示的图片序号，默认0
+                "data": [   //相册包含的图片，数组格式
+                    {
+                    "alt": "图片名",
+                    "pid": 666, //图片id
+                    "src": "https://semantic-ui.com/images/avatar2/large/kristy.png", //原图地址
+                    "thumb": "https://semantic-ui.com/images/avatar2/large/kristy.png" //缩略图地址
+                    },
+                    {
+                    "alt": "图片名",
+                    "pid": 666, //图片id
+                    "src": "http://thumbs2.ebaystatic.com/m/m1WoI8tzYZAfFClQts79ryQ/140.jpg", //原图地址
+                    "thumb": "http://thumbs2.ebaystatic.com/m/m1WoI8tzYZAfFClQts79ryQ/140.jpg" //缩略图地址
+                    }
+                ]
+            };
+
+
+            // 商品图片弹出层
+            lightbox.option({
+                'resizeDuration': 200,
+                'wrapAround': true
+            });
+
+            
         </script>
     </body>
 </html>
