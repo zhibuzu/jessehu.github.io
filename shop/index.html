@@ -63,6 +63,16 @@
         }
 
         /*swiper css*/
+        .swiper-container {
+            width: 100%;
+            height: 350px;
+        }
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+        }
+
+        /*category , product box css*/
         #top-content-box, #middle-content-box {
             width: 98%!important;
             background: #fafafa;
@@ -101,15 +111,6 @@
         }
         #products-box .ui.card .image {
             cursor: pointer;
-        }
-
-        .swiper-container {
-            width: 100%;
-            height: 350px;
-        }
-        .swiper-slide {
-            background-position: center;
-            background-size: cover;
         }
 
         </style>
@@ -199,10 +200,10 @@
 
                 <!--button-->
                 <div class="item">
-                    <div class="ui button">Log-in</div>
+                    <a href="login.html" class="ui button">Log-in</a>
                 </div>
                 <div class="item">
-                    <div class="ui primary button">Sign up</div>
+                    <a href="register.html" class="ui primary button">Sign up</a>
                 </div>
             </div>
         </div>
@@ -248,8 +249,12 @@
 
             <!--middle content box-->
             <div class="ui grid container" id="middle-content-box">
+                <!--category list-->
                 <div class="four wide column" id="categories-box">
-                    <div class="ui segment">
+                    <h4 class="ui top attached block header">
+                        产品分类
+                    </h4>
+                    <div class="ui bottom attached segment">
                         <div class="ui selection divided list">
                             <div class="item">
                                 <i class="right triangle icon"></i>
@@ -293,8 +298,10 @@
                         </div>
                     </div>
                 </div>
+                <!--product list-->
                 <div class="twelve wide column" id="products-box">
-                    <div class="ui segment">
+                    <h4 class="ui top attached block header">产品列表</h4>
+                    <div class="ui bottom attached segment">
                         <div class="ui three column grid">
                             <div class="column">
                                 <div class="ui card">
