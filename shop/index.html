@@ -40,79 +40,123 @@
                 $('.ui.sticky').sticky({
                     context: '#middle-content-box'
                 });
+
+                $("#language-menu").dropdown({
+                    onChange: function (value, text, $choice) {
+                        console.log(value);
+                        console.log(text);
+                        console.log($choice);
+                        console.log(this);
+                        var currentText = $(this).dropdown('get text');
+                        console.log(currentText);
+                    }
+                });
             });
         </script>
 
         <!--page style-->
         <style type="text/css">
-        body {
-            background-color: #FFFFFF;
-        }
-        .ui.menu .item img.logo {
-            margin-right: 1.5em;
-        }
-        .main.container {
-            margin-top: 7em;
-        }
-        .wireframe {
-            margin-top: 2em;
-        }
-        .ui.footer.segment {
-            margin: 5em 0em 0em;
-            padding: 5em 0em;
-        }
+            body {
+                background-color: #FFFFFF;
+            }
+            .ui.menu .item img.logo {
+                margin-right: 1.5em;
+            }
+            .main.container {
+                margin-top: 7em;
+            }
+            .wireframe {
+                margin-top: 2em;
+            }
+            .ui.footer.segment {
+                margin: 5em 0em 0em;
+                padding: 5em 0em;
+            }
 
-        /*swiper css*/
-        .swiper-container {
-            width: 100%;
-            height: 350px;
-        }
-        .swiper-slide {
-            background-position: center;
-            background-size: cover;
-        }
+            /*swiper css*/
+            .swiper-container {
+                width: 100%;
+                height: 350px;
+            }
+            .swiper-slide {
+                background-position: center;
+                background-size: cover;
+            }
 
-        /*category , product box css*/
-        #top-content-box, #middle-content-box {
-            width: 98%!important;
-            background: #fafafa;
-            padding: 20px 10px;
-        }
+            /*category , product box css*/
+            #top-content-box, #middle-content-box {
+                width: 98%!important;
+                background: #fafafa;
+                padding: 20px 10px;
+            }
 
-        #middle-content-box #categories-box {
-            padding-left: 0;
-        }
-        #middle-content-box #products-box {
-            padding-right: 0;
-        }
-         #middle-content-box #categories-box .label {
-            margin-left: 1em;
-        }
-        #products-box .number {
-            margin-bottom: 0.3em;
-            height: 2.4em;
-            width: 12em;
-            line-height: 2.4em;
-        }
-        #products-box .price {
-            font-size: 1.5em;
-            color: #f15355;
-            padding-top: 0.3em;
-        }
-        #products-box .number .number-input-wrap {
-            padding-left: 0;
-            padding-right: 0;
-        }
-        #products-box .number .number-input-wrap input {
-            border-radius: 0;
-            text-align: center;
-            height: 2.5em;
-            margin-top: -1px;
-        }
-        #products-box .ui.card .image {
-            cursor: pointer;
-        }
+            #middle-content-box #categories-box {
+                padding-left: 0;
+            }
+            #middle-content-box #products-box {
+                padding-right: 0;
+            }
+            #middle-content-box #categories-box .label {
+                margin-left: 1em;
+            }
+            #products-box .number {
+                margin-bottom: 0.3em;
+                height: 2.4em;
+                width: 12em;
+                line-height: 2.4em;
+            }
+            #products-box .price {
+                font-size: 1.5em;
+                color: #f15355;
+                padding-top: 0.3em;
+            }
+            #products-box .number .number-input-wrap {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            #products-box .number .number-input-wrap input {
+                border-radius: 0;
+                text-align: center;
+                height: 2.5em;
+                margin-top: -1px;
+            }
+            #products-box .ui.card .image {
+                cursor: pointer;
+            }
+            #back-to-top {
+                background: url(./static/images/arrow-up-large.png) no-repeat center center;
+                background-color: #ddd;
+                background-color: rgba(221,221,221,0.7);
+                bottom: 50px;
+                color: transparent;
+                display: none;
+                font: 0/0 a;
+                height: 46px;
+                position: fixed;
+                right: 20px;
+                text-shadow: none;
+                -webkit-transition: all .2s ease;
+                -moz-transition: all .2s ease;
+                -ms-transition: all .2s ease;
+                -o-transition: all .2s ease;
+                transition: all .2s ease;
+                width: 45px;
+                z-index: 100;
+            }
 
+            #back-to-top:hover {
+                background-color: #d2232a;
+             }
+
+            .text.align.left {
+                text-align: left;
+            }
+            .text.align.right {
+                text-align: right;
+            }
+            .text.align.center {
+                text-align: center;
+            }    
         </style>
     </head>
     <body>
@@ -205,6 +249,20 @@
                 <div class="item">
                     <a href="register.html" class="ui primary button">Sign up</a>
                 </div>
+
+                <!--select language-->
+                <div class="item">
+                    <div class="ui floating dropdown labeled search icon button" id="language-menu">
+                        <input name="language" type="hidden" value="0">
+                        <i class="world icon"></i>
+                        <span class="text">选择语言</span>
+                        <div class="menu">
+                            <div class="item" data-value="0"><i class="am flag"></i>Armenia</div>
+                            <div class="item" data-value="1"><i class="cn flag"></i>Chinese</div>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </div>
 
@@ -420,8 +478,34 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="ui page padded grid">
+                        <div class="column text align center">
+                            <div class="ui pagination menu">
+                                <a href="" class="item"><i class="icon left arrow"></i>前一夜</a>
+                                <a class="active item">
+                                    1
+                                </a>
+                                <div class="disabled item">
+                                    ...
+                                </div>
+                                <a class="item">
+                                    10
+                                </a>
+                                <a class="item">
+                                    11
+                                </a>
+                                <a class="item">
+                                    12
+                                </a>
+                                <a href="" class="item"><i class="icon right arrow"></i>前一夜</a>
+                            </div>
+                        </div>
+
+                    </div>
                 </div>
             </div>
+            
             
             <!--footer-->
             <div class="ui blue vertical footer segment">
@@ -453,6 +537,9 @@
             </div>
         </div>
         </div>
+
+        
+        <a href="#" id="back-to-top" title="Back to Top" style="display: inline;">Back to Top</a>
         <script>
             var swiper = new Swiper('.swiper-container', {
                 autoplay: 2000,
@@ -490,7 +577,18 @@
                 'wrapAround': true
             });
 
-            
+            // 回归顶部按钮显示隐藏
+            $(window).scroll(function () {
+                if (window.document.body.scrollTop < 50) {
+                    if (document.getElementById('back-to-top').style.display !== 'none') {
+                        document.getElementById('back-to-top').style.display = 'none';
+                    }
+                } else {
+                    if (document.getElementById('back-to-top').style.display !== 'inline') {
+                        document.getElementById('back-to-top').style.display = 'inline';
+                    }
+                }
+            });
         </script>
     </body>
 </html>
