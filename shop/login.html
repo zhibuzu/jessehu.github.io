@@ -46,18 +46,22 @@
         <!--page style-->
         <style type="text/css">
         body {
+            background: #f8f8f8;
+        }
+
+        body .login-box {
             background: url("./static/images/11.jpg");
             background-position: 50% 50%;
             background-size: cover;
         }
         body > .grid {
-        height: 100%;
+            height: 100%;
         }
         .image {
-        margin-top: -100px;
+            margin-top: -100px;
         }
         .column {
-        max-width: 450px;
+            max-width: 450px;
         }
         .ui.menu .item img.logo {
             margin-right: 1.5em;
@@ -69,7 +73,7 @@
             margin-top: 2em;
         }
         .ui.footer.segment {
-            margin: 5em 0em 0em;
+            margin: 1em 0em 0em;
             padding: 5em 0em;
         }
         </style>
@@ -138,39 +142,69 @@
     </div>
 
     <!--login box-->
-    <div class="ui middle aligned center aligned grid">
-    <div class="column">
-        <h2 class="ui teal image header">
-        <img src="./static/images/logo.png" class="image">
-        <div class="content">
-            登录平台
-        </div>
-        </h2>
-        <form class="ui large form">
-        <div class="ui green segment">
-            <div class="field">
-            <div class="ui left icon input">
-                <i class="user icon"></i>
-                <input type="text" name="account" placeholder="请输入账号">
+    <div class="ui middle aligned center aligned grid login-box">
+        <div class="column">
+            <h2 class="ui teal image header">
+            <img src="./static/images/logo.png" class="image">
+            <div class="content">
+                登录平台
             </div>
+            </h2>
+            <form class="ui large form">
+            <div class="ui green segment">
+                <div class="field">
+                <div class="ui left icon input">
+                    <i class="user icon"></i>
+                    <input type="text" name="account" placeholder="请输入账号">
+                </div>
+                </div>
+                <div class="field">
+                <div class="ui left icon input">
+                    <i class="lock icon"></i>
+                    <input type="password" name="password" placeholder="请输入密码">
+                </div>
+                </div>
+                <div class="ui fluid large teal submit button">登&nbsp;&nbsp;&nbsp;&nbsp;录</div>
             </div>
-            <div class="field">
-            <div class="ui left icon input">
-                <i class="lock icon"></i>
-                <input type="password" name="password" placeholder="请输入密码">
-            </div>
-            </div>
-            <div class="ui fluid large teal submit button">登&nbsp;&nbsp;&nbsp;&nbsp;录</div>
-        </div>
 
-        <div class="ui error message"></div>
+            <div class="ui error message"></div>
 
-        </form>
+            </form>
 
-        <div class="ui message">
-        新用户? <a href="register.html">注&nbsp;&nbsp;&nbsp;&nbsp;册</a>
+            <div class="ui message">
+            新用户? <a href="register.html">注&nbsp;&nbsp;&nbsp;&nbsp;册</a>
+            </div>
         </div>
     </div>
+
+    <!--footer-->
+    <div class="ui blue vertical footer segment">
+        <div class="ui container">
+            <div class="ui stackable blue divided equal height stackable grid">
+                <div class="three wide column">
+                <h4 class="ui blue header">About</h4>
+                <div class="ui blue link list">
+                    <a href="#" class="item">Sitemap</a>
+                    <a href="#" class="item">Contact Us</a>
+                    <a href="#" class="item">Religious Ceremonies</a>
+                    <a href="#" class="item">Gazebo Plans</a>
+                </div>
+                </div>
+                <div class="three wide column">
+                <h4 class="ui blue header">Services</h4>
+                <div class="ui blue link list">
+                    <a href="#" class="item">Banana Pre-Order</a>
+                    <a href="#" class="item">DNA FAQ</a>
+                    <a href="#" class="item">How To Access</a>
+                    <a href="#" class="item">Favorite X-Men</a>
+                </div>
+                </div>
+                <div class="seven wide column">
+                <h4 class="ui blue header">Footer Header</h4>
+                <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="http://www.semantic-ui.cn/dist/components/form.js"></script>
@@ -179,43 +213,45 @@
         .ready(function() {
         $('.ui.form')
             .form({
-            fields: {
-                account: {
-                    identifier  : 'account',
-                    rules: [
-                        {
-                        type   : 'empty',
-                        prompt : '请输入你的账号'
-                        },
-                        {
-                        type   : 'email',
-                        prompt : '请输入合法账号，应为电子邮箱'
-                        }
-                    ]
+                inline: true,
+                on: 'blur',
+                fields: {
+                    account: {
+                        identifier  : 'account',
+                        rules: [
+                            {
+                            type   : 'empty',
+                            prompt : '请输入你的账号'
+                            },
+                            {
+                            type   : 'email',
+                            prompt : '请输入合法账号，应为电子邮箱'
+                            }
+                        ]
+                    },
+                    password: {
+                        identifier  : 'password',
+                        rules: [
+                            {
+                            type   : 'empty',
+                            prompt : '请输入密码'
+                            },
+                            {
+                            type   : 'length[6]',
+                            prompt : '密码至少为6位'
+                            }
+                        ]
+                    }
                 },
-                password: {
-                    identifier  : 'password',
-                    rules: [
-                        {
-                        type   : 'empty',
-                        prompt : '请输入密码'
-                        },
-                        {
-                        type   : 'length[6]',
-                        prompt : '密码至少为6位'
-                        }
-                    ]
+                onSuccess: function(event, fields) {
+                    // [*] 表单验证通过后调用 onSuccess 函数
+                    // fields 中保存了所有的表单数据，例如 {name: "Alice", color: "rgb(255, 255, 255)"}
+                    event.preventDefault(); // [*] 如果需要使用 Ajax 提交时，防止表单自动提交
+                    console.log(fields);
+                },
+                onFailure:  function(){
+                    return false;
                 }
-            },
-            onSuccess: function(event, fields) {
-                // [*] 表单验证通过后调用 onSuccess 函数
-                // fields 中保存了所有的表单数据，例如 {name: "Alice", color: "rgb(255, 255, 255)"}
-                event.preventDefault(); // [*] 如果需要使用 Ajax 提交时，防止表单自动提交
-                console.log(fields);
-            },
-            onFailure:  function(){
-                return false;
-            }
             });
         });
     </script>
