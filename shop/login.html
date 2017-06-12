@@ -152,16 +152,16 @@
             </h2>
             <form class="ui large form">
             <div class="ui green segment">
-                <div class="field">
+<!--                 <div class="field">
                 <div class="ui left icon input">
                     <i class="user icon"></i>
                     <input type="text" name="account" placeholder="请输入账号">
                 </div>
-                </div>
+                </div> -->
                 <div class="field">
                 <div class="ui left icon input">
                     <i class="lock icon"></i>
-                    <input type="password" name="password" placeholder="请输入密码">
+                    <input type="password" name="password" placeholder="请输入登录码">
                 </div>
                 </div>
                 <div class="ui fluid large teal submit button">登&nbsp;&nbsp;&nbsp;&nbsp;录</div>
@@ -216,29 +216,29 @@
                 inline: true,
                 on: 'blur',
                 fields: {
-                    account: {
-                        identifier  : 'account',
-                        rules: [
-                            {
-                            type   : 'empty',
-                            prompt : '请输入你的账号'
-                            },
-                            {
-                            type   : 'email',
-                            prompt : '请输入合法账号，应为电子邮箱'
-                            }
-                        ]
-                    },
+//                     account: {
+//                         identifier  : 'account',
+//                         rules: [
+//                             {
+//                             type   : 'empty',
+//                             prompt : '请输入你的账号'
+//                             },
+//                             {
+//                             type   : 'email',
+//                             prompt : '请输入合法账号，应为电子邮箱'
+//                             }
+//                         ]
+//                     },
                     password: {
                         identifier  : 'password',
                         rules: [
                             {
                             type   : 'empty',
-                            prompt : '请输入密码'
+                            prompt : '请输入登录码'
                             },
                             {
                             type   : 'length[6]',
-                            prompt : '密码至少为6位'
+                            prompt : '登录码至少为6位'
                             }
                         ]
                     }
