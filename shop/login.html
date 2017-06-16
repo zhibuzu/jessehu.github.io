@@ -164,7 +164,7 @@
                     <input type="password" name="password" placeholder="请输入登录码">
                 </div>
                 </div>
-                <div class="ui fluid large teal submit button">登&nbsp;&nbsp;&nbsp;&nbsp;录</div>
+                <div class="ui fluid large teal submit button" onclick="window.location.href='index-1.html'">登&nbsp;&nbsp;&nbsp;&nbsp;录</div>
             </div>
 
             <div class="ui error message"></div>
@@ -209,26 +209,13 @@
 
     <script src="http://www.semantic-ui.cn/dist/components/form.js"></script>
     <script>
-        $(document)
-        .ready(function() {
+        /*
+        $(document).ready(function() {
         $('.ui.form')
             .form({
                 inline: true,
                 on: 'blur',
                 fields: {
-//                     account: {
-//                         identifier  : 'account',
-//                         rules: [
-//                             {
-//                             type   : 'empty',
-//                             prompt : '请输入你的账号'
-//                             },
-//                             {
-//                             type   : 'email',
-//                             prompt : '请输入合法账号，应为电子邮箱'
-//                             }
-//                         ]
-//                     },
                     password: {
                         identifier  : 'password',
                         rules: [
@@ -254,6 +241,7 @@
                 }
             });
         });
+        */
     </script>
 </body>
 </html>
