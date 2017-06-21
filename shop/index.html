@@ -22,8 +22,8 @@
         <!--<script src="https://cdn.bootcss.com/Swiper/3.4.2/js/swiper.jquery.js"></script>-->
         <script src="https://cdn.bootcss.com/Swiper/3.4.2/js/swiper.min.js"></script>
 
-        <!--iconfont-->
-        <link rel="stylesheet" href="http://at.alicdn.com/t/font_r754ezzppzdj9k9.css">
+        <!--country flag-->
+        <link rel="stylesheet" href="static/css/flag-icon/css/flag-icon.min.css">
 
         <!--lightbox-->
         <link href="https://cdn.bootcss.com/lightbox2/2.9.0/css/lightbox.min.css" rel="stylesheet">
@@ -41,15 +41,10 @@
                     context: '#middle-content-box'
                 });
 
-                $("#language-menu").dropdown({
-                    onChange: function (value, text, $choice) {
-                        console.log(value);
-                        console.log(text);
-                        console.log($choice);
-                        console.log(this);
-                        var currentText = $(this).dropdown('get text');
-                        console.log(currentText);
-                    }
+                $('.message .close').on('click', function() {
+                    $(this)
+                    .closest('.message')
+                    .transition('fade');
                 });
             });
         </script>
@@ -61,9 +56,6 @@
             }
             .ui.menu .item img.logo {
                 margin-right: 1.5em;
-            }
-            .main.container {
-                margin-top: 7em;
             }
             .wireframe {
                 margin-top: 2em;
@@ -83,18 +75,55 @@
                 background-size: cover;
             }
 
+            /*cookie messge*/
+            .cookie.message {
+                text-align: center;
+                color: #fff;
+                background: #52565a;
+                border-radius: 0;
+            }
+
             /*category , product box css*/
-            #top-content-box, #middle-content-box {
+            #top-header-box, #top-content-box, #middle-content-box {
                 width: 98%!important;
                 background: #fafafa;
                 padding: 20px 10px;
+                margin-top: 0;
             }
+            #top-header-box {
+                background: #FFFFFF;
+            }
+            #top-header-box .logo {
+                width: 10em;
+            }
+            #top-header-box .cart-box {
+                bottom: 1em;
+                position: absolute;
+                right: 1em;
+            }
+            #top-header-box .ui.header{
+                color:#3bb2c3!important;
+            }
+            #top-header-box .ui.header>.icon{
+                vertical-align: bottom;
+            }
+
+            /*country flag*/
+            .flag-icon.flag-icon-squared {
+                width: 3em;
+                height: 2em;
+            }
+            
 
             #middle-content-box #categories-box {
                 padding-left: 0;
             }
             #middle-content-box #products-box {
                 padding-right: 0;
+                margin-top: -2em;
+            }
+            #middle-content-box #products-box .products-item {
+                    margin-top: 2em;
             }
             #middle-content-box #categories-box .label {
                 margin-left: 1em;
@@ -157,121 +186,65 @@
             .text.align.center {
                 text-align: center;
             }    
+
+            /*hkp style*/
+            .hkp-bg {
+                background: #3ab2c3!important;
+            }
+
+            .hkp-color, .hkp-color * {
+                color: #0f7f81!important;
+            }
+            .hkp-header {
+                color: #3ab2c4!important;
+            }
+            .hkp-button {
+                background: #46bfa6!important;
+            }
+
+            #products-box .products-content {
+                border-top: 1px solid #0f7f81;
+            }
         </style>
     </head>
     <body>
-        <!--fixed navigation menu-->
-        <div class="ui large top fixed brown menu masthead stackable">
-            <div class="ui container">
-                <a href="#" class="header item">
-                    <img src="https://semantic-ui.com/examples/assets/images/logo.jpg" alt="logo" class="logo">
-                    xxx商城
-                </a>
-                <a href="#" class="item active" id="page-index-item"><i class="icon home"></i>首页</a>
-                
-                <!--<a href="#" class="item" id="category-1">
-                    <i class="grid layout icon"></i>
-                    分类1
-                </a>-->
-                <!--<div class="ui flowing basic admission popup">
-                    <div class="ui three column relaxed divided grid">
-                        <div class="column">
-                        <h4 class="ui header">母婴奶粉</h4>
-                        <div class="ui link list">
-                            <a class="item">上装</a>
-                            <a class="item">下装</a>
-                        </div>
-                        </div>
-                        <div class="column">
-                        <h4 class="ui header">个人护理</h4>
-                        <div class="ui link list">
-                            <a class="item">上装</a>
-                            <a class="item">下装</a>
-                        </div>
-                        </div>
-                        <div class="column">
-                        <h4 class="ui header">服装</h4>
-                        <div class="ui link list">
-                            <a class="item">上装</a>
-                            <a class="item">下装</a>
-                        </div>
-                        </div>
-                    </div>
-                </div>-->
-
-                <!--<div class="ui simple dropdown item">-->
-                    <!--<i class="grid layout icon"></i>-->
-                    <!--分类-->
-                    <!--<i class="dropdown icon"></i>-->
-                    <!--<div class="menu">-->
-                        <!--<a href="#" class="item">category-level-1</a>-->
-                        <!--<a href="#" class="item">category-level-2</a>-->
-                        <!--<div class="divider"></div>-->
-                        <!--<div class="header">category-level-3</div>-->
-                        <!--<div class="item">-->
-                            <!--<i class="dropdown icon"></i>-->
-                            <!--category-level-3-1-->
-                            <!--<div class="menu">-->
-                                <!--<a href="#" class="item">category-level-3-1-1</a>-->
-                                <!--<a href="#" class="item">category-level-3-1-2</a>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                        <!--<div class="item">-->
-                            <!--<i class="dropdown icon"></i>-->
-                            <!--category-level-3-2-->
-                            <!--<div class="menu">-->
-                                <!--<a href="#" class="item">category-level-3-2-1</a>-->
-                                <!--<a href="#" class="item">category-level-3-2-2</a>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-                <!--</div>-->
-                <!--<a href="#" class="item">-->
-                    <!--<i class="mail icon"></i>公司介绍-->
-                <!--</a>-->
-
-                <!--right menu-->
-                <div class="right menu">
-                    <div class="item">
-                    <div class="ui icon input">
-                        <input type="text" placeholder="Search...">
-                        <i class="search link icon"></i>
-                    </div>
-                    </div>
-                    <!--<a class="ui item">Logout </a>-->
-                    
-                </div>
-
-                <!--button-->
-                <div class="item">
-                    <a href="login.html" class="ui button">Log-in</a>
-                </div>
-                <div class="item">
-                    <a href="register.html" class="ui primary button">Sign up</a>
-                </div>
-
-                <!--select language-->
-                <div class="item">
-                    <div class="ui floating dropdown labeled search icon button" id="language-menu">
-                        <input name="language" type="hidden" value="0">
-                        <i class="world icon"></i>
-                        <span class="text">选择语言</span>
-                        <div class="menu">
-                            <div class="item" data-value="0"><i class="am flag"></i>Armenia</div>
-                            <div class="item" data-value="1"><i class="cn flag"></i>Chinese</div>
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-
-        
+        <!--cookie message-->
+        <div class="ui message cookie">
+            <i class="close icon"></i>
+            <p>本网站使用的Cookies。通过继续浏览该网站即表示您同意我们使用Cookie的。</p>
+            <div class="header">查找更多内容 </div>
+        </div>  
 
         <!--page contents-->
         <div class="pusher">
             
             <!--top content-->
+            <div class="ui main container" id="top-header-box">
+                <div class="ui grid">
+                    <div class="six wide column">
+                        <h2 class="ui header">
+                            <img class="ui image logo" src="static/images/logo.jpg">
+                        </h2>
+                    </div>
+                    <!--country flags-->
+                    <div class="ten wide column text align right">
+                        <a href="#"><i class="flag-icon flag-icon-gb flag-icon-squared"></i></a>
+                        <a href="#"><i class="flag-icon flag-icon-am flag-icon-squared"></i></a>
+                        <a href="#"><i class="flag-icon flag-icon-fr flag-icon-squared"></i></a>
+                        <a href="#"><i class="flag-icon flag-icon-es flag-icon-squared"></i></a>
+                        <a href="#"><i class="flag-icon flag-icon-it flag-icon-squared"></i></a>
+                        <a href="#"><i class="flag-icon flag-icon-cn flag-icon-squared"></i></a>
+                        <a href="cart.html" class="cart-box">
+                            <h2 class="ui header">
+                                <i class="large in cart icon"> </i> Shopping Cart
+                            </h2>
+                        </a>
+                        
+                    </div>
+                </div>
+            </div>
+
+            <!--gallery box-->
             <!--<div class="masthead segment bg4" id="top-content-box">-->
                 <div class="ui main container" id="top-content-box">
                     <!--bread crumb-->
@@ -309,28 +282,28 @@
             <div class="ui grid container" id="middle-content-box">
                 <!--category list-->
                 <div class="four wide column" id="categories-box">
-                    <h4 class="ui top attached block header">
+                    <h4 class="ui top attached block header hkp-bg">
                         产品分类
                     </h4>
-                    <div class="ui bottom attached segment">
+                    <div class="ui bottom attached segment hkp-color">
                         <div class="ui selection divided list">
                             <div class="item">
                                 <i class="right triangle icon"></i>
                                 <div class="content"><a href="#">category 1</a>
-                                    <span class="ui violet circular label">2</span>
+                                    <!--<span class="ui violet circular label">2</span>-->
                                 </div>
                                 
                                 <div class="list">
                                     <div class="item active">
                                         <i class="right triangle icon"></i>
                                         <div class="content"><a href="#">category 1 1</a>
-                                            <span class="ui violet circular label">2</span>
+                                            <!--<span class="ui violet circular label">2</span>-->
                                         </div>
                                     </div>
                                     <div class="item">
                                         <i class="right triangle icon"></i>
                                         <div class="content"><a href="#">category 1 2</a>
-                                            <span class="ui violet circular label">2</span>
+                                            <!--<span class="ui violet circular label">2</span>-->
                                         </div>
                                     </div>
                                 </div>
@@ -338,19 +311,19 @@
                             <div class="item">
                                 <i class="right triangle icon"></i>
                                 <div class="content"><a href="#">category 2</a>
-                                    <span class="ui violet circular label">2</span>
+                                    <!--<span class="ui violet circular label">2</span>-->
                                 </div>
                             </div>
                             <div class="item">
                                 <i class="right triangle icon"></i>
                                 <div class="content"><a href="#">category 3</a>
-                                    <span class="ui violet circular label">2</span>
+                                    <!--<span class="ui violet circular label">2</span>-->
                                 </div>
                             </div>
                             <div class="item">
                                 <i class="right triangle icon"></i>
                                 <div class="content"><a href="#">category 4</a>
-                                    <span class="ui violet circular label">2</span>
+                                    <!--<span class="ui violet circular label">2</span>-->
                                 </div>
                             </div>
                         </div>
@@ -358,151 +331,346 @@
                 </div>
                 <!--product list-->
                 <div class="twelve wide column" id="products-box">
-                    <h4 class="ui top attached block header">产品列表</h4>
-                    <div class="ui bottom attached segment">
-                        <div class="ui three column grid">
-                            <div class="column">
-                                <div class="ui card">
-                                    <a class="image" href="https://semantic-ui.com/images/avatar2/large/kristy.png" data-lightbox="image-1" data-title="My caption"><img src="https://semantic-ui.com/images/avatar2/large/kristy.png" alt="" title=""></a>
-                                    <div class="content">
-                                        <a href="" class="header">product 1product 1product 1product 1</a>
-                                        <div class="meta"><span class="date">category 1</span></div>
-                                        <div class="description">descript 1descript 1descript 1descript 1descript 1descript 1descript 1</div>
+                    <div class="products-item">
+                        <h2 class="ui header hkp-header">Category-1-Products</h2>
+                        <div class="ui bottom attached segment products-content">
+                            <div class="ui three column grid">
+                                <div class="column">
+                                    <div class="ui card">
+                                        <a class="image" href="https://semantic-ui.com/images/avatar2/large/kristy.png" data-lightbox="image-1" data-title="My caption"><img src="https://semantic-ui.com/images/avatar2/large/kristy.png" alt="" title=""></a>
+                                        <div class="content">
+                                            <a href="" class="header hkp-color">product 1product 1product 1product 1</a>
+                                            <div class="meta"><span class="date hkp-color">category 1</span></div>
+                                            <div class="description">descript 1descript 1descript 1descript 1descript 1descript 1descript 1</div>
+                                        </div>
+                                        <div class="extra">
+                                            <span class="price left floated hkp-color">¥500.99</span>
+                                            <span class="ui form right floated">
+                                                <div class="fields number">
+                                                    <button class="ui mini left attached button three wide field"><i class="iconfont icon-minus"></i></button> 
+                                                    <div class="eight wide field number-input-wrap">
+                                                        <input type="text" name="number" value="1" autocomplete="off">
+                                                    </div>
+                                                    <button class="ui mini right attached button three wide field"><i class="iconfont icon-plus"></i></button>
+                                                </div>
+                                            </span>
+                                        </div>
+                                        <div class="ui primary bottom attached button hkp-button"><i class="icon cart"></i> Add Cart </div>
                                     </div>
-                                    <div class="extra">
-                                        <span class="price left floated">¥500.99</span>
-                                        <span class="ui form right floated">
-                                            <div class="fields number">
-                                                <button class="ui mini left attached button three wide field"><i class="iconfont icon-minus"></i></button> 
-                                                <div class="eight wide field number-input-wrap">
-                                                    <input type="text" name="number" value="1" autocomplete="off">
-                                                 </div>
-                                                <button class="ui mini right attached button three wide field"><i class="iconfont icon-plus"></i></button>
-                                            </div>
-                                        </span>
-                                    </div>
-                                    <div class="ui primary bottom attached button"><i class="icon cart"></i> Add Cart </div>
                                 </div>
-                            </div>
-                            <div class="column">
-                                <div class="ui card">
-                                    <a class="image" href="https://semantic-ui.com/images/avatar2/large/kristy.png" data-lightbox="image-2" data-title="My caption"><img src="https://semantic-ui.com/images/avatar2/large/kristy.png" alt="" title=""></a>
-                                    <div class="content">
-                                        <a href="" class="header">product 1product 1product 1product 1</a>
-                                        <div class="meta"><span class="date">category 1</span></div>
-                                        <div class="description">descript 1descript 1descript 1descript 1descript 1descript 1descript 1</div>
+                                <div class="column">
+                                    <div class="ui card">
+                                        <a class="image" href="https://semantic-ui.com/images/avatar2/large/kristy.png" data-lightbox="image-1" data-title="My caption"><img src="https://semantic-ui.com/images/avatar2/large/kristy.png" alt="" title=""></a>
+                                        <div class="content">
+                                            <a href="" class="header hkp-color">product 1product 1product 1product 1</a>
+                                            <div class="meta"><span class="date hkp-color">category 1</span></div>
+                                            <div class="description">descript 1descript 1descript 1descript 1descript 1descript 1descript 1</div>
+                                        </div>
+                                        <div class="extra">
+                                            <span class="price left floated hkp-color">¥500.99</span>
+                                            <span class="ui form right floated">
+                                                <div class="fields number">
+                                                    <button class="ui mini left attached button three wide field"><i class="iconfont icon-minus"></i></button> 
+                                                    <div class="eight wide field number-input-wrap">
+                                                        <input type="text" name="number" value="1" autocomplete="off">
+                                                    </div>
+                                                    <button class="ui mini right attached button three wide field"><i class="iconfont icon-plus"></i></button>
+                                                </div>
+                                            </span>
+                                        </div>
+                                        <div class="ui primary bottom attached button hkp-button"><i class="icon cart"></i> Add Cart </div>
                                     </div>
-                                    <div class="extra">
-                                        <span class="price left floated">¥500.99</span>
-                                        <span class="ui form right floated">
-                                            <div class="fields number">
-                                                <button class="ui mini left attached button three wide field"><i class="iconfont icon-minus"></i></button> 
-                                                <div class="eight wide field number-input-wrap">
-                                                    <input type="text" name="number" value="1" autocomplete="off">
-                                                 </div>
-                                                <button class="ui mini right attached button three wide field"><i class="iconfont icon-plus"></i></button>
-                                            </div>
-                                        </span>
-                                    </div>
-                                    <div class="ui primary bottom attached button"><i class="icon cart"></i> Add Cart </div>
                                 </div>
-                            </div>
-                            <div class="column">
-                                <div class="ui card">
-                                    <a class="image" href="https://semantic-ui.com/images/avatar2/large/kristy.png" data-lightbox="image-2" data-title="My caption"><img src="https://semantic-ui.com/images/avatar2/large/kristy.png" alt="" title=""></a>
-                                    <div class="content">
-                                        <a href="" class="header">product 1product 1product 1product 1</a>
-                                        <div class="meta"><span class="date">category 1</span></div>
-                                        <div class="description">descript 1descript 1descript 1descript 1descript 1descript 1descript 1</div>
+                                <div class="column">
+                                    <div class="ui card">
+                                        <a class="image" href="https://semantic-ui.com/images/avatar2/large/kristy.png" data-lightbox="image-1" data-title="My caption"><img src="https://semantic-ui.com/images/avatar2/large/kristy.png" alt="" title=""></a>
+                                        <div class="content">
+                                            <a href="" class="header hkp-color">product 1product 1product 1product 1</a>
+                                            <div class="meta"><span class="date hkp-color">category 1</span></div>
+                                            <div class="description">descript 1descript 1descript 1descript 1descript 1descript 1descript 1</div>
+                                        </div>
+                                        <div class="extra">
+                                            <span class="price left floated hkp-color">¥500.99</span>
+                                            <span class="ui form right floated">
+                                                <div class="fields number">
+                                                    <button class="ui mini left attached button three wide field"><i class="iconfont icon-minus"></i></button> 
+                                                    <div class="eight wide field number-input-wrap">
+                                                        <input type="text" name="number" value="1" autocomplete="off">
+                                                    </div>
+                                                    <button class="ui mini right attached button three wide field"><i class="iconfont icon-plus"></i></button>
+                                                </div>
+                                            </span>
+                                        </div>
+                                        <div class="ui primary bottom attached button hkp-button"><i class="icon cart"></i> Add Cart </div>
                                     </div>
-                                    <div class="extra">
-                                        <span class="price left floated">¥500.99</span>
-                                        <span class="ui form right floated">
-                                            <div class="fields number">
-                                                <button class="ui mini left attached button three wide field"><i class="iconfont icon-minus"></i></button> 
-                                                <div class="eight wide field number-input-wrap">
-                                                    <input type="text" name="number" value="1" autocomplete="off">
-                                                 </div>
-                                                <button class="ui mini right attached button three wide field"><i class="iconfont icon-plus"></i></button>
-                                            </div>
-                                        </span>
-                                    </div>
-                                    <div class="ui primary bottom attached button"><i class="icon cart"></i> Add Cart </div>
                                 </div>
-                            </div>
-                            <div class="column">
-                                <div class="ui card">
-                                    <a class="image" href="https://semantic-ui.com/images/avatar2/large/kristy.png" data-lightbox="image-2" data-title="My caption"><img src="https://semantic-ui.com/images/avatar2/large/kristy.png" alt="" title=""></a>
-                                    <div class="content">
-                                        <a href="" class="header">product 1product 1product 1product 1</a>
-                                        <div class="meta"><span class="date">category 1</span></div>
-                                        <div class="description">descript 1descript 1descript 1descript 1descript 1descript 1descript 1</div>
+                                <div class="column">
+                                    <div class="ui card">
+                                        <a class="image" href="https://semantic-ui.com/images/avatar2/large/kristy.png" data-lightbox="image-1" data-title="My caption"><img src="https://semantic-ui.com/images/avatar2/large/kristy.png" alt="" title=""></a>
+                                        <div class="content">
+                                            <a href="" class="header hkp-color">product 1product 1product 1product 1</a>
+                                            <div class="meta"><span class="date hkp-color">category 1</span></div>
+                                            <div class="description">descript 1descript 1descript 1descript 1descript 1descript 1descript 1</div>
+                                        </div>
+                                        <div class="extra">
+                                            <span class="price left floated hkp-color">¥500.99</span>
+                                            <span class="ui form right floated">
+                                                <div class="fields number">
+                                                    <button class="ui mini left attached button three wide field"><i class="iconfont icon-minus"></i></button> 
+                                                    <div class="eight wide field number-input-wrap">
+                                                        <input type="text" name="number" value="1" autocomplete="off">
+                                                    </div>
+                                                    <button class="ui mini right attached button three wide field"><i class="iconfont icon-plus"></i></button>
+                                                </div>
+                                            </span>
+                                        </div>
+                                        <div class="ui primary bottom attached button hkp-button"><i class="icon cart"></i> Add Cart </div>
                                     </div>
-                                    <div class="extra">
-                                        <span class="price left floated">¥500.99</span>
-                                        <span class="ui form right floated">
-                                            <div class="fields number">
-                                                <button class="ui mini left attached button three wide field"><i class="iconfont icon-minus"></i></button> 
-                                                <div class="eight wide field number-input-wrap">
-                                                    <input type="text" name="number" value="1" autocomplete="off">
-                                                 </div>
-                                                <button class="ui mini right attached button three wide field"><i class="iconfont icon-plus"></i></button>
-                                            </div>
-                                        </span>
-                                    </div>
-                                    <div class="ui primary bottom attached button"><i class="icon cart"></i> Add Cart </div>
                                 </div>
-                            </div>
-                            <div class="column">
-                                <div class="ui card">
-                                    <a class="image" href="https://semantic-ui.com/images/avatar2/large/kristy.png" data-lightbox="image-2" data-title="My caption"><img src="https://semantic-ui.com/images/avatar2/large/kristy.png" alt="" title=""></a>
-                                    <div class="content">
-                                        <a href="" class="header">product 1product 1product 1product 1</a>
-                                        <div class="meta"><span class="date">category 1</span></div>
-                                        <div class="description">descript 1descript 1descript 1descript 1descript 1descript 1descript 1</div>
+                                <div class="column">
+                                    <div class="ui card">
+                                        <a class="image" href="https://semantic-ui.com/images/avatar2/large/kristy.png" data-lightbox="image-1" data-title="My caption"><img src="https://semantic-ui.com/images/avatar2/large/kristy.png" alt="" title=""></a>
+                                        <div class="content">
+                                            <a href="" class="header hkp-color">product 1product 1product 1product 1</a>
+                                            <div class="meta"><span class="date hkp-color">category 1</span></div>
+                                            <div class="description">descript 1descript 1descript 1descript 1descript 1descript 1descript 1</div>
+                                        </div>
+                                        <div class="extra">
+                                            <span class="price left floated hkp-color">¥500.99</span>
+                                            <span class="ui form right floated">
+                                                <div class="fields number">
+                                                    <button class="ui mini left attached button three wide field"><i class="iconfont icon-minus"></i></button> 
+                                                    <div class="eight wide field number-input-wrap">
+                                                        <input type="text" name="number" value="1" autocomplete="off">
+                                                    </div>
+                                                    <button class="ui mini right attached button three wide field"><i class="iconfont icon-plus"></i></button>
+                                                </div>
+                                            </span>
+                                        </div>
+                                        <div class="ui primary bottom attached button hkp-button"><i class="icon cart"></i> Add Cart </div>
                                     </div>
-                                    <div class="extra">
-                                        <span class="price left floated">¥500.99</span>
-                                        <span class="ui form right floated">
-                                            <div class="fields number">
-                                                <button class="ui mini left attached button three wide field"><i class="iconfont icon-minus"></i></button> 
-                                                <div class="eight wide field number-input-wrap">
-                                                    <input type="text" name="number" value="1" autocomplete="off">
-                                                 </div>
-                                                <button class="ui mini right attached button three wide field"><i class="iconfont icon-plus"></i></button>
-                                            </div>
-                                        </span>
+                                </div>
+                                <div class="column">
+                                    <div class="ui card">
+                                        <a class="image" href="https://semantic-ui.com/images/avatar2/large/kristy.png" data-lightbox="image-1" data-title="My caption"><img src="https://semantic-ui.com/images/avatar2/large/kristy.png" alt="" title=""></a>
+                                        <div class="content">
+                                            <a href="" class="header hkp-color">product 1product 1product 1product 1</a>
+                                            <div class="meta"><span class="date hkp-color">category 1</span></div>
+                                            <div class="description">descript 1descript 1descript 1descript 1descript 1descript 1descript 1</div>
+                                        </div>
+                                        <div class="extra">
+                                            <span class="price left floated hkp-color">¥500.99</span>
+                                            <span class="ui form right floated">
+                                                <div class="fields number">
+                                                    <button class="ui mini left attached button three wide field"><i class="iconfont icon-minus"></i></button> 
+                                                    <div class="eight wide field number-input-wrap">
+                                                        <input type="text" name="number" value="1" autocomplete="off">
+                                                    </div>
+                                                    <button class="ui mini right attached button three wide field"><i class="iconfont icon-plus"></i></button>
+                                                </div>
+                                            </span>
+                                        </div>
+                                        <div class="ui primary bottom attached button hkp-button"><i class="icon cart"></i> Add Cart </div>
                                     </div>
-                                    <div class="ui primary bottom attached button"><i class="icon cart"></i> Add Cart </div>
                                 </div>
                             </div>
                         </div>
+
+                        <!--<div class="ui page padded grid">
+                            <div class="column text align center">
+                                <div class="ui pagination menu">
+                                    <a href="" class="item"><i class="icon left arrow"></i>前一夜</a>
+                                    <a class="active item">
+                                        1
+                                    </a>
+                                    <div class="disabled item">
+                                        ...
+                                    </div>
+                                    <a class="item">
+                                        10
+                                    </a>
+                                    <a class="item">
+                                        11
+                                    </a>    
+                                    <a class="item">
+                                        12
+                                    </a>
+                                    <a href="" class="item"><i class="icon right arrow"></i>前一夜</a>
+                                </div>
+                            </div>
+                        </div>-->
                     </div>
 
-                    <div class="ui page padded grid">
-                        <div class="column text align center">
-                            <div class="ui pagination menu">
-                                <a href="" class="item"><i class="icon left arrow"></i>前一夜</a>
-                                <a class="active item">
-                                    1
-                                </a>
-                                <div class="disabled item">
-                                    ...
+                    <div class="products-item">
+                        <h2 class="ui header hkp-header">Category-2-Products</h2>
+                        <div class="ui bottom attached segment products-content">
+                            <div class="ui three column grid">
+                                <div class="column">
+                                    <div class="ui card">
+                                        <a class="image" href="https://semantic-ui.com/images/avatar2/large/kristy.png" data-lightbox="image-1" data-title="My caption"><img src="https://semantic-ui.com/images/avatar2/large/kristy.png" alt="" title=""></a>
+                                        <div class="content">
+                                            <a href="" class="header hkp-color">product 1product 1product 1product 1</a>
+                                            <div class="meta"><span class="date hkp-color">category 1</span></div>
+                                            <div class="description">descript 1descript 1descript 1descript 1descript 1descript 1descript 1</div>
+                                        </div>
+                                        <div class="extra">
+                                            <span class="price left floated hkp-color">¥500.99</span>
+                                            <span class="ui form right floated">
+                                                <div class="fields number">
+                                                    <button class="ui mini left attached button three wide field"><i class="iconfont icon-minus"></i></button> 
+                                                    <div class="eight wide field number-input-wrap">
+                                                        <input type="text" name="number" value="1" autocomplete="off">
+                                                    </div>
+                                                    <button class="ui mini right attached button three wide field"><i class="iconfont icon-plus"></i></button>
+                                                </div>
+                                            </span>
+                                        </div>
+                                        <div class="ui primary bottom attached button hkp-button"><i class="icon cart"></i> Add Cart </div>
+                                    </div>
                                 </div>
-                                <a class="item">
-                                    10
-                                </a>
-                                <a class="item">
-                                    11
-                                </a>    
-                                <a class="item">
-                                    12
-                                </a>
-                                <a href="" class="item"><i class="icon right arrow"></i>前一夜</a>
+                                <div class="column">
+                                    <div class="ui card">
+                                        <a class="image" href="https://semantic-ui.com/images/avatar2/large/kristy.png" data-lightbox="image-1" data-title="My caption"><img src="https://semantic-ui.com/images/avatar2/large/kristy.png" alt="" title=""></a>
+                                        <div class="content">
+                                            <a href="" class="header hkp-color">product 1product 1product 1product 1</a>
+                                            <div class="meta"><span class="date hkp-color">category 1</span></div>
+                                            <div class="description">descript 1descript 1descript 1descript 1descript 1descript 1descript 1</div>
+                                        </div>
+                                        <div class="extra">
+                                            <span class="price left floated hkp-color">¥500.99</span>
+                                            <span class="ui form right floated">
+                                                <div class="fields number">
+                                                    <button class="ui mini left attached button three wide field"><i class="iconfont icon-minus"></i></button> 
+                                                    <div class="eight wide field number-input-wrap">
+                                                        <input type="text" name="number" value="1" autocomplete="off">
+                                                    </div>
+                                                    <button class="ui mini right attached button three wide field"><i class="iconfont icon-plus"></i></button>
+                                                </div>
+                                            </span>
+                                        </div>
+                                        <div class="ui primary bottom attached button hkp-button"><i class="icon cart"></i> Add Cart </div>
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <div class="ui card">
+                                        <a class="image" href="https://semantic-ui.com/images/avatar2/large/kristy.png" data-lightbox="image-1" data-title="My caption"><img src="https://semantic-ui.com/images/avatar2/large/kristy.png" alt="" title=""></a>
+                                        <div class="content">
+                                            <a href="" class="header hkp-color">product 1product 1product 1product 1</a>
+                                            <div class="meta"><span class="date hkp-color">category 1</span></div>
+                                            <div class="description">descript 1descript 1descript 1descript 1descript 1descript 1descript 1</div>
+                                        </div>
+                                        <div class="extra">
+                                            <span class="price left floated hkp-color">¥500.99</span>
+                                            <span class="ui form right floated">
+                                                <div class="fields number">
+                                                    <button class="ui mini left attached button three wide field"><i class="iconfont icon-minus"></i></button> 
+                                                    <div class="eight wide field number-input-wrap">
+                                                        <input type="text" name="number" value="1" autocomplete="off">
+                                                    </div>
+                                                    <button class="ui mini right attached button three wide field"><i class="iconfont icon-plus"></i></button>
+                                                </div>
+                                            </span>
+                                        </div>
+                                        <div class="ui primary bottom attached button hkp-button"><i class="icon cart"></i> Add Cart </div>
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <div class="ui card">
+                                        <a class="image" href="https://semantic-ui.com/images/avatar2/large/kristy.png" data-lightbox="image-1" data-title="My caption"><img src="https://semantic-ui.com/images/avatar2/large/kristy.png" alt="" title=""></a>
+                                        <div class="content">
+                                            <a href="" class="header hkp-color">product 1product 1product 1product 1</a>
+                                            <div class="meta"><span class="date hkp-color">category 1</span></div>
+                                            <div class="description">descript 1descript 1descript 1descript 1descript 1descript 1descript 1</div>
+                                        </div>
+                                        <div class="extra">
+                                            <span class="price left floated hkp-color">¥500.99</span>
+                                            <span class="ui form right floated">
+                                                <div class="fields number">
+                                                    <button class="ui mini left attached button three wide field"><i class="iconfont icon-minus"></i></button> 
+                                                    <div class="eight wide field number-input-wrap">
+                                                        <input type="text" name="number" value="1" autocomplete="off">
+                                                    </div>
+                                                    <button class="ui mini right attached button three wide field"><i class="iconfont icon-plus"></i></button>
+                                                </div>
+                                            </span>
+                                        </div>
+                                        <div class="ui primary bottom attached button hkp-button"><i class="icon cart"></i> Add Cart </div>
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <div class="ui card">
+                                        <a class="image" href="https://semantic-ui.com/images/avatar2/large/kristy.png" data-lightbox="image-1" data-title="My caption"><img src="https://semantic-ui.com/images/avatar2/large/kristy.png" alt="" title=""></a>
+                                        <div class="content">
+                                            <a href="" class="header hkp-color">product 1product 1product 1product 1</a>
+                                            <div class="meta"><span class="date hkp-color">category 1</span></div>
+                                            <div class="description">descript 1descript 1descript 1descript 1descript 1descript 1descript 1</div>
+                                        </div>
+                                        <div class="extra">
+                                            <span class="price left floated hkp-color">¥500.99</span>
+                                            <span class="ui form right floated">
+                                                <div class="fields number">
+                                                    <button class="ui mini left attached button three wide field"><i class="iconfont icon-minus"></i></button> 
+                                                    <div class="eight wide field number-input-wrap">
+                                                        <input type="text" name="number" value="1" autocomplete="off">
+                                                    </div>
+                                                    <button class="ui mini right attached button three wide field"><i class="iconfont icon-plus"></i></button>
+                                                </div>
+                                            </span>
+                                        </div>
+                                        <div class="ui primary bottom attached button hkp-button"><i class="icon cart"></i> Add Cart </div>
+                                    </div>
+                                </div>
+                                <div class="column">
+                                    <div class="ui card">
+                                        <a class="image" href="https://semantic-ui.com/images/avatar2/large/kristy.png" data-lightbox="image-1" data-title="My caption"><img src="https://semantic-ui.com/images/avatar2/large/kristy.png" alt="" title=""></a>
+                                        <div class="content">
+                                            <a href="" class="header hkp-color">product 1product 1product 1product 1</a>
+                                            <div class="meta"><span class="date hkp-color">category 1</span></div>
+                                            <div class="description">descript 1descript 1descript 1descript 1descript 1descript 1descript 1</div>
+                                        </div>
+                                        <div class="extra">
+                                            <span class="price left floated hkp-color">¥500.99</span>
+                                            <span class="ui form right floated">
+                                                <div class="fields number">
+                                                    <button class="ui mini left attached button three wide field"><i class="iconfont icon-minus"></i></button> 
+                                                    <div class="eight wide field number-input-wrap">
+                                                        <input type="text" name="number" value="1" autocomplete="off">
+                                                    </div>
+                                                    <button class="ui mini right attached button three wide field"><i class="iconfont icon-plus"></i></button>
+                                                </div>
+                                            </span>
+                                        </div>
+                                        <div class="ui primary bottom attached button hkp-button"><i class="icon cart"></i> Add Cart </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
+                        <!--<div class="ui page padded grid">
+                            <div class="column text align center">
+                                <div class="ui pagination menu">
+                                    <a href="" class="item"><i class="icon left arrow"></i>前一夜</a>
+                                    <a class="active item">
+                                        1
+                                    </a>
+                                    <div class="disabled item">
+                                        ...
+                                    </div>
+                                    <a class="item">
+                                        10
+                                    </a>
+                                    <a class="item">
+                                        11
+                                    </a>    
+                                    <a class="item">
+                                        12
+                                    </a>
+                                    <a href="" class="item"><i class="icon right arrow"></i>前一夜</a>
+                                </div>
+                            </div>
+                        </div>-->
                     </div>
+                    
                 </div>
             </div>
             
