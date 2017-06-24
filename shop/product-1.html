@@ -162,7 +162,9 @@
                 <div class="fl pic-box-control">
                     <div class="pic-box bst" id="picbox">
                         <div class="pr" style="z-index:1;height:350px">
-                            <img id="js_pi" src="https://semantic-ui.com/images/avatar2/large/kristy.png" alt="商品图片">
+                            <a href="https://semantic-ui.com/images/avatar2/large/kristy.png" data-lightbox="image-1" data-title="My caption">
+                                <img id="js_pi" src="https://semantic-ui.com/images/avatar2/large/kristy.png" alt="商品图片">
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -250,5 +252,12 @@
             </div>
         </div>
     </div>
+<script>
+    // 商品图片弹出层
+    lightbox.option({
+        'resizeDuration': 200,
+        'wrapAround': true
+    });
+</script>
 </body>
 </html>
