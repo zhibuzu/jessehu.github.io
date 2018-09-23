@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>cart</title>
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--<link href="https://cdn.bootcss.com/semantic-ui/2.2.10/components/menu.min.css" rel="stylesheet">-->
+    <!--semantic style-->
+    <link href="https://cdn.bootcss.com/semantic-ui/2.2.10/semantic.min.css" rel="stylesheet">
+
+    <!--swiper css-->
+    <link href="https://cdn.bootcss.com/Swiper/3.4.2/css/swiper.min.css" rel="stylesheet">
+
+
+
+    <!--<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>-->
+    <script src="https://semantic-ui.com/javascript/library/jquery.min.js"></script>
+    <!--<script src="https://cdn.bootcss.com/semantic-ui/2.2.10/semantic.min.js"></script>-->
+    <script src="https://semantic-ui.com/dist/semantic.min.js"></script>
+
+    <!--swiper js-->
+    <!--<script src="https://cdn.bootcss.com/Swiper/3.4.2/js/swiper.jquery.js"></script>-->
+    <script src="https://cdn.bootcss.com/Swiper/3.4.2/js/swiper.min.js"></script>
+
+    <!--iconfont-->
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_r754ezzppzdj9k9.css">
+
+    <!--lightbox-->
+    <link href="https://cdn.bootcss.com/lightbox2/2.9.0/css/lightbox.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/lightbox2/2.9.0/js/lightbox.min.js"></script>
+
+    <!--cart style-->
+    <link rel="stylesheet" href="./static/css/layout.css?v=20170616">
+    <link rel="stylesheet" href="./static/css/master.css">
+
+    <script>
+        $(document).ready(function() {
+            $('.ui.selection.dropdown').dropdown();
+            $('.ui.menu .ui.dropdown').dropdown({
+                on: 'hover'
+            });
+            $("#page-index-item").popup();
+
+            $('.ui.sticky').sticky({
+                context: '#middle-content-box'
+            });
+
+            $("#language-menu").dropdown({
+                onChange: function (value, text, $choice) {
+                    console.log(value);
+                    console.log(text);
+                    console.log($choice);
+                    console.log(this);
+                    var currentText = $(this).dropdown('get text');
+                    console.log(currentText);
+                }
+            });
+        });
+    </script>
+    <!--inner css-->
+    <style>
+        .main.container {
+            margin-top: 7em;
+        }
+        .ui.text.container {
+            max-width: initial!important;
+        }
+        .ui.footer.segment {
+            margin: 5em 0em 0em;
+            padding: 5em 0em;
+        }
+    </style>
+</head>
+<body>
+    <!--fixed navigation menu-->
+    <div class="ui large top fixed brown menu masthead stackable">
+        <div class="ui container">
+            <a href="#" class="header item">
+                <img src="https://semantic-ui.com/examples/assets/images/logo.png" alt="logo" class="logo">
+                xxx商城
+            </a>
+            <a href="index-1.html" class="item" id="page-index-item"><i class="icon home"></i>首页</a>
+
+            <!--<div class="ui simple dropdown item">-->
+                <!--<i class="grid layout icon"></i>-->
+                <!--分类-->
+                <!--<i class="dropdown icon"></i>-->
+                <!--<div class="menu">-->
+                    <!--<a href="#" class="item">category-level-1</a>-->
+                    <!--<a href="#" class="item">category-level-2</a>-->
+                    <!--<div class="divider"></div>-->
+                    <!--<div class="header">category-level-3</div>-->
+                    <!--<div class="item">-->
+                        <!--<i class="dropdown icon"></i>-->
+                        <!--category-level-3-1-->
+                        <!--<div class="menu">-->
+                            <!--<a href="#" class="item">category-level-3-1-1</a>-->
+                            <!--<a href="#" class="item">category-level-3-1-2</a>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                    <!--<div class="item">-->
+                        <!--<i class="dropdown icon"></i>-->
+                        <!--category-level-3-2-->
+                        <!--<div class="menu">-->
+                            <!--<a href="#" class="item">category-level-3-2-1</a>-->
+                            <!--<a href="#" class="item">category-level-3-2-2</a>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+            <!--<a href="#" class="item">-->
+                <!--<i class="mail icon"></i>公司介绍-->
+            <!--</a>-->
+
+            <!--right menu-->
+            <div class="right menu">
+                <div class="item">
+                    <div class="ui icon input">
+                        <input type="text" placeholder="Search...">
+                        <i class="search link icon"></i>
+                    </div>
+                </div>
+                <!--<a class="ui item">Logout </a>-->
+
+            </div>
+
+
+
+            <!--personal-->
+            <div class="ui pointing dropdown link item">
+                <i class="user icon"></i>
+                <span class="text">hello, jesse!</span>
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                    <div class="header">header1</div>
+                    <div class="item">item-1</div>
+                    <div class="divider"></div>
+                    <div class="header"><a href="index.html">Login out</a></div>
+                </div>
+            </div>
+
+            <!--shopping cart-->
+            <div class="item">
+                <a href="" title="go in cart">
+                    <i class="large in cart icon"></i>
+                </a>
+            </div>
+
+            <!--select language-->
+            <div class="item">
+                <div class="ui floating dropdown labeled search icon button" id="language-menu">
+                    <input name="language" type="hidden" value="0">
+                    <i class="world icon"></i>
+                    <span class="text">选择语言</span>
+                    <div class="menu">
+                        <div class="item" data-value="0"><i class="am flag"></i>Armenia</div>
+                        <div class="item" data-value="1"><i class="cn flag"></i>Chinese</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--page content-->
+    <div class="ui main text container">
+        <div class="m-control-4 clearfix">
+            <div class="m-base-title">
+                <div class="m-tx-2"><i class="imgall arrow"></i>温馨提示：在这里放置购物提示，若不需要可删除</div>
+                <table width="998" class="table-base table-base-3">
+                    <thead class="s-title">
+                    <tr>
+                        <th width="112"><div class="td-control"><div class="check-box cm"><input type="checkbox" id="a1"></div><label for="a1">全选</label><em class="tb-lp"></em><em class="tb-rp"></em></div></th>
+                        <th width="308"><div class="td-control">商品信息</div></th>
+                        <th width="90"><div class="td-control">单价</div></th>
+                        <th width="130"><div class="td-control">数量</div></th>
+                        <th width="120"><div class="td-control">优惠</div></th>
+                        <th width="120"><div class="td-control">小计</div></th>
+                        <th width="118"><div class="td-control">操作</div></th>
+                    </tr>
+                    </thead>
+                    <tbody class="pad pad-1">
+                        <tr><td colspan="7"><div class="td-control"><div class="pad-b"></div></div></td></tr>
+                    </tbody>
+                    <thead class="s-title-1">
+                        <tr><th colspan="7"><div class="td-control">
+                            <div class="check-box cm"><input type="checkbox" id="a2"></div>
+                            <label for="a2" class="s-name">商家：store-111</label></div></th>
+                        </tr>
+                    </thead>
+                    <tbody class="s-content">
+                        <tr>
+                            <td colspan="2"><div class="td-control">
+                                <div class="check-box cm"><input type="checkbox"></div>
+
+                                <a href="#" class="product-img"><img src="https://semantic-ui.com/images/avatar2/large/kristy.png" alt="product description"></a>
+                                <div class="product-base"><div class="product-title"><a href="#">product descriptionproduct descriptionproduct description</a></div> </div>
+                            </div></td>
+                            <td><div class="td-control"><span class="jgs">￥348.00</span></div></td>
+                            <td><div class="td-control">
+                                <div class="product-quantity"><a rel="goodsSub" proindex="1" href="javascript:void(0);"><i class="imgall icon-wh icon-21 dib"></i></a>
+                                    <input type="text" class="input-s" readonly="" value="1">
+                                    <a rel="goodsPlus" proindex="1" href="javascript:void(0);"><i class="imgall icon-wh icon-22 dib"></i></a></div>
+                            </div></td>
+                            <td><div class="td-control"><span class="jgs-1">--</span></div></td>
+                            <td><div class="td-control"><span class="jgs">￥348.00</span></div></td>
+                            <td><div class="td-control"><a href="javascript:void(0);" rel="JsRemoveGood" class="m-ac-red-1">删除</a></div></td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2"><div class="td-control">
+                                <div class="check-box cm"><input type="checkbox"></div>
+
+                                <a href="#" class="product-img"><img src="https://semantic-ui.com/images/avatar2/large/kristy.png" alt="product description"></a>
+                                <div class="product-base"><div class="product-title"><a href="#">product descriptionproduct descriptionproduct description</a></div> </div>
+                            </div></td>
+                            <td><div class="td-control"><span class="jgs">￥348.00</span></div></td>
+                            <td><div class="td-control">
+                                <div class="product-quantity"><a rel="goodsSub" proindex="1" href="javascript:void(0);"><i class="imgall icon-wh icon-21 dib"></i></a>
+                                    <input type="text" class="input-s" readonly="" value="1">
+                                    <a rel="goodsPlus" proindex="1" href="javascript:void(0);"><i class="imgall icon-wh icon-22 dib"></i></a></div>
+                            </div></td>
+                            <td><div class="td-control"><span class="jgs-1">--</span></div></td>
+                            <td><div class="td-control"><span class="jgs">￥348.00</span></div></td>
+                            <td><div class="td-control"><a href="javascript:void(0);" rel="JsRemoveGood" class="m-ac-red-1">删除</a></div></td>
+                        </tr>
+                    </tbody>
+                    <tbody class="pad">
+                        <tr><td colspan="7"><div class="td-control"><div class="pad-b"></div></div></td></tr>
+                    </tbody>
+                </table>
+
+                <div class="table-base-footer">
+                    <div class="one-control">
+                        <div class="three"><div class="check-box"><input type="checkbox" id="a4"></div><label for="a4">全选</label></div>
+                        <a href="#" class="one">删除</a><a href="index.html" class="two">继续购物</a>
+                    </div>
+
+                    <div class="two-control">
+                        <span class="one">数量总计</span>
+                        <span class="two">1</span>
+                        <span class="three">商品总金额(不含运费)</span>
+                        <span class="four">￥348.00</span>
+                        <a href="order.html" class="five five-no"><span>立即结算</span></a>
+                        <a href="order.html" class="five"><span>立即结算</span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--footer-->
+    <div class="ui blue vertical footer segment">
+        <div class="ui container">
+            <div class="ui stackable blue divided equal height stackable grid">
+                <div class="three wide column">
+                    <h4 class="ui blue header">About</h4>
+                    <div class="ui blue link list">
+                        <a href="#" class="item">Sitemap</a>
+                        <a href="#" class="item">Contact Us</a>
+                        <a href="#" class="item">Religious Ceremonies</a>
+                        <a href="#" class="item">Gazebo Plans</a>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui blue header">Services</h4>
+                    <div class="ui blue link list">
+                        <a href="#" class="item">Banana Pre-Order</a>
+                        <a href="#" class="item">DNA FAQ</a>
+                        <a href="#" class="item">How To Access</a>
+                        <a href="#" class="item">Favorite X-Men</a>
+                    </div>
+                </div>
+                <div class="seven wide column">
+                    <h4 class="ui blue header">Footer Header</h4>
+                    <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

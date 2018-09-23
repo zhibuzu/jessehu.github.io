@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>order</title>
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--<link href="https://cdn.bootcss.com/semantic-ui/2.2.10/components/menu.min.css" rel="stylesheet">-->
+    <!--semantic style-->
+    <link href="https://cdn.bootcss.com/semantic-ui/2.2.10/semantic.min.css" rel="stylesheet">
+
+    <!--swiper css-->
+    <link href="https://cdn.bootcss.com/Swiper/3.4.2/css/swiper.min.css" rel="stylesheet">
+
+
+
+    <!--<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>-->
+    <script src="https://semantic-ui.com/javascript/library/jquery.min.js"></script>
+    <!--<script src="https://cdn.bootcss.com/semantic-ui/2.2.10/semantic.min.js"></script>-->
+    <script src="https://semantic-ui.com/dist/semantic.min.js"></script>
+
+    <!--swiper js-->
+    <!--<script src="https://cdn.bootcss.com/Swiper/3.4.2/js/swiper.jquery.js"></script>-->
+    <script src="https://cdn.bootcss.com/Swiper/3.4.2/js/swiper.min.js"></script>
+
+    <!--iconfont-->
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_r754ezzppzdj9k9.css">
+
+    <!--lightbox-->
+    <link href="https://cdn.bootcss.com/lightbox2/2.9.0/css/lightbox.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/lightbox2/2.9.0/js/lightbox.min.js"></script>
+
+    <!--cart style-->
+    <link rel="stylesheet" href="./static/css/layout.css?v=2017061601">
+    <link rel="stylesheet" href="./static/css/master.css">
+
+    <script>
+        $(document).ready(function() {
+            $('.ui.selection.dropdown').dropdown();
+            $('.ui.menu .ui.dropdown').dropdown({
+                on: 'hover'
+            });
+            $("#page-index-item").popup();
+
+            $('.ui.sticky').sticky({
+                context: '#middle-content-box'
+            });
+
+            $("#language-menu").dropdown({
+                onChange: function (value, text, $choice) {
+                    console.log(value);
+                    console.log(text);
+                    console.log($choice);
+                    console.log(this);
+                    var currentText = $(this).dropdown('get text');
+                    console.log(currentText);
+                }
+            });
+        });
+    </script>
+    <!--inner css-->
+    <style>
+        .main.container {
+            margin-top: 7em;
+        }
+
+        .m-control-5 *, .m-control-5 :after, .m-control-5 :before {
+            box-sizing: content-box;
+        }
+
+        .ui.footer.segment {
+            margin: 5em 0em 0em;
+            padding: 5em 0em;
+        }
+    </style>
+</head>
+<body>
+<!--fixed navigation menu-->
+<div class="ui large top fixed brown menu masthead stackable">
+    <div class="ui container">
+        <a href="#" class="header item">
+            <img src="https://semantic-ui.com/examples/assets/images/logo.png" alt="logo" class="logo">
+            xxx商城
+        </a>
+        <a href="index-1.html" class="item" id="page-index-item"><i class="icon home"></i>首页</a>
+
+        <!--<div class="ui simple dropdown item">-->
+            <!--<i class="grid layout icon"></i>-->
+            <!--分类-->
+            <!--<i class="dropdown icon"></i>-->
+            <!--<div class="menu">-->
+                <!--<a href="#" class="item">category-level-1</a>-->
+                <!--<a href="#" class="item">category-level-2</a>-->
+                <!--<div class="divider"></div>-->
+                <!--<div class="header">category-level-3</div>-->
+                <!--<div class="item">-->
+                    <!--<i class="dropdown icon"></i>-->
+                    <!--category-level-3-1-->
+                    <!--<div class="menu">-->
+                        <!--<a href="#" class="item">category-level-3-1-1</a>-->
+                        <!--<a href="#" class="item">category-level-3-1-2</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+                <!--<div class="item">-->
+                    <!--<i class="dropdown icon"></i>-->
+                    <!--category-level-3-2-->
+                    <!--<div class="menu">-->
+                        <!--<a href="#" class="item">category-level-3-2-1</a>-->
+                        <!--<a href="#" class="item">category-level-3-2-2</a>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</div>-->
+        <!--</div>-->
+        <!--<a href="#" class="item">-->
+            <!--<i class="mail icon"></i>公司介绍-->
+        <!--</a>-->
+
+        <!--right menu-->
+        <div class="right menu">
+            <div class="item">
+                <div class="ui icon input">
+                    <input type="text" placeholder="Search...">
+                    <i class="search link icon"></i>
+                </div>
+            </div>
+            <!--<a class="ui item">Logout </a>-->
+
+        </div>
+
+
+
+        <!--personal-->
+        <div class="ui pointing dropdown link item">
+            <i class="user icon"></i>
+            <span class="text">hello, jesse!</span>
+            <i class="dropdown icon"></i>
+            <div class="menu">
+                <div class="header">header1</div>
+                <div class="item">item-1</div>
+                <div class="divider"></div>
+                <div class="header"><a href="index.html">Login out</a></div>
+            </div>
+        </div>
+
+        <!--shopping cart-->
+        <div class="item">
+            <a href="cart.html" title="go in cart">
+                <i class="large in cart icon"></i>
+            </a>
+        </div>
+
+        <!--select language-->
+        <div class="item">
+            <div class="ui floating dropdown labeled search icon button" id="language-menu">
+                <input name="language" type="hidden" value="0">
+                <i class="world icon"></i>
+                <span class="text">选择语言</span>
+                <div class="menu">
+                    <div class="item" data-value="0"><i class="am flag"></i>Armenia</div>
+                    <div class="item" data-value="1"><i class="cn flag"></i>Chinese</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!--page content-->
+<div class="ui main container">
+    <div class="m-control-5">
+        <div class="control clearfix">
+            <div class="m-tx-2"><i class="imgall arrow"></i>温馨提示：在这里放置购物提示，若不需要可删除</div>
+            <div class="title"><h6>1地址选择</h6></div>
+            <div class="content">
+                <div class="shouhuo">
+                    <div class="content-s">
+                        <div class="option-box selected">
+                            <input type="radio" class="one">
+                            <label class="two"><span class="btn-three" title="设为默认地址">设为默认地址</span><span class="btn-one" title="修改地址" onclick="javascript:window.location.href='cart-2-5.html'">修改</span><span href="#none" class="btn-two" title="删除地址">删除</span>            <p>
+                                <span class="one-s">胡的第</span>
+                                <span class="two-s">辽宁省-大连市-西岗区 asfew范围范围,422100</span>
+                                <span class="three-s">158****5487 </span>
+                            </p>
+                            </label>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="option-box">
+                            <input type="radio" class="one">
+                            <label class="two"><span class="btn-three" title="设为默认地址">设为默认地址</span><span class="btn-one" title="修改地址" onclick="javascript:window.location.href='cart-2-5.html'">修改</span><span href="#none" class="btn-two" title="删除地址">删除</span>            <p>
+                                <span class="one-s">柳飘飘</span>
+                                <span class="two-s">辽宁省-大连市-西岗区 asfew范围范围,422100</span>
+                                <span class="three-s">158****5487 </span>
+                            </p>
+                            </label>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="option-box">
+                            <input type="radio" class="one">
+                            <label class="two"><span class="btn-three" title="设为默认地址">设为默认地址</span><span class="btn-one" title="修改地址" onclick="javascript:window.location.href='cart-2-5.html'">修改</span><span href="#none" class="btn-two" title="删除地址">删除</span>            <p>
+                                <span class="one-s">刘德华</span>
+                                <span class="two-s">辽宁省-大连市-西岗区 asfew范围范围,422100</span>
+                                <span class="three-s">158****5487 </span>
+                            </p>
+                            </label>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="option-box">
+                            <input type="radio" class="one">
+                            <label class="two"><span class="btn-three" title="设为默认地址">设为默认地址</span><span class="btn-one" title="修改地址" onclick="javascript:window.location.href='cart-2-5.html'">修改</span><span href="#none" class="btn-two" title="删除地址">删除</span>            <p>
+                                <span class="one-s">谷子</span>
+                                <span class="two-s">辽宁省-大连市-西岗区 asfew范围范围,422100</span>
+                                <span class="three-s">158****5487 </span>
+                            </p>
+                            </label>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="option-box dn">
+                            <input type="radio" class="one">
+                            <label class="two"><span class="btn-three" title="设为默认地址">设为默认地址</span><span class="btn-one" title="修改地址" onclick="javascript:window.location.href='cart-2-5.html'">修改</span><span href="#none" class="btn-two" title="删除地址">删除</span>            <p>
+                                <span class="one-s">柳飘飘</span>
+                                <span class="two-s">辽宁省-大连市-西岗区 asfew范围范围,422100</span>
+                                <span class="three-s">158****5487 </span>
+                            </p>
+                            </label>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="option-box dn">
+                            <input type="radio" class="one">
+                            <label class="two"><span class="btn-three" title="设为默认地址">设为默认地址</span><span class="btn-one" title="修改地址" onclick="javascript:window.location.href='cart-2-5.html'">修改</span><span href="#none" class="btn-two" title="删除地址">删除</span>            <p>
+                                <span class="one-s">柳飘飘</span>
+                                <span class="two-s">辽宁省-大连市-西岗区 asfew范围范围,422100</span>
+                                <span class="three-s">158****5487 </span>
+                            </p>
+                            </label>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="option-box dn">
+                            <input type="radio" class="one">
+                            <label class="two"><span class="btn-three" title="设为默认地址">设为默认地址</span><span class="btn-one" title="修改地址" onclick="javascript:window.location.href='cart-2-5.html'">修改</span><span href="#none" class="btn-two" title="删除地址">删除</span>            <p>
+                                <span class="one-s">柳飘飘</span>
+                                <span class="two-s">辽宁省-大连市-西岗区 asfew范围范围,422100</span>
+                                <span class="three-s">158****5487 </span>
+                            </p>
+                            </label>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="option-box-footer">
+                        <a href="#" class="btn-one off">展开收货地址<i></i></a>
+                        <a href="#" class="btn-two">使用新地址</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="control clearfix">
+            <div class="title"><h6>2商品清单</h6>
+                <div class="shop-f">
+                    <a href="cart.html" class="two-s">返回修改购物车</a>
+                </div>
+            </div>
+            <div class="content">
+                <table width="956" class="table-base">
+                    <thead class="s-title">
+                    <tr>
+                        <th width="90"><div class="td-control">包裹</div></th>
+                        <th width="516"><div class="td-control">商品信息</div></th>
+                        <th width="130"><div class="td-control">数量</div></th>
+                        <th width="90"><div class="td-control">单价</div></th>
+                        <th width="130"><div class="td-control">小计</div></th>
+                    </tr>
+                    </thead>
+                    <tbody class="s-content">
+                    <tr>
+                        <td rowspan="3"><div class="td-control">包裹1</div></td>
+                        <td><div class="td-control">
+                            <a href="#" class="product-img"><img src="https://semantic-ui.com/images/avatar2/large/kristy.png" alt=""></a>
+                            <div class="product-base"><div class="product-title"><a href="#">product name product attr</a></div> </div>
+                        </div></td>
+                        <td><div class="td-control"><span>1</span></div></td>
+                        <td><div class="td-control"><span class="jgs">￥348.00</span></div></td>
+                        <td><div class="td-control"><span class="jgs">￥348.00</span></div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="td-control">
+                            <a href="#" class="product-img"><img src="https://semantic-ui.com/images/avatar2/large/kristy.png" alt=""></a>
+                            <div class="product-base"><div class="product-title"><a href="#">product name product attr</a></div> </div>
+                        </div></td>
+                        <td><div class="td-control"><span>1</span></div></td>
+                        <td><div class="td-control"><span class="jgs">￥348.00</span></div></td>
+                        <td><div class="td-control"><span class="jgs">￥348.00</span></div></td>
+                    </tr>
+                    <tr>
+                        <td><div class="td-control">
+                            <a href="#" class="product-img"><img src="https://semantic-ui.com/images/avatar2/large/kristy.png" alt=""></a>
+                            <div class="product-base"><div class="product-title"><a href="#">product name product attr</a></div> </div>
+                        </div></td>
+                        <td><div class="td-control"><span>1</span></div></td>
+                        <td><div class="td-control"><span class="jgs">￥348.00</span></div></td>
+                        <td><div class="td-control"><span class="jgs">￥348.00</span></div></td>
+                    </tr>
+
+                    <tr>
+                        <td rowspan="3"><div class="td-control">包裹2</div></td>
+                        <td><div class="td-control">
+                            <a href="#" class="product-img"><img src="https://semantic-ui.com/images/avatar2/large/kristy.png" alt=""></a>
+                            <div class="product-base"><div class="product-title"><a href="#">product name product attr</a></div> </div>
+                        </div></td>
+                        <td><div class="td-control"><span>1</span></div></td>
+                        <td><div class="td-control"><span class="jgs">￥348.00</span></div></td>
+                        <td><div class="td-control"><span class="jgs">￥348.00</span></div></td>
+                    </tr>
+                    </tbody>
+                </table>
+                <div></div>
+            </div>
+
+            <div class="m-orders-base-bottom">
+                <div class="control-left">
+                    <label for="" class="one-1">给商家留言：</label>
+                    <div class="clear"></div>
+                    <textarea cols="60" rows="3" class="two-2"></textarea>
+                </div>
+
+                <ul class="m-ul">
+                    <li><span class="two">￥2168.00</span><span class="one">商品金额：</span></li>
+                    <li><span class="two" id="coupon_area"></span><span class="one">现金券：</span></li>
+                    <li><span class="two" id="yh_coupon_area"></span><span class="one">优惠：</span></li>
+                    <li><span class="two">￥0.00</span><span class="one">运费：</span></li>
+                    <li><span class="two m-tc-golden-2">-￥578.00</span><span class="one">活动优惠：</span></li>
+                    <li><span class="four">￥2168.00</span><span class="three">应付金额：</span></li>
+                </ul>
+
+                <div class="hd-box"></div>
+                <a href="#" id="btn_order" class="purple-button"><span>提交订单</span></a>
+            </div>
+        </div>
+
+        <!--商品推荐-->
+        <div class="lover-product">
+            <div class="title" style="background-color:#35bdb2;"><h6>商品推荐</h6></div>
+            <div class="content">
+                <div class="control" style="border: none;padding:0;">
+                    <ul class="product-list">
+                        <li>
+                            <div class="pr layer-control"> 
+                                <a href="pitem.html" target="_blank" class="product-img"><img src="https://semantic-ui.com/images/avatar2/large/kristy.png" alt="商品介绍"></a>
+                                <div class="product-title"> 
+                                    <a href="pitem.html" title="商品介绍" target="_blank">商品名称</a> 
+                                </div>
+                                <div class="product-price"><span class="xj">¥78.00</span><p class="yj">¥<span>568</span></p></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pr layer-control"> 
+                                <a href="pitem.html" target="_blank" class="product-img"><img src="https://semantic-ui.com/images/avatar2/large/kristy.png" alt="商品介绍"></a>
+                                <div class="product-title"> 
+                                    <a href="pitem.html" title="商品介绍" target="_blank">商品名称</a> 
+                                </div>
+                                <div class="product-price"><span class="xj">¥78.00</span><p class="yj">¥<span>568</span></p></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pr layer-control"> 
+                                <a href="pitem.html" target="_blank" class="product-img"><img src="https://semantic-ui.com/images/avatar2/large/kristy.png" alt="商品介绍"></a>
+                                <div class="product-title"> 
+                                    <a href="pitem.html" title="商品介绍" target="_blank">商品名称</a> 
+                                </div>
+                                <div class="product-price"><span class="xj">¥78.00</span><p class="yj">¥<span>568</span></p></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pr layer-control"> 
+                                <a href="pitem.html" target="_blank" class="product-img"><img src="https://semantic-ui.com/images/avatar2/large/kristy.png" alt="商品介绍"></a>
+                                <div class="product-title"> 
+                                    <a href="pitem.html" title="商品介绍" target="_blank">商品名称</a> 
+                                </div>
+                                <div class="product-price"><span class="xj">¥78.00</span><p class="yj">¥<span>568</span></p></div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="pr layer-control"> 
+                                <a href="pitem.html" target="_blank" class="product-img"><img src="https://semantic-ui.com/images/avatar2/large/kristy.png" alt="商品介绍"></a>
+                                <div class="product-title"> 
+                                    <a href="pitem.html" title="商品介绍" target="_blank">商品名称</a> 
+                                </div>
+                                <div class="product-price"><span class="xj">¥78.00</span><p class="yj">¥<span>568</span></p></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    
+
+
+<!--footer-->
+<div class="ui blue vertical footer segment">
+    <div class="ui container">
+        <div class="ui stackable blue divided equal height stackable grid">
+            <div class="three wide column">
+                <h4 class="ui blue header">About</h4>
+                <div class="ui blue link list">
+                    <a href="#" class="item">Sitemap</a>
+                    <a href="#" class="item">Contact Us</a>
+                    <a href="#" class="item">Religious Ceremonies</a>
+                    <a href="#" class="item">Gazebo Plans</a>
+                </div>
+            </div>
+            <div class="three wide column">
+                <h4 class="ui blue header">Services</h4>
+                <div class="ui blue link list">
+                    <a href="#" class="item">Banana Pre-Order</a>
+                    <a href="#" class="item">DNA FAQ</a>
+                    <a href="#" class="item">How To Access</a>
+                    <a href="#" class="item">Favorite X-Men</a>
+                </div>
+            </div>
+            <div class="seven wide column">
+                <h4 class="ui blue header">Footer Header</h4>
+                <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

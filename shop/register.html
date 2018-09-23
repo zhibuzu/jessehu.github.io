@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
+    <title>Register</title>
+    <!--<link href="https://cdn.bootcss.com/semantic-ui/2.2.10/components/menu.min.css" rel="stylesheet">-->
+    <!--semantic style-->
+    <link href="https://cdn.bootcss.com/semantic-ui/2.2.10/semantic.min.css" rel="stylesheet">
+
+    <!--swiper css-->
+    <link href="https://cdn.bootcss.com/Swiper/3.4.2/css/swiper.min.css" rel="stylesheet">
+
+
+
+    <!--<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>-->
+    <script src="https://semantic-ui.com/javascript/library/jquery.min.js"></script>
+    <!--<script src="https://cdn.bootcss.com/semantic-ui/2.2.10/semantic.min.js"></script>-->
+    <script src="https://semantic-ui.com/dist/semantic.min.js"></script>
+
+    <!--swiper js-->
+    <!--<script src="https://cdn.bootcss.com/Swiper/3.4.2/js/swiper.jquery.js"></script>-->
+    <script src="https://cdn.bootcss.com/Swiper/3.4.2/js/swiper.min.js"></script>
+
+    <!--iconfont-->
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_r754ezzppzdj9k9.css">
+
+    <!--lightbox-->
+    <link href="https://cdn.bootcss.com/lightbox2/2.9.0/css/lightbox.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/lightbox2/2.9.0/js/lightbox.min.js"></script>
+    <script>
+        $(document)
+            .ready(function() {
+            $('.ui.selection.dropdown').dropdown();
+            $('.ui.menu .ui.dropdown').dropdown({
+                on: 'hover'
+            });
+            $("#page-index-item").popup();
+
+            $('.ui.sticky').sticky({
+                context: '#middle-content-box'
+            });
+
+            $('.ui.checkbox').checkbox();
+        });
+    </script>
+
+    <!--page style-->
+    <style type="text/css">
+    body {
+        background: #f8f8f8;
+    }
+    body .register-box {
+        background: url("./static/images/11.jpg");
+        background-position: 50% 50%;
+        background-size: cover;
+        height: 115%;
+    }
+    .image {
+        margin-top: -100px;
+    }
+    .column {
+        max-width: 450px;
+    }
+    .ui.menu .item img.logo {
+        margin-right: 1.5em;
+    }
+    .main.container {
+        margin-top: 7em;
+    }
+    .wireframe {
+        margin-top: 2em;
+    }
+    .ui.footer.segment {
+        margin: 1em 0em 0em;
+        padding: 5em 0em;
+    }
+
+    .text.align.left {
+        text-align: left;
+    }
+    .text.align.right {
+        text-align: right;
+    }
+    .text.align.center {
+        text-align: center;
+    }
+    </style>
+</head>
+<body>
+    <!--fixed navigation menu-->
+    <div class="ui large top fixed brown menu masthead stackable">
+        <div class="ui container">
+            <a href="#" class="header item">
+                <img src="https://semantic-ui.com/examples/assets/images/logo.png" alt="logo" class="logo">
+                xxx商城
+            </a>
+            <a href="index.html" class="item" id="page-index-item"><i class="icon home"></i>首页</a>
+
+            <div class="ui simple dropdown item">
+                <i class="grid layout icon"></i>
+                分类
+                <i class="dropdown icon"></i>
+                <div class="menu">
+                    <a href="#" class="item">category-level-1</a>
+                    <a href="#" class="item">category-level-2</a>
+                    <div class="divider"></div>
+                    <div class="header">category-level-3</div>
+                    <div class="item">
+                        <i class="dropdown icon"></i>
+                        category-level-3-1
+                        <div class="menu">
+                            <a href="#" class="item">category-level-3-1-1</a>
+                            <a href="#" class="item">category-level-3-1-2</a>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <i class="dropdown icon"></i>
+                        category-level-3-2
+                        <div class="menu">
+                            <a href="#" class="item">category-level-3-2-1</a>
+                            <a href="#" class="item">category-level-3-2-2</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="item">
+                <i class="mail icon"></i>公司介绍
+            </a>
+
+            <!--right menu-->
+            <div class="right menu">
+                <div class="item">
+                <div class="ui icon input">
+                    <input type="text" placeholder="Search...">
+                    <i class="search link icon"></i>
+                </div>
+                </div>
+                <!--<a class="ui item">Logout </a>-->
+                
+            </div>
+
+            <!--button-->
+            <div class="item">
+                <a href="login.html" class="ui button">Log-in</a>
+            </div>
+            <div class="item">
+                <a href="register.html" class="ui primary button">Sign up</a>
+            </div>
+        </div>
+    </div>
+
+    <!--register box-->
+    <div class="ui middle aligned center aligned grid register-box">
+        <div class="column">
+            <!--<h2 class="ui teal image header">
+            <img src="./static/images/logo.png" class="image">
+            <div class="content">
+                注册
+            </div>
+            </h2>-->
+            <form action="register.html#11" method="post" class="ui large form">
+                <div class="ui error message"></div>
+                <div class="ui green padded segment">
+                        <div class="field">
+                            <label class="text align left">公司名:</label>
+                            <div class="ui left icon input">
+                                <i class="building outline icon"></i>
+                                <input type="text" name="company" placeholder="公司名">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="text align left">姓名:</label>
+                            <div class="ui left icon input">
+                                <i class="user icon"></i>
+                                <input type="text" name="account" placeholder="姓名">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="text align left">email:</label>
+                            <div class="ui left icon input">
+                                <i class="mail icon"></i>
+                                <input type="text" name="email" placeholder="email">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label class="text align left">地址:</label>
+                            <div class="ui left icon input">
+                                <i class="marker icon"></i>
+                                <input type="text" name="address" placeholder="地址">
+                            </div>
+                        </div>
+
+                        <div class="field">
+                            <label class="text align left">产品型号:</label>
+                            <div class="ui left icon input">
+                                <!--<i class="list layout icon"></i>-->
+                                <select class="ui search dropdown" name="product_type">
+                                    <option value="2">产品型号1</option>
+                                    <option value="1">产品型号2</option>
+                                    <option value="0">产品型号3</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="inline field" style="text-align: left;">
+                            <div class="ui left icon checkbox">
+                                <input type="checkbox" name="agreement" tabindex="0" class="hidden">
+                                <label>
+                                    同意
+                                    <a href="#">注册协议</a>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="ui fluid large teal submit button">注&nbsp;&nbsp;&nbsp;&nbsp;册</div>
+                    </div>
+
+                    
+
+            </form>
+
+            <div class="ui message">
+            已有账户? <a href="login.html">登&nbsp;&nbsp;&nbsp;&nbsp;录</a>
+            </div>
+        </div>
+    </div>
+
+
+    <!--footer-->
+    <div class="ui blue vertical footer segment">
+        <div class="ui container">
+            <div class="ui stackable blue divided equal height stackable grid">
+                <div class="three wide column">
+                <h4 class="ui blue header">About</h4>
+                <div class="ui blue link list">
+                    <a href="#" class="item">Sitemap</a>
+                    <a href="#" class="item">Contact Us</a>
+                    <a href="#" class="item">Religious Ceremonies</a>
+                    <a href="#" class="item">Gazebo Plans</a>
+                </div>
+                </div>
+                <div class="three wide column">
+                <h4 class="ui blue header">Services</h4>
+                <div class="ui blue link list">
+                    <a href="#" class="item">Banana Pre-Order</a>
+                    <a href="#" class="item">DNA FAQ</a>
+                    <a href="#" class="item">How To Access</a>
+                    <a href="#" class="item">Favorite X-Men</a>
+                </div>
+                </div>
+                <div class="seven wide column">
+                <h4 class="ui blue header">Footer Header</h4>
+                <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="http://www.semantic-ui.cn/dist/components/form.js"></script>
+    <script>
+        $(document)
+        .ready(function() {
+            // 自定义验证
+            // [*] 自定义校验函数，返回 false 校验不通过
+            $.fn.form.settings.rules.confirmPassword = function(value) {
+                return value === $('[name="password"]').val();
+            };
+
+            // [*] 使用 AJAX 去服务器上验证数据，返回 false 校验不通过
+            $.fn.form.settings.rules.uniqueUsername = function(username) {
+                var valid = false;
+                $.ajax({
+                    url: 'http://localhost:8080/uniqueName',
+                    data: {username: username},
+                    type: 'GET',
+                    async: false, // 同步 AJAX 请求
+                    dataType:    'json',
+                    contentType: 'application/json;charset=utf-8'
+                })
+                .done(function(result) {
+                    valid = result.success;
+                });
+                return valid;
+            };
+
+
+
+        $('.ui.form')
+            .form({
+                inline: true,
+                on     : 'blur',
+                fields: {
+                    company: {
+                        identifier  : 'company',
+                        rules: [
+                            {
+                                type: 'empty',
+                                prompt: '请输入公司名称'
+                            },
+                            {
+                                type: 'length[3]',
+                                prompt: '公司名称至少为三个字符'
+                            }
+                        ]
+                    },
+                    account: {
+                        identifier  : 'account',
+                        rules: [
+                            {
+                                type   : 'empty',
+                                prompt : '请输入你的帐号'
+                            },
+                            {
+                                type: 'regExp',
+                                value: /^[a-zA-Z0-9-_]+$/,
+                                prompt: '帐号名只能包含数字，英文字母及下划线_'
+                            },
+                            // {
+                            //     type: 'uniqueUsername',
+                            //     prompt: '名字已经存在'
+                            // }
+                        ]
+                    },
+                    email: {
+                        identifier  : 'email',
+                        rules: [
+                            {
+                                type   : 'empty',
+                                prompt : '请输入电子邮箱'
+                            },
+                            {
+                                type   : 'email',
+                                prompt : '请输入合法账号，应为电子邮箱'
+                            }
+                        ]
+                    },
+                    address: {
+                        identifier  : 'address',
+                        rules: [
+                            {
+                                type   : 'empty',
+                                prompt : '请输入地址'
+                            }
+                        ]
+                    },
+                    product_type: {
+                        identifier: 'product_type',
+                        rules: [
+                            {
+                                type: 'empty',
+                                prompt: '请选择产品型号'
+                            }
+                        ]
+                    },
+                    agreement: {
+                        identifier  : 'agreement',
+                        rules: [
+                            {
+                            type   : 'checked',
+                            prompt : '请同意注册协议'
+                            }
+                        ]
+                    }
+                },
+                onSuccess: function(event, fields) {
+                    // [*] 表单验证通过后调用 onSuccess 函数
+                    // fields 中保存了所有的表单数据，例如 {name: "Alice", color: "rgb(255, 255, 255)"}
+                    event.preventDefault(); // [*] 如果需要使用 Ajax 提交时，防止表单自动提交
+                    console.log(fields);
+                },
+                onFailure:  function(){
+                    return false;
+                }
+            });
+        });
+    </script>
+</body>
+</html>
