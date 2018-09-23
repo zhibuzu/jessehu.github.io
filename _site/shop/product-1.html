@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Product</title>
+    <meta http-equiv="X-UA-COMPATIBLE" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <!--<link href="https://cdn.bootcss.com/semantic-ui/2.2.10/components/menu.min.css" rel="stylesheet">-->
+    <!--semantic style-->
+    <link href="https://cdn.bootcss.com/semantic-ui/2.2.10/semantic.min.css" rel="stylesheet">
+
+    <!--swiper css-->
+    <link href="https://cdn.bootcss.com/Swiper/3.4.2/css/swiper.min.css" rel="stylesheet">
+
+
+
+    <!--<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>-->
+    <script src="https://semantic-ui.com/javascript/library/jquery.min.js"></script>
+    <!--<script src="https://cdn.bootcss.com/semantic-ui/2.2.10/semantic.min.js"></script>-->
+    <script src="https://semantic-ui.com/dist/semantic.min.js"></script>
+
+    <!--swiper js-->
+    <!--<script src="https://cdn.bootcss.com/Swiper/3.4.2/js/swiper.jquery.js"></script>-->
+    <script src="https://cdn.bootcss.com/Swiper/3.4.2/js/swiper.min.js"></script>
+
+    <!--lightbox-->
+    <link href="https://cdn.bootcss.com/lightbox2/2.9.0/css/lightbox.min.css" rel="stylesheet">
+    <script src="https://cdn.bootcss.com/lightbox2/2.9.0/js/lightbox.min.js"></script>
+
+    <!--country flag-->
+    <link rel="stylesheet" href="static/css/flag-icon/css/flag-icon.min.css">
+
+    <!--cart style-->
+    <link rel="stylesheet" href="./static/css/layout.css?v=2017061601">
+    <link rel="stylesheet" href="./static/css/master.css">
+
+    <script>
+        $(document).ready(function() {
+            $('.ui.selection.dropdown').dropdown();
+            $('.ui.menu .ui.dropdown').dropdown({
+                on: 'hover'
+            });
+            $("#page-index-item").popup();
+
+            $('.ui.sticky').sticky({
+                context: '#middle-content-box'
+            });
+
+            $("#language-menu").dropdown({
+                onChange: function (value, text, $choice) {
+                    console.log(value);
+                    console.log(text);
+                    console.log($choice);
+                    console.log(this);
+                    var currentText = $(this).dropdown('get text');
+                    console.log(currentText);
+                }
+            });
+        });
+    </script>
+    <!--inner css-->
+    <style>
+        .main.container {
+            margin-top: 7em;
+        }
+
+        .m-control-5 *, .m-control-5 :after, .m-control-5 :before {
+            box-sizing: content-box;
+        }
+
+        .ui.footer.segment {
+            margin: 5em 0em 0em;
+            padding: 5em 0em;
+        }
+
+        .m-control-3 *, .m-control-3 :after, .m-control-3 :before {
+            box-sizing: content-box;
+        }
+
+        /*category , product box css*/
+        #top-header-box {
+            width: 100%!important;
+            background: #fafafa;
+            padding: 20px 10px;
+            margin-top: 0;
+        }
+        #top-header-box {
+            background: #FFFFFF;
+        }
+        #top-header-box .logo {
+            width: 10em;
+        }
+        #top-header-box .cart-box {
+            bottom: 1em;
+            position: absolute;
+            right: 1em;
+        }
+        #top-header-box .ui.header{
+            color:#3bb2c3!important;
+        }
+        #top-header-box .ui.header>.icon{
+            vertical-align: bottom;
+        }
+
+        /*country flag*/
+        .flag-icon.flag-icon-squared {
+            width: 3em;
+            height: 2em;
+        }
+
+        /*text align*/
+        .text.align.left {
+            text-align: left;
+        }
+        .text.align.right {
+            text-align: right;
+        }
+        .text.align.center {
+            text-align: center;
+        }   
+    </style>
+</head>
+<body class="bodybg">
+    <!--top content-->
+    <div class="ui main container" id="top-header-box">
+        <div class="ui grid">
+            <div class="six wide column">
+                <a href="index.html" target="_bank">
+                    <h2 class="ui header">
+                        <img class="ui image logo" src="static/images/logo.jpg">
+                    </h2>
+                </a>
+            </div>
+            <!--country flags-->
+            <div class="ten wide column text align right">
+                <a href="#"><i class="flag-icon flag-icon-gb flag-icon-squared"></i></a>
+                <a href="#"><i class="flag-icon flag-icon-am flag-icon-squared"></i></a>
+                <a href="#"><i class="flag-icon flag-icon-fr flag-icon-squared"></i></a>
+                <a href="#"><i class="flag-icon flag-icon-es flag-icon-squared"></i></a>
+                <a href="#"><i class="flag-icon flag-icon-it flag-icon-squared"></i></a>
+                <a href="#"><i class="flag-icon flag-icon-cn flag-icon-squared"></i></a>
+                <a href="cart.html" class="cart-box">
+                    <h2 class="ui header">
+                        <i class="large in cart icon"> </i> Shopping Cart
+                    </h2>
+                </a>
+                
+            </div>
+        </div>
+    </div>
+
+    <!--page content-->
+    <div class="ui main container">
+        <div class="m-control-3 clearfix">
+            <!--商品类目-->
+            <div class="m-intros-title">
+                <a href="javascript:;" class="first">category_level_1</a><i class="m-pad">&gt;</i>
+                <a href="javascript:;" class="trash">category_level_2</a><i class="m-pad">&gt;</i>
+                <a href="javascript:;" class="trash">category_level_3</a>
+            </div>
+
+            <div class="item-base clearfix">
+                <div class="fl pic-box-control">
+                    <div class="pic-box bst" id="picbox">
+                        <div class="pr" style="z-index:1;height:350px">
+                            <a href="https://semantic-ui.com/images/avatar2/large/kristy.png" data-lightbox="image-1" data-title="My caption">
+                                <img id="js_pi" src="https://semantic-ui.com/images/avatar2/large/kristy.png" alt="商品图片">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="pic-txt">
+                    <input type="hidden" name="product_id" value="499">
+                    <h5 class="product-title">商品名称</h5>
+                    <h6 class="product-s-title">其他描述</h6>
+                    <div class="product-pad"></div>
+                    <div class="list" rel="pp">
+                        <div class="list-l"><span>单&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;价：</span><em class="product-price">￥449.00</em></div>
+                        <div class="product-pad"></div>
+                        <div class="list-l list-l-control" id="goods-num">
+                            <span>购买数量：</span>
+                            <div class="product-quantity pr">
+                                <a href="javascript:void(0);" class="fl" id="bot_subtract"><i class="imgall icon-wh icon-21 dib"></i></a>
+                                <input type="text" onbeforepaste="clipboardData.setData('text ',clipboardData.getData('text').replace(/[^\d]/g, ' ')) " class="input-s" value="1" id="buy-num" maxlength="3">
+                                <a href="javascript:void(0);" class="fl" id="bot_plus"><i class="imgall icon-wh icon-22 dib"></i></a>
+                            </div>
+                            <em class="kc-span">库存179件</em>
+                            <div class="clear"></div>
+                            <div class="m-tx-5" style="display:block"><i class="imgall arrow"></i>您所填写的宝贝数量超过库存！</div>
+                        </div>
+                        <div class="list-l list-l-control temp mb0" style="margin-top: 100px;">
+                            <a href="order.html" class="imgall button-buy"></a>
+                            <a href="javascript:;" class="dib imgall button-cart"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="item-content">
+                <div class="main clearfix">
+                    <div class="tab">
+                        <div class="layer-control">
+                            <div class="list">
+                                <a href="javascript:;" class="tab-a selected"><span>商品详情</span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-content1">
+                        <div class="tab-c">
+                            <div class="main-content">
+                                <div class="p-style">
+                                    <p>商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述</p>
+                                    <p>商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述</p>
+                                    <p>商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述</p>
+                                    <p>商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述商品详情描述</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--footer-->
+    <div class="ui blue vertical footer segment">
+        <div class="ui container">
+            <div class="ui stackable blue divided equal height stackable grid">
+                <div class="three wide column">
+                    <h4 class="ui blue header">About</h4>
+                    <div class="ui blue link list">
+                        <a href="#" class="item">Sitemap</a>
+                        <a href="#" class="item">Contact Us</a>
+                        <a href="#" class="item">Religious Ceremonies</a>
+                        <a href="#" class="item">Gazebo Plans</a>
+                    </div>
+                </div>
+                <div class="three wide column">
+                    <h4 class="ui blue header">Services</h4>
+                    <div class="ui blue link list">
+                        <a href="#" class="item">Banana Pre-Order</a>
+                        <a href="#" class="item">DNA FAQ</a>
+                        <a href="#" class="item">How To Access</a>
+                        <a href="#" class="item">Favorite X-Men</a>
+                    </div>
+                </div>
+                <div class="seven wide column">
+                    <h4 class="ui blue header">Footer Header</h4>
+                    <p>Extra space for a call to action inside the footer that could help re-engage users.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+<script>
+    // 商品图片弹出层
+    lightbox.option({
+        'resizeDuration': 200,
+        'wrapAround': true
+    });
+</script>
+</body>
+</html>
