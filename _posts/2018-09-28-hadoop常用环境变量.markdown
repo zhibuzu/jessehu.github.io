@@ -1,0 +1,22 @@
+---
+layout: post
+title:  "hadoop 常用环境变量"
+date:   2018-09-28 14:53 +0800
+categories: learn
+---
+| 环境变量名          | 意义解释                                 |
+| ------------------- | ---------------------------------------- |
+| HADOOP_HOME         | 计算节点上配置的hadoop client路径        |
+| LD_LIBRARY_PATH     | 计算节点上加载库文件的路径列表           |
+| PWD                 | 当前工作目录                             |
+| df_block_size       | 当前设置的HDFS文件块大小                 |
+| map_input_file      | mapper正在处理得输入文件路径，包含文件名 |
+| mapred_job_id       | 当前作业ID                               |
+| mapred_job_name     | 当前作业名称                             |
+| mapred_tip_id       | 当前任务的第几次重试                     |
+| mapred_task_id      | 任务ID                                   |
+| mapred_task_is_map  | 当前任务是否为map                        |
+| mapred_output_dir   | 计算输出路径                             |
+| mapred_map_tasks    | 计算的map任务数                          |
+| mapred_reduce_tasks | 计算的reduce的任务数                     |
+
