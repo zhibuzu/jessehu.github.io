@@ -1,0 +1,5595 @@
+From 23693a037bf9c287d37df1357878f39820f368f0 Mon Sep 17 00:00:00 2001
+From: hulifa <hulifa@baidu.com>
+Date: Fri, 28 Sep 2018 15:10:01 +0800
+Subject: [PATCH 1/2] some post
+
+---
+ .../minima.scssc                              |  Bin 0 -> 9229 bytes
+ .../_base.scssc                               |  Bin 0 -> 46942 bytes
+ .../_layout.scssc                             |  Bin 0 -> 48777 bytes
+ .../_syntax-highlighting.scssc                |  Bin 0 -> 44277 bytes
+ _posts/2018-09-23-test.markdown               |    9 -
+ _posts/2018-09-23-welcome-to-jekyll.markdown  |    2 +-
+ ...\240\201\345\220\227\357\274\237.markdown" |   49 +
+ ...\242\203\345\217\230\351\207\217.markdown" |   22 +
+ _site/404.html                                |    8 +-
+ _site/about/index.html                        |    8 +-
+ _site/feed.xml                                |  148 +-
+ _site/index.html                              |   21 +-
+ .../2018/09/23/welcome-to-jekyll.html         |   10 +-
+ _site/jekyll/update/2018/09/23/test.html      |   84 -
+ ...\345\242\203\345\217\230\351\207\217.html" |  142 ++
+ ...\347\274\226\347\240\201\345\220\227.html" |  164 ++
+ _site/static/css/manage.css                   | 1900 +++++++--------
+ _site/static/css/public.css                   | 2126 ++++++++---------
+ 18 files changed, 2561 insertions(+), 2132 deletions(-)
+ create mode 100644 .sass-cache/c7cbbc39cd3a5dac9be2e4a5062de59e41cc6ff5/minima.scssc
+ create mode 100644 .sass-cache/db85969e9cbc40af68be6066a9b54d49788ef835/_base.scssc
+ create mode 100644 .sass-cache/db85969e9cbc40af68be6066a9b54d49788ef835/_layout.scssc
+ create mode 100644 .sass-cache/db85969e9cbc40af68be6066a9b54d49788ef835/_syntax-highlighting.scssc
+ delete mode 100644 _posts/2018-09-23-test.markdown
+ create mode 100644 "_posts/2018-09-26-\344\275\240\344\272\206\350\247\243\345\255\227\347\254\246\351\233\206\343\200\201\345\255\227\347\254\246\347\274\226\347\240\201\345\220\227\357\274\237.markdown"
+ create mode 100644 "_posts/2018-09-28-hadoop\345\270\270\347\224\250\347\216\257\345\242\203\345\217\230\351\207\217.markdown"
+ rename _site/jekyll/{update => }/2018/09/23/welcome-to-jekyll.html (84%)
+ delete mode 100644 _site/jekyll/update/2018/09/23/test.html
+ create mode 100644 "_site/learn/2018/09/28/hadoop\345\270\270\347\224\250\347\216\257\345\242\203\345\217\230\351\207\217.html"
+ create mode 100644 "_site/learn/2018/09/28/\344\275\240\344\272\206\350\247\243\345\255\227\347\254\246\351\233\206-\345\255\227\347\254\246\347\274\226\347\240\201\345\220\227.html"
+
+diff --git a/.sass-cache/c7cbbc39cd3a5dac9be2e4a5062de59e41cc6ff5/minima.scssc b/.sass-cache/c7cbbc39cd3a5dac9be2e4a5062de59e41cc6ff5/minima.scssc
+new file mode 100644
+index 0000000000000000000000000000000000000000..539cda05164ab27698fe6cf00c3e9f9f5253c6ff
+GIT binary patch
+literal 9229
+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
+P@~<SsD)}o3Xwd!(KuOQg
+
+literal 0
+HcmV?d00001
+
+diff --git a/.sass-cache/db85969e9cbc40af68be6066a9b54d49788ef835/_base.scssc b/.sass-cache/db85969e9cbc40af68be6066a9b54d49788ef835/_base.scssc
+new file mode 100644
+index 0000000000000000000000000000000000000000..f0ec3e72bd183c9ebffaf69e28bc74ff93a47b94
+GIT binary patch
+literal 46942
+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
+
+literal 0
+HcmV?d00001
+
+diff --git a/.sass-cache/db85969e9cbc40af68be6066a9b54d49788ef835/_layout.scssc b/.sass-cache/db85969e9cbc40af68be6066a9b54d49788ef835/_layout.scssc
+new file mode 100644
+index 0000000000000000000000000000000000000000..f49a93cfb5fd6c3b567038eded34b8f81660587a
+GIT binary patch
+literal 48777
+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
+
+literal 0
+HcmV?d00001
+
+diff --git a/.sass-cache/db85969e9cbc40af68be6066a9b54d49788ef835/_syntax-highlighting.scssc b/.sass-cache/db85969e9cbc40af68be6066a9b54d49788ef835/_syntax-highlighting.scssc
+new file mode 100644
+index 0000000000000000000000000000000000000000..5b97f69ed0113f3b9473a78f215386f39a532756
+GIT binary patch
+literal 44277
+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
+Ng38p&&MsZJ{{K=k+$sP7
+
+literal 0
+HcmV?d00001
+
+diff --git a/_posts/2018-09-23-test.markdown b/_posts/2018-09-23-test.markdown
+deleted file mode 100644
+index 8321ba6..0000000
+--- a/_posts/2018-09-23-test.markdown
++++ /dev/null
+@@ -1,9 +0,0 @@
+----
+-layout: post
+-title:  "just test"
+-date:   2018-09-23 19:51
+-categories: jekyll update
+----
+-# 标题1
+-
+-> 你哈
+diff --git a/_posts/2018-09-23-welcome-to-jekyll.markdown b/_posts/2018-09-23-welcome-to-jekyll.markdown
+index b88cd2e..9a3d56b 100644
+--- a/_posts/2018-09-23-welcome-to-jekyll.markdown
++++ b/_posts/2018-09-23-welcome-to-jekyll.markdown
+@@ -2,7 +2,7 @@
+ layout: post
+ title:  "Welcome to Jekyll!"
+ date:   2018-09-23 19:27:08 +0800
+-categories: jekyll update
++categories: jekyll
+ ---
+ You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
+ 
+diff --git "a/_posts/2018-09-26-\344\275\240\344\272\206\350\247\243\345\255\227\347\254\246\351\233\206\343\200\201\345\255\227\347\254\246\347\274\226\347\240\201\345\220\227\357\274\237.markdown" "b/_posts/2018-09-26-\344\275\240\344\272\206\350\247\243\345\255\227\347\254\246\351\233\206\343\200\201\345\255\227\347\254\246\347\274\226\347\240\201\345\220\227\357\274\237.markdown"
+new file mode 100644
+index 0000000..87ad794
+--- /dev/null
++++ "b/_posts/2018-09-26-\344\275\240\344\272\206\350\247\243\345\255\227\347\254\246\351\233\206\343\200\201\345\255\227\347\254\246\347\274\226\347\240\201\345\220\227\357\274\237.markdown"
+@@ -0,0 +1,49 @@
++---
++layout: post
++title: "你了解字符集、字符编码吗？"
++date: 2018-09-28 12:49 +0800
++categories: learn
++---
++
++
++
++### 你了解字符集、字符编码吗？
++
++* **ASCII**: 使用一个字节表示一个字符，实际使用的只有一个字节的低7位，第8位永远是0，因此最多只能表示2^7=128个字符，主要用来表示基础的拉丁字符，如英文字母，数字等，包括95个可打印字符和33个控制字符；
++* **ISO 8859-n\(n=1,2,3…11,13…16,没有12\)**: 利用了ASCII字符集没有使用的最高位，使最多可表示的字符扩展到2^8=256个字符，可以支持许多欧洲国家的语言文字；
++  * 其中0x00 ~ 0x7f范围是与ASCII兼容的
++  * 0x80 ~ 0xff范围是在ASCII基础上的扩展字符集
++  * ISO 8859-n 字符集有多个系列，分别用于不同的欧洲语言地区，如西欧，北欧，东欧
++  * Latin-1是ISO 8859-1的别名
++* **GB2312**: 为了表示更大规模的汉字字符集，我国制定了国家简体中文字符集，即GB2312，使用一个字节表示拉丁字母来兼容ASCII，汉字使用两个字节表示，因此GB2312是变字节的字符集，但除了简体汉字外，还有繁体汉字及中日韩文字需要表示，因此还有BIG5，GBK，GB18030几种字符集，请看下表它们的区别；
++
++|  | GB2312 | BIG5 | GBK | GB18030 |
++| :--- | :--- | :--- | :--- | :--- |
++| 作用 | 国家简体中文字符集 | 统一繁体字符集 | GB2312扩展，加入对繁体字的支持 | 中日韩文字编码 |
++| 字节数 | 变字节：1字节 - 兼容ASCII        2字节 - 汉字 | 2字节 | 2字节 | 变字节：1字节 - 兼容ASCII  2字节，4字节 |
++| 范围 | 能表示7445个符号，包括6763个汉字 | 能表示21886个符号 | 能表示21886个符号 | 能表示27484个符号 |
++| 兼容性 | 兼容ASCII， 0x00 ~ 0x7F 与ASCII保持一致 | 兼容ASCII，但与GB2312有冲突 | 兼容GB2312 | 兼容GB2312 |
++
++* **Unicode**： 终极字符集，全世界通用，用4个字节表示一个字符，可以表达的字符数理论上可达21亿左右个。但每个字符用4个字节表示总觉得有些浪费啊，毕竟字节是要占存储空间的啊，还有一个问题是如何让计算机了解你是在用4个字节表示一个字符而不是4个ASCII表示4个字符 ，这两个问题一直困扰着Unicode的发展推广。
++* **UTF-8**: 直到出现UTF-8解决这两个问题，UTF-8不是一种字符集，而是对Unicode字符集的一种实现，这也意味着Unicode有其他实现方式，如UTF-16，UTF-32。而如此牛逼的UTF-8，话说当初是大神Ben Thomason吃饭的时候在一张餐巾纸上设计出来的！！UTF-8的实现规则如下：
++  * 对单字节字符，字节的第一位为0，后7位为该字符实际的Unicode码，所以对于拉丁字母，UTF-8与ASCII一致。
++  * 对于n\(n &gt; 1\)字节字符，第一个字节前n位都设为1，第n + 1位为0，后面字节的前两位均为10，剩下没有提及的位，就是字符的Unicode编码；
++  * 另外需要注意的是：UTF-8与GBK，GB2312这些汉字编码完全不兼容的。
++  * UTF-8字符编码理论可以表示的字符总数为：2^7 + 2^11 + 2^16 + 2^21 = 2164864,  两百多万个！！！
++
++### 常见问题及解答
++
++### 1.windows Notepad中的编码ANSI保存选项，代表什么含义？
++
++ANSI是windows的默认的编码方式，对于英文文件是ASCII编码，对于简体中文文件是GB2312编码（只针对Windows简体中文版，如果是繁体中文版会采用Big5码）。所以，**如果将一个UTF-8编码的文件，另存为ANSI的方式，对于中文部分会产生乱码**。
++
++### 2.什么是UTF-8的BOM？
++
++BOM的全称是Byte Order Mark，BOM是微软给UTF-8编码加上的，用于标识文件使用的是UTF-8编码，即在UTF-8编码的文件起始位置，加入三个字节“EE BB BF”。这是微软特有的，标准并不推荐包含BOM的方式。采用加BOM的UTF-8编码文件，对于一些只支持标准UTF-8编码的环境，可能导致问题。比如，在Go语言编程中，对于包含BOM的代码文件，会导致编译出错。详细可见我的[这篇文章](http://sharecore.info/blog/2013/04/05/parse-csv-to-sql-for-insert/)。
++
++### 参考资料
++
++* [http://blog.jobbole.com/76376/](http://blog.jobbole.com/76376/ "字符编码常识及问题解析")
++
++
++
+diff --git "a/_posts/2018-09-28-hadoop\345\270\270\347\224\250\347\216\257\345\242\203\345\217\230\351\207\217.markdown" "b/_posts/2018-09-28-hadoop\345\270\270\347\224\250\347\216\257\345\242\203\345\217\230\351\207\217.markdown"
+new file mode 100644
+index 0000000..78a6f04
+--- /dev/null
++++ "b/_posts/2018-09-28-hadoop\345\270\270\347\224\250\347\216\257\345\242\203\345\217\230\351\207\217.markdown"
+@@ -0,0 +1,22 @@
++---
++layout: post
++title:  "hadoop 常用环境变量"
++date:   2018-09-28 14:53 +0800
++categories: learn
++---
++| 环境变量名          | 意义解释                                 |
++| ------------------- | ---------------------------------------- |
++| HADOOP_HOME         | 计算节点上配置的hadoop client路径        |
++| LD_LIBRARY_PATH     | 计算节点上加载库文件的路径列表           |
++| PWD                 | 当前工作目录                             |
++| df_block_size       | 当前设置的HDFS文件块大小                 |
++| map_input_file      | mapper正在处理得输入文件路径，包含文件名 |
++| mapred_job_id       | 当前作业ID                               |
++| mapred_job_name     | 当前作业名称                             |
++| mapred_tip_id       | 当前任务的第几次重试                     |
++| mapred_task_id      | 任务ID                                   |
++| mapred_task_is_map  | 当前任务是否为map                        |
++| mapred_output_dir   | 计算输出路径                             |
++| mapred_map_tasks    | 计算的map任务数                          |
++| mapred_reduce_tasks | 计算的reduce的任务数                     |
++
+diff --git a/_site/404.html b/_site/404.html
+index a36ceab..459923f 100644
+--- a/_site/404.html
++++ b/_site/404.html
+@@ -9,13 +9,13 @@
+ <meta property="og:locale" content="en_US" />
+ <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+ <meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+-<link rel="canonical" href="http://localhost:4000/404.html" />
+-<meta property="og:url" content="http://localhost:4000/404.html" />
++<link rel="canonical" href="/404.html" />
++<meta property="og:url" content="/404.html" />
+ <meta property="og:site_name" content="I am who i am" />
+ <script type="application/ld+json">
+-{"description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@type":"WebPage","url":"http://localhost:4000/404.html","headline":"I am who i am","@context":"http://schema.org"}</script>
++{"url":"/404.html","headline":"I am who i am","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@type":"WebPage","@context":"http://schema.org"}</script>
+ <!-- End Jekyll SEO tag -->
+-<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="I am who i am" /></head>
++<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="I am who i am" /></head>
+ <body><header class="site-header" role="banner">
+ 
+   <div class="wrapper"><a class="site-title" rel="author" href="/">I am who i am</a><nav class="site-nav">
+diff --git a/_site/about/index.html b/_site/about/index.html
+index 2bca5c2..598e051 100644
+--- a/_site/about/index.html
++++ b/_site/about/index.html
+@@ -9,13 +9,13 @@
+ <meta property="og:locale" content="en_US" />
+ <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+ <meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+-<link rel="canonical" href="http://localhost:4000/about/" />
+-<meta property="og:url" content="http://localhost:4000/about/" />
++<link rel="canonical" href="/about/" />
++<meta property="og:url" content="/about/" />
+ <meta property="og:site_name" content="I am who i am" />
+ <script type="application/ld+json">
+-{"name":"I am who i am","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@type":"WebSite","url":"http://localhost:4000/about/","headline":"About","@context":"http://schema.org"}</script>
++{"url":"/about/","headline":"About","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","name":"I am who i am","@type":"WebSite","@context":"http://schema.org"}</script>
+ <!-- End Jekyll SEO tag -->
+-<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="I am who i am" /></head>
++<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="I am who i am" /></head>
+ <body><header class="site-header" role="banner">
+ 
+   <div class="wrapper"><a class="site-title" rel="author" href="/">I am who i am</a><nav class="site-nav">
+diff --git a/_site/feed.xml b/_site/feed.xml
+index bcaeb8f..8ae6a6c 100644
+--- a/_site/feed.xml
++++ b/_site/feed.xml
+@@ -1,8 +1,148 @@
+-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2018-09-23T19:51:46+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">I am who i am</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">just test</title><link href="http://localhost:4000/jekyll/update/2018/09/23/test.html" rel="alternate" type="text/html" title="just test" /><published>2018-09-23T19:51:00+08:00</published><updated>2018-09-23T19:51:00+08:00</updated><id>http://localhost:4000/jekyll/update/2018/09/23/test</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2018/09/23/test.html">&lt;h1 id=&quot;标题1&quot;&gt;标题1&lt;/h1&gt;
++<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2018-09-28T15:08:56+08:00</updated><id>/feed.xml</id><title type="html">I am who i am</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">hadoop 常用环境变量</title><link href="/learn/2018/09/28/hadoop%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.html" rel="alternate" type="text/html" title="hadoop 常用环境变量" /><published>2018-09-28T14:53:00+08:00</published><updated>2018-09-28T14:53:00+08:00</updated><id>/learn/2018/09/28/hadoop%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F</id><content type="html" xml:base="/learn/2018/09/28/hadoop%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.html">&lt;table&gt;
++  &lt;thead&gt;
++    &lt;tr&gt;
++      &lt;th&gt;环境变量名&lt;/th&gt;
++      &lt;th&gt;意义解释&lt;/th&gt;
++    &lt;/tr&gt;
++  &lt;/thead&gt;
++  &lt;tbody&gt;
++    &lt;tr&gt;
++      &lt;td&gt;HADOOP_HOME&lt;/td&gt;
++      &lt;td&gt;计算节点上配置的hadoop client路径&lt;/td&gt;
++    &lt;/tr&gt;
++    &lt;tr&gt;
++      &lt;td&gt;LD_LIBRARY_PATH&lt;/td&gt;
++      &lt;td&gt;计算节点上加载库文件的路径列表&lt;/td&gt;
++    &lt;/tr&gt;
++    &lt;tr&gt;
++      &lt;td&gt;PWD&lt;/td&gt;
++      &lt;td&gt;当前工作目录&lt;/td&gt;
++    &lt;/tr&gt;
++    &lt;tr&gt;
++      &lt;td&gt;df_block_size&lt;/td&gt;
++      &lt;td&gt;当前设置的HDFS文件块大小&lt;/td&gt;
++    &lt;/tr&gt;
++    &lt;tr&gt;
++      &lt;td&gt;map_input_file&lt;/td&gt;
++      &lt;td&gt;mapper正在处理得输入文件路径，包含文件名&lt;/td&gt;
++    &lt;/tr&gt;
++    &lt;tr&gt;
++      &lt;td&gt;mapred_job_id&lt;/td&gt;
++      &lt;td&gt;当前作业ID&lt;/td&gt;
++    &lt;/tr&gt;
++    &lt;tr&gt;
++      &lt;td&gt;mapred_job_name&lt;/td&gt;
++      &lt;td&gt;当前作业名称&lt;/td&gt;
++    &lt;/tr&gt;
++    &lt;tr&gt;
++      &lt;td&gt;mapred_tip_id&lt;/td&gt;
++      &lt;td&gt;当前任务的第几次重试&lt;/td&gt;
++    &lt;/tr&gt;
++    &lt;tr&gt;
++      &lt;td&gt;mapred_task_id&lt;/td&gt;
++      &lt;td&gt;任务ID&lt;/td&gt;
++    &lt;/tr&gt;
++    &lt;tr&gt;
++      &lt;td&gt;mapred_task_is_map&lt;/td&gt;
++      &lt;td&gt;当前任务是否为map&lt;/td&gt;
++    &lt;/tr&gt;
++    &lt;tr&gt;
++      &lt;td&gt;mapred_output_dir&lt;/td&gt;
++      &lt;td&gt;计算输出路径&lt;/td&gt;
++    &lt;/tr&gt;
++    &lt;tr&gt;
++      &lt;td&gt;mapred_map_tasks&lt;/td&gt;
++      &lt;td&gt;计算的map任务数&lt;/td&gt;
++    &lt;/tr&gt;
++    &lt;tr&gt;
++      &lt;td&gt;mapred_reduce_tasks&lt;/td&gt;
++      &lt;td&gt;计算的reduce的任务数&lt;/td&gt;
++    &lt;/tr&gt;
++  &lt;/tbody&gt;
++&lt;/table&gt;</content><author><name></name></author><summary type="html">环境变量名 意义解释 HADOOP_HOME 计算节点上配置的hadoop client路径 LD_LIBRARY_PATH 计算节点上加载库文件的路径列表 PWD 当前工作目录 df_block_size 当前设置的HDFS文件块大小 map_input_file mapper正在处理得输入文件路径，包含文件名 mapred_job_id 当前作业ID mapred_job_name 当前作业名称 mapred_tip_id 当前任务的第几次重试 mapred_task_id 任务ID mapred_task_is_map 当前任务是否为map mapred_output_dir 计算输出路径 mapred_map_tasks 计算的map任务数 mapred_reduce_tasks 计算的reduce的任务数</summary></entry><entry><title type="html">你了解字符集、字符编码吗？</title><link href="/learn/2018/09/28/%E4%BD%A0%E4%BA%86%E8%A7%A3%E5%AD%97%E7%AC%A6%E9%9B%86-%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E5%90%97.html" rel="alternate" type="text/html" title="你了解字符集、字符编码吗？" /><published>2018-09-28T12:49:00+08:00</published><updated>2018-09-28T12:49:00+08:00</updated><id>/learn/2018/09/28/%E4%BD%A0%E4%BA%86%E8%A7%A3%E5%AD%97%E7%AC%A6%E9%9B%86%E3%80%81%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E5%90%97%3F</id><content type="html" xml:base="/learn/2018/09/28/%E4%BD%A0%E4%BA%86%E8%A7%A3%E5%AD%97%E7%AC%A6%E9%9B%86-%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E5%90%97.html">&lt;h3 id=&quot;你了解字符集字符编码吗&quot;&gt;你了解字符集、字符编码吗？&lt;/h3&gt;
+ 
+-&lt;blockquote&gt;
+-  &lt;p&gt;你哈&lt;/p&gt;
+-&lt;/blockquote&gt;</content><author><name></name></author><summary type="html">标题1</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2018/09/23/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2018-09-23T19:27:08+08:00</published><updated>2018-09-23T19:27:08+08:00</updated><id>http://localhost:4000/jekyll/update/2018/09/23/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2018/09/23/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
++&lt;ul&gt;
++  &lt;li&gt;&lt;strong&gt;ASCII&lt;/strong&gt;: 使用一个字节表示一个字符，实际使用的只有一个字节的低7位，第8位永远是0，因此最多只能表示2^7=128个字符，主要用来表示基础的拉丁字符，如英文字母，数字等，包括95个可打印字符和33个控制字符；&lt;/li&gt;
++  &lt;li&gt;&lt;strong&gt;ISO 8859-n(n=1,2,3…11,13…16,没有12)&lt;/strong&gt;: 利用了ASCII字符集没有使用的最高位，使最多可表示的字符扩展到2^8=256个字符，可以支持许多欧洲国家的语言文字；
++    &lt;ul&gt;
++      &lt;li&gt;其中0x00 ~ 0x7f范围是与ASCII兼容的&lt;/li&gt;
++      &lt;li&gt;0x80 ~ 0xff范围是在ASCII基础上的扩展字符集&lt;/li&gt;
++      &lt;li&gt;ISO 8859-n 字符集有多个系列，分别用于不同的欧洲语言地区，如西欧，北欧，东欧&lt;/li&gt;
++      &lt;li&gt;Latin-1是ISO 8859-1的别名&lt;/li&gt;
++    &lt;/ul&gt;
++  &lt;/li&gt;
++  &lt;li&gt;&lt;strong&gt;GB2312&lt;/strong&gt;: 为了表示更大规模的汉字字符集，我国制定了国家简体中文字符集，即GB2312，使用一个字节表示拉丁字母来兼容ASCII，汉字使用两个字节表示，因此GB2312是变字节的字符集，但除了简体汉字外，还有繁体汉字及中日韩文字需要表示，因此还有BIG5，GBK，GB18030几种字符集，请看下表它们的区别；&lt;/li&gt;
++&lt;/ul&gt;
++
++&lt;table&gt;
++  &lt;thead&gt;
++    &lt;tr&gt;
++      &lt;th style=&quot;text-align: left&quot;&gt; &lt;/th&gt;
++      &lt;th style=&quot;text-align: left&quot;&gt;GB2312&lt;/th&gt;
++      &lt;th style=&quot;text-align: left&quot;&gt;BIG5&lt;/th&gt;
++      &lt;th style=&quot;text-align: left&quot;&gt;GBK&lt;/th&gt;
++      &lt;th style=&quot;text-align: left&quot;&gt;GB18030&lt;/th&gt;
++    &lt;/tr&gt;
++  &lt;/thead&gt;
++  &lt;tbody&gt;
++    &lt;tr&gt;
++      &lt;td style=&quot;text-align: left&quot;&gt;作用&lt;/td&gt;
++      &lt;td style=&quot;text-align: left&quot;&gt;国家简体中文字符集&lt;/td&gt;
++      &lt;td style=&quot;text-align: left&quot;&gt;统一繁体字符集&lt;/td&gt;
++      &lt;td style=&quot;text-align: left&quot;&gt;GB2312扩展，加入对繁体字的支持&lt;/td&gt;
++      &lt;td style=&quot;text-align: left&quot;&gt;中日韩文字编码&lt;/td&gt;
++    &lt;/tr&gt;
++    &lt;tr&gt;
++      &lt;td style=&quot;text-align: left&quot;&gt;字节数&lt;/td&gt;
++      &lt;td style=&quot;text-align: left&quot;&gt;变字节：1字节 - 兼容ASCII        2字节 - 汉字&lt;/td&gt;
++      &lt;td style=&quot;text-align: left&quot;&gt;2字节&lt;/td&gt;
++      &lt;td style=&quot;text-align: left&quot;&gt;2字节&lt;/td&gt;
++      &lt;td style=&quot;text-align: left&quot;&gt;变字节：1字节 - 兼容ASCII  2字节，4字节&lt;/td&gt;
++    &lt;/tr&gt;
++    &lt;tr&gt;
++      &lt;td style=&quot;text-align: left&quot;&gt;范围&lt;/td&gt;
++      &lt;td style=&quot;text-align: left&quot;&gt;能表示7445个符号，包括6763个汉字&lt;/td&gt;
++      &lt;td style=&quot;text-align: left&quot;&gt;能表示21886个符号&lt;/td&gt;
++      &lt;td style=&quot;text-align: left&quot;&gt;能表示21886个符号&lt;/td&gt;
++      &lt;td style=&quot;text-align: left&quot;&gt;能表示27484个符号&lt;/td&gt;
++    &lt;/tr&gt;
++    &lt;tr&gt;
++      &lt;td style=&quot;text-align: left&quot;&gt;兼容性&lt;/td&gt;
++      &lt;td style=&quot;text-align: left&quot;&gt;兼容ASCII， 0x00 ~ 0x7F 与ASCII保持一致&lt;/td&gt;
++      &lt;td style=&quot;text-align: left&quot;&gt;兼容ASCII，但与GB2312有冲突&lt;/td&gt;
++      &lt;td style=&quot;text-align: left&quot;&gt;兼容GB2312&lt;/td&gt;
++      &lt;td style=&quot;text-align: left&quot;&gt;兼容GB2312&lt;/td&gt;
++    &lt;/tr&gt;
++  &lt;/tbody&gt;
++&lt;/table&gt;
++
++&lt;ul&gt;
++  &lt;li&gt;&lt;strong&gt;Unicode&lt;/strong&gt;： 终极字符集，全世界通用，用4个字节表示一个字符，可以表达的字符数理论上可达21亿左右个。但每个字符用4个字节表示总觉得有些浪费啊，毕竟字节是要占存储空间的啊，还有一个问题是如何让计算机了解你是在用4个字节表示一个字符而不是4个ASCII表示4个字符 ，这两个问题一直困扰着Unicode的发展推广。&lt;/li&gt;
++  &lt;li&gt;&lt;strong&gt;UTF-8&lt;/strong&gt;: 直到出现UTF-8解决这两个问题，UTF-8不是一种字符集，而是对Unicode字符集的一种实现，这也意味着Unicode有其他实现方式，如UTF-16，UTF-32。而如此牛逼的UTF-8，话说当初是大神Ben Thomason吃饭的时候在一张餐巾纸上设计出来的！！UTF-8的实现规则如下：
++    &lt;ul&gt;
++      &lt;li&gt;对单字节字符，字节的第一位为0，后7位为该字符实际的Unicode码，所以对于拉丁字母，UTF-8与ASCII一致。&lt;/li&gt;
++      &lt;li&gt;对于n(n &amp;gt; 1)字节字符，第一个字节前n位都设为1，第n + 1位为0，后面字节的前两位均为10，剩下没有提及的位，就是字符的Unicode编码；&lt;/li&gt;
++      &lt;li&gt;另外需要注意的是：UTF-8与GBK，GB2312这些汉字编码完全不兼容的。&lt;/li&gt;
++      &lt;li&gt;UTF-8字符编码理论可以表示的字符总数为：2^7 + 2^11 + 2^16 + 2^21 = 2164864,  两百多万个！！！&lt;/li&gt;
++    &lt;/ul&gt;
++  &lt;/li&gt;
++&lt;/ul&gt;
++
++&lt;h3 id=&quot;常见问题及解答&quot;&gt;常见问题及解答&lt;/h3&gt;
++
++&lt;h3 id=&quot;1windows-notepad中的编码ansi保存选项代表什么含义&quot;&gt;1.windows Notepad中的编码ANSI保存选项，代表什么含义？&lt;/h3&gt;
++
++&lt;p&gt;ANSI是windows的默认的编码方式，对于英文文件是ASCII编码，对于简体中文文件是GB2312编码（只针对Windows简体中文版，如果是繁体中文版会采用Big5码）。所以，&lt;strong&gt;如果将一个UTF-8编码的文件，另存为ANSI的方式，对于中文部分会产生乱码&lt;/strong&gt;。&lt;/p&gt;
++
++&lt;h3 id=&quot;2什么是utf-8的bom&quot;&gt;2.什么是UTF-8的BOM？&lt;/h3&gt;
++
++&lt;p&gt;BOM的全称是Byte Order Mark，BOM是微软给UTF-8编码加上的，用于标识文件使用的是UTF-8编码，即在UTF-8编码的文件起始位置，加入三个字节“EE BB BF”。这是微软特有的，标准并不推荐包含BOM的方式。采用加BOM的UTF-8编码文件，对于一些只支持标准UTF-8编码的环境，可能导致问题。比如，在Go语言编程中，对于包含BOM的代码文件，会导致编译出错。详细可见我的&lt;a href=&quot;http://sharecore.info/blog/2013/04/05/parse-csv-to-sql-for-insert/&quot;&gt;这篇文章&lt;/a&gt;。&lt;/p&gt;
++
++&lt;h3 id=&quot;参考资料&quot;&gt;参考资料&lt;/h3&gt;
++
++&lt;ul&gt;
++  &lt;li&gt;&lt;a href=&quot;http://blog.jobbole.com/76376/&quot; title=&quot;字符编码常识及问题解析&quot;&gt;http://blog.jobbole.com/76376/&lt;/a&gt;&lt;/li&gt;
++&lt;/ul&gt;</content><author><name></name></author><summary type="html">你了解字符集、字符编码吗？</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="/jekyll/2018/09/23/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2018-09-23T19:27:08+08:00</published><updated>2018-09-23T19:27:08+08:00</updated><id>/jekyll/2018/09/23/welcome-to-jekyll</id><content type="html" xml:base="/jekyll/2018/09/23/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+ 
+ &lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
+ 
+diff --git a/_site/index.html b/_site/index.html
+index eb81ca4..83a797f 100644
+--- a/_site/index.html
++++ b/_site/index.html
+@@ -9,13 +9,13 @@
+ <meta property="og:locale" content="en_US" />
+ <meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+ <meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
+-<link rel="canonical" href="http://localhost:4000/" />
+-<meta property="og:url" content="http://localhost:4000/" />
++<link rel="canonical" href="/" />
++<meta property="og:url" content="/" />
+ <meta property="og:site_name" content="I am who i am" />
+ <script type="application/ld+json">
+-{"name":"I am who i am","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@type":"WebSite","url":"http://localhost:4000/","headline":"I am who i am","@context":"http://schema.org"}</script>
++{"url":"/","headline":"I am who i am","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","name":"I am who i am","@type":"WebSite","@context":"http://schema.org"}</script>
+ <!-- End Jekyll SEO tag -->
+-<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="I am who i am" /></head>
++<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="I am who i am" /></head>
+ <body><header class="site-header" role="banner">
+ 
+   <div class="wrapper"><a class="site-title" rel="author" href="/">I am who i am</a><nav class="site-nav">
+@@ -35,14 +35,19 @@
+       <div class="wrapper">
+         <div class="home">
+ <h2 class="post-list-heading">Posts</h2>
+-    <ul class="post-list"><li><span class="post-meta">Sep 23, 2018</span>
++    <ul class="post-list"><li><span class="post-meta">Sep 28, 2018</span>
+         <h3>
+-          <a class="post-link" href="/jekyll/update/2018/09/23/test.html">
+-            just test
++          <a class="post-link" href="/learn/2018/09/28/hadoop%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.html">
++            hadoop 常用环境变量
++          </a>
++        </h3></li><li><span class="post-meta">Sep 28, 2018</span>
++        <h3>
++          <a class="post-link" href="/learn/2018/09/28/%E4%BD%A0%E4%BA%86%E8%A7%A3%E5%AD%97%E7%AC%A6%E9%9B%86-%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E5%90%97.html">
++            你了解字符集、字符编码吗？
+           </a>
+         </h3></li><li><span class="post-meta">Sep 23, 2018</span>
+         <h3>
+-          <a class="post-link" href="/jekyll/update/2018/09/23/welcome-to-jekyll.html">
++          <a class="post-link" href="/jekyll/2018/09/23/welcome-to-jekyll.html">
+             Welcome to Jekyll!
+           </a>
+         </h3></li></ul>
+diff --git a/_site/jekyll/update/2018/09/23/welcome-to-jekyll.html b/_site/jekyll/2018/09/23/welcome-to-jekyll.html
+similarity index 84%
+rename from _site/jekyll/update/2018/09/23/welcome-to-jekyll.html
+rename to _site/jekyll/2018/09/23/welcome-to-jekyll.html
+index 10cbfa6..1ccfdd0 100644
+--- a/_site/jekyll/update/2018/09/23/welcome-to-jekyll.html
++++ b/_site/jekyll/2018/09/23/welcome-to-jekyll.html
+@@ -9,15 +9,15 @@
+ <meta property="og:locale" content="en_US" />
+ <meta name="description" content="You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated." />
+ <meta property="og:description" content="You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated." />
+-<link rel="canonical" href="http://localhost:4000/jekyll/update/2018/09/23/welcome-to-jekyll.html" />
+-<meta property="og:url" content="http://localhost:4000/jekyll/update/2018/09/23/welcome-to-jekyll.html" />
++<link rel="canonical" href="/jekyll/2018/09/23/welcome-to-jekyll.html" />
++<meta property="og:url" content="/jekyll/2018/09/23/welcome-to-jekyll.html" />
+ <meta property="og:site_name" content="I am who i am" />
+ <meta property="og:type" content="article" />
+ <meta property="article:published_time" content="2018-09-23T19:27:08+08:00" />
+ <script type="application/ld+json">
+-{"description":"You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.","@type":"BlogPosting","url":"http://localhost:4000/jekyll/update/2018/09/23/welcome-to-jekyll.html","headline":"Welcome to Jekyll!","dateModified":"2018-09-23T19:27:08+08:00","datePublished":"2018-09-23T19:27:08+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/jekyll/update/2018/09/23/welcome-to-jekyll.html"},"@context":"http://schema.org"}</script>
++{"url":"/jekyll/2018/09/23/welcome-to-jekyll.html","headline":"Welcome to Jekyll!","dateModified":"2018-09-23T19:27:08+08:00","datePublished":"2018-09-23T19:27:08+08:00","description":"You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.","mainEntityOfPage":{"@type":"WebPage","@id":"/jekyll/2018/09/23/welcome-to-jekyll.html"},"@type":"BlogPosting","@context":"http://schema.org"}</script>
+ <!-- End Jekyll SEO tag -->
+-<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="I am who i am" /></head>
++<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="I am who i am" /></head>
+ <body><header class="site-header" role="banner">
+ 
+   <div class="wrapper"><a class="site-title" rel="author" href="/">I am who i am</a><nav class="site-nav">
+@@ -60,7 +60,7 @@
+ <p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
+ 
+ 
+-  </div><a class="u-url" href="/jekyll/update/2018/09/23/welcome-to-jekyll.html" hidden></a>
++  </div><a class="u-url" href="/jekyll/2018/09/23/welcome-to-jekyll.html" hidden></a>
+ </article>
+ 
+       </div>
+diff --git a/_site/jekyll/update/2018/09/23/test.html b/_site/jekyll/update/2018/09/23/test.html
+deleted file mode 100644
+index 69acd3a..0000000
+--- a/_site/jekyll/update/2018/09/23/test.html
++++ /dev/null
+@@ -1,84 +0,0 @@
+-<!DOCTYPE html>
+-<html lang="en"><head>
+-  <meta charset="utf-8">
+-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+-  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.5.0 -->
+-<title>just test | I am who i am</title>
+-<meta name="generator" content="Jekyll v3.8.4" />
+-<meta property="og:title" content="just test" />
+-<meta property="og:locale" content="en_US" />
+-<meta name="description" content="标题1" />
+-<meta property="og:description" content="标题1" />
+-<link rel="canonical" href="http://localhost:4000/jekyll/update/2018/09/23/test.html" />
+-<meta property="og:url" content="http://localhost:4000/jekyll/update/2018/09/23/test.html" />
+-<meta property="og:site_name" content="I am who i am" />
+-<meta property="og:type" content="article" />
+-<meta property="article:published_time" content="2018-09-23T19:51:00+08:00" />
+-<script type="application/ld+json">
+-{"description":"标题1","@type":"BlogPosting","url":"http://localhost:4000/jekyll/update/2018/09/23/test.html","headline":"just test","dateModified":"2018-09-23T19:51:00+08:00","datePublished":"2018-09-23T19:51:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/jekyll/update/2018/09/23/test.html"},"@context":"http://schema.org"}</script>
+-<!-- End Jekyll SEO tag -->
+-<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="I am who i am" /></head>
+-<body><header class="site-header" role="banner">
+-
+-  <div class="wrapper"><a class="site-title" rel="author" href="/">I am who i am</a><nav class="site-nav">
+-        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+-        <label for="nav-trigger">
+-          <span class="menu-icon">
+-            <svg viewBox="0 0 18 15" width="18px" height="15px">
+-              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+-            </svg>
+-          </span>
+-        </label>
+-
+-        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+-      </nav></div>
+-</header>
+-<main class="page-content" aria-label="Content">
+-      <div class="wrapper">
+-        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+-
+-  <header class="post-header">
+-    <h1 class="post-title p-name" itemprop="name headline">just test</h1>
+-    <p class="post-meta">
+-      <time class="dt-published" datetime="2018-09-23T19:51:00+08:00" itemprop="datePublished">Sep 23, 2018
+-      </time></p>
+-  </header>
+-
+-  <div class="post-content e-content" itemprop="articleBody">
+-    <h1 id="标题1">标题1</h1>
+-
+-<blockquote>
+-  <p>你哈</p>
+-</blockquote>
+-
+-  </div><a class="u-url" href="/jekyll/update/2018/09/23/test.html" hidden></a>
+-</article>
+-
+-      </div>
+-    </main><footer class="site-footer h-card">
+-  <data class="u-url" href="/"></data>
+-
+-  <div class="wrapper">
+-
+-    <h2 class="footer-heading">I am who i am</h2>
+-
+-    <div class="footer-col-wrapper">
+-      <div class="footer-col footer-col-1">
+-        <ul class="contact-list">
+-          <li class="p-name">I am who i am</li><li><a class="u-email" href="mailto:hu2014jesse@gmail.com">hu2014jesse@gmail.com</a></li></ul>
+-      </div>
+-
+-      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/zhibuzu"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">zhibuzu</span></a></li><li><a href="https://www.twitter.com/None"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">None</span></a></li></ul>
+-</div>
+-
+-      <div class="footer-col footer-col-3">
+-        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
+-      </div>
+-    </div>
+-
+-  </div>
+-
+-</footer>
+-</body>
+-
+-</html>
+diff --git "a/_site/learn/2018/09/28/hadoop\345\270\270\347\224\250\347\216\257\345\242\203\345\217\230\351\207\217.html" "b/_site/learn/2018/09/28/hadoop\345\270\270\347\224\250\347\216\257\345\242\203\345\217\230\351\207\217.html"
+new file mode 100644
+index 0000000..dabe456
+--- /dev/null
++++ "b/_site/learn/2018/09/28/hadoop\345\270\270\347\224\250\347\216\257\345\242\203\345\217\230\351\207\217.html"
+@@ -0,0 +1,142 @@
++<!DOCTYPE html>
++<html lang="en"><head>
++  <meta charset="utf-8">
++  <meta http-equiv="X-UA-Compatible" content="IE=edge">
++  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.5.0 -->
++<title>hadoop 常用环境变量 | I am who i am</title>
++<meta name="generator" content="Jekyll v3.8.4" />
++<meta property="og:title" content="hadoop 常用环境变量" />
++<meta property="og:locale" content="en_US" />
++<meta name="description" content="环境变量名 意义解释 HADOOP_HOME 计算节点上配置的hadoop client路径 LD_LIBRARY_PATH 计算节点上加载库文件的路径列表 PWD 当前工作目录 df_block_size 当前设置的HDFS文件块大小 map_input_file mapper正在处理得输入文件路径，包含文件名 mapred_job_id 当前作业ID mapred_job_name 当前作业名称 mapred_tip_id 当前任务的第几次重试 mapred_task_id 任务ID mapred_task_is_map 当前任务是否为map mapred_output_dir 计算输出路径 mapred_map_tasks 计算的map任务数 mapred_reduce_tasks 计算的reduce的任务数" />
++<meta property="og:description" content="环境变量名 意义解释 HADOOP_HOME 计算节点上配置的hadoop client路径 LD_LIBRARY_PATH 计算节点上加载库文件的路径列表 PWD 当前工作目录 df_block_size 当前设置的HDFS文件块大小 map_input_file mapper正在处理得输入文件路径，包含文件名 mapred_job_id 当前作业ID mapred_job_name 当前作业名称 mapred_tip_id 当前任务的第几次重试 mapred_task_id 任务ID mapred_task_is_map 当前任务是否为map mapred_output_dir 计算输出路径 mapred_map_tasks 计算的map任务数 mapred_reduce_tasks 计算的reduce的任务数" />
++<link rel="canonical" href="/learn/2018/09/28/hadoop%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.html" />
++<meta property="og:url" content="/learn/2018/09/28/hadoop%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.html" />
++<meta property="og:site_name" content="I am who i am" />
++<meta property="og:type" content="article" />
++<meta property="article:published_time" content="2018-09-28T14:53:00+08:00" />
++<script type="application/ld+json">
++{"url":"/learn/2018/09/28/hadoop%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.html","headline":"hadoop 常用环境变量","dateModified":"2018-09-28T14:53:00+08:00","datePublished":"2018-09-28T14:53:00+08:00","description":"环境变量名 意义解释 HADOOP_HOME 计算节点上配置的hadoop client路径 LD_LIBRARY_PATH 计算节点上加载库文件的路径列表 PWD 当前工作目录 df_block_size 当前设置的HDFS文件块大小 map_input_file mapper正在处理得输入文件路径，包含文件名 mapred_job_id 当前作业ID mapred_job_name 当前作业名称 mapred_tip_id 当前任务的第几次重试 mapred_task_id 任务ID mapred_task_is_map 当前任务是否为map mapred_output_dir 计算输出路径 mapred_map_tasks 计算的map任务数 mapred_reduce_tasks 计算的reduce的任务数","mainEntityOfPage":{"@type":"WebPage","@id":"/learn/2018/09/28/hadoop%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.html"},"@type":"BlogPosting","@context":"http://schema.org"}</script>
++<!-- End Jekyll SEO tag -->
++<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="I am who i am" /></head>
++<body><header class="site-header" role="banner">
++
++  <div class="wrapper"><a class="site-title" rel="author" href="/">I am who i am</a><nav class="site-nav">
++        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
++        <label for="nav-trigger">
++          <span class="menu-icon">
++            <svg viewBox="0 0 18 15" width="18px" height="15px">
++              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
++            </svg>
++          </span>
++        </label>
++
++        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
++      </nav></div>
++</header>
++<main class="page-content" aria-label="Content">
++      <div class="wrapper">
++        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
++
++  <header class="post-header">
++    <h1 class="post-title p-name" itemprop="name headline">hadoop 常用环境变量</h1>
++    <p class="post-meta">
++      <time class="dt-published" datetime="2018-09-28T14:53:00+08:00" itemprop="datePublished">Sep 28, 2018
++      </time></p>
++  </header>
++
++  <div class="post-content e-content" itemprop="articleBody">
++    <table>
++  <thead>
++    <tr>
++      <th>环境变量名</th>
++      <th>意义解释</th>
++    </tr>
++  </thead>
++  <tbody>
++    <tr>
++      <td>HADOOP_HOME</td>
++      <td>计算节点上配置的hadoop client路径</td>
++    </tr>
++    <tr>
++      <td>LD_LIBRARY_PATH</td>
++      <td>计算节点上加载库文件的路径列表</td>
++    </tr>
++    <tr>
++      <td>PWD</td>
++      <td>当前工作目录</td>
++    </tr>
++    <tr>
++      <td>df_block_size</td>
++      <td>当前设置的HDFS文件块大小</td>
++    </tr>
++    <tr>
++      <td>map_input_file</td>
++      <td>mapper正在处理得输入文件路径，包含文件名</td>
++    </tr>
++    <tr>
++      <td>mapred_job_id</td>
++      <td>当前作业ID</td>
++    </tr>
++    <tr>
++      <td>mapred_job_name</td>
++      <td>当前作业名称</td>
++    </tr>
++    <tr>
++      <td>mapred_tip_id</td>
++      <td>当前任务的第几次重试</td>
++    </tr>
++    <tr>
++      <td>mapred_task_id</td>
++      <td>任务ID</td>
++    </tr>
++    <tr>
++      <td>mapred_task_is_map</td>
++      <td>当前任务是否为map</td>
++    </tr>
++    <tr>
++      <td>mapred_output_dir</td>
++      <td>计算输出路径</td>
++    </tr>
++    <tr>
++      <td>mapred_map_tasks</td>
++      <td>计算的map任务数</td>
++    </tr>
++    <tr>
++      <td>mapred_reduce_tasks</td>
++      <td>计算的reduce的任务数</td>
++    </tr>
++  </tbody>
++</table>
++
++
++  </div><a class="u-url" href="/learn/2018/09/28/hadoop%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.html" hidden></a>
++</article>
++
++      </div>
++    </main><footer class="site-footer h-card">
++  <data class="u-url" href="/"></data>
++
++  <div class="wrapper">
++
++    <h2 class="footer-heading">I am who i am</h2>
++
++    <div class="footer-col-wrapper">
++      <div class="footer-col footer-col-1">
++        <ul class="contact-list">
++          <li class="p-name">I am who i am</li><li><a class="u-email" href="mailto:hu2014jesse@gmail.com">hu2014jesse@gmail.com</a></li></ul>
++      </div>
++
++      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/zhibuzu"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">zhibuzu</span></a></li><li><a href="https://www.twitter.com/None"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">None</span></a></li></ul>
++</div>
++
++      <div class="footer-col footer-col-3">
++        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
++      </div>
++    </div>
++
++  </div>
++
++</footer>
++</body>
++
++</html>
+diff --git "a/_site/learn/2018/09/28/\344\275\240\344\272\206\350\247\243\345\255\227\347\254\246\351\233\206-\345\255\227\347\254\246\347\274\226\347\240\201\345\220\227.html" "b/_site/learn/2018/09/28/\344\275\240\344\272\206\350\247\243\345\255\227\347\254\246\351\233\206-\345\255\227\347\254\246\347\274\226\347\240\201\345\220\227.html"
+new file mode 100644
+index 0000000..2affe99
+--- /dev/null
++++ "b/_site/learn/2018/09/28/\344\275\240\344\272\206\350\247\243\345\255\227\347\254\246\351\233\206-\345\255\227\347\254\246\347\274\226\347\240\201\345\220\227.html"
+@@ -0,0 +1,164 @@
++<!DOCTYPE html>
++<html lang="en"><head>
++  <meta charset="utf-8">
++  <meta http-equiv="X-UA-Compatible" content="IE=edge">
++  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.5.0 -->
++<title>你了解字符集、字符编码吗？ | I am who i am</title>
++<meta name="generator" content="Jekyll v3.8.4" />
++<meta property="og:title" content="你了解字符集、字符编码吗？" />
++<meta property="og:locale" content="en_US" />
++<meta name="description" content="你了解字符集、字符编码吗？" />
++<meta property="og:description" content="你了解字符集、字符编码吗？" />
++<link rel="canonical" href="/learn/2018/09/28/%E4%BD%A0%E4%BA%86%E8%A7%A3%E5%AD%97%E7%AC%A6%E9%9B%86-%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E5%90%97.html" />
++<meta property="og:url" content="/learn/2018/09/28/%E4%BD%A0%E4%BA%86%E8%A7%A3%E5%AD%97%E7%AC%A6%E9%9B%86-%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E5%90%97.html" />
++<meta property="og:site_name" content="I am who i am" />
++<meta property="og:type" content="article" />
++<meta property="article:published_time" content="2018-09-28T12:49:00+08:00" />
++<script type="application/ld+json">
++{"url":"/learn/2018/09/28/%E4%BD%A0%E4%BA%86%E8%A7%A3%E5%AD%97%E7%AC%A6%E9%9B%86-%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E5%90%97.html","headline":"你了解字符集、字符编码吗？","dateModified":"2018-09-28T12:49:00+08:00","datePublished":"2018-09-28T12:49:00+08:00","description":"你了解字符集、字符编码吗？","mainEntityOfPage":{"@type":"WebPage","@id":"/learn/2018/09/28/%E4%BD%A0%E4%BA%86%E8%A7%A3%E5%AD%97%E7%AC%A6%E9%9B%86-%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E5%90%97.html"},"@type":"BlogPosting","@context":"http://schema.org"}</script>
++<!-- End Jekyll SEO tag -->
++<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="I am who i am" /></head>
++<body><header class="site-header" role="banner">
++
++  <div class="wrapper"><a class="site-title" rel="author" href="/">I am who i am</a><nav class="site-nav">
++        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
++        <label for="nav-trigger">
++          <span class="menu-icon">
++            <svg viewBox="0 0 18 15" width="18px" height="15px">
++              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
++            </svg>
++          </span>
++        </label>
++
++        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
++      </nav></div>
++</header>
++<main class="page-content" aria-label="Content">
++      <div class="wrapper">
++        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
++
++  <header class="post-header">
++    <h1 class="post-title p-name" itemprop="name headline">你了解字符集、字符编码吗？</h1>
++    <p class="post-meta">
++      <time class="dt-published" datetime="2018-09-28T12:49:00+08:00" itemprop="datePublished">Sep 28, 2018
++      </time></p>
++  </header>
++
++  <div class="post-content e-content" itemprop="articleBody">
++    <h3 id="你了解字符集字符编码吗">你了解字符集、字符编码吗？</h3>
++
++<ul>
++  <li><strong>ASCII</strong>: 使用一个字节表示一个字符，实际使用的只有一个字节的低7位，第8位永远是0，因此最多只能表示2^7=128个字符，主要用来表示基础的拉丁字符，如英文字母，数字等，包括95个可打印字符和33个控制字符；</li>
++  <li><strong>ISO 8859-n(n=1,2,3…11,13…16,没有12)</strong>: 利用了ASCII字符集没有使用的最高位，使最多可表示的字符扩展到2^8=256个字符，可以支持许多欧洲国家的语言文字；
++    <ul>
++      <li>其中0x00 ~ 0x7f范围是与ASCII兼容的</li>
++      <li>0x80 ~ 0xff范围是在ASCII基础上的扩展字符集</li>
++      <li>ISO 8859-n 字符集有多个系列，分别用于不同的欧洲语言地区，如西欧，北欧，东欧</li>
++      <li>Latin-1是ISO 8859-1的别名</li>
++    </ul>
++  </li>
++  <li><strong>GB2312</strong>: 为了表示更大规模的汉字字符集，我国制定了国家简体中文字符集，即GB2312，使用一个字节表示拉丁字母来兼容ASCII，汉字使用两个字节表示，因此GB2312是变字节的字符集，但除了简体汉字外，还有繁体汉字及中日韩文字需要表示，因此还有BIG5，GBK，GB18030几种字符集，请看下表它们的区别；</li>
++</ul>
++
++<table>
++  <thead>
++    <tr>
++      <th style="text-align: left"> </th>
++      <th style="text-align: left">GB2312</th>
++      <th style="text-align: left">BIG5</th>
++      <th style="text-align: left">GBK</th>
++      <th style="text-align: left">GB18030</th>
++    </tr>
++  </thead>
++  <tbody>
++    <tr>
++      <td style="text-align: left">作用</td>
++      <td style="text-align: left">国家简体中文字符集</td>
++      <td style="text-align: left">统一繁体字符集</td>
++      <td style="text-align: left">GB2312扩展，加入对繁体字的支持</td>
++      <td style="text-align: left">中日韩文字编码</td>
++    </tr>
++    <tr>
++      <td style="text-align: left">字节数</td>
++      <td style="text-align: left">变字节：1字节 - 兼容ASCII        2字节 - 汉字</td>
++      <td style="text-align: left">2字节</td>
++      <td style="text-align: left">2字节</td>
++      <td style="text-align: left">变字节：1字节 - 兼容ASCII  2字节，4字节</td>
++    </tr>
++    <tr>
++      <td style="text-align: left">范围</td>
++      <td style="text-align: left">能表示7445个符号，包括6763个汉字</td>
++      <td style="text-align: left">能表示21886个符号</td>
++      <td style="text-align: left">能表示21886个符号</td>
++      <td style="text-align: left">能表示27484个符号</td>
++    </tr>
++    <tr>
++      <td style="text-align: left">兼容性</td>
++      <td style="text-align: left">兼容ASCII， 0x00 ~ 0x7F 与ASCII保持一致</td>
++      <td style="text-align: left">兼容ASCII，但与GB2312有冲突</td>
++      <td style="text-align: left">兼容GB2312</td>
++      <td style="text-align: left">兼容GB2312</td>
++    </tr>
++  </tbody>
++</table>
++
++<ul>
++  <li><strong>Unicode</strong>： 终极字符集，全世界通用，用4个字节表示一个字符，可以表达的字符数理论上可达21亿左右个。但每个字符用4个字节表示总觉得有些浪费啊，毕竟字节是要占存储空间的啊，还有一个问题是如何让计算机了解你是在用4个字节表示一个字符而不是4个ASCII表示4个字符 ，这两个问题一直困扰着Unicode的发展推广。</li>
++  <li><strong>UTF-8</strong>: 直到出现UTF-8解决这两个问题，UTF-8不是一种字符集，而是对Unicode字符集的一种实现，这也意味着Unicode有其他实现方式，如UTF-16，UTF-32。而如此牛逼的UTF-8，话说当初是大神Ben Thomason吃饭的时候在一张餐巾纸上设计出来的！！UTF-8的实现规则如下：
++    <ul>
++      <li>对单字节字符，字节的第一位为0，后7位为该字符实际的Unicode码，所以对于拉丁字母，UTF-8与ASCII一致。</li>
++      <li>对于n(n &gt; 1)字节字符，第一个字节前n位都设为1，第n + 1位为0，后面字节的前两位均为10，剩下没有提及的位，就是字符的Unicode编码；</li>
++      <li>另外需要注意的是：UTF-8与GBK，GB2312这些汉字编码完全不兼容的。</li>
++      <li>UTF-8字符编码理论可以表示的字符总数为：2^7 + 2^11 + 2^16 + 2^21 = 2164864,  两百多万个！！！</li>
++    </ul>
++  </li>
++</ul>
++
++<h3 id="常见问题及解答">常见问题及解答</h3>
++
++<h3 id="1windows-notepad中的编码ansi保存选项代表什么含义">1.windows Notepad中的编码ANSI保存选项，代表什么含义？</h3>
++
++<p>ANSI是windows的默认的编码方式，对于英文文件是ASCII编码，对于简体中文文件是GB2312编码（只针对Windows简体中文版，如果是繁体中文版会采用Big5码）。所以，<strong>如果将一个UTF-8编码的文件，另存为ANSI的方式，对于中文部分会产生乱码</strong>。</p>
++
++<h3 id="2什么是utf-8的bom">2.什么是UTF-8的BOM？</h3>
++
++<p>BOM的全称是Byte Order Mark，BOM是微软给UTF-8编码加上的，用于标识文件使用的是UTF-8编码，即在UTF-8编码的文件起始位置，加入三个字节“EE BB BF”。这是微软特有的，标准并不推荐包含BOM的方式。采用加BOM的UTF-8编码文件，对于一些只支持标准UTF-8编码的环境，可能导致问题。比如，在Go语言编程中，对于包含BOM的代码文件，会导致编译出错。详细可见我的<a href="http://sharecore.info/blog/2013/04/05/parse-csv-to-sql-for-insert/">这篇文章</a>。</p>
++
++<h3 id="参考资料">参考资料</h3>
++
++<ul>
++  <li><a href="http://blog.jobbole.com/76376/" title="字符编码常识及问题解析">http://blog.jobbole.com/76376/</a></li>
++</ul>
++
++
++  </div><a class="u-url" href="/learn/2018/09/28/%E4%BD%A0%E4%BA%86%E8%A7%A3%E5%AD%97%E7%AC%A6%E9%9B%86-%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E5%90%97.html" hidden></a>
++</article>
++
++      </div>
++    </main><footer class="site-footer h-card">
++  <data class="u-url" href="/"></data>
++
++  <div class="wrapper">
++
++    <h2 class="footer-heading">I am who i am</h2>
++
++    <div class="footer-col-wrapper">
++      <div class="footer-col footer-col-1">
++        <ul class="contact-list">
++          <li class="p-name">I am who i am</li><li><a class="u-email" href="mailto:hu2014jesse@gmail.com">hu2014jesse@gmail.com</a></li></ul>
++      </div>
++
++      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/zhibuzu"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">zhibuzu</span></a></li><li><a href="https://www.twitter.com/None"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">None</span></a></li></ul>
++</div>
++
++      <div class="footer-col footer-col-3">
++        <p>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</p>
++      </div>
++    </div>
++
++  </div>
++
++</footer>
++</body>
++
++</html>
+diff --git a/_site/static/css/manage.css b/_site/static/css/manage.css
+index 5386611..7621e01 100644
+--- a/_site/static/css/manage.css
++++ b/_site/static/css/manage.css
+@@ -1,950 +1,950 @@
+-/* LESS Document */
+-@charset "utf-8";
+-/*常用的注释*/
+-body {
+-  margin: 0;
+-  min-width: 320px;
+-  font-family: "ts01";
+-  font-family: "Arial", "Helvetica", "sans-serif", "微软雅黑";
+-  font-size: 12px;
+-}
+-div,
+-dl,
+-dt,
+-dd,
+-ul,
+-ol,
+-li,
+-h1,
+-h2,
+-h3,
+-h4,
+-h5,
+-h6,
+-pre,
+-form,
+-fieldset,
+-input,
+-textarea,
+-blockquote,
+-p,
+-table,
+-th,
+-td {
+-  padding: 0;
+-  margin: 0;
+-  text-decoration: none;
+-  list-style-type: none;
+-  font-weight: normal;
+-}
+-a,
+-a:link,
+-a:hover,
+-a:visited,
+-a:active {
+-  text-decoration: none;
+-  cursor: pointer;
+-}
+-img {
+-  display: block;
+-  border: none;
+-}
+-textarea {
+-  resize: none;
+-}
+-input,
+-button,
+-select,
+-textarea {
+-  margin: 0;
+-  padding: 0;
+-  border: none;
+-  outline: none;
+-  font-family: "ts01";
+-  font-family: "Arial", "Helvetica", "sans-serif", "微软雅黑";
+-}
+-input[type="button"],
+-button,
+-input[type=submit] {
+-  cursor: pointer;
+-}
+-em,
+-i {
+-  list-style: none;
+-  font-weight: normal;
+-  font-style: normal;
+-}
+-/*常用的css样式*/
+-.fl {
+-  float: left;
+-}
+-.fr {
+-  float: right;
+-}
+-.clear:after {
+-  clear: both;
+-  width: 0;
+-  height: 0;
+-  content: "";
+-  display: block;
+-  zoom: 1;
+-}
+-.ellipsis {
+-  overflow: hidden;
+-  text-overflow: ellipsis;
+-  white-space: nowrap;
+-}
+-@font-face {
+-  font-family: 'ts01';
+-  src: url('../fonts/NOTOSANSHANS-REGULAR.eot');
+-  src: url('../fonts/NOTOSANSHANS-REGULAR.eot?#iefix') format('embedded-opentype'), url('../fonts/NOTOSANSHANS-REGULAR.woff') format('woff'), url('../fonts/NOTOSANSHANS-REGULAR.ttf') format('truetype'), url('../fonts/NOTOSANSHANS-REGULAR.otf') format('truetype'), url('../fonts/NOTOSANSHANS-REGULAR.svg#NOTOSANSHANS-REGULAR') format('svg');
+-  font-style: normal;
+-  font-weight: normal;
+-}
+-.banner01 .text {
+-  font-size: 42px;
+-  line-height: 42px;
+-  height: auto;
+-  top: 15%;
+-}
+-.banner01 .text p {
+-  font-size: 16px;
+-  padding: 10px 0;
+-}
+-.banner01 .text a {
+-  display: block;
+-  width: 160px;
+-  padding: 0 0 0 44px;
+-  background-color: #FFFFFF;
+-  background-position: 36px center;
+-  background-repeat: no-repeat;
+-  background-image: url(../img/get02.png);
+-  height: 57px;
+-  font-size: 18px;
+-  margin: 20px auto;
+-  color: #37b0f1;
+-  line-height: 57px;
+-  -webkit-border-radius: 30px;
+-  -moz-border-radius: 30px;
+-  border-radius: 30px;
+-}
+-.banner01 .xfc {
+-  text-align: center;
+-  position: absolute;
+-  width: 100%;
+-  left: 0;
+-  bottom: 5%;
+-}
+-.banner01 .xfc a {
+-  display: inline-block;
+-  font-size: 20px;
+-  line-height: 28px;
+-  width: 100px;
+-  vertical-align: top;
+-  color: #FFFFFF;
+-  margin: 0 0 0 15px;
+-}
+-.banner01 .xfc a div {
+-  display: none;
+-  width: 40px;
+-  height: 86px;
+-  background-position: left center;
+-  background-repeat: no-repeat;
+-  float: left;
+-}
+-.banner01 .xfc a p {
+-  padding: 5px 0;
+-}
+-.banner01 .xfc01 {
+-  position: fixed;
+-  top: 0;
+-  left: 0;
+-  height: 86px;
+-  line-height: 86px;
+-  width: 100%;
+-  text-align: center;
+-  background-color: #FFFFFF;
+-  z-index:10;
+-}
+-.banner01 .xfc01 a {
+-  overflow: hidden;
+-  width: auto;
+-}
+-.banner01 .xfc01 a img {
+-  display: none;
+-}
+-.banner01 .xfc01 a div {
+-  display: block;
+-}
+-.banner01 .xfc01 a .div1 {
+-  background-image: url(../img/xfc_wygl01.png);
+-}
+-.banner01 .xfc01 a .div2 {
+-  background-image: url(../img/xfc_wygl02.png);
+-}
+-.banner01 .xfc01 a .div3 {
+-  background-image: url(../img/xfc_wygl03.png);
+-}
+-.banner01 .xfc01 a .div4 {
+-  background-image: url(../img/xfc_wygl04.png);
+-}
+-.banner01 .xfc01 a .div5 {
+-  background-image: url(../img/xfc_wygl05.png);
+-}
+-.banner01 .xfc01 a .div6 {
+-  background-image: url(../img/xfc_wygl06.png);
+-}
+-.banner01 .xfc01 a .div7 {
+-  background-image: url(../img/xfc_wygl07.png);
+-}
+-.banner01 .xfc01 a .div8 {
+-  background-image: url(../img/xfc_wygl08.png);
+-}
+-.banner01 .xfc01 a .div9 {
+-  background-image: url(../img/xfc_wygl09.png);
+-}
+-.banner01 .xfc01 a .div10 {
+-  background-image: url(../img/xfc_wygl10.png);
+-}
+-.banner01 .xfc01 a p {
+-  line-height: 86px;
+-  height: 86px;
+-  float: left;
+-  font-size: 14px;
+-  color: #000000;
+-}
+-.content > div {
+-  padding: 86px 0 0 0;
+-}
+-.content .gt {
+-  width: 1200px;
+-  margin: 0 auto;
+-  overflow: hidden;
+-}
+-.content .gt > h4 {
+-  text-align: center;
+-  font-size: 42px;
+-  color: #FFFFFF;
+-}
+-.content .gt > p {
+-  margin: 25px 0 70px 0;
+-  font-size: 16px;
+-  text-align: center;
+-  color: #FFFFFF;
+-}
+-.content .gt .img {
+-  width: 40%;
+-  float: left;
+-}
+-.content .gt .img img {
+-  max-width: 100%;
+-  margin: 0 auto;
+-}
+-.content .gt .text {
+-    font-size: 16px;
+-    color: #2ea9e4;
+-    margin: 0 auto;
+-    display: inline;
+-    text-align: center;
+-}
+-.content .gt .text h4 {
+-  font-size: 42px;
+-  color: #000000;
+-    padding: 0 0 20px 46px;
+-}
+-.content .gt .text p {
+-  padding: 20px 0 40px 0;
+-}
+-.content .gt .text ul {
+-  line-height: 48px;
+-  font-size: 20px;
+-  color: #9797a6;
+-}
+-.content .gt .text ul li {
+-  padding: 0 0 0 26px;
+-  background-image: url(../img/y04.png);
+-  background-repeat: no-repeat;
+-  background-position: left 19px;
+-}
+-.content #wygl1 {
+-  background-color: #f6f2f1;
+-}
+-.content #wygl1 .wygl1 {
+-  padding: 0 0 80px 0;
+-}
+-.content #wygl2 {
+-  background-color: #4b566a;
+-}
+-.content #wygl2 .wygl2 {
+-  padding: 0 0 130px 0;
+-}
+-.content #wygl2 .wygl2 .img {
+-  width: 100%;
+-}
+-.content #wygl2 .wygl2 .img img {
+-  max-width: 100%;
+-  margin: 0 auto;
+-}
+-.content #wygl3 {
+-  background-color: #ec8558;
+-}
+-.content #wygl3 .wygl3 {
+-  padding: 0 0 80px 0;
+-}
+-.content #wygl3 .wygl3 .text {
+-  color: #FFFFFF;
+-}
+-.content #wygl3 .wygl3 .text > * {
+-  color: #FFFFFF;
+-}
+-.content #wygl3 .wygl3 .text ul li {
+-  background-image: url(../img/y03.png);
+-}
+-.content #wygl4 .wygl4 {
+-  padding: 0 0 80px 0;
+-}
+-.content #wygl4 .wygl4 .img {
+-  padding: 130px 0 0 0;
+-}
+-.content #wygl5 {
+-  background-color: #f6f2f1;
+-}
+-.content #wygl5 .wygl5 {
+-  padding: 0 0 80px 0;
+-}
+-.content #wygl5 .wygl5 > h4 {
+-  color: #000;
+-}
+-.content #wygl5 .wygl5 > p {
+-  color: #2ea9e4;
+-}
+-.content #wygl5 .wygl5 .img {
+-  padding: 80px 0 0 0;
+-}
+-.content #wygl5 .wygl5 .text {
+-  padding: 0 0 0 5%;
+-  width: 45%;
+-}
+-.content #wygl5 .wygl5 .text h4 {
+-  font-size: 26px;
+-  color: #2EA9E4;
+-  font-weight: bold;
+-}
+-.content #wygl5 .wygl5 .text div {
+-  font-size: 20px;
+-  color: #9797a6;
+-  opacity: 0.8;
+-  filter: alpha(opacity=80);
+-  line-height: 48px;
+-  margin: 20px 0 60px 0;
+-}
+-.content #wygl6 {
+-  background-color: #7491c6;
+-}
+-.content #wygl6 .wygl6 {
+-  padding: 0 0 80px 0;
+-}
+-.content #wygl6 .wygl6 .img {
+-  padding: 80px 0 0 0;
+-}
+-.content #wygl6 .wygl6 .text {
+-  color: #FFFFFF;
+-  width: 45%;
+-  padding: 0 0 0 5%;
+-}
+-.content #wygl6 .wygl6 .text > * {
+-  color: #FFFFFF;
+-}
+-.content #wygl6 .wygl6 .text ul li {
+-  background-image: url(../img/y03.png);
+-}
+-.content #wygl7 {
+-  background-color: #f6f2f1;
+-}
+-.content #wygl7 .wygl7 {
+-  padding: 0 0 80px 0;
+-}
+-.content #wygl7 .wygl7 .img {
+-  padding: 60px 0 0 0;
+-}
+-.content #wygl8 .wygl8 {
+-  padding: 0 0 80px 0;
+-}
+-.content #wygl8 .wygl8 .img {
+-  padding: 130px 0 0 0;
+-}
+-.content #wygl9 {
+-  background-color: #7ab4c0;
+-}
+-.content #wygl9 .wygl9 {
+-  padding: 0 0 80px 0;
+-}
+-.content #wygl9 .wygl9 .img {
+-  width: 40%;
+-  padding: 100px 0 0 0;
+-}
+-.content #wygl9 .wygl9 .text {
+-  width: 58%;
+-  color: #FFFFFF;
+-}
+-.content #wygl9 .wygl9 .text > * {
+-  color: #FFFFFF;
+-}
+-.content #wygl9 .wygl9 .text ul li {
+-  background-image: url(../img/y03.png);
+-}
+-.content #wygl10 {
+-  background-color: #f6f2f1;
+-}
+-.content #wygl10 .wygl10 > h4 {
+-  color: #000;
+-}
+-.content #wygl10 .wygl10 > p {
+-  color: #2ea9e4;
+-}
+-.content #wygl10 .wygl10 .img {
+-  padding: 80px 0 0 0;
+-  width: 100%;
+-  float: none;
+-}
+-.content #wygl10 .wygl10 .text {
+-  width: 100%;
+-  float: none;
+-}
+-.content #wygl10 .wygl10 .text h4 {
+-  font-size: 26px;
+-  color: #2EA9E4;
+-  font-weight: bold;
+-}
+-.content #wygl10 .wygl10 .text div {
+-  font-size: 20px;
+-  color: #9797a6;
+-  opacity: 0.8;
+-  filter: alpha(opacity=80);
+-  line-height: 48px;
+-  margin: 20px 0 60px 0;
+-}
+-.content #wygl10 .wygl10 .text ul {
+-  text-align: center;
+-}
+-.content #wygl10 .wygl10 .text ul li {
+-  text-align: left;
+-  display: inline-block;
+-  width: 60%;
+-}
+-.content #wygl11 .wygl11 > h4 {
+-  color: #000;
+-}
+-.content #wygl11 .wygl11 > p {
+-  color: #2ea9e4;
+-}
+-.content #wygl11 .wygl11 > div {
+-  text-align: center;
+-  padding: 60px 0 70px 0;
+-}
+-.content #wygl11 .wygl11 > div .d {
+-  display: inline-block;
+-  width: 150px;
+-  margin: 0 60px;
+-}
+-.content #wygl11 .wygl11 > div .d > h4 {
+-  color: #000000;
+-  font-size: 20px;
+-  padding: 0 0 40px 0;
+-}
+-.content #wygl11 .wygl11 > div .d div {
+-  height: 150px;
+-}
+-.content #wygl11 .wygl11 > div .d div img {
+-  max-width: 100%;
+-  margin: 0 auto;
+-}
+-.content #wygl11 .wygl11 > div .d div .ewm {
+-  display: none;
+-}
+-.content #wygl11 .wygl11 > div .d a {
+-  display: block;
+-  border: 1px solid #0593e0;
+-  height: 38px;
+-  line-height: 38px;
+-  -webkit-border-radius: 20px;
+-  -moz-border-radius: 20px;
+-  border-radius: 20px;
+-  font-size: 18px;
+-  color: #0593e0;
+-}
+-.content #wygl11 .wygl11 > div .d .a1 {
+-  border-color: #3baeed;
+-  background-color: #3baeed;
+-  color: #FFFFFF;
+-}
+-.content #wygl11 .wygl11 > div .d01 a:hover {
+-  background-color: #0593e0;
+-  border-color: #0593e0;
+-  color: #FFFFFF;
+-}
+-/*响应式*/
+-/*分辨率小于1200*/
+-@media screen and (max-width: 1199px) {
+-  .banner01 .text {
+-    top: 20%;
+-  }
+-  .banner01 .text p {
+-    padding: 5px;
+-    line-height: 30px;
+-  }
+-  .banner01 .xfc {
+-    width: 100%;
+-    bottom: 5%;
+-  }
+-  .banner01 .xfc a {
+-    width: 75px;
+-    margin: 0 0 0 20px;
+-  }
+-  .banner01 .xfc01 {
+-    position: fixed;
+-    top: 0;
+-    left: 0;
+-    overflow: hidden;
+-    line-height: 43px;
+-    width: 100%;
+-    height: 86px;
+-    text-align: center;
+-    background-color: #FFFFFF;
+-  }
+-  .banner01 .xfc01 a {
+-    overflow: hidden;
+-    width: 170px;
+-  }
+-  .banner01 .xfc01 a img {
+-    display: none;
+-  }
+-  .banner01 .xfc01 a div {
+-    display: block;
+-    height: 43px;
+-  }
+-  .banner01 .xfc01 a p {
+-    height: 43px;
+-    line-height: 43px;
+-    padding: 0;
+-  }
+-  .content > div {
+-    padding: 86px 0 0 0;
+-  }
+-  .content .gt {
+-    width: 1000px;
+-  }
+-}
+-/*分辨率小于1000*/
+-@media screen and (max-width: 999px) {
+-  .banner01 .text {
+-    font-size: 36px;
+-    line-height: 36px;
+-    top: 15%;
+-  }
+-  .banner01 .text p {
+-    font-size: 14px;
+-    padding: 5px 0;
+-    line-height: 20px;
+-  }
+-  .banner01 .text a {
+-    margin: 5px auto;
+-  }
+-  .banner01 .xfc {
+-    text-align: center;
+-    position: absolute;
+-    width: 100%;
+-    left: 0;
+-    bottom: 2%;
+-  }
+-  .banner01 .xfc a {
+-    display: inline-block;
+-    font-size: 14px;
+-    width: 36px;
+-    line-height: 20px;
+-    color: #FFFFFF;
+-    margin: 0 0 0 20px;
+-  }
+-  .banner01 .xfc a img {
+-    width: 35px;
+-    margin: 0 auto;
+-  }
+-  .banner01 .xfc a div {
+-    display: none;
+-    width: 40px;
+-    height: 86px;
+-    background-position: left center;
+-    background-repeat: no-repeat;
+-    float: left;
+-  }
+-  .banner01 .xfc01 {
+-    position: fixed;
+-    top: 0;
+-    left: 0;
+-    overflow: hidden;
+-    line-height: 43px;
+-    width: 100%;
+-    height: 86px;
+-    text-align: center;
+-    background-color: #FFFFFF;
+-  }
+-  .banner01 .xfc01 a {
+-    overflow: hidden;
+-    width: 30px;
+-  }
+-  .banner01 .xfc01 a img {
+-    display: none;
+-  }
+-  .banner01 .xfc01 a div {
+-    display: block;
+-    height: 43px;
+-  }
+-  .banner01 .xfc01 a p {
+-    height: 43px;
+-    line-height: 43px;
+-  }
+-  .content > div {
+-    padding: 86px 0 0 0;
+-  }
+-  .content .gt {
+-    width: 640px;
+-  }
+-  .content #wygl1 {
+-    background-color: #f6f2f1;
+-  }
+-  .content #wygl1 .wygl1 {
+-    padding: 0 0 80px 0;
+-  }
+-  .content #wygl1 .wygl1 .img {
+-    float: none;
+-    width: 100%;
+-  }
+-  .content #wygl1 .wygl1 .text {
+-    float: none;
+-    width: 100%;
+-    text-align: center;
+-  }
+-  .content #wygl1 .wygl1 .text ul {
+-    display: inline-block;
+-    text-align: left;
+-  }
+-  .content #wygl2 {
+-    background-color: #4b566a;
+-  }
+-  .content #wygl2 .wygl2 {
+-    padding: 0 0 130px 0;
+-  }
+-  .content #wygl2 .wygl2 .img {
+-    width: 100%;
+-  }
+-  .content #wygl2 .wygl2 .img img {
+-    max-width: 96%;
+-    margin: 0 auto;
+-  }
+-  .content #wygl3 {
+-    background-color: #ec8558;
+-  }
+-  .content #wygl3 .wygl3 {
+-    padding: 0 0 80px 0;
+-  }
+-  .content #wygl3 .wygl3 .img {
+-    float: none;
+-    width: 100%;
+-  }
+-  .content #wygl3 .wygl3 .text {
+-    float: none;
+-    width: 100%;
+-    text-align: center;
+-    color: #FFFFFF;
+-  }
+-  .content #wygl3 .wygl3 .text > * {
+-    color: #FFFFFF;
+-  }
+-  .content #wygl3 .wygl3 .text ul {
+-    display: inline-block;
+-    text-align: left;
+-  }
+-  .content #wygl3 .wygl3 .text ul li {
+-    background-image: url(../img/y03.png);
+-  }
+-  .content #wygl4 .wygl4 {
+-    padding: 0 0 80px 0;
+-  }
+-  .content #wygl4 .wygl4 .img {
+-    padding: 50px 0 0 0;
+-    float: none;
+-    width: 100%;
+-  }
+-  .content #wygl4 .wygl4 .text {
+-    float: none;
+-    width: 100%;
+-    text-align: center;
+-  }
+-  .content #wygl4 .wygl4 .text ul {
+-    display: inline-block;
+-    text-align: left;
+-  }
+-  .content #wygl5 {
+-    background-color: #f6f2f1;
+-  }
+-  .content #wygl5 .wygl5 {
+-    padding: 0 0 80px 0;
+-  }
+-  .content #wygl5 .wygl5 > h4 {
+-    color: #000;
+-  }
+-  .content #wygl5 .wygl5 > p {
+-    color: #2ea9e4;
+-  }
+-  .content #wygl5 .wygl5 .img {
+-    padding: 80px 0 0 0;
+-    float: none;
+-    width: 100%;
+-  }
+-  .content #wygl5 .wygl5 .text {
+-    padding: 0 2%;
+-    float: none;
+-    width: 96%;
+-    text-align: center;
+-  }
+-  .content #wygl5 .wygl5 .text h4 {
+-    font-size: 26px;
+-    color: #2EA9E4;
+-    font-weight: bold;
+-  }
+-  .content #wygl5 .wygl5 .text div {
+-    font-size: 20px;
+-    color: #9797a6;
+-    opacity: 0.8;
+-    filter: alpha(opacity=80);
+-    line-height: 48px;
+-    margin: 20px 0 60px 0;
+-  }
+-  .content #wygl6 {
+-    background-color: #7491c6;
+-  }
+-  .content #wygl6 .wygl6 {
+-    padding: 0 0 80px 0;
+-  }
+-  .content #wygl6 .wygl6 .img {
+-    padding: 80px 0 0 0;
+-    float: none;
+-    width: 100%;
+-  }
+-  .content #wygl6 .wygl6 .text {
+-    color: #FFFFFF;
+-    width: 96%;
+-    padding: 0 2%;
+-    float: none;
+-    text-align: center;
+-  }
+-  .content #wygl6 .wygl6 .text > * {
+-    color: #FFFFFF;
+-  }
+-  .content #wygl6 .wygl6 .text ul {
+-    text-align: left;
+-    display: inline-block;
+-  }
+-  .content #wygl6 .wygl6 .text ul li {
+-    background-image: url(../img/y03.png);
+-  }
+-  .content #wygl7 {
+-    background-color: #f6f2f1;
+-  }
+-  .content #wygl7 .wygl7 {
+-    padding: 0 0 80px 0;
+-  }
+-  .content #wygl7 .wygl7 .img {
+-    float: none;
+-    width: 100%;
+-    padding: 60px 0 0 0;
+-  }
+-  .content #wygl7 .wygl7 .text {
+-    float: none;
+-    width: 100%;
+-    text-align: center;
+-  }
+-  .content #wygl7 .wygl7 .text ul {
+-    display: inline-block;
+-    text-align: left;
+-  }
+-  .content #wygl8 .wygl8 {
+-    padding: 0 0 80px 0;
+-  }
+-  .content #wygl8 .wygl8 .img {
+-    float: none;
+-    width: 100%;
+-    padding: 130px 0 0 0;
+-  }
+-  .content #wygl8 .wygl8 .text {
+-    float: none;
+-    width: 100%;
+-    text-align: center;
+-  }
+-  .content #wygl8 .wygl8 .text ul {
+-    display: inline-block;
+-    text-align: left;
+-  }
+-  .content #wygl9 {
+-    background-color: #7ab4c0;
+-  }
+-  .content #wygl9 .wygl9 {
+-    padding: 0 0 80px 0;
+-  }
+-  .content #wygl9 .wygl9 .img {
+-    width: 100%;
+-    float: none;
+-    padding: 100px 0 0 0;
+-  }
+-  .content #wygl9 .wygl9 .text {
+-    width: 96%;
+-    padding: 0 2%;
+-    float: none;
+-    text-align: center;
+-    color: #FFFFFF;
+-  }
+-  .content #wygl9 .wygl9 .text > * {
+-    color: #FFFFFF;
+-  }
+-  .content #wygl9 .wygl9 .text ul {
+-    text-align: left;
+-    display: inline-block;
+-  }
+-  .content #wygl9 .wygl9 .text ul li {
+-    background-image: url(../img/y03.png);
+-  }
+-  .content #wygl10 {
+-    background-color: #f6f2f1;
+-  }
+-  .content #wygl10 .wygl10 > h4 {
+-    color: #000;
+-  }
+-  .content #wygl10 .wygl10 > p {
+-    color: #2ea9e4;
+-  }
+-  .content #wygl10 .wygl10 .img {
+-    padding: 80px 0 0 0;
+-    width: 100%;
+-    float: none;
+-  }
+-  .content #wygl10 .wygl10 .text {
+-    width: 100%;
+-    float: none;
+-  }
+-  .content #wygl10 .wygl10 .text h4 {
+-    font-size: 26px;
+-    color: #2EA9E4;
+-    font-weight: bold;
+-  }
+-  .content #wygl10 .wygl10 .text div {
+-    font-size: 20px;
+-    color: #9797a6;
+-    opacity: 0.8;
+-    filter: alpha(opacity=80);
+-    line-height: 48px;
+-    margin: 20px 0 60px 0;
+-  }
+-  .content #wygl10 .wygl10 .text ul {
+-    text-align: center;
+-  }
+-  .content #wygl10 .wygl10 .text ul li {
+-    text-align: left;
+-    display: inline-block;
+-    width: 60%;
+-  }
+-  .content #wygl11 .wygl11 > div {
+-    text-align: center;
+-    padding: 60px 0 70px 0;
+-  }
+-  .content #wygl11 .wygl11 > div .d {
+-    display: inline-block;
+-    width: 150px;
+-    margin: 0 30px;
+-  }
+-  .content #wygl11 .wygl11 > div .d > h4 {
+-    color: #000000;
+-    font-size: 20px;
+-    padding: 0 0 40px 0;
+-  }
+-  .content #wygl11 .wygl11 > div .d div {
+-    height: 150px;
+-  }
+-  .content #wygl11 .wygl11 > div .d div img {
+-    max-width: 100%;
+-    margin: 0 auto;
+-  }
+-  .content #wygl11 .wygl11 > div .d div .ewm {
+-    display: none;
+-  }
+-  .content #wygl11 .wygl11 > div .d a {
+-    display: block;
+-    border: 1px solid #0593e0;
+-    height: 38px;
+-    line-height: 38px;
+-    -webkit-border-radius: 20px;
+-    -moz-border-radius: 20px;
+-    border-radius: 20px;
+-    font-size: 18px;
+-    color: #0593e0;
+-  }
+-  .content #wygl11 .wygl11 > div .d .a1 {
+-    border-color: #3baeed;
+-    background-color: #3baeed;
+-    color: #FFFFFF;
+-  }
+-  .content #wygl11 .wygl11 > div .d01 a:hover {
+-    background-color: #0593e0;
+-    border-color: #0593e0;
+-    color: #FFFFFF;
+-  }
+-}
+-/*分辨率小于640*/
+-@media screen and (max-width: 639px) {
+-  .banner01 img {
+-    height: 200px;
+-  }
+-  .banner01 .text {
+-    font-size: 24px;
+-    line-height: 24px;
+-    top: 34%;
+-  }
+-  .banner01 .text p {
+-    font-size: 14px;
+-    padding: 10px 0;
+-  }
+-  .banner01 .text a {
+-    margin: 0 auto;
+-    width: 140px;
+-    line-height: 40px;
+-    height: 40px;
+-    font-size: 16px;
+-  }
+-  .banner01 .xfc {
+-    display: none;
+-  }
+-  .banner01 .xfc01 {
+-    display: none;
+-  }
+-  .content .gt {
+-    width: 320px;
+-  }
+-  .content #app1 {
+-    background-color: #52b4e6;
+-  }
+-  .content #app1 .app1 {
+-    padding: 0 0 90px 0;
+-  }
+-  .content #app1 .app1 .a01 {
+-    overflow: hidden;
+-    padding: 60px 0 0 0;
+-  }
+-  .content #app1 .app1 .a01 .text {
+-    padding: 0 2%;
+-    width: 96%;
+-    float: none;
+-    text-align: center;
+-  }
+-  .content #wygl11 .wygl11 > div .d {
+-    margin: 10px;
+-  }
+-}
++/* LESS Document */
++@charset "utf-8";
++/*常用的注释*/
++body {
++  margin: 0;
++  min-width: 320px;
++  font-family: "ts01";
++  font-family: "Arial", "Helvetica", "sans-serif", "微软雅黑";
++  font-size: 12px;
++}
++div,
++dl,
++dt,
++dd,
++ul,
++ol,
++li,
++h1,
++h2,
++h3,
++h4,
++h5,
++h6,
++pre,
++form,
++fieldset,
++input,
++textarea,
++blockquote,
++p,
++table,
++th,
++td {
++  padding: 0;
++  margin: 0;
++  text-decoration: none;
++  list-style-type: none;
++  font-weight: normal;
++}
++a,
++a:link,
++a:hover,
++a:visited,
++a:active {
++  text-decoration: none;
++  cursor: pointer;
++}
++img {
++  display: block;
++  border: none;
++}
++textarea {
++  resize: none;
++}
++input,
++button,
++select,
++textarea {
++  margin: 0;
++  padding: 0;
++  border: none;
++  outline: none;
++  font-family: "ts01";
++  font-family: "Arial", "Helvetica", "sans-serif", "微软雅黑";
++}
++input[type="button"],
++button,
++input[type=submit] {
++  cursor: pointer;
++}
++em,
++i {
++  list-style: none;
++  font-weight: normal;
++  font-style: normal;
++}
++/*常用的css样式*/
++.fl {
++  float: left;
++}
++.fr {
++  float: right;
++}
++.clear:after {
++  clear: both;
++  width: 0;
++  height: 0;
++  content: "";
++  display: block;
++  zoom: 1;
++}
++.ellipsis {
++  overflow: hidden;
++  text-overflow: ellipsis;
++  white-space: nowrap;
++}
++@font-face {
++  font-family: 'ts01';
++  src: url('../fonts/NOTOSANSHANS-REGULAR.eot');
++  src: url('../fonts/NOTOSANSHANS-REGULAR.eot?#iefix') format('embedded-opentype'), url('../fonts/NOTOSANSHANS-REGULAR.woff') format('woff'), url('../fonts/NOTOSANSHANS-REGULAR.ttf') format('truetype'), url('../fonts/NOTOSANSHANS-REGULAR.otf') format('truetype'), url('../fonts/NOTOSANSHANS-REGULAR.svg#NOTOSANSHANS-REGULAR') format('svg');
++  font-style: normal;
++  font-weight: normal;
++}
++.banner01 .text {
++  font-size: 42px;
++  line-height: 42px;
++  height: auto;
++  top: 15%;
++}
++.banner01 .text p {
++  font-size: 16px;
++  padding: 10px 0;
++}
++.banner01 .text a {
++  display: block;
++  width: 160px;
++  padding: 0 0 0 44px;
++  background-color: #FFFFFF;
++  background-position: 36px center;
++  background-repeat: no-repeat;
++  background-image: url(../img/get02.png);
++  height: 57px;
++  font-size: 18px;
++  margin: 20px auto;
++  color: #37b0f1;
++  line-height: 57px;
++  -webkit-border-radius: 30px;
++  -moz-border-radius: 30px;
++  border-radius: 30px;
++}
++.banner01 .xfc {
++  text-align: center;
++  position: absolute;
++  width: 100%;
++  left: 0;
++  bottom: 5%;
++}
++.banner01 .xfc a {
++  display: inline-block;
++  font-size: 20px;
++  line-height: 28px;
++  width: 100px;
++  vertical-align: top;
++  color: #FFFFFF;
++  margin: 0 0 0 15px;
++}
++.banner01 .xfc a div {
++  display: none;
++  width: 40px;
++  height: 86px;
++  background-position: left center;
++  background-repeat: no-repeat;
++  float: left;
++}
++.banner01 .xfc a p {
++  padding: 5px 0;
++}
++.banner01 .xfc01 {
++  position: fixed;
++  top: 0;
++  left: 0;
++  height: 86px;
++  line-height: 86px;
++  width: 100%;
++  text-align: center;
++  background-color: #FFFFFF;
++  z-index:10;
++}
++.banner01 .xfc01 a {
++  overflow: hidden;
++  width: auto;
++}
++.banner01 .xfc01 a img {
++  display: none;
++}
++.banner01 .xfc01 a div {
++  display: block;
++}
++.banner01 .xfc01 a .div1 {
++  background-image: url(../img/xfc_wygl01.png);
++}
++.banner01 .xfc01 a .div2 {
++  background-image: url(../img/xfc_wygl02.png);
++}
++.banner01 .xfc01 a .div3 {
++  background-image: url(../img/xfc_wygl03.png);
++}
++.banner01 .xfc01 a .div4 {
++  background-image: url(../img/xfc_wygl04.png);
++}
++.banner01 .xfc01 a .div5 {
++  background-image: url(../img/xfc_wygl05.png);
++}
++.banner01 .xfc01 a .div6 {
++  background-image: url(../img/xfc_wygl06.png);
++}
++.banner01 .xfc01 a .div7 {
++  background-image: url(../img/xfc_wygl07.png);
++}
++.banner01 .xfc01 a .div8 {
++  background-image: url(../img/xfc_wygl08.png);
++}
++.banner01 .xfc01 a .div9 {
++  background-image: url(../img/xfc_wygl09.png);
++}
++.banner01 .xfc01 a .div10 {
++  background-image: url(../img/xfc_wygl10.png);
++}
++.banner01 .xfc01 a p {
++  line-height: 86px;
++  height: 86px;
++  float: left;
++  font-size: 14px;
++  color: #000000;
++}
++.content > div {
++  padding: 86px 0 0 0;
++}
++.content .gt {
++  width: 1200px;
++  margin: 0 auto;
++  overflow: hidden;
++}
++.content .gt > h4 {
++  text-align: center;
++  font-size: 42px;
++  color: #FFFFFF;
++}
++.content .gt > p {
++  margin: 25px 0 70px 0;
++  font-size: 16px;
++  text-align: center;
++  color: #FFFFFF;
++}
++.content .gt .img {
++  width: 40%;
++  float: left;
++}
++.content .gt .img img {
++  max-width: 100%;
++  margin: 0 auto;
++}
++.content .gt .text {
++    font-size: 16px;
++    color: #2ea9e4;
++    margin: 0 auto;
++    display: inline;
++    text-align: center;
++}
++.content .gt .text h4 {
++  font-size: 42px;
++  color: #000000;
++    padding: 0 0 20px 46px;
++}
++.content .gt .text p {
++  padding: 20px 0 40px 0;
++}
++.content .gt .text ul {
++  line-height: 48px;
++  font-size: 20px;
++  color: #9797a6;
++}
++.content .gt .text ul li {
++  padding: 0 0 0 26px;
++  background-image: url(../img/y04.png);
++  background-repeat: no-repeat;
++  background-position: left 19px;
++}
++.content #wygl1 {
++  background-color: #f6f2f1;
++}
++.content #wygl1 .wygl1 {
++  padding: 0 0 80px 0;
++}
++.content #wygl2 {
++  background-color: #4b566a;
++}
++.content #wygl2 .wygl2 {
++  padding: 0 0 130px 0;
++}
++.content #wygl2 .wygl2 .img {
++  width: 100%;
++}
++.content #wygl2 .wygl2 .img img {
++  max-width: 100%;
++  margin: 0 auto;
++}
++.content #wygl3 {
++  background-color: #ec8558;
++}
++.content #wygl3 .wygl3 {
++  padding: 0 0 80px 0;
++}
++.content #wygl3 .wygl3 .text {
++  color: #FFFFFF;
++}
++.content #wygl3 .wygl3 .text > * {
++  color: #FFFFFF;
++}
++.content #wygl3 .wygl3 .text ul li {
++  background-image: url(../img/y03.png);
++}
++.content #wygl4 .wygl4 {
++  padding: 0 0 80px 0;
++}
++.content #wygl4 .wygl4 .img {
++  padding: 130px 0 0 0;
++}
++.content #wygl5 {
++  background-color: #f6f2f1;
++}
++.content #wygl5 .wygl5 {
++  padding: 0 0 80px 0;
++}
++.content #wygl5 .wygl5 > h4 {
++  color: #000;
++}
++.content #wygl5 .wygl5 > p {
++  color: #2ea9e4;
++}
++.content #wygl5 .wygl5 .img {
++  padding: 80px 0 0 0;
++}
++.content #wygl5 .wygl5 .text {
++  padding: 0 0 0 5%;
++  width: 45%;
++}
++.content #wygl5 .wygl5 .text h4 {
++  font-size: 26px;
++  color: #2EA9E4;
++  font-weight: bold;
++}
++.content #wygl5 .wygl5 .text div {
++  font-size: 20px;
++  color: #9797a6;
++  opacity: 0.8;
++  filter: alpha(opacity=80);
++  line-height: 48px;
++  margin: 20px 0 60px 0;
++}
++.content #wygl6 {
++  background-color: #7491c6;
++}
++.content #wygl6 .wygl6 {
++  padding: 0 0 80px 0;
++}
++.content #wygl6 .wygl6 .img {
++  padding: 80px 0 0 0;
++}
++.content #wygl6 .wygl6 .text {
++  color: #FFFFFF;
++  width: 45%;
++  padding: 0 0 0 5%;
++}
++.content #wygl6 .wygl6 .text > * {
++  color: #FFFFFF;
++}
++.content #wygl6 .wygl6 .text ul li {
++  background-image: url(../img/y03.png);
++}
++.content #wygl7 {
++  background-color: #f6f2f1;
++}
++.content #wygl7 .wygl7 {
++  padding: 0 0 80px 0;
++}
++.content #wygl7 .wygl7 .img {
++  padding: 60px 0 0 0;
++}
++.content #wygl8 .wygl8 {
++  padding: 0 0 80px 0;
++}
++.content #wygl8 .wygl8 .img {
++  padding: 130px 0 0 0;
++}
++.content #wygl9 {
++  background-color: #7ab4c0;
++}
++.content #wygl9 .wygl9 {
++  padding: 0 0 80px 0;
++}
++.content #wygl9 .wygl9 .img {
++  width: 40%;
++  padding: 100px 0 0 0;
++}
++.content #wygl9 .wygl9 .text {
++  width: 58%;
++  color: #FFFFFF;
++}
++.content #wygl9 .wygl9 .text > * {
++  color: #FFFFFF;
++}
++.content #wygl9 .wygl9 .text ul li {
++  background-image: url(../img/y03.png);
++}
++.content #wygl10 {
++  background-color: #f6f2f1;
++}
++.content #wygl10 .wygl10 > h4 {
++  color: #000;
++}
++.content #wygl10 .wygl10 > p {
++  color: #2ea9e4;
++}
++.content #wygl10 .wygl10 .img {
++  padding: 80px 0 0 0;
++  width: 100%;
++  float: none;
++}
++.content #wygl10 .wygl10 .text {
++  width: 100%;
++  float: none;
++}
++.content #wygl10 .wygl10 .text h4 {
++  font-size: 26px;
++  color: #2EA9E4;
++  font-weight: bold;
++}
++.content #wygl10 .wygl10 .text div {
++  font-size: 20px;
++  color: #9797a6;
++  opacity: 0.8;
++  filter: alpha(opacity=80);
++  line-height: 48px;
++  margin: 20px 0 60px 0;
++}
++.content #wygl10 .wygl10 .text ul {
++  text-align: center;
++}
++.content #wygl10 .wygl10 .text ul li {
++  text-align: left;
++  display: inline-block;
++  width: 60%;
++}
++.content #wygl11 .wygl11 > h4 {
++  color: #000;
++}
++.content #wygl11 .wygl11 > p {
++  color: #2ea9e4;
++}
++.content #wygl11 .wygl11 > div {
++  text-align: center;
++  padding: 60px 0 70px 0;
++}
++.content #wygl11 .wygl11 > div .d {
++  display: inline-block;
++  width: 150px;
++  margin: 0 60px;
++}
++.content #wygl11 .wygl11 > div .d > h4 {
++  color: #000000;
++  font-size: 20px;
++  padding: 0 0 40px 0;
++}
++.content #wygl11 .wygl11 > div .d div {
++  height: 150px;
++}
++.content #wygl11 .wygl11 > div .d div img {
++  max-width: 100%;
++  margin: 0 auto;
++}
++.content #wygl11 .wygl11 > div .d div .ewm {
++  display: none;
++}
++.content #wygl11 .wygl11 > div .d a {
++  display: block;
++  border: 1px solid #0593e0;
++  height: 38px;
++  line-height: 38px;
++  -webkit-border-radius: 20px;
++  -moz-border-radius: 20px;
++  border-radius: 20px;
++  font-size: 18px;
++  color: #0593e0;
++}
++.content #wygl11 .wygl11 > div .d .a1 {
++  border-color: #3baeed;
++  background-color: #3baeed;
++  color: #FFFFFF;
++}
++.content #wygl11 .wygl11 > div .d01 a:hover {
++  background-color: #0593e0;
++  border-color: #0593e0;
++  color: #FFFFFF;
++}
++/*响应式*/
++/*分辨率小于1200*/
++@media screen and (max-width: 1199px) {
++  .banner01 .text {
++    top: 20%;
++  }
++  .banner01 .text p {
++    padding: 5px;
++    line-height: 30px;
++  }
++  .banner01 .xfc {
++    width: 100%;
++    bottom: 5%;
++  }
++  .banner01 .xfc a {
++    width: 75px;
++    margin: 0 0 0 20px;
++  }
++  .banner01 .xfc01 {
++    position: fixed;
++    top: 0;
++    left: 0;
++    overflow: hidden;
++    line-height: 43px;
++    width: 100%;
++    height: 86px;
++    text-align: center;
++    background-color: #FFFFFF;
++  }
++  .banner01 .xfc01 a {
++    overflow: hidden;
++    width: 170px;
++  }
++  .banner01 .xfc01 a img {
++    display: none;
++  }
++  .banner01 .xfc01 a div {
++    display: block;
++    height: 43px;
++  }
++  .banner01 .xfc01 a p {
++    height: 43px;
++    line-height: 43px;
++    padding: 0;
++  }
++  .content > div {
++    padding: 86px 0 0 0;
++  }
++  .content .gt {
++    width: 1000px;
++  }
++}
++/*分辨率小于1000*/
++@media screen and (max-width: 999px) {
++  .banner01 .text {
++    font-size: 36px;
++    line-height: 36px;
++    top: 15%;
++  }
++  .banner01 .text p {
++    font-size: 14px;
++    padding: 5px 0;
++    line-height: 20px;
++  }
++  .banner01 .text a {
++    margin: 5px auto;
++  }
++  .banner01 .xfc {
++    text-align: center;
++    position: absolute;
++    width: 100%;
++    left: 0;
++    bottom: 2%;
++  }
++  .banner01 .xfc a {
++    display: inline-block;
++    font-size: 14px;
++    width: 36px;
++    line-height: 20px;
++    color: #FFFFFF;
++    margin: 0 0 0 20px;
++  }
++  .banner01 .xfc a img {
++    width: 35px;
++    margin: 0 auto;
++  }
++  .banner01 .xfc a div {
++    display: none;
++    width: 40px;
++    height: 86px;
++    background-position: left center;
++    background-repeat: no-repeat;
++    float: left;
++  }
++  .banner01 .xfc01 {
++    position: fixed;
++    top: 0;
++    left: 0;
++    overflow: hidden;
++    line-height: 43px;
++    width: 100%;
++    height: 86px;
++    text-align: center;
++    background-color: #FFFFFF;
++  }
++  .banner01 .xfc01 a {
++    overflow: hidden;
++    width: 30px;
++  }
++  .banner01 .xfc01 a img {
++    display: none;
++  }
++  .banner01 .xfc01 a div {
++    display: block;
++    height: 43px;
++  }
++  .banner01 .xfc01 a p {
++    height: 43px;
++    line-height: 43px;
++  }
++  .content > div {
++    padding: 86px 0 0 0;
++  }
++  .content .gt {
++    width: 640px;
++  }
++  .content #wygl1 {
++    background-color: #f6f2f1;
++  }
++  .content #wygl1 .wygl1 {
++    padding: 0 0 80px 0;
++  }
++  .content #wygl1 .wygl1 .img {
++    float: none;
++    width: 100%;
++  }
++  .content #wygl1 .wygl1 .text {
++    float: none;
++    width: 100%;
++    text-align: center;
++  }
++  .content #wygl1 .wygl1 .text ul {
++    display: inline-block;
++    text-align: left;
++  }
++  .content #wygl2 {
++    background-color: #4b566a;
++  }
++  .content #wygl2 .wygl2 {
++    padding: 0 0 130px 0;
++  }
++  .content #wygl2 .wygl2 .img {
++    width: 100%;
++  }
++  .content #wygl2 .wygl2 .img img {
++    max-width: 96%;
++    margin: 0 auto;
++  }
++  .content #wygl3 {
++    background-color: #ec8558;
++  }
++  .content #wygl3 .wygl3 {
++    padding: 0 0 80px 0;
++  }
++  .content #wygl3 .wygl3 .img {
++    float: none;
++    width: 100%;
++  }
++  .content #wygl3 .wygl3 .text {
++    float: none;
++    width: 100%;
++    text-align: center;
++    color: #FFFFFF;
++  }
++  .content #wygl3 .wygl3 .text > * {
++    color: #FFFFFF;
++  }
++  .content #wygl3 .wygl3 .text ul {
++    display: inline-block;
++    text-align: left;
++  }
++  .content #wygl3 .wygl3 .text ul li {
++    background-image: url(../img/y03.png);
++  }
++  .content #wygl4 .wygl4 {
++    padding: 0 0 80px 0;
++  }
++  .content #wygl4 .wygl4 .img {
++    padding: 50px 0 0 0;
++    float: none;
++    width: 100%;
++  }
++  .content #wygl4 .wygl4 .text {
++    float: none;
++    width: 100%;
++    text-align: center;
++  }
++  .content #wygl4 .wygl4 .text ul {
++    display: inline-block;
++    text-align: left;
++  }
++  .content #wygl5 {
++    background-color: #f6f2f1;
++  }
++  .content #wygl5 .wygl5 {
++    padding: 0 0 80px 0;
++  }
++  .content #wygl5 .wygl5 > h4 {
++    color: #000;
++  }
++  .content #wygl5 .wygl5 > p {
++    color: #2ea9e4;
++  }
++  .content #wygl5 .wygl5 .img {
++    padding: 80px 0 0 0;
++    float: none;
++    width: 100%;
++  }
++  .content #wygl5 .wygl5 .text {
++    padding: 0 2%;
++    float: none;
++    width: 96%;
++    text-align: center;
++  }
++  .content #wygl5 .wygl5 .text h4 {
++    font-size: 26px;
++    color: #2EA9E4;
++    font-weight: bold;
++  }
++  .content #wygl5 .wygl5 .text div {
++    font-size: 20px;
++    color: #9797a6;
++    opacity: 0.8;
++    filter: alpha(opacity=80);
++    line-height: 48px;
++    margin: 20px 0 60px 0;
++  }
++  .content #wygl6 {
++    background-color: #7491c6;
++  }
++  .content #wygl6 .wygl6 {
++    padding: 0 0 80px 0;
++  }
++  .content #wygl6 .wygl6 .img {
++    padding: 80px 0 0 0;
++    float: none;
++    width: 100%;
++  }
++  .content #wygl6 .wygl6 .text {
++    color: #FFFFFF;
++    width: 96%;
++    padding: 0 2%;
++    float: none;
++    text-align: center;
++  }
++  .content #wygl6 .wygl6 .text > * {
++    color: #FFFFFF;
++  }
++  .content #wygl6 .wygl6 .text ul {
++    text-align: left;
++    display: inline-block;
++  }
++  .content #wygl6 .wygl6 .text ul li {
++    background-image: url(../img/y03.png);
++  }
++  .content #wygl7 {
++    background-color: #f6f2f1;
++  }
++  .content #wygl7 .wygl7 {
++    padding: 0 0 80px 0;
++  }
++  .content #wygl7 .wygl7 .img {
++    float: none;
++    width: 100%;
++    padding: 60px 0 0 0;
++  }
++  .content #wygl7 .wygl7 .text {
++    float: none;
++    width: 100%;
++    text-align: center;
++  }
++  .content #wygl7 .wygl7 .text ul {
++    display: inline-block;
++    text-align: left;
++  }
++  .content #wygl8 .wygl8 {
++    padding: 0 0 80px 0;
++  }
++  .content #wygl8 .wygl8 .img {
++    float: none;
++    width: 100%;
++    padding: 130px 0 0 0;
++  }
++  .content #wygl8 .wygl8 .text {
++    float: none;
++    width: 100%;
++    text-align: center;
++  }
++  .content #wygl8 .wygl8 .text ul {
++    display: inline-block;
++    text-align: left;
++  }
++  .content #wygl9 {
++    background-color: #7ab4c0;
++  }
++  .content #wygl9 .wygl9 {
++    padding: 0 0 80px 0;
++  }
++  .content #wygl9 .wygl9 .img {
++    width: 100%;
++    float: none;
++    padding: 100px 0 0 0;
++  }
++  .content #wygl9 .wygl9 .text {
++    width: 96%;
++    padding: 0 2%;
++    float: none;
++    text-align: center;
++    color: #FFFFFF;
++  }
++  .content #wygl9 .wygl9 .text > * {
++    color: #FFFFFF;
++  }
++  .content #wygl9 .wygl9 .text ul {
++    text-align: left;
++    display: inline-block;
++  }
++  .content #wygl9 .wygl9 .text ul li {
++    background-image: url(../img/y03.png);
++  }
++  .content #wygl10 {
++    background-color: #f6f2f1;
++  }
++  .content #wygl10 .wygl10 > h4 {
++    color: #000;
++  }
++  .content #wygl10 .wygl10 > p {
++    color: #2ea9e4;
++  }
++  .content #wygl10 .wygl10 .img {
++    padding: 80px 0 0 0;
++    width: 100%;
++    float: none;
++  }
++  .content #wygl10 .wygl10 .text {
++    width: 100%;
++    float: none;
++  }
++  .content #wygl10 .wygl10 .text h4 {
++    font-size: 26px;
++    color: #2EA9E4;
++    font-weight: bold;
++  }
++  .content #wygl10 .wygl10 .text div {
++    font-size: 20px;
++    color: #9797a6;
++    opacity: 0.8;
++    filter: alpha(opacity=80);
++    line-height: 48px;
++    margin: 20px 0 60px 0;
++  }
++  .content #wygl10 .wygl10 .text ul {
++    text-align: center;
++  }
++  .content #wygl10 .wygl10 .text ul li {
++    text-align: left;
++    display: inline-block;
++    width: 60%;
++  }
++  .content #wygl11 .wygl11 > div {
++    text-align: center;
++    padding: 60px 0 70px 0;
++  }
++  .content #wygl11 .wygl11 > div .d {
++    display: inline-block;
++    width: 150px;
++    margin: 0 30px;
++  }
++  .content #wygl11 .wygl11 > div .d > h4 {
++    color: #000000;
++    font-size: 20px;
++    padding: 0 0 40px 0;
++  }
++  .content #wygl11 .wygl11 > div .d div {
++    height: 150px;
++  }
++  .content #wygl11 .wygl11 > div .d div img {
++    max-width: 100%;
++    margin: 0 auto;
++  }
++  .content #wygl11 .wygl11 > div .d div .ewm {
++    display: none;
++  }
++  .content #wygl11 .wygl11 > div .d a {
++    display: block;
++    border: 1px solid #0593e0;
++    height: 38px;
++    line-height: 38px;
++    -webkit-border-radius: 20px;
++    -moz-border-radius: 20px;
++    border-radius: 20px;
++    font-size: 18px;
++    color: #0593e0;
++  }
++  .content #wygl11 .wygl11 > div .d .a1 {
++    border-color: #3baeed;
++    background-color: #3baeed;
++    color: #FFFFFF;
++  }
++  .content #wygl11 .wygl11 > div .d01 a:hover {
++    background-color: #0593e0;
++    border-color: #0593e0;
++    color: #FFFFFF;
++  }
++}
++/*分辨率小于640*/
++@media screen and (max-width: 639px) {
++  .banner01 img {
++    height: 200px;
++  }
++  .banner01 .text {
++    font-size: 24px;
++    line-height: 24px;
++    top: 34%;
++  }
++  .banner01 .text p {
++    font-size: 14px;
++    padding: 10px 0;
++  }
++  .banner01 .text a {
++    margin: 0 auto;
++    width: 140px;
++    line-height: 40px;
++    height: 40px;
++    font-size: 16px;
++  }
++  .banner01 .xfc {
++    display: none;
++  }
++  .banner01 .xfc01 {
++    display: none;
++  }
++  .content .gt {
++    width: 320px;
++  }
++  .content #app1 {
++    background-color: #52b4e6;
++  }
++  .content #app1 .app1 {
++    padding: 0 0 90px 0;
++  }
++  .content #app1 .app1 .a01 {
++    overflow: hidden;
++    padding: 60px 0 0 0;
++  }
++  .content #app1 .app1 .a01 .text {
++    padding: 0 2%;
++    width: 96%;
++    float: none;
++    text-align: center;
++  }
++  .content #wygl11 .wygl11 > div .d {
++    margin: 10px;
++  }
++}
+diff --git a/_site/static/css/public.css b/_site/static/css/public.css
+index 680a9ae..40d2709 100644
+--- a/_site/static/css/public.css
++++ b/_site/static/css/public.css
+@@ -1,1063 +1,1063 @@
+-﻿@charset "utf-8";
+-/* LESS Document */
+-/*常用的注释*/
+-body {
+-  margin: 0;
+-  min-width: 320px;
+-  font-family: "ts01";
+-  font-family: "Arial", "Helvetica", "sans-serif", "微软雅黑";
+-  font-size: 12px;
+-}
+-div,
+-dl,
+-dt,
+-dd,
+-ul,
+-ol,
+-li,
+-h1,
+-h2,
+-h3,
+-h4,
+-h5,
+-h6,
+-pre,
+-form,
+-fieldset,
+-input,
+-textarea,
+-blockquote,
+-p,
+-table,
+-th,
+-td {
+-  padding: 0;
+-  margin: 0;
+-  text-decoration: none;
+-  list-style-type: none;
+-  font-weight: normal;
+-}
+-a,
+-a:link,
+-a:hover,
+-a:visited,
+-a:active {
+-  text-decoration: none;
+-  cursor: pointer;
+-}
+-img {
+-  display: block;
+-  border: none;
+-}
+-textarea {
+-  resize: none;
+-}
+-input,
+-button,
+-select,
+-textarea {
+-  margin: 0;
+-  padding: 0;
+-  border: none;
+-  outline: none;
+-  font-family: "ts01";
+-  font-family: "Arial", "Helvetica", "sans-serif", "微软雅黑";
+-}
+-input[type="button"],
+-button,
+-input[type=submit] {
+-  cursor: pointer;
+-}
+-em,
+-i {
+-  list-style: none;
+-  font-weight: normal;
+-  font-style: normal;
+-}
+-/*常用的css样式*/
+-.fl {
+-  float: left;
+-}
+-.fr {
+-  float: right;
+-}
+-.clear:after {
+-  clear: both;
+-  width: 0;
+-  height: 0;
+-  content: "";
+-  display: block;
+-  zoom: 1;
+-}
+-.ellipsis {
+-  overflow: hidden;
+-  text-overflow: ellipsis;
+-  white-space: nowrap;
+-}
+-@font-face {
+-  font-family: 'ts01';
+-  src: url('../fonts/NOTOSANSHANS-REGULAR.eot');
+-  src: url('../fonts/NOTOSANSHANS-REGULAR.eot?#iefix') format('embedded-opentype'), url('../fonts/NOTOSANSHANS-REGULAR.woff') format('woff'), url('../fonts/NOTOSANSHANS-REGULAR.ttf') format('truetype'), url('../fonts/NOTOSANSHANS-REGULAR.otf') format('truetype'), url('../fonts/NOTOSANSHANS-REGULAR.svg#NOTOSANSHANS-REGULAR') format('svg');
+-  font-style: normal;
+-  font-weight: normal;
+-}
+-/*返回顶部*/
+-/*顶部*/
+-#top {
+-  box-shadow: 0 2px 5px rgba(189, 189, 189, 0.5);
+-}
+-#top .top {
+-  width: 1200px;
+-  margin: 0 auto;
+-}
+-#top .top .logo {
+-  float: left;
+-  line-height: 80px;
+-}
+-#top .top .logo img {
+-  display: inline-block;
+-  vertical-align: middle;
+-  max-width: 100%;
+-  max-height: 100%;
+-}
+-#top .top .nav {
+-  float: right;
+-}
+-#top .top .nav > ul > li {
+-  float: left;
+-  padding: 0 36px;
+-  text-align: center;
+-  line-height: 80px;
+-  height: 77px;
+-  border-bottom: 3px solid transparent;
+-  font-size: 14px;
+-  position: relative;
+-}
+-#top .top .nav > ul > li > a {
+-  display: block;
+-  color: #000000;
+-}
+-#top .top .nav > ul > li ul {
+-  position: absolute;
+-  background-color: #FFFFFF;
+-  display: none;
+-  border: 1px solid #b0b0b0;
+-  z-index: 10;
+-  top: 80px;
+-  left: 20px;
+-  width: 198px;
+-  padding: 8px 0;
+-  -webkit-border-radius: 3px;
+-  -moz-border-radius: 3px;
+-  border-radius: 3px;
+-  text-align: left;
+-}
+-#top .top .nav > ul > li ul:before {
+-  content: "";
+-  position: absolute;
+-  top: -9px;
+-  left: 35px;
+-  display: block;
+-  width: 0;
+-  height: 0;
+-  border-left: 9px solid transparent;
+-  border-right: 9px solid transparent;
+-  border-top: 0px solid transparent;
+-  border-bottom: 9px solid #fff;
+-  z-index: 9;
+-}
+-#top .top .nav > ul > li ul:after {
+-  content: "";
+-  position: absolute;
+-  top: -10px;
+-  left: 34px;
+-  display: block;
+-  width: 0;
+-  height: 0;
+-  border-left: 10px solid transparent;
+-  border-right: 10px solid transparent;
+-  border-top: 0px solid transparent;
+-  border-bottom: 10px solid #b0b0b0;
+-  z-index: 8;
+-}
+-#top .top .nav > ul > li ul li {
+-  padding: 0 0 0 14px;
+-}
+-#top .top .nav > ul > li ul li a {
+-  color: #000000;
+-  display: block;
+-  line-height: 28px;
+-}
+-#top .top .nav > ul > li ul li a:hover {
+-  color: #2ea9e4;
+-}
+-#top .top .nav > ul .on {
+-  border-color: #2fa9e4;
+-}
+-#top .top .nav > ul .on > a {
+-  color: #2fa9e4;
+-}
+-/*banner*/
+-.banner {
+-  min-width: 320px;
+-}
+-.banner .lunbo {
+-  width: 100%;
+-  overflow: hidden;
+-  position: relative;
+-}
+-.banner .lunbo .hd {
+-  overflow: hidden;
+-  position: absolute;
+-  z-index: 2;
+-  bottom: 5%;
+-  width: 100%;
+-  left: 0;
+-  text-align: center;
+-}
+-.banner .lunbo .hd ul {
+-  display: inline-block;
+-  vertical-align: top;
+-  overflow: hidden;
+-  zoom: 1;
+-  *display: inline;
+-}
+-.banner .lunbo .hd ul li {
+-  width: 18px;
+-  text-indent: -999px;
+-  height: 18px;
+-  background: url(../img/y01.png) no-repeat center center;
+-  float: left;
+-  margin: 0 0 0 10px;
+-  cursor: pointer;
+-}
+-.banner .lunbo .hd ul .on {
+-  background: url(../img/y02.png) no-repeat center center;
+-}
+-.banner .lunbo .bd {
+-  position: relative;
+-  z-index: 0;
+-}
+-.banner .lunbo .bd ul li {
+-  position: relative;
+-}
+-.banner .lunbo .bd ul li img {
+-  max-width: 100%;
+-  max-height: 100%;
+-}
+-.banner .lunbo .bd ul li .text {
+-  width: 680px;
+-  position: absolute;
+-  left: 50%;
+-  margin-left: -340px;
+-  z-index: 11;
+-  height: 300px;
+-  margin-top: -150px;
+-  top: 50%;
+-  font-family: ts01;
+-}
+-.banner .lunbo .bd ul li .text div {
+-  overflow: hidden;
+-}
+-.banner .lunbo .bd ul li .text div h4 {
+-  font-size: 56px;
+-  color: #FFFFFF;
+-  font-weight: bold;
+-  text-align: center;
+-  letter-spacing: 5px;
+-  line-height: 56px;
+-  min-height: 56px;
+-}
+-.banner .lunbo .bd ul li .text div div {
+-  text-align: center;
+-  font-size: 22px;
+-  color: #FFFFFF;
+-  min-height: 22px;
+-  margin: 5% 0 9% 0;
+-}
+-.banner .lunbo .bd ul li .text div a {
+-  display: block;
+-  width: 138px;
+-  padding: 0 0 0 72px;
+-  background-position: 36px center;
+-  background-repeat: no-repeat;
+-  background-image: url(../img/play.png);
+-  height: 56px;
+-  font-size: 18px;
+-  float: right;
+-  color: #FFFFFF;
+-  line-height: 56px;
+-  border: 1px solid #FFFFFF;
+-  -webkit-border-radius: 3px;
+-  -moz-border-radius: 3px;
+-  border-radius: 3px;
+-}
+-.banner .lunbo .bd ul li .text div a:first-child {
+-  border-color: #3eb0e6;
+-  background-color: #3eb0e6;
+-  background-image: url(../img/get.png);
+-  float: left;
+-}
+-.banner #focus {
+-  display: none;
+-}
+-.banner01 {
+-  min-width: 320px;
+-  position: relative;
+-}
+-.banner01 .img {
+-  width: 100%;
+-  height: 350px;
+-  background-position: center center;
+-  background-repeat: no-repeat;
+-  background-size: cover;
+-  display: none;
+-}
+-.banner01 img {
+-  max-width: 100%;
+-}
+-.banner01 .text {
+-  font-size: 46px;
+-  color: #FFFFFF;
+-  position: absolute;
+-  left: 0;
+-  width: 100%;
+-  text-align: center;
+-  top: 50%;
+-  height: 60px;
+-  margin-top: -30px;
+-  line-height: 60px;
+-}
+-/*底部*/
+-.foot .foot01 {
+-  background-color: #3eb0e5;
+-}
+-.foot .foot01 > div {
+-  width: 1200px;
+-  margin: 0 auto;
+-  font-size: 22px;
+-  color: #FFFFFF;
+-  line-height: 80px;
+-}
+-.foot .foot01 > div > * {
+-  height: 80px;
+-}
+-.foot .foot01 > div .l {
+-  padding: 0 0 0 120px;
+-  font-size: 26px;
+-  background: url(../img/call.png) no-repeat 80px center;
+-  width: 300px;
+-  float: left;
+-}
+-.foot .foot01 > div .r {
+-  float: right;
+-  overflow: hidden;
+-  padding: 0 20px 0 0;
+-}
+-.foot .foot01 > div .r li {
+-  float: left;
+-  margin: 0 100px 0 0;
+-}
+-.foot .foot01 > div .r li a {
+-  display: block;
+-  height: 80px;
+-  color: #FFFFFF;
+-  padding: 0 0 0 40px;
+-  background-position: left center;
+-  background-repeat: no-repeat;
+-}
+-.foot .foot01 > div .r .li1 a {
+-  background-image: url(../img/kf.png);
+-}
+-.foot .foot01 > div .r .li2 a {
+-  background-image: url(../img/yj.png);
+-}
+-.foot .foot01 > div .r .li3 a {
+-  background-image: url(../img/bz.png);
+-}
+-.foot .foot02 {
+-  background-color: #2c2c2c;
+-  padding: 46px 0 0 0;
+-}
+-.foot .foot02 > div {
+-  width: 1200px;
+-  margin: 0 auto;
+-}
+-.foot .foot02 .div1 {
+-  color: #FFFFFF;
+-  padding: 0 0 60px 0;
+-  line-height: 22px;
+-  position: relative;
+-}
+-.foot .foot02 .div1 .l {
+-  width: 370px;
+-  float: left;
+-}
+-.foot .foot02 .div1 .l > img {
+-  max-width: 100%;
+-  max-height: 100%;
+-}
+-.foot .foot02 .div1 .l p {
+-  margin: 26px 0;
+-  opacity: 0.5;
+-  filter: alpha(opacity=50);
+-}
+-.foot .foot02 .div1 .l div {
+-  font-size: 14px;
+-}
+-.foot .foot02 .div1 .l div div {
+-  padding: 20px 0 0 0;
+-}
+-.foot .foot02 .div1 .l div div a {
+-  display: inline-block;
+-  vertical-align: top;
+-  margin: 0 14px 0 0;
+-  width: 36px;
+-  height: 36px;
+-  background-color: #FFFFFF;
+-  background-position: center center;
+-  background-repeat: no-repeat;
+-  background-image: url(../img/s.png);
+-}
+-.foot .foot02 .div1 .l div div a:first-child {
+-  background-image: url(../img/qq.png);
+-}
+-.foot .foot02 .div1 .r {
+-  float: right;
+-  overflow: hidden;
+-}
+-.foot .foot02 .div1 .r ul {
+-  float: left;
+-  width: 180px;
+-}
+-.foot .foot02 .div1 .r ul li:first-child {
+-  padding: 20px 0 30px 0;
+-  font-size: 16px;
+-  line-height: 16px;
+-}
+-.foot .foot02 .div1 .r ul li a {
+-  color: #cacaca;
+-  line-height: 26px;
+-}
+-.foot .foot02 .div1 .r ul li a:hover {
+-  color: #3eb0e5;
+-}
+-.foot .foot02 .div1 .r ul li .d01 {
+-  overflow: hidden;
+-}
+-.foot .foot02 .div1 .r ul li .d01 div {
+-  width: 30px;
+-  height: 30px;
+-  background-position: center center;
+-  background-repeat: no-repeat;
+-  float: left;
+-  margin: 0 15px 0 0;
+-  cursor: pointer;
+-}
+-.foot .foot02 .div1 .r ul li .d01 .wb {
+-  background-image: url(../img/wb01.png);
+-}
+-.foot .foot02 .div1 .r ul li .d01 .wechat {
+-  background-image: url(../img/wechat01.png);
+-}
+-.foot .foot02 .div1 .r ul li .d01 .wb.on {
+-  background-image: url(../img/wb1.png);
+-}
+-.foot .foot02 .div1 .r ul li .d01 .wechat.on {
+-  background-image: url(../img/wechat1.png);
+-}
+-.foot .foot02 .div1 .r ul li .d02 {
+-  padding: 14px 0 0 0;
+-}
+-.foot .foot02 .div1 .r ul li .d02 img {
+-  max-width: 100%;
+-  max-height: 100%;
+-  display: none;
+-}
+-.foot .foot02 .div1 #returnTop {
+-  position: absolute;
+-  width: 70px;
+-  height: 70px;
+-  background-position: center;
+-  background-repeat: no-repeat;
+-  cursor: pointer;
+-  bottom: 36px;
+-  right: 5%;
+-  background-image: url(../img/top.png);
+-  z-index: 99;
+-}
+-.foot .foot02 .div1 #returnTop:hover {
+-  background-image: url(../img/top01.png);
+-}
+-.foot .foot02 .div2 {
+-  padding: 10px 0;
+-  border-top: 1px solid #FFFFFF;
+-  opacity: 0.5;
+-  filter: alpha(opacity=50);
+-  color: #FFFFFF;
+-  line-height: 26px;
+-  text-align: center;
+-}
+-.get {
+-  width: 135px;
+-  height: 50px;
+-  border: 2px solid #FFFFFF;
+-  background-position: 26px center;
+-  background-repeat: no-repeat;
+-  background-image: url(../img/get01.png);
+-  line-height: 50px;
+-  -webkit-border-radius: 30px;
+-  -moz-border-radius: 30px;
+-  border-radius: 30px;
+-  padding: 0 0 0 65px;
+-  font-size: 18px;
+-  color: #FFFFFF;
+-  margin: 0 auto;
+-  display: block;
+-}
+-/*公用css*/
+-.public_title {
+-  padding: 36px 0;
+-  font-size: 18px;
+-  line-height: 20px;
+-}
+-.public_title a {
+-  color: #2ea9e4;
+-}
+-.public_title a:first-child {
+-  color: #000000;
+-}
+-.public_title span {
+-  opacity: 0.3;
+-  filter: alpha(opacity=30);
+-  padding: 0 10px;
+-}
+-.public_content {
+-  padding: 0 0 160px 0;
+-}
+-.public_content .public_left{
+-  float: left;
+-  width: 200px;
+-}
+-.public_content .public_left .sideMenu {
+-  width: 200px;
+-}
+-.public_content .public_left .sideMenu > ul {
+-  font-size: 14px;
+-  color: #000000;
+-  line-height: 40px;
+-  border-bottom: 1px solid #CFCFCF;
+-  padding: 0 0 20px 0;
+-}
+-.public_content .public_left .sideMenu > ul > li {
+-  border-top: 1px dashed #cfcfcf;
+-}
+-.public_content .public_left .sideMenu > ul > li > a {
+-  display: block;
+-  padding: 0 0 0 20px;
+-  color: #000000;
+-  overflow: hidden;
+-}
+-.public_content .public_left .sideMenu > ul > li > a:hover {
+-  color: #26a6e3;
+-}
+-.public_content .public_left .sideMenu > ul > li > a em {
+-  display: block;
+-  float: right;
+-  width: 50px;
+-  height: 40px;
+-  background-position: center center;
+-  background-repeat: no-repeat;
+-  background-image: url(../img/dropdown02.png);
+-}
+-.public_content .public_left .sideMenu > ul > li > div {
+-  display: block;
+-  padding: 0 0 0 20px;
+-  color: #000000;
+-  overflow: hidden;
+-}
+-.public_content .public_left .sideMenu > ul > li > div em {
+-  display: block;
+-  float: right;
+-  width: 50px;
+-  height: 40px;
+-  background-position: center center;
+-  background-repeat: no-repeat;
+-  background-image: url(../img/dropdown02.png);
+-}
+-.public_content .public_left .sideMenu > ul > li ul {
+-  display: none;
+-}
+-.public_content .public_left .sideMenu > ul > li ul li a {
+-  display: block;
+-  color: #000000;
+-  text-align: center;
+-}
+-.public_content .public_left .sideMenu > ul > li ul li a:hover {
+-  color: #26a6e3;
+-}
+-.public_content .public_left .sideMenu > ul > li ul li .on {
+-  color: #26A6E3;
+-  border-color: transparent;
+-}
+-.public_content .public_left .sideMenu > ul .on {
+-  border-top: 1px solid #26a6e3;
+-}
+-.public_content .public_left .sideMenu > ul .on > a {
+-  background-color: #26a6e3;
+-  color: #FFFFFF;
+-}
+-.public_content .public_left .sideMenu > ul .on > a:hover {
+-  color: #000000;
+-}
+-.public_content .public_left .sideMenu > ul .on > a em {
+-  background-image: url(../img/dropdown03.png);
+-}
+-.public_content .public_left .sideMenu > ul .on > div {
+-  background-color: #26a6e3;
+-  color: #FFFFFF;
+-}
+-.public_content .public_left .sideMenu > ul .on > div em {
+-  background-image: url(../img/dropdown03.png);
+-}
+-.public_content .public_left .sideMenu > ul .on ul {
+-  display: block;
+-}
+-.public_content .public_right {
+-  float: right;
+-  width: 1000px;
+-}
+-.public_content .public_right .right_title {
+-  text-align: center;
+-  font-size: 26px;
+-  color: #000000;
+-  line-height: 26px;
+-}
+-.public_content .public_right .right_title a{
+-  float: right;
+-  font-size: 12px;
+-  display: block;
+-  padding: 0 0 0 20px;
+-  background: url(../img/back.png) no-repeat left center;
+-}
+-/*分页*/
+-.paging {
+-  font-size: 16px;
+-  color: #4F4F4F;
+-  overflow: hidden;
+-}
+-.paging a,
+-.paging span {
+-  display: block;
+-  float: left;
+-  width: 34px;
+-  height: 34px;
+-  text-align: center;
+-  line-height: 34px;
+-  border: 1px solid #4f4f4f;
+-  margin: 0 0 0 10px;
+-  color: #4F4F4F;
+-}
+-.paging .on {
+-  color: #FFFFFF;
+-  background-color: #0487da;
+-  border-color: #0487da;
+-}
+-.paging .prev,
+-.paging .next {
+-  color: #616161;
+-  width: 78px;
+-}
+-/*响应式*/
+-/*分辨率小于1200*/
+-@media screen and (max-width: 1199px) {
+-  /*顶部*/
+-  #top .top {
+-    width: 1000px;
+-  }
+-  #top .top .nav {
+-    float: right;
+-  }
+-  /*底部*/
+-  .foot .foot01 > div {
+-    width: 1000px;
+-  }
+-  .foot .foot01 > div .l {
+-    padding: 0 0 0 120px;
+-  }
+-  .foot .foot01 > div .r {
+-    padding: 0 20px 0 0;
+-  }
+-  .foot .foot01 > div .r li {
+-    margin: 0 60px 0 0;
+-  }
+-  .foot .foot02 {
+-    padding: 46px 0 0 0;
+-  }
+-  .foot .foot02 > div {
+-    width: 1000px;
+-  }
+-  .foot .foot02 .div1 {
+-    padding: 0 0 60px 0;
+-  }
+-  .foot .foot02 .div1 .l {
+-    width: 260px;
+-  }
+-  .foot .foot02 .div1 .l p {
+-    margin: 26px 0;
+-  }
+-  .foot .foot02 .div1 .l div div {
+-    padding: 20px 0 0 0;
+-  }
+-  .foot .foot02 .div1 .r ul {
+-    width: 115px;
+-  }
+-  .foot .foot02 .div1 .r ul li:first-child {
+-    padding: 20px 0 30px 0;
+-  }
+-  /*banner*/
+-  .banner .lunbo .bd ul li .text {
+-    bottom: 20%;
+-  }
+-  .banner .lunbo .bd ul li .text div {
+-    overflow: hidden;
+-  }
+-  .banner .lunbo .bd ul li .text div div {
+-    margin: 3% 0 6% 0;
+-  }
+-  .banner01 {
+-    position: relative;
+-  }
+-  .banner01 img {
+-    max-width: 100%;
+-  }
+-  .banner01 .text {
+-    font-size: 46px;
+-  }
+-  /*公用css*/
+-  .public_content {
+-    padding: 0 0 160px 0;
+-  }
+-  .public_content .public_left {
+-    float: left;
+-    width: 200px;
+-  }
+-  .public_content .public_left .sideMenu {
+-    width: 200px;
+-  }
+-  .public_content .public_right {
+-    float: right;
+-    width: 800px;
+-  }
+-}
+-/*分辨率小于1000*/
+-@media screen and (max-width: 999px) {
+-  /*顶部*/
+-  #top .top {
+-    width: 640px;
+-  }
+-  #top .top .nav {
+-    float: right;
+-  }
+-  #top .top .nav > ul > li {
+-    padding: 0 16px;
+-  }
+-  /*底部*/
+-  .foot .foot01 {
+-    background-color: #3eb0e5;
+-  }
+-  .foot .foot01 > div {
+-    width: 640px;
+-  }
+-  .foot .foot01 > div .l {
+-    padding: 0 0 0 60px;
+-    background-position: 10px center;
+-    width: 300px;
+-  }
+-  .foot .foot01 > div .r {
+-    padding: 0 10px 0 0;
+-  }
+-  .foot .foot01 > div .r li {
+-    margin: 0 10px 0 0;
+-  }
+-  .foot .foot01 > div .r li a {
+-    padding: 0 0 0 32px;
+-  }
+-  .foot .foot02 {
+-    padding: 46px 0 0 0;
+-  }
+-  .foot .foot02 > div {
+-    width: 640px;
+-  }
+-  .foot .foot02 .div1 {
+-    padding: 0 0 30px 0;
+-  }
+-  .foot .foot02 .div1 .l {
+-    width: 640px;
+-  }
+-  .foot .foot02 .div1 .l > img {
+-    margin: 0 auto;
+-  }
+-  .foot .foot02 .div1 .l p {
+-    margin: 26px 0;
+-  }
+-  .foot .foot02 .div1 .l div div {
+-    padding: 20px 0 0 0;
+-  }
+-  .foot .foot02 .div1 .r {
+-    padding: 0 5px;
+-  }
+-  .foot .foot02 .div1 .r ul {
+-    width: 105px;
+-  }
+-  .foot .foot02 .div1 .r ul li:first-child {
+-    padding: 20px 0 30px 0;
+-  }
+-  /*banner*/
+-  .banner .lunbo .bd ul li .text {
+-    bottom: 15%;
+-  }
+-  .banner .lunbo .bd ul li .text div {
+-    overflow: hidden;
+-  }
+-  .banner .lunbo .bd ul li .text div h4 {
+-    font-size: 36px;
+-    line-height: 36px;
+-    min-height: 36px;
+-  }
+-  .banner .lunbo .bd ul li .text div div {
+-    margin: 1% 0 4% 0;
+-  }
+-  .banner .lunbo .bd ul li .text div a {
+-    width: 100px;
+-    padding: 0 0 0 50px;
+-    height: 40px;
+-    line-height: 40px;
+-    background-position: 10px center;
+-  }
+-  .banner01 {
+-    position: relative;
+-  }
+-  .banner01 img {
+-    max-width: 100%;
+-  }
+-  .banner01 .text {
+-    font-size: 42px;
+-  }
+-  /*公用css*/
+-  .public_content {
+-    padding: 0 0 160px 0;
+-  }
+-  .public_content .public_left {
+-    float: left;
+-    width: 200px;
+-  }
+-  .public_content .public_left .sideMenu {
+-    width: 200px;
+-  }
+-  .public_content .public_right {
+-    float: right;
+-    width: 440px;
+-  }
+-  .public_content .public_right .right_title {
+-    text-align: center;
+-    font-size: 26px;
+-    color: #000000;
+-    line-height: 26px;
+-  }
+-}
+-/*分辨率小于640*/
+-@media screen and (max-width: 639px) {
+-  .suspend {
+-    display: none;
+-  }
+-  /*顶部*/
+-  #top .top {
+-    width: 320px;
+-  }
+-  #top .top .logo {
+-    width: 320px;
+-    padding: 10px 0;
+-  }
+-  #top .top .logo img {
+-    margin: 0 auto;
+-    display: block;
+-  }
+-  #top .top .nav {
+-    float: right;
+-  }
+-  #top .top .nav > ul > li {
+-    padding: 0 6px;
+-    line-height: 40px;
+-    height: 37px;
+-  }
+-  /*底部*/
+-  .foot .foot01 {
+-    background-color: #3eb0e5;
+-  }
+-  .foot .foot01 > div {
+-    width: 100%;
+-    line-height: 50px;
+-    font-size: 16px;
+-  }
+-  .foot .foot01 > div > * {
+-    height: 50px;
+-  }
+-  .foot .foot01 > div .l {
+-    padding: 0 0 0 110px;
+-    background-position: 70px center;
+-    width: 186px;
+-    font-size: 16px;
+-  }
+-  .foot .foot01 > div .r {
+-    padding: 0;
+-  }
+-  .foot .foot01 > div .r li {
+-    width: 100px;
+-    margin: 0 6px 0 0;
+-  }
+-  .foot .foot01 > div .r li a {
+-    height: 40px;
+-    padding: 0 0 0 32px;
+-  }
+-  .foot .foot02 {
+-    padding: 46px 0 0 0;
+-  }
+-  .foot .foot02 > div {
+-    width: 320px;
+-  }
+-  .foot .foot02 .div1 {
+-    padding: 0 0 30px 0;
+-  }
+-  .foot .foot02 .div1 .l {
+-    width: 310px;
+-    padding: 0 5px;
+-  }
+-  .foot .foot02 .div1 .l > img {
+-    margin: 0 auto;
+-  }
+-  .foot .foot02 .div1 .l p {
+-    margin: 26px 0;
+-  }
+-  .foot .foot02 .div1 .l div {
+-    text-align: center;
+-  }
+-  .foot .foot02 .div1 .l div div {
+-    padding: 20px 0 0 0;
+-  }
+-  .foot .foot02 .div1 .r {
+-    padding: 0 5px;
+-  }
+-  .foot .foot02 .div1 .r ul {
+-    width: 310px;
+-    float: none;
+-    text-align: center;
+-  }
+-  .foot .foot02 .div1 .r ul li:first-child {
+-    padding: 20px 0 30px 0;
+-  }
+-  .foot .foot02 .div1 .r ul li .d01 {
+-    text-align: center;
+-  }
+-  .foot .foot02 .div1 .r ul li .d01 > div {
+-    display: inline-block;
+-    float: none;
+-  }
+-  .foot .foot02 .div1 .r ul li .d02 img {
+-    margin: 0 auto;
+-  }
+-  .foot .foot02 .div1 #returnTop {
+-    width: 36px;
+-    height: 36px;
+-    background-size: 100%;
+-  }
+-  .foot .foot02 .div2 {
+-    padding: 0 5px;
+-  }
+-  /*banner*/
+-  .banner .lunbo .bd ul li .img a {
+-    display: block;
+-  }
+-  .banner .lunbo .bd ul li .img img {
+-    max-width: 100%;
+-  }
+-  .banner .lunbo .bd ul li .text {
+-    width: 100%;
+-    margin: -150px auto 0 auto;
+-    left: 0;
+-  }
+-  .banner .lunbo .bd ul li .text div h4 {
+-    font-size: 30px;
+-    line-height: 36px;
+-    min-height: 36px;
+-  }
+-  .banner .lunbo .bd ul li .text div div {
+-    font-size: 16px;
+-    margin: 5% 0;
+-    min-height: 20px;
+-  }
+-  .banner .lunbo .bd ul li .text div > a {
+-    width: 130px;
+-    padding: 0 0 0 50px;
+-    height: 42px;
+-    line-height: 42px;
+-    background-position: 10px center;
+-    display: block;
+-    margin: 20px auto;
+-    float: none;
+-  }
+-  .banner .lunbo .bd ul li .text div > a:first-child {
+-    float: none;
+-  }
+-  .banner .slideBox {
+-    display: none;
+-  }
+-  .banner #focus {
+-    display: block;
+-  }
+-  .banner01 {
+-    position: relative;
+-  }
+-  .banner01 > img {
+-    display: none;
+-  }
+-  .banner01 .img {
+-    display: block;
+-  }
+-  .banner01 .text {
+-    font-size: 18px;
+-  }
+-  /*公用css*/
+-  .public_title {
+-    padding: 20px 2%;
+-  }
+-  .public_content {
+-    padding: 0 0 80px 0;
+-  }
+-  .public_content .public_left {
+-    float: none;
+-    margin: 20px auto;
+-    width: 200px;
+-  }
+-  .public_content .public_right {
+-    padding: 30px 0 0 0;
+-    float: none;
+-    width: 320px;
+-    margin: 0 auto;
+-  }
+-  /*分页*/
+-  .paging {
+-    font-size: 14px;
+-  }
+-  .paging a,
+-  .paging span {
+-    width: 24px;
+-    height: 24px;
+-    line-height: 24px;
+-    margin: 0 0 0 5px;
+-  }
+-  .paging .prev,
+-  .paging .next {
+-    width: 70px;
+-  }
+-}
++﻿@charset "utf-8";
++/* LESS Document */
++/*常用的注释*/
++body {
++  margin: 0;
++  min-width: 320px;
++  font-family: "ts01";
++  font-family: "Arial", "Helvetica", "sans-serif", "微软雅黑";
++  font-size: 12px;
++}
++div,
++dl,
++dt,
++dd,
++ul,
++ol,
++li,
++h1,
++h2,
++h3,
++h4,
++h5,
++h6,
++pre,
++form,
++fieldset,
++input,
++textarea,
++blockquote,
++p,
++table,
++th,
++td {
++  padding: 0;
++  margin: 0;
++  text-decoration: none;
++  list-style-type: none;
++  font-weight: normal;
++}
++a,
++a:link,
++a:hover,
++a:visited,
++a:active {
++  text-decoration: none;
++  cursor: pointer;
++}
++img {
++  display: block;
++  border: none;
++}
++textarea {
++  resize: none;
++}
++input,
++button,
++select,
++textarea {
++  margin: 0;
++  padding: 0;
++  border: none;
++  outline: none;
++  font-family: "ts01";
++  font-family: "Arial", "Helvetica", "sans-serif", "微软雅黑";
++}
++input[type="button"],
++button,
++input[type=submit] {
++  cursor: pointer;
++}
++em,
++i {
++  list-style: none;
++  font-weight: normal;
++  font-style: normal;
++}
++/*常用的css样式*/
++.fl {
++  float: left;
++}
++.fr {
++  float: right;
++}
++.clear:after {
++  clear: both;
++  width: 0;
++  height: 0;
++  content: "";
++  display: block;
++  zoom: 1;
++}
++.ellipsis {
++  overflow: hidden;
++  text-overflow: ellipsis;
++  white-space: nowrap;
++}
++@font-face {
++  font-family: 'ts01';
++  src: url('../fonts/NOTOSANSHANS-REGULAR.eot');
++  src: url('../fonts/NOTOSANSHANS-REGULAR.eot?#iefix') format('embedded-opentype'), url('../fonts/NOTOSANSHANS-REGULAR.woff') format('woff'), url('../fonts/NOTOSANSHANS-REGULAR.ttf') format('truetype'), url('../fonts/NOTOSANSHANS-REGULAR.otf') format('truetype'), url('../fonts/NOTOSANSHANS-REGULAR.svg#NOTOSANSHANS-REGULAR') format('svg');
++  font-style: normal;
++  font-weight: normal;
++}
++/*返回顶部*/
++/*顶部*/
++#top {
++  box-shadow: 0 2px 5px rgba(189, 189, 189, 0.5);
++}
++#top .top {
++  width: 1200px;
++  margin: 0 auto;
++}
++#top .top .logo {
++  float: left;
++  line-height: 80px;
++}
++#top .top .logo img {
++  display: inline-block;
++  vertical-align: middle;
++  max-width: 100%;
++  max-height: 100%;
++}
++#top .top .nav {
++  float: right;
++}
++#top .top .nav > ul > li {
++  float: left;
++  padding: 0 36px;
++  text-align: center;
++  line-height: 80px;
++  height: 77px;
++  border-bottom: 3px solid transparent;
++  font-size: 14px;
++  position: relative;
++}
++#top .top .nav > ul > li > a {
++  display: block;
++  color: #000000;
++}
++#top .top .nav > ul > li ul {
++  position: absolute;
++  background-color: #FFFFFF;
++  display: none;
++  border: 1px solid #b0b0b0;
++  z-index: 10;
++  top: 80px;
++  left: 20px;
++  width: 198px;
++  padding: 8px 0;
++  -webkit-border-radius: 3px;
++  -moz-border-radius: 3px;
++  border-radius: 3px;
++  text-align: left;
++}
++#top .top .nav > ul > li ul:before {
++  content: "";
++  position: absolute;
++  top: -9px;
++  left: 35px;
++  display: block;
++  width: 0;
++  height: 0;
++  border-left: 9px solid transparent;
++  border-right: 9px solid transparent;
++  border-top: 0px solid transparent;
++  border-bottom: 9px solid #fff;
++  z-index: 9;
++}
++#top .top .nav > ul > li ul:after {
++  content: "";
++  position: absolute;
++  top: -10px;
++  left: 34px;
++  display: block;
++  width: 0;
++  height: 0;
++  border-left: 10px solid transparent;
++  border-right: 10px solid transparent;
++  border-top: 0px solid transparent;
++  border-bottom: 10px solid #b0b0b0;
++  z-index: 8;
++}
++#top .top .nav > ul > li ul li {
++  padding: 0 0 0 14px;
++}
++#top .top .nav > ul > li ul li a {
++  color: #000000;
++  display: block;
++  line-height: 28px;
++}
++#top .top .nav > ul > li ul li a:hover {
++  color: #2ea9e4;
++}
++#top .top .nav > ul .on {
++  border-color: #2fa9e4;
++}
++#top .top .nav > ul .on > a {
++  color: #2fa9e4;
++}
++/*banner*/
++.banner {
++  min-width: 320px;
++}
++.banner .lunbo {
++  width: 100%;
++  overflow: hidden;
++  position: relative;
++}
++.banner .lunbo .hd {
++  overflow: hidden;
++  position: absolute;
++  z-index: 2;
++  bottom: 5%;
++  width: 100%;
++  left: 0;
++  text-align: center;
++}
++.banner .lunbo .hd ul {
++  display: inline-block;
++  vertical-align: top;
++  overflow: hidden;
++  zoom: 1;
++  *display: inline;
++}
++.banner .lunbo .hd ul li {
++  width: 18px;
++  text-indent: -999px;
++  height: 18px;
++  background: url(../img/y01.png) no-repeat center center;
++  float: left;
++  margin: 0 0 0 10px;
++  cursor: pointer;
++}
++.banner .lunbo .hd ul .on {
++  background: url(../img/y02.png) no-repeat center center;
++}
++.banner .lunbo .bd {
++  position: relative;
++  z-index: 0;
++}
++.banner .lunbo .bd ul li {
++  position: relative;
++}
++.banner .lunbo .bd ul li img {
++  max-width: 100%;
++  max-height: 100%;
++}
++.banner .lunbo .bd ul li .text {
++  width: 680px;
++  position: absolute;
++  left: 50%;
++  margin-left: -340px;
++  z-index: 11;
++  height: 300px;
++  margin-top: -150px;
++  top: 50%;
++  font-family: ts01;
++}
++.banner .lunbo .bd ul li .text div {
++  overflow: hidden;
++}
++.banner .lunbo .bd ul li .text div h4 {
++  font-size: 56px;
++  color: #FFFFFF;
++  font-weight: bold;
++  text-align: center;
++  letter-spacing: 5px;
++  line-height: 56px;
++  min-height: 56px;
++}
++.banner .lunbo .bd ul li .text div div {
++  text-align: center;
++  font-size: 22px;
++  color: #FFFFFF;
++  min-height: 22px;
++  margin: 5% 0 9% 0;
++}
++.banner .lunbo .bd ul li .text div a {
++  display: block;
++  width: 138px;
++  padding: 0 0 0 72px;
++  background-position: 36px center;
++  background-repeat: no-repeat;
++  background-image: url(../img/play.png);
++  height: 56px;
++  font-size: 18px;
++  float: right;
++  color: #FFFFFF;
++  line-height: 56px;
++  border: 1px solid #FFFFFF;
++  -webkit-border-radius: 3px;
++  -moz-border-radius: 3px;
++  border-radius: 3px;
++}
++.banner .lunbo .bd ul li .text div a:first-child {
++  border-color: #3eb0e6;
++  background-color: #3eb0e6;
++  background-image: url(../img/get.png);
++  float: left;
++}
++.banner #focus {
++  display: none;
++}
++.banner01 {
++  min-width: 320px;
++  position: relative;
++}
++.banner01 .img {
++  width: 100%;
++  height: 350px;
++  background-position: center center;
++  background-repeat: no-repeat;
++  background-size: cover;
++  display: none;
++}
++.banner01 img {
++  max-width: 100%;
++}
++.banner01 .text {
++  font-size: 46px;
++  color: #FFFFFF;
++  position: absolute;
++  left: 0;
++  width: 100%;
++  text-align: center;
++  top: 50%;
++  height: 60px;
++  margin-top: -30px;
++  line-height: 60px;
++}
++/*底部*/
++.foot .foot01 {
++  background-color: #3eb0e5;
++}
++.foot .foot01 > div {
++  width: 1200px;
++  margin: 0 auto;
++  font-size: 22px;
++  color: #FFFFFF;
++  line-height: 80px;
++}
++.foot .foot01 > div > * {
++  height: 80px;
++}
++.foot .foot01 > div .l {
++  padding: 0 0 0 120px;
++  font-size: 26px;
++  background: url(../img/call.png) no-repeat 80px center;
++  width: 300px;
++  float: left;
++}
++.foot .foot01 > div .r {
++  float: right;
++  overflow: hidden;
++  padding: 0 20px 0 0;
++}
++.foot .foot01 > div .r li {
++  float: left;
++  margin: 0 100px 0 0;
++}
++.foot .foot01 > div .r li a {
++  display: block;
++  height: 80px;
++  color: #FFFFFF;
++  padding: 0 0 0 40px;
++  background-position: left center;
++  background-repeat: no-repeat;
++}
++.foot .foot01 > div .r .li1 a {
++  background-image: url(../img/kf.png);
++}
++.foot .foot01 > div .r .li2 a {
++  background-image: url(../img/yj.png);
++}
++.foot .foot01 > div .r .li3 a {
++  background-image: url(../img/bz.png);
++}
++.foot .foot02 {
++  background-color: #2c2c2c;
++  padding: 46px 0 0 0;
++}
++.foot .foot02 > div {
++  width: 1200px;
++  margin: 0 auto;
++}
++.foot .foot02 .div1 {
++  color: #FFFFFF;
++  padding: 0 0 60px 0;
++  line-height: 22px;
++  position: relative;
++}
++.foot .foot02 .div1 .l {
++  width: 370px;
++  float: left;
++}
++.foot .foot02 .div1 .l > img {
++  max-width: 100%;
++  max-height: 100%;
++}
++.foot .foot02 .div1 .l p {
++  margin: 26px 0;
++  opacity: 0.5;
++  filter: alpha(opacity=50);
++}
++.foot .foot02 .div1 .l div {
++  font-size: 14px;
++}
++.foot .foot02 .div1 .l div div {
++  padding: 20px 0 0 0;
++}
++.foot .foot02 .div1 .l div div a {
++  display: inline-block;
++  vertical-align: top;
++  margin: 0 14px 0 0;
++  width: 36px;
++  height: 36px;
++  background-color: #FFFFFF;
++  background-position: center center;
++  background-repeat: no-repeat;
++  background-image: url(../img/s.png);
++}
++.foot .foot02 .div1 .l div div a:first-child {
++  background-image: url(../img/qq.png);
++}
++.foot .foot02 .div1 .r {
++  float: right;
++  overflow: hidden;
++}
++.foot .foot02 .div1 .r ul {
++  float: left;
++  width: 180px;
++}
++.foot .foot02 .div1 .r ul li:first-child {
++  padding: 20px 0 30px 0;
++  font-size: 16px;
++  line-height: 16px;
++}
++.foot .foot02 .div1 .r ul li a {
++  color: #cacaca;
++  line-height: 26px;
++}
++.foot .foot02 .div1 .r ul li a:hover {
++  color: #3eb0e5;
++}
++.foot .foot02 .div1 .r ul li .d01 {
++  overflow: hidden;
++}
++.foot .foot02 .div1 .r ul li .d01 div {
++  width: 30px;
++  height: 30px;
++  background-position: center center;
++  background-repeat: no-repeat;
++  float: left;
++  margin: 0 15px 0 0;
++  cursor: pointer;
++}
++.foot .foot02 .div1 .r ul li .d01 .wb {
++  background-image: url(../img/wb01.png);
++}
++.foot .foot02 .div1 .r ul li .d01 .wechat {
++  background-image: url(../img/wechat01.png);
++}
++.foot .foot02 .div1 .r ul li .d01 .wb.on {
++  background-image: url(../img/wb1.png);
++}
++.foot .foot02 .div1 .r ul li .d01 .wechat.on {
++  background-image: url(../img/wechat1.png);
++}
++.foot .foot02 .div1 .r ul li .d02 {
++  padding: 14px 0 0 0;
++}
++.foot .foot02 .div1 .r ul li .d02 img {
++  max-width: 100%;
++  max-height: 100%;
++  display: none;
++}
++.foot .foot02 .div1 #returnTop {
++  position: absolute;
++  width: 70px;
++  height: 70px;
++  background-position: center;
++  background-repeat: no-repeat;
++  cursor: pointer;
++  bottom: 36px;
++  right: 5%;
++  background-image: url(../img/top.png);
++  z-index: 99;
++}
++.foot .foot02 .div1 #returnTop:hover {
++  background-image: url(../img/top01.png);
++}
++.foot .foot02 .div2 {
++  padding: 10px 0;
++  border-top: 1px solid #FFFFFF;
++  opacity: 0.5;
++  filter: alpha(opacity=50);
++  color: #FFFFFF;
++  line-height: 26px;
++  text-align: center;
++}
++.get {
++  width: 135px;
++  height: 50px;
++  border: 2px solid #FFFFFF;
++  background-position: 26px center;
++  background-repeat: no-repeat;
++  background-image: url(../img/get01.png);
++  line-height: 50px;
++  -webkit-border-radius: 30px;
++  -moz-border-radius: 30px;
++  border-radius: 30px;
++  padding: 0 0 0 65px;
++  font-size: 18px;
++  color: #FFFFFF;
++  margin: 0 auto;
++  display: block;
++}
++/*公用css*/
++.public_title {
++  padding: 36px 0;
++  font-size: 18px;
++  line-height: 20px;
++}
++.public_title a {
++  color: #2ea9e4;
++}
++.public_title a:first-child {
++  color: #000000;
++}
++.public_title span {
++  opacity: 0.3;
++  filter: alpha(opacity=30);
++  padding: 0 10px;
++}
++.public_content {
++  padding: 0 0 160px 0;
++}
++.public_content .public_left{
++  float: left;
++  width: 200px;
++}
++.public_content .public_left .sideMenu {
++  width: 200px;
++}
++.public_content .public_left .sideMenu > ul {
++  font-size: 14px;
++  color: #000000;
++  line-height: 40px;
++  border-bottom: 1px solid #CFCFCF;
++  padding: 0 0 20px 0;
++}
++.public_content .public_left .sideMenu > ul > li {
++  border-top: 1px dashed #cfcfcf;
++}
++.public_content .public_left .sideMenu > ul > li > a {
++  display: block;
++  padding: 0 0 0 20px;
++  color: #000000;
++  overflow: hidden;
++}
++.public_content .public_left .sideMenu > ul > li > a:hover {
++  color: #26a6e3;
++}
++.public_content .public_left .sideMenu > ul > li > a em {
++  display: block;
++  float: right;
++  width: 50px;
++  height: 40px;
++  background-position: center center;
++  background-repeat: no-repeat;
++  background-image: url(../img/dropdown02.png);
++}
++.public_content .public_left .sideMenu > ul > li > div {
++  display: block;
++  padding: 0 0 0 20px;
++  color: #000000;
++  overflow: hidden;
++}
++.public_content .public_left .sideMenu > ul > li > div em {
++  display: block;
++  float: right;
++  width: 50px;
++  height: 40px;
++  background-position: center center;
++  background-repeat: no-repeat;
++  background-image: url(../img/dropdown02.png);
++}
++.public_content .public_left .sideMenu > ul > li ul {
++  display: none;
++}
++.public_content .public_left .sideMenu > ul > li ul li a {
++  display: block;
++  color: #000000;
++  text-align: center;
++}
++.public_content .public_left .sideMenu > ul > li ul li a:hover {
++  color: #26a6e3;
++}
++.public_content .public_left .sideMenu > ul > li ul li .on {
++  color: #26A6E3;
++  border-color: transparent;
++}
++.public_content .public_left .sideMenu > ul .on {
++  border-top: 1px solid #26a6e3;
++}
++.public_content .public_left .sideMenu > ul .on > a {
++  background-color: #26a6e3;
++  color: #FFFFFF;
++}
++.public_content .public_left .sideMenu > ul .on > a:hover {
++  color: #000000;
++}
++.public_content .public_left .sideMenu > ul .on > a em {
++  background-image: url(../img/dropdown03.png);
++}
++.public_content .public_left .sideMenu > ul .on > div {
++  background-color: #26a6e3;
++  color: #FFFFFF;
++}
++.public_content .public_left .sideMenu > ul .on > div em {
++  background-image: url(../img/dropdown03.png);
++}
++.public_content .public_left .sideMenu > ul .on ul {
++  display: block;
++}
++.public_content .public_right {
++  float: right;
++  width: 1000px;
++}
++.public_content .public_right .right_title {
++  text-align: center;
++  font-size: 26px;
++  color: #000000;
++  line-height: 26px;
++}
++.public_content .public_right .right_title a{
++  float: right;
++  font-size: 12px;
++  display: block;
++  padding: 0 0 0 20px;
++  background: url(../img/back.png) no-repeat left center;
++}
++/*分页*/
++.paging {
++  font-size: 16px;
++  color: #4F4F4F;
++  overflow: hidden;
++}
++.paging a,
++.paging span {
++  display: block;
++  float: left;
++  width: 34px;
++  height: 34px;
++  text-align: center;
++  line-height: 34px;
++  border: 1px solid #4f4f4f;
++  margin: 0 0 0 10px;
++  color: #4F4F4F;
++}
++.paging .on {
++  color: #FFFFFF;
++  background-color: #0487da;
++  border-color: #0487da;
++}
++.paging .prev,
++.paging .next {
++  color: #616161;
++  width: 78px;
++}
++/*响应式*/
++/*分辨率小于1200*/
++@media screen and (max-width: 1199px) {
++  /*顶部*/
++  #top .top {
++    width: 1000px;
++  }
++  #top .top .nav {
++    float: right;
++  }
++  /*底部*/
++  .foot .foot01 > div {
++    width: 1000px;
++  }
++  .foot .foot01 > div .l {
++    padding: 0 0 0 120px;
++  }
++  .foot .foot01 > div .r {
++    padding: 0 20px 0 0;
++  }
++  .foot .foot01 > div .r li {
++    margin: 0 60px 0 0;
++  }
++  .foot .foot02 {
++    padding: 46px 0 0 0;
++  }
++  .foot .foot02 > div {
++    width: 1000px;
++  }
++  .foot .foot02 .div1 {
++    padding: 0 0 60px 0;
++  }
++  .foot .foot02 .div1 .l {
++    width: 260px;
++  }
++  .foot .foot02 .div1 .l p {
++    margin: 26px 0;
++  }
++  .foot .foot02 .div1 .l div div {
++    padding: 20px 0 0 0;
++  }
++  .foot .foot02 .div1 .r ul {
++    width: 115px;
++  }
++  .foot .foot02 .div1 .r ul li:first-child {
++    padding: 20px 0 30px 0;
++  }
++  /*banner*/
++  .banner .lunbo .bd ul li .text {
++    bottom: 20%;
++  }
++  .banner .lunbo .bd ul li .text div {
++    overflow: hidden;
++  }
++  .banner .lunbo .bd ul li .text div div {
++    margin: 3% 0 6% 0;
++  }
++  .banner01 {
++    position: relative;
++  }
++  .banner01 img {
++    max-width: 100%;
++  }
++  .banner01 .text {
++    font-size: 46px;
++  }
++  /*公用css*/
++  .public_content {
++    padding: 0 0 160px 0;
++  }
++  .public_content .public_left {
++    float: left;
++    width: 200px;
++  }
++  .public_content .public_left .sideMenu {
++    width: 200px;
++  }
++  .public_content .public_right {
++    float: right;
++    width: 800px;
++  }
++}
++/*分辨率小于1000*/
++@media screen and (max-width: 999px) {
++  /*顶部*/
++  #top .top {
++    width: 640px;
++  }
++  #top .top .nav {
++    float: right;
++  }
++  #top .top .nav > ul > li {
++    padding: 0 16px;
++  }
++  /*底部*/
++  .foot .foot01 {
++    background-color: #3eb0e5;
++  }
++  .foot .foot01 > div {
++    width: 640px;
++  }
++  .foot .foot01 > div .l {
++    padding: 0 0 0 60px;
++    background-position: 10px center;
++    width: 300px;
++  }
++  .foot .foot01 > div .r {
++    padding: 0 10px 0 0;
++  }
++  .foot .foot01 > div .r li {
++    margin: 0 10px 0 0;
++  }
++  .foot .foot01 > div .r li a {
++    padding: 0 0 0 32px;
++  }
++  .foot .foot02 {
++    padding: 46px 0 0 0;
++  }
++  .foot .foot02 > div {
++    width: 640px;
++  }
++  .foot .foot02 .div1 {
++    padding: 0 0 30px 0;
++  }
++  .foot .foot02 .div1 .l {
++    width: 640px;
++  }
++  .foot .foot02 .div1 .l > img {
++    margin: 0 auto;
++  }
++  .foot .foot02 .div1 .l p {
++    margin: 26px 0;
++  }
++  .foot .foot02 .div1 .l div div {
++    padding: 20px 0 0 0;
++  }
++  .foot .foot02 .div1 .r {
++    padding: 0 5px;
++  }
++  .foot .foot02 .div1 .r ul {
++    width: 105px;
++  }
++  .foot .foot02 .div1 .r ul li:first-child {
++    padding: 20px 0 30px 0;
++  }
++  /*banner*/
++  .banner .lunbo .bd ul li .text {
++    bottom: 15%;
++  }
++  .banner .lunbo .bd ul li .text div {
++    overflow: hidden;
++  }
++  .banner .lunbo .bd ul li .text div h4 {
++    font-size: 36px;
++    line-height: 36px;
++    min-height: 36px;
++  }
++  .banner .lunbo .bd ul li .text div div {
++    margin: 1% 0 4% 0;
++  }
++  .banner .lunbo .bd ul li .text div a {
++    width: 100px;
++    padding: 0 0 0 50px;
++    height: 40px;
++    line-height: 40px;
++    background-position: 10px center;
++  }
++  .banner01 {
++    position: relative;
++  }
++  .banner01 img {
++    max-width: 100%;
++  }
++  .banner01 .text {
++    font-size: 42px;
++  }
++  /*公用css*/
++  .public_content {
++    padding: 0 0 160px 0;
++  }
++  .public_content .public_left {
++    float: left;
++    width: 200px;
++  }
++  .public_content .public_left .sideMenu {
++    width: 200px;
++  }
++  .public_content .public_right {
++    float: right;
++    width: 440px;
++  }
++  .public_content .public_right .right_title {
++    text-align: center;
++    font-size: 26px;
++    color: #000000;
++    line-height: 26px;
++  }
++}
++/*分辨率小于640*/
++@media screen and (max-width: 639px) {
++  .suspend {
++    display: none;
++  }
++  /*顶部*/
++  #top .top {
++    width: 320px;
++  }
++  #top .top .logo {
++    width: 320px;
++    padding: 10px 0;
++  }
++  #top .top .logo img {
++    margin: 0 auto;
++    display: block;
++  }
++  #top .top .nav {
++    float: right;
++  }
++  #top .top .nav > ul > li {
++    padding: 0 6px;
++    line-height: 40px;
++    height: 37px;
++  }
++  /*底部*/
++  .foot .foot01 {
++    background-color: #3eb0e5;
++  }
++  .foot .foot01 > div {
++    width: 100%;
++    line-height: 50px;
++    font-size: 16px;
++  }
++  .foot .foot01 > div > * {
++    height: 50px;
++  }
++  .foot .foot01 > div .l {
++    padding: 0 0 0 110px;
++    background-position: 70px center;
++    width: 186px;
++    font-size: 16px;
++  }
++  .foot .foot01 > div .r {
++    padding: 0;
++  }
++  .foot .foot01 > div .r li {
++    width: 100px;
++    margin: 0 6px 0 0;
++  }
++  .foot .foot01 > div .r li a {
++    height: 40px;
++    padding: 0 0 0 32px;
++  }
++  .foot .foot02 {
++    padding: 46px 0 0 0;
++  }
++  .foot .foot02 > div {
++    width: 320px;
++  }
++  .foot .foot02 .div1 {
++    padding: 0 0 30px 0;
++  }
++  .foot .foot02 .div1 .l {
++    width: 310px;
++    padding: 0 5px;
++  }
++  .foot .foot02 .div1 .l > img {
++    margin: 0 auto;
++  }
++  .foot .foot02 .div1 .l p {
++    margin: 26px 0;
++  }
++  .foot .foot02 .div1 .l div {
++    text-align: center;
++  }
++  .foot .foot02 .div1 .l div div {
++    padding: 20px 0 0 0;
++  }
++  .foot .foot02 .div1 .r {
++    padding: 0 5px;
++  }
++  .foot .foot02 .div1 .r ul {
++    width: 310px;
++    float: none;
++    text-align: center;
++  }
++  .foot .foot02 .div1 .r ul li:first-child {
++    padding: 20px 0 30px 0;
++  }
++  .foot .foot02 .div1 .r ul li .d01 {
++    text-align: center;
++  }
++  .foot .foot02 .div1 .r ul li .d01 > div {
++    display: inline-block;
++    float: none;
++  }
++  .foot .foot02 .div1 .r ul li .d02 img {
++    margin: 0 auto;
++  }
++  .foot .foot02 .div1 #returnTop {
++    width: 36px;
++    height: 36px;
++    background-size: 100%;
++  }
++  .foot .foot02 .div2 {
++    padding: 0 5px;
++  }
++  /*banner*/
++  .banner .lunbo .bd ul li .img a {
++    display: block;
++  }
++  .banner .lunbo .bd ul li .img img {
++    max-width: 100%;
++  }
++  .banner .lunbo .bd ul li .text {
++    width: 100%;
++    margin: -150px auto 0 auto;
++    left: 0;
++  }
++  .banner .lunbo .bd ul li .text div h4 {
++    font-size: 30px;
++    line-height: 36px;
++    min-height: 36px;
++  }
++  .banner .lunbo .bd ul li .text div div {
++    font-size: 16px;
++    margin: 5% 0;
++    min-height: 20px;
++  }
++  .banner .lunbo .bd ul li .text div > a {
++    width: 130px;
++    padding: 0 0 0 50px;
++    height: 42px;
++    line-height: 42px;
++    background-position: 10px center;
++    display: block;
++    margin: 20px auto;
++    float: none;
++  }
++  .banner .lunbo .bd ul li .text div > a:first-child {
++    float: none;
++  }
++  .banner .slideBox {
++    display: none;
++  }
++  .banner #focus {
++    display: block;
++  }
++  .banner01 {
++    position: relative;
++  }
++  .banner01 > img {
++    display: none;
++  }
++  .banner01 .img {
++    display: block;
++  }
++  .banner01 .text {
++    font-size: 18px;
++  }
++  /*公用css*/
++  .public_title {
++    padding: 20px 2%;
++  }
++  .public_content {
++    padding: 0 0 80px 0;
++  }
++  .public_content .public_left {
++    float: none;
++    margin: 20px auto;
++    width: 200px;
++  }
++  .public_content .public_right {
++    padding: 30px 0 0 0;
++    float: none;
++    width: 320px;
++    margin: 0 auto;
++  }
++  /*分页*/
++  .paging {
++    font-size: 14px;
++  }
++  .paging a,
++  .paging span {
++    width: 24px;
++    height: 24px;
++    line-height: 24px;
++    margin: 0 0 0 5px;
++  }
++  .paging .prev,
++  .paging .next {
++    width: 70px;
++  }
++}
+-- 
+2.17.2 (Apple Git-113)
+
