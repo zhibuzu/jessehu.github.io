@@ -3,17 +3,19 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>I am who i am | Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</title>
+<title>hadoop streaming 多路输出 | I am who i am</title>
 <meta name="generator" content="Jekyll v3.8.4" />
-<meta property="og:title" content="I am who i am" />
+<meta property="og:title" content="hadoop streaming 多路输出" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
-<meta property="og:description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description." />
-<link rel="canonical" href="/404.html" />
-<meta property="og:url" content="/404.html" />
+<meta name="description" content="多路输出指定outputformat" />
+<meta property="og:description" content="多路输出指定outputformat" />
+<link rel="canonical" href="/learn/2019/06/10/hadoop-streaming-%E5%A4%9A%E8%B7%AF%E8%BE%93%E5%87%BA.html" />
+<meta property="og:url" content="/learn/2019/06/10/hadoop-streaming-%E5%A4%9A%E8%B7%AF%E8%BE%93%E5%87%BA.html" />
 <meta property="og:site_name" content="I am who i am" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-06-10T21:12:00+08:00" />
 <script type="application/ld+json">
-{"url":"/404.html","headline":"I am who i am","description":"Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.","@type":"WebPage","@context":"http://schema.org"}</script>
+{"url":"/learn/2019/06/10/hadoop-streaming-%E5%A4%9A%E8%B7%AF%E8%BE%93%E5%87%BA.html","headline":"hadoop streaming 多路输出","dateModified":"2019-06-10T21:12:00+08:00","datePublished":"2019-06-10T21:12:00+08:00","description":"多路输出指定outputformat","mainEntityOfPage":{"@type":"WebPage","@id":"/learn/2019/06/10/hadoop-streaming-%E5%A4%9A%E8%B7%AF%E8%BE%93%E5%87%BA.html"},"@type":"BlogPosting","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="I am who i am" /></head>
 <body><header class="site-header" role="banner">
@@ -33,26 +35,35 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <style type="text/css" media="screen">
-  .container {
-    margin: 10px auto;
-    max-width: 600px;
-    text-align: center;
-  }
-  h1 {
-    margin: 30px 0;
-    font-size: 4em;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
-</style>
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
-<div class="container">
-  <h1>404</h1>
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">hadoop streaming 多路输出</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-06-10T21:12:00+08:00" itemprop="datePublished">Jun 10, 2019
+      </time></p>
+  </header>
 
-  <p><strong>Page not found :(</strong></p>
-  <p>The requested page could not be found.</p>
-</div>
+  <div class="post-content e-content" itemprop="articleBody">
+    <ol>
+  <li>
+    <p>多路输出指定outputformat</p>
+
+    <p><code class="highlighter-rouge">-outputformat org.apache.hadoop.mapred.lib.SuffixMultipleTextOutputFormat</code></p>
+
+    <p><code class="highlighter-rouge">-outputformat org.apache.hadoop.mapred.lib.SuffixMultipleSequenceFileOutputFormat</code></p>
+  </li>
+  <li>
+    <p>在reduce的输出&lt;key, value&gt;变为输出&lt;key, value#X&gt;, #X后缀中X是A~Z的26个英文字母</p>
+  </li>
+  <li>
+    <p>坑：对于TextInputFormat，reduce输出数据经常是一行一行的文本，如果一行的中间没有”\t”的话，就代表value为空，如果直接将”#X”后缀放在行尾，”#X”会作为key的一部分而不是value的一部分（因为加上后缀后一行中间仍然没有”\t”）这样会导致出错，解决的方式是在#X后缀前面添加”\t”使它变成value的一部分而不是key的一部分</p>
+  </li>
+</ol>
+
+
+  </div><a class="u-url" href="/learn/2019/06/10/hadoop-streaming-%E5%A4%9A%E8%B7%AF%E8%BE%93%E5%87%BA.html" hidden></a>
+</article>
 
       </div>
     </main><footer class="site-footer h-card">
