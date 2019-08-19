@@ -1,8 +1,330 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-05-26T09:40:36+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">代码仔</title><subtitle>技术、人生感悟，大数据，架构、策略等</subtitle><entry><title type="html">just test</title><link href="http://localhost:4000/jekyll/update/2018/09/23/test.html" rel="alternate" type="text/html" title="just test" /><published>2018-09-23T19:51:00+08:00</published><updated>2018-09-23T19:51:00+08:00</updated><id>http://localhost:4000/jekyll/update/2018/09/23/test</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2018/09/23/test.html">&lt;h1 id=&quot;标题1&quot;&gt;标题1&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-06-10T21:41:24+08:00</updated><id>/feed.xml</id><title type="html">I am who i am</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><entry><title type="html">hadoop streaming 多路输出</title><link href="/learn/2019/06/10/hadoop-streaming-%E5%A4%9A%E8%B7%AF%E8%BE%93%E5%87%BA.html" rel="alternate" type="text/html" title="hadoop streaming 多路输出" /><published>2019-06-10T21:12:00+08:00</published><updated>2019-06-10T21:12:00+08:00</updated><id>/learn/2019/06/10/hadoop-streaming-%E5%A4%9A%E8%B7%AF%E8%BE%93%E5%87%BA</id><content type="html" xml:base="/learn/2019/06/10/hadoop-streaming-%E5%A4%9A%E8%B7%AF%E8%BE%93%E5%87%BA.html">&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;多路输出指定outputformat&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;你哈&lt;/p&gt;
-&lt;/blockquote&gt;</content><author><name></name></author><summary type="html">标题1</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/update/2018/09/23/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2018-09-23T19:27:08+08:00</published><updated>2018-09-23T19:27:08+08:00</updated><id>http://localhost:4000/jekyll/update/2018/09/23/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2018/09/23/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-outputformat org.apache.hadoop.mapred.lib.SuffixMultipleTextOutputFormat&lt;/code&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-outputformat org.apache.hadoop.mapred.lib.SuffixMultipleSequenceFileOutputFormat&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;在reduce的输出&amp;lt;key, value&amp;gt;变为输出&amp;lt;key, value#X&amp;gt;, #X后缀中X是A~Z的26个英文字母&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;坑：对于TextInputFormat，reduce输出数据经常是一行一行的文本，如果一行的中间没有”\t”的话，就代表value为空，如果直接将”#X”后缀放在行尾，”#X”会作为key的一部分而不是value的一部分（因为加上后缀后一行中间仍然没有”\t”）这样会导致出错，解决的方式是在#X后缀前面添加”\t”使它变成value的一部分而不是key的一部分&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">多路输出指定outputformat</summary></entry><entry><title type="html">taglist-vim快捷键</title><link href="/learn/2019/06/10/taglist-vim%E5%BF%AB%E6%8D%B7%E9%94%AE.html" rel="alternate" type="text/html" title="taglist-vim快捷键" /><published>2019-06-10T21:04:00+08:00</published><updated>2019-06-10T21:04:00+08:00</updated><id>/learn/2019/06/10/taglist-vim%E5%BF%AB%E6%8D%B7%E9%94%AE</id><content type="html" xml:base="/learn/2019/06/10/taglist-vim%E5%BF%AB%E6%8D%B7%E9%94%AE.html">&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&amp;lt;CR&amp;gt;          跳到光标下tag所定义的位置，用鼠标双击此tag功能也一样
+o             在一个新打开的窗口中显示光标下tag
+&amp;lt;Space&amp;gt;       显示光标下tag的原型定义
+u             更新taglist窗口中的tag
+s             更改排序方式，在按名字排序和按出现顺序排序间切换
+x             taglist窗口放大和缩小，方便查看较长的tag
++             打开一个折叠，同zo
+-             将tag折叠起来，同zc
+*             打开所有的折叠，同zR
+=             将所有tag折叠起来，同zM
+[[            跳到前一个文件
+]]            跳到后一个文件
+q             关闭taglist窗口
+&amp;lt;F1&amp;gt;          显示帮助 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">```</summary></entry><entry><title type="html">hadoop partitioner类</title><link href="/learn/2019/06/10/hadoop-Partitioner%E7%B1%BB.html" rel="alternate" type="text/html" title="hadoop partitioner类" /><published>2019-06-10T21:04:00+08:00</published><updated>2019-06-10T21:04:00+08:00</updated><id>/learn/2019/06/10/hadoop-Partitioner%E7%B1%BB</id><content type="html" xml:base="/learn/2019/06/10/hadoop-Partitioner%E7%B1%BB.html">&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;指定partitioner类（二次排序）&lt;/p&gt;
+
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-partitioner org.apache.hadoop.mapred.lib.KeyFieldBasedPartitioner&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;指定自定义方法切分行来形成key/value对&lt;/p&gt;
+
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-jobconf stream.reduce.output.field.separator=SEP # 指定分隔符，默认是tab符&lt;/code&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;-jobconf stream.num.reduce.output.fields=NUM # 指定在第n（n&amp;gt;=1）个分隔符分隔，而不是默认的第1个&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;指定map输出数据分桶的列数（基于key值的前缀）&lt;/p&gt;
+
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;map.output.key.field.separator=. # 指定切分map输出的分隔符为. &lt;/code&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;num.key.fields.for.partition=2 # 指定使用key的前2个块部分来切分map输出&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">指定partitioner类（二次排序）</summary></entry><entry><title type="html">shell test命令常用条件</title><link href="/learn/2018/09/28/shell-test-condition.html" rel="alternate" type="text/html" title="shell test命令常用条件" /><published>2018-09-28T18:33:00+08:00</published><updated>2018-09-28T18:33:00+08:00</updated><id>/learn/2018/09/28/shell-test-condition</id><content type="html" xml:base="/learn/2018/09/28/shell-test-condition.html">&lt;h2 id=&quot;数值测试&quot;&gt;数值测试&lt;/h2&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;参数&lt;/th&gt;
+      &lt;th&gt;说明&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;-eq&lt;/td&gt;
+      &lt;td&gt;等于则为真&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;-ne&lt;/td&gt;
+      &lt;td&gt;不等&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;-gt&lt;/td&gt;
+      &lt;td&gt;大于&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;-ge&lt;/td&gt;
+      &lt;td&gt;大于等于&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;-lt&lt;/td&gt;
+      &lt;td&gt;小于&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;-le&lt;/td&gt;
+      &lt;td&gt;小于等于&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;字符串测试&quot;&gt;字符串测试&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;参数&lt;/th&gt;
+      &lt;th&gt;说明&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;=&lt;/td&gt;
+      &lt;td&gt;等于则为真&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;!=&lt;/td&gt;
+      &lt;td&gt;不想等&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;-z 字符串&lt;/td&gt;
+      &lt;td&gt;字符串长度为零则为真&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;-n 字符串&lt;/td&gt;
+      &lt;td&gt;字符串长度不为零则为真&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h3 id=&quot;文件测试&quot;&gt;文件测试&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;参数&lt;/th&gt;
+      &lt;th&gt;说明&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;-e 文件名&lt;/td&gt;
+      &lt;td&gt;文件存在则为真&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;-r 文件名&lt;/td&gt;
+      &lt;td&gt;文件可读则为真&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;-w 文件名&lt;/td&gt;
+      &lt;td&gt;文件可写则为真&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;-x 文件名&lt;/td&gt;
+      &lt;td&gt;文件可执行则为真&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;-s 文件名&lt;/td&gt;
+      &lt;td&gt;文件存在且至少有一个字符则为真&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;-d 文件名&lt;/td&gt;
+      &lt;td&gt;文件存在且为目录则为真&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;-f 文件名&lt;/td&gt;
+      &lt;td&gt;文件存在且为普通文件则为真&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;-c 文件名&lt;/td&gt;
+      &lt;td&gt;文件存在且为字符型特殊文件？则为真&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;-b 文件名&lt;/td&gt;
+      &lt;td&gt;文件存在且为块特殊文件则为真&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;</content><author><name></name></author><summary type="html">数值测试</summary></entry><entry><title type="html">hadoop 常用环境变量</title><link href="/learn/2018/09/28/hadoop%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.html" rel="alternate" type="text/html" title="hadoop 常用环境变量" /><published>2018-09-28T14:53:00+08:00</published><updated>2018-09-28T14:53:00+08:00</updated><id>/learn/2018/09/28/hadoop%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F</id><content type="html" xml:base="/learn/2018/09/28/hadoop%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.html">&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;环境变量名&lt;/th&gt;
+      &lt;th&gt;意义解释&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;HADOOP_HOME&lt;/td&gt;
+      &lt;td&gt;计算节点上配置的hadoop client路径&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;LD_LIBRARY_PATH&lt;/td&gt;
+      &lt;td&gt;计算节点上加载库文件的路径列表&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;PWD&lt;/td&gt;
+      &lt;td&gt;当前工作目录&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;df_block_size&lt;/td&gt;
+      &lt;td&gt;当前设置的HDFS文件块大小&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;map_input_file&lt;/td&gt;
+      &lt;td&gt;mapper正在处理得输入文件路径，包含文件名&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;mapred_job_id&lt;/td&gt;
+      &lt;td&gt;当前作业ID&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;mapred_job_name&lt;/td&gt;
+      &lt;td&gt;当前作业名称&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;mapred_tip_id&lt;/td&gt;
+      &lt;td&gt;当前任务的第几次重试&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;mapred_task_id&lt;/td&gt;
+      &lt;td&gt;任务ID&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;mapred_task_is_map&lt;/td&gt;
+      &lt;td&gt;当前任务是否为map&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;mapred_output_dir&lt;/td&gt;
+      &lt;td&gt;计算输出路径&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;mapred_map_tasks&lt;/td&gt;
+      &lt;td&gt;计算的map任务数&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;mapred_reduce_tasks&lt;/td&gt;
+      &lt;td&gt;计算的reduce的任务数&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;mapred_work_output_dir&lt;/td&gt;
+      &lt;td&gt;task临时输出目录&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;mapred_output_dir&lt;/td&gt;
+      &lt;td&gt;job输出路径&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;mapred_work_output_dir解释&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;为了避免冲突，Map/Reduce框架为每次尝试执行任务都建立和维护一个特殊的&lt;/p&gt;
+
+&lt;p&gt;${mapred.output.dir}/&lt;em&gt;temporary/&lt;/em&gt;​${taskid}子目录，这个目录位于本次尝试执行任务输出结果所在的FileSystem上，可以通过 ${mapred.work.output.dir}来访问这个子目录。 对于成功完成的任务尝试，只有${mapred.output.dir}/&lt;em&gt;temporary/&lt;/em&gt;${taskid}下的文件会&lt;em&gt;移动&lt;/em&gt;到${mapred.output.dir}。当然，框架会丢弃那些失败的任务尝试的子目录。这种处理过程对于应用程序来说是完全透明的。&lt;/p&gt;
+
+&lt;p&gt;在任务执行期间，应用程序在写文件时可以利用这个特性，比如 通过&lt;a href=&quot;http://hadoop.apache.org/core/docs/r0.18.2/api/org/apache/hadoop/mapred/FileOutputFormat.html#getWorkOutputPath(org.apache.hadoop.mapred.JobConf)&quot;&gt; FileOutputFormat.getWorkOutputPath()&lt;/a&gt;获得${mapred.work.output.dir}目录， 并在其下创建任意任务执行时所需的side-file，框架在任务尝试成功时会马上移动这些文件，因此不需要在程序内为每次任务尝试选取一个独一无二的名字。&lt;/p&gt;
+
+&lt;p&gt;注意：在每次任务尝试执行期间，${mapred.work.output.dir} 的值实际上是 ​${mapred.output.dir}/&lt;em&gt;temporary/&lt;/em&gt;{$taskid}，这个值是Map/Reduce框架创建的。 所以使用这个特性的方法是，在&lt;a href=&quot;http://hadoop.apache.org/core/docs/r0.18.2/api/org/apache/hadoop/mapred/FileOutputFormat.html#getWorkOutputPath(org.apache.hadoop.mapred.JobConf)&quot;&gt; FileOutputFormat.getWorkOutputPath() &lt;/a&gt;路径下创建side-file即可。&lt;/p&gt;</content><author><name></name></author><summary type="html">环境变量名 意义解释 HADOOP_HOME 计算节点上配置的hadoop client路径 LD_LIBRARY_PATH 计算节点上加载库文件的路径列表 PWD 当前工作目录 df_block_size 当前设置的HDFS文件块大小 map_input_file mapper正在处理得输入文件路径，包含文件名 mapred_job_id 当前作业ID mapred_job_name 当前作业名称 mapred_tip_id 当前任务的第几次重试 mapred_task_id 任务ID mapred_task_is_map 当前任务是否为map mapred_output_dir 计算输出路径 mapred_map_tasks 计算的map任务数 mapred_reduce_tasks 计算的reduce的任务数 mapred_work_output_dir task临时输出目录 mapred_output_dir job输出路径</summary></entry><entry><title type="html">你了解字符集、字符编码吗？</title><link href="/learn/2018/09/28/%E4%BD%A0%E4%BA%86%E8%A7%A3%E5%AD%97%E7%AC%A6%E9%9B%86-%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E5%90%97.html" rel="alternate" type="text/html" title="你了解字符集、字符编码吗？" /><published>2018-09-28T12:49:00+08:00</published><updated>2018-09-28T12:49:00+08:00</updated><id>/learn/2018/09/28/%E4%BD%A0%E4%BA%86%E8%A7%A3%E5%AD%97%E7%AC%A6%E9%9B%86%E3%80%81%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E5%90%97%3F</id><content type="html" xml:base="/learn/2018/09/28/%E4%BD%A0%E4%BA%86%E8%A7%A3%E5%AD%97%E7%AC%A6%E9%9B%86-%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E5%90%97.html">&lt;h3 id=&quot;你了解字符集字符编码吗&quot;&gt;你了解字符集、字符编码吗？&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;ASCII&lt;/strong&gt;: 使用一个字节表示一个字符，实际使用的只有一个字节的低7位，第8位永远是0，因此最多只能表示2^7=128个字符，主要用来表示基础的拉丁字符，如英文字母，数字等，包括95个可打印字符和33个控制字符；&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;ISO 8859-n(n=1,2,3…11,13…16,没有12)&lt;/strong&gt;: 利用了ASCII字符集没有使用的最高位，使最多可表示的字符扩展到2^8=256个字符，可以支持许多欧洲国家的语言文字；
+    &lt;ul&gt;
+      &lt;li&gt;其中0x00 ~ 0x7f范围是与ASCII兼容的&lt;/li&gt;
+      &lt;li&gt;0x80 ~ 0xff范围是在ASCII基础上的扩展字符集&lt;/li&gt;
+      &lt;li&gt;ISO 8859-n 字符集有多个系列，分别用于不同的欧洲语言地区，如西欧，北欧，东欧&lt;/li&gt;
+      &lt;li&gt;Latin-1是ISO 8859-1的别名&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;GB2312&lt;/strong&gt;: 为了表示更大规模的汉字字符集，我国制定了国家简体中文字符集，即GB2312，使用一个字节表示拉丁字母来兼容ASCII，汉字使用两个字节表示，因此GB2312是变字节的字符集，但除了简体汉字外，还有繁体汉字及中日韩文字需要表示，因此还有BIG5，GBK，GB18030几种字符集，请看下表它们的区别；&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt; &lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;GB2312&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;BIG5&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;GBK&lt;/th&gt;
+      &lt;th style=&quot;text-align: left&quot;&gt;GB18030&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;作用&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;国家简体中文字符集&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;统一繁体字符集&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;GB2312扩展，加入对繁体字的支持&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;中日韩文字编码&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;字节数&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;变字节：1字节 - 兼容ASCII        2字节 - 汉字&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;2字节&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;2字节&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;变字节：1字节 - 兼容ASCII  2字节，4字节&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;范围&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;能表示7445个符号，包括6763个汉字&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;能表示21886个符号&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;能表示21886个符号&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;能表示27484个符号&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;兼容性&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;兼容ASCII， 0x00 ~ 0x7F 与ASCII保持一致&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;兼容ASCII，但与GB2312有冲突&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;兼容GB2312&lt;/td&gt;
+      &lt;td style=&quot;text-align: left&quot;&gt;兼容GB2312&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Unicode&lt;/strong&gt;： 终极字符集，全世界通用，用4个字节表示一个字符，可以表达的字符数理论上可达21亿左右个。但每个字符用4个字节表示总觉得有些浪费啊，毕竟字节是要占存储空间的啊，还有一个问题是如何让计算机了解你是在用4个字节表示一个字符而不是4个ASCII表示4个字符 ，这两个问题一直困扰着Unicode的发展推广。&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;UTF-8&lt;/strong&gt;: 直到出现UTF-8解决这两个问题，UTF-8不是一种字符集，而是对Unicode字符集的一种实现，这也意味着Unicode有其他实现方式，如UTF-16，UTF-32。而如此牛逼的UTF-8，话说当初是大神Ben Thomason吃饭的时候在一张餐巾纸上设计出来的！！UTF-8的实现规则如下：
+    &lt;ul&gt;
+      &lt;li&gt;对单字节字符，字节的第一位为0，后7位为该字符实际的Unicode码，所以对于拉丁字母，UTF-8与ASCII一致。&lt;/li&gt;
+      &lt;li&gt;对于n(n &amp;gt; 1)字节字符，第一个字节前n位都设为1，第n + 1位为0，后面字节的前两位均为10，剩下没有提及的位，就是字符的Unicode编码；&lt;/li&gt;
+      &lt;li&gt;另外需要注意的是：UTF-8与GBK，GB2312这些汉字编码完全不兼容的。&lt;/li&gt;
+      &lt;li&gt;UTF-8字符编码理论可以表示的字符总数为：2^7 + 2^11 + 2^16 + 2^21 = 2164864,  两百多万个！！！&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;常见问题及解答&quot;&gt;常见问题及解答&lt;/h3&gt;
+
+&lt;h3 id=&quot;1windows-notepad中的编码ansi保存选项代表什么含义&quot;&gt;1.windows Notepad中的编码ANSI保存选项，代表什么含义？&lt;/h3&gt;
+
+&lt;p&gt;ANSI是windows的默认的编码方式，对于英文文件是ASCII编码，对于简体中文文件是GB2312编码（只针对Windows简体中文版，如果是繁体中文版会采用Big5码）。所以，&lt;strong&gt;如果将一个UTF-8编码的文件，另存为ANSI的方式，对于中文部分会产生乱码&lt;/strong&gt;。&lt;/p&gt;
+
+&lt;h3 id=&quot;2什么是utf-8的bom&quot;&gt;2.什么是UTF-8的BOM？&lt;/h3&gt;
+
+&lt;p&gt;BOM的全称是Byte Order Mark，BOM是微软给UTF-8编码加上的，用于标识文件使用的是UTF-8编码，即在UTF-8编码的文件起始位置，加入三个字节“EE BB BF”。这是微软特有的，标准并不推荐包含BOM的方式。采用加BOM的UTF-8编码文件，对于一些只支持标准UTF-8编码的环境，可能导致问题。比如，在Go语言编程中，对于包含BOM的代码文件，会导致编译出错。详细可见我的&lt;a href=&quot;http://sharecore.info/blog/2013/04/05/parse-csv-to-sql-for-insert/&quot;&gt;这篇文章&lt;/a&gt;。&lt;/p&gt;
+
+&lt;h3 id=&quot;参考资料&quot;&gt;参考资料&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://blog.jobbole.com/76376/&quot; title=&quot;字符编码常识及问题解析&quot;&gt;http://blog.jobbole.com/76376/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">你了解字符集、字符编码吗？</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="/jekyll/2018/09/23/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2018-09-23T19:27:08+08:00</published><updated>2018-09-23T19:27:08+08:00</updated><id>/jekyll/2018/09/23/welcome-to-jekyll</id><content type="html" xml:base="/jekyll/2018/09/23/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
 
 &lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
 
