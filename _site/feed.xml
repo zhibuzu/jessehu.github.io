@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-08-20T17:12:35+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">代码仔</title><subtitle>技术、人生感悟，大数据，架构、策略等</subtitle><entry><title type="html">C/C++易混淆概念记录</title><link href="http://localhost:4000/learn/2019/08/19/CC++%E6%98%93%E6%B7%B7%E6%B7%86%E7%9A%84%E6%A6%82%E5%BF%B5.html" rel="alternate" type="text/html" title="C/C++易混淆概念记录" /><published>2019-08-19T23:12:00+08:00</published><updated>2019-08-19T23:12:00+08:00</updated><id>http://localhost:4000/learn/2019/08/19/CC++%E6%98%93%E6%B7%B7%E6%B7%86%E7%9A%84%E6%A6%82%E5%BF%B5</id><content type="html" xml:base="http://localhost:4000/learn/2019/08/19/CC++%E6%98%93%E6%B7%B7%E6%B7%86%E7%9A%84%E6%A6%82%E5%BF%B5.html">&lt;h2 id=&quot;基础&quot;&gt;基础&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-08-20T17:34:06+08:00</updated><id>/feed.xml</id><title type="html">代码仔</title><subtitle>技术、人生感悟，大数据，架构、策略等</subtitle><entry><title type="html">C/C++易混淆概念记录</title><link href="/learn/2019/08/19/CC++%E6%98%93%E6%B7%B7%E6%B7%86%E7%9A%84%E6%A6%82%E5%BF%B5.html" rel="alternate" type="text/html" title="C/C++易混淆概念记录" /><published>2019-08-19T23:12:00+08:00</published><updated>2019-08-19T23:12:00+08:00</updated><id>/learn/2019/08/19/CC++%E6%98%93%E6%B7%B7%E6%B7%86%E7%9A%84%E6%A6%82%E5%BF%B5</id><content type="html" xml:base="/learn/2019/08/19/CC++%E6%98%93%E6%B7%B7%E6%B7%86%E7%9A%84%E6%A6%82%E5%BF%B5.html">&lt;h2 id=&quot;基础&quot;&gt;基础&lt;/h2&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
@@ -43,9 +43,41 @@ p[i]=a[i];
 优先级：()&amp;gt;[]&amp;gt;*
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;int / long/ long long？&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;On major 32-bit platforms:
+int is 32 bits
+long is 32 bits as well
+long long is 64 bits
+   
+On major 64-bit platforms:
+   
+int is 32 bits
+long is either 32 or 64 bits
+long long is 64 bits as well
+Going by the standard:
+   
+int must be at least 16 bits
+long must be at least 32 bits
+long long must be at least 64 bits
+Correct me if I'm wrong.
+   
+If you need a specific integer size for a particular application, rather than trusting the compiler to pick the size you want, #include &amp;lt;stdint.h&amp;gt; (or &amp;lt;cstdint&amp;gt;) so you can use these types:
+   
+int8_t and uint8_t
+int16_t and uint16_t
+int32_t and uint32_t
+int64_t and uint64_t
+You may also be interested in #include &amp;lt;stddef.h&amp;gt; (or &amp;lt;cstddef&amp;gt;):
+   
+size_t
+ptrdiff_t
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&quot;高级&quot;&gt;高级&lt;/h2&gt;</content><author><name></name></author><summary type="html">基础</summary></entry><entry><title type="html">hadoop streaming 多路输出</title><link href="http://localhost:4000/learn/2019/06/10/hadoop-streaming-%E5%A4%9A%E8%B7%AF%E8%BE%93%E5%87%BA.html" rel="alternate" type="text/html" title="hadoop streaming 多路输出" /><published>2019-06-10T21:12:00+08:00</published><updated>2019-06-10T21:12:00+08:00</updated><id>http://localhost:4000/learn/2019/06/10/hadoop-streaming-%E5%A4%9A%E8%B7%AF%E8%BE%93%E5%87%BA</id><content type="html" xml:base="http://localhost:4000/learn/2019/06/10/hadoop-streaming-%E5%A4%9A%E8%B7%AF%E8%BE%93%E5%87%BA.html">&lt;ol&gt;
+&lt;h2 id=&quot;高级&quot;&gt;高级&lt;/h2&gt;</content><author><name></name></author><summary type="html">基础</summary></entry><entry><title type="html">hadoop streaming 多路输出</title><link href="/learn/2019/06/10/hadoop-streaming-%E5%A4%9A%E8%B7%AF%E8%BE%93%E5%87%BA.html" rel="alternate" type="text/html" title="hadoop streaming 多路输出" /><published>2019-06-10T21:12:00+08:00</published><updated>2019-06-10T21:12:00+08:00</updated><id>/learn/2019/06/10/hadoop-streaming-%E5%A4%9A%E8%B7%AF%E8%BE%93%E5%87%BA</id><content type="html" xml:base="/learn/2019/06/10/hadoop-streaming-%E5%A4%9A%E8%B7%AF%E8%BE%93%E5%87%BA.html">&lt;ol&gt;
   &lt;li&gt;
     &lt;p&gt;多路输出指定outputformat&lt;/p&gt;
 
@@ -59,7 +91,7 @@ p[i]=a[i];
   &lt;li&gt;
     &lt;p&gt;坑：对于TextInputFormat，reduce输出数据经常是一行一行的文本，如果一行的中间没有”\t”的话，就代表value为空，如果直接将”#X”后缀放在行尾，”#X”会作为key的一部分而不是value的一部分（因为加上后缀后一行中间仍然没有”\t”）这样会导致出错，解决的方式是在#X后缀前面添加”\t”使它变成value的一部分而不是key的一部分&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><summary type="html">多路输出指定outputformat</summary></entry><entry><title type="html">hadoop partitioner类</title><link href="http://localhost:4000/learn/2019/06/10/hadoop-Partitioner%E7%B1%BB.html" rel="alternate" type="text/html" title="hadoop partitioner类" /><published>2019-06-10T21:04:00+08:00</published><updated>2019-06-10T21:04:00+08:00</updated><id>http://localhost:4000/learn/2019/06/10/hadoop-Partitioner%E7%B1%BB</id><content type="html" xml:base="http://localhost:4000/learn/2019/06/10/hadoop-Partitioner%E7%B1%BB.html">&lt;ol&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">多路输出指定outputformat</summary></entry><entry><title type="html">hadoop partitioner类</title><link href="/learn/2019/06/10/hadoop-Partitioner%E7%B1%BB.html" rel="alternate" type="text/html" title="hadoop partitioner类" /><published>2019-06-10T21:04:00+08:00</published><updated>2019-06-10T21:04:00+08:00</updated><id>/learn/2019/06/10/hadoop-Partitioner%E7%B1%BB</id><content type="html" xml:base="/learn/2019/06/10/hadoop-Partitioner%E7%B1%BB.html">&lt;ol&gt;
   &lt;li&gt;
     &lt;p&gt;指定partitioner类（二次排序）&lt;/p&gt;
 
@@ -79,7 +111,7 @@ p[i]=a[i];
 
     &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;num.key.fields.for.partition=2 # 指定使用key的前2个块部分来切分map输出&lt;/code&gt;&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><summary type="html">指定partitioner类（二次排序）</summary></entry><entry><title type="html">taglist-vim快捷键</title><link href="http://localhost:4000/learn/2019/06/10/taglist-vim%E5%BF%AB%E6%8D%B7%E9%94%AE.html" rel="alternate" type="text/html" title="taglist-vim快捷键" /><published>2019-06-10T21:04:00+08:00</published><updated>2019-06-10T21:04:00+08:00</updated><id>http://localhost:4000/learn/2019/06/10/taglist-vim%E5%BF%AB%E6%8D%B7%E9%94%AE</id><content type="html" xml:base="http://localhost:4000/learn/2019/06/10/taglist-vim%E5%BF%AB%E6%8D%B7%E9%94%AE.html">&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">指定partitioner类（二次排序）</summary></entry><entry><title type="html">taglist-vim快捷键</title><link href="/learn/2019/06/10/taglist-vim%E5%BF%AB%E6%8D%B7%E9%94%AE.html" rel="alternate" type="text/html" title="taglist-vim快捷键" /><published>2019-06-10T21:04:00+08:00</published><updated>2019-06-10T21:04:00+08:00</updated><id>/learn/2019/06/10/taglist-vim%E5%BF%AB%E6%8D%B7%E9%94%AE</id><content type="html" xml:base="/learn/2019/06/10/taglist-vim%E5%BF%AB%E6%8D%B7%E9%94%AE.html">&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
 &amp;lt;CR&amp;gt;          跳到光标下tag所定义的位置，用鼠标双击此tag功能也一样
 o             在一个新打开的窗口中显示光标下tag
 &amp;lt;Space&amp;gt;       显示光标下tag的原型定义
@@ -94,7 +126,7 @@ x             taglist窗口放大和缩小，方便查看较长的tag
 ]]            跳到后一个文件
 q             关闭taglist窗口
 &amp;lt;F1&amp;gt;          显示帮助 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">```</summary></entry><entry><title type="html">shell test命令常用条件</title><link href="http://localhost:4000/learn/2018/09/28/shell-test-condition.html" rel="alternate" type="text/html" title="shell test命令常用条件" /><published>2018-09-28T18:33:00+08:00</published><updated>2018-09-28T18:33:00+08:00</updated><id>http://localhost:4000/learn/2018/09/28/shell-test-condition</id><content type="html" xml:base="http://localhost:4000/learn/2018/09/28/shell-test-condition.html">&lt;h2 id=&quot;数值测试&quot;&gt;数值测试&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">```</summary></entry><entry><title type="html">shell test命令常用条件</title><link href="/learn/2018/09/28/shell-test-condition.html" rel="alternate" type="text/html" title="shell test命令常用条件" /><published>2018-09-28T18:33:00+08:00</published><updated>2018-09-28T18:33:00+08:00</updated><id>/learn/2018/09/28/shell-test-condition</id><content type="html" xml:base="/learn/2018/09/28/shell-test-condition.html">&lt;h2 id=&quot;数值测试&quot;&gt;数值测试&lt;/h2&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -207,7 +239,7 @@ q             关闭taglist窗口
       &lt;td&gt;文件存在且为块特殊文件则为真&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
-&lt;/table&gt;</content><author><name></name></author><summary type="html">数值测试</summary></entry><entry><title type="html">hadoop 常用环境变量</title><link href="http://localhost:4000/learn/2018/09/28/hadoop%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.html" rel="alternate" type="text/html" title="hadoop 常用环境变量" /><published>2018-09-28T14:53:00+08:00</published><updated>2018-09-28T14:53:00+08:00</updated><id>http://localhost:4000/learn/2018/09/28/hadoop%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F</id><content type="html" xml:base="http://localhost:4000/learn/2018/09/28/hadoop%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.html">&lt;table&gt;
+&lt;/table&gt;</content><author><name></name></author><summary type="html">数值测试</summary></entry><entry><title type="html">hadoop 常用环境变量</title><link href="/learn/2018/09/28/hadoop%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.html" rel="alternate" type="text/html" title="hadoop 常用环境变量" /><published>2018-09-28T14:53:00+08:00</published><updated>2018-09-28T14:53:00+08:00</updated><id>/learn/2018/09/28/hadoop%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F</id><content type="html" xml:base="/learn/2018/09/28/hadoop%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.html">&lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th&gt;环境变量名&lt;/th&gt;
@@ -288,7 +320,7 @@ q             关闭taglist窗口
 
 &lt;p&gt;在任务执行期间，应用程序在写文件时可以利用这个特性，比如 通过&lt;a href=&quot;http://hadoop.apache.org/core/docs/r0.18.2/api/org/apache/hadoop/mapred/FileOutputFormat.html#getWorkOutputPath(org.apache.hadoop.mapred.JobConf)&quot;&gt; FileOutputFormat.getWorkOutputPath()&lt;/a&gt;获得${mapred.work.output.dir}目录， 并在其下创建任意任务执行时所需的side-file，框架在任务尝试成功时会马上移动这些文件，因此不需要在程序内为每次任务尝试选取一个独一无二的名字。&lt;/p&gt;
 
-&lt;p&gt;注意：在每次任务尝试执行期间，${mapred.work.output.dir} 的值实际上是 ​${mapred.output.dir}/&lt;em&gt;temporary/&lt;/em&gt;{$taskid}，这个值是Map/Reduce框架创建的。 所以使用这个特性的方法是，在&lt;a href=&quot;http://hadoop.apache.org/core/docs/r0.18.2/api/org/apache/hadoop/mapred/FileOutputFormat.html#getWorkOutputPath(org.apache.hadoop.mapred.JobConf)&quot;&gt; FileOutputFormat.getWorkOutputPath() &lt;/a&gt;路径下创建side-file即可。&lt;/p&gt;</content><author><name></name></author><summary type="html">环境变量名 意义解释 HADOOP_HOME 计算节点上配置的hadoop client路径 LD_LIBRARY_PATH 计算节点上加载库文件的路径列表 PWD 当前工作目录 df_block_size 当前设置的HDFS文件块大小 map_input_file mapper正在处理得输入文件路径，包含文件名 mapred_job_id 当前作业ID mapred_job_name 当前作业名称 mapred_tip_id 当前任务的第几次重试 mapred_task_id 任务ID mapred_task_is_map 当前任务是否为map mapred_output_dir 计算输出路径 mapred_map_tasks 计算的map任务数 mapred_reduce_tasks 计算的reduce的任务数 mapred_work_output_dir task临时输出目录 mapred_output_dir job输出路径</summary></entry><entry><title type="html">你了解字符集、字符编码吗？</title><link href="http://localhost:4000/learn/2018/09/28/%E4%BD%A0%E4%BA%86%E8%A7%A3%E5%AD%97%E7%AC%A6%E9%9B%86-%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E5%90%97.html" rel="alternate" type="text/html" title="你了解字符集、字符编码吗？" /><published>2018-09-28T12:49:00+08:00</published><updated>2018-09-28T12:49:00+08:00</updated><id>http://localhost:4000/learn/2018/09/28/%E4%BD%A0%E4%BA%86%E8%A7%A3%E5%AD%97%E7%AC%A6%E9%9B%86%E3%80%81%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E5%90%97%3F</id><content type="html" xml:base="http://localhost:4000/learn/2018/09/28/%E4%BD%A0%E4%BA%86%E8%A7%A3%E5%AD%97%E7%AC%A6%E9%9B%86-%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E5%90%97.html">&lt;h3 id=&quot;你了解字符集字符编码吗&quot;&gt;你了解字符集、字符编码吗？&lt;/h3&gt;
+&lt;p&gt;注意：在每次任务尝试执行期间，${mapred.work.output.dir} 的值实际上是 ​${mapred.output.dir}/&lt;em&gt;temporary/&lt;/em&gt;{$taskid}，这个值是Map/Reduce框架创建的。 所以使用这个特性的方法是，在&lt;a href=&quot;http://hadoop.apache.org/core/docs/r0.18.2/api/org/apache/hadoop/mapred/FileOutputFormat.html#getWorkOutputPath(org.apache.hadoop.mapred.JobConf)&quot;&gt; FileOutputFormat.getWorkOutputPath() &lt;/a&gt;路径下创建side-file即可。&lt;/p&gt;</content><author><name></name></author><summary type="html">环境变量名 意义解释 HADOOP_HOME 计算节点上配置的hadoop client路径 LD_LIBRARY_PATH 计算节点上加载库文件的路径列表 PWD 当前工作目录 df_block_size 当前设置的HDFS文件块大小 map_input_file mapper正在处理得输入文件路径，包含文件名 mapred_job_id 当前作业ID mapred_job_name 当前作业名称 mapred_tip_id 当前任务的第几次重试 mapred_task_id 任务ID mapred_task_is_map 当前任务是否为map mapred_output_dir 计算输出路径 mapred_map_tasks 计算的map任务数 mapred_reduce_tasks 计算的reduce的任务数 mapred_work_output_dir task临时输出目录 mapred_output_dir job输出路径</summary></entry><entry><title type="html">你了解字符集、字符编码吗？</title><link href="/learn/2018/09/28/%E4%BD%A0%E4%BA%86%E8%A7%A3%E5%AD%97%E7%AC%A6%E9%9B%86-%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E5%90%97.html" rel="alternate" type="text/html" title="你了解字符集、字符编码吗？" /><published>2018-09-28T12:49:00+08:00</published><updated>2018-09-28T12:49:00+08:00</updated><id>/learn/2018/09/28/%E4%BD%A0%E4%BA%86%E8%A7%A3%E5%AD%97%E7%AC%A6%E9%9B%86%E3%80%81%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E5%90%97%3F</id><content type="html" xml:base="/learn/2018/09/28/%E4%BD%A0%E4%BA%86%E8%A7%A3%E5%AD%97%E7%AC%A6%E9%9B%86-%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E5%90%97.html">&lt;h3 id=&quot;你了解字符集字符编码吗&quot;&gt;你了解字符集、字符编码吗？&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;ASCII&lt;/strong&gt;: 使用一个字节表示一个字符，实际使用的只有一个字节的低7位，第8位永远是0，因此最多只能表示2^7=128个字符，主要用来表示基础的拉丁字符，如英文字母，数字等，包括95个可打印字符和33个控制字符；&lt;/li&gt;
@@ -371,7 +403,7 @@ q             关闭taglist窗口
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://blog.jobbole.com/76376/&quot; title=&quot;字符编码常识及问题解析&quot;&gt;http://blog.jobbole.com/76376/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">你了解字符集、字符编码吗？</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/2018/09/23/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2018-09-23T19:27:08+08:00</published><updated>2018-09-23T19:27:08+08:00</updated><id>http://localhost:4000/jekyll/2018/09/23/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/2018/09/23/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">你了解字符集、字符编码吗？</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="/jekyll/2018/09/23/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2018-09-23T19:27:08+08:00</published><updated>2018-09-23T19:27:08+08:00</updated><id>/jekyll/2018/09/23/welcome-to-jekyll</id><content type="html" xml:base="/jekyll/2018/09/23/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
 
 &lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
 
