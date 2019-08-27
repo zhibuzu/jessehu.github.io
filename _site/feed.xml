@@ -1,4 +1,321 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-08-20T17:34:06+08:00</updated><id>/feed.xml</id><title type="html">代码仔</title><subtitle>技术、人生感悟，大数据，架构、策略等</subtitle><entry><title type="html">C/C++易混淆概念记录</title><link href="/learn/2019/08/19/CC++%E6%98%93%E6%B7%B7%E6%B7%86%E7%9A%84%E6%A6%82%E5%BF%B5.html" rel="alternate" type="text/html" title="C/C++易混淆概念记录" /><published>2019-08-19T23:12:00+08:00</published><updated>2019-08-19T23:12:00+08:00</updated><id>/learn/2019/08/19/CC++%E6%98%93%E6%B7%B7%E6%B7%86%E7%9A%84%E6%A6%82%E5%BF%B5</id><content type="html" xml:base="/learn/2019/08/19/CC++%E6%98%93%E6%B7%B7%E6%B7%86%E7%9A%84%E6%A6%82%E5%BF%B5.html">&lt;h2 id=&quot;基础&quot;&gt;基础&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-08-27T21:17:01+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">代码仔</title><subtitle>技术、人生感悟，大数据，架构、策略等</subtitle><entry><title type="html">常用Git命令清单</title><link href="http://localhost:4000/git/2019/08/26/%E5%B8%B8%E7%94%A8Git%E5%91%BD%E4%BB%A4%E6%B8%85%E5%8D%95.html" rel="alternate" type="text/html" title="常用Git命令清单" /><published>2019-08-26T21:16:08+08:00</published><updated>2019-08-26T21:16:08+08:00</updated><id>http://localhost:4000/git/2019/08/26/%E5%B8%B8%E7%94%A8Git%E5%91%BD%E4%BB%A4%E6%B8%85%E5%8D%95</id><content type="html" xml:base="http://localhost:4000/git/2019/08/26/%E5%B8%B8%E7%94%A8Git%E5%91%BD%E4%BB%A4%E6%B8%85%E5%8D%95.html">&lt;p&gt;我每天使用 Git ，但是很多命令记不住。&lt;/p&gt;
+
+&lt;p&gt;一般来说，日常使用只要记住下图6个命令，就可以了。但是熟练使用，恐怕要记住60～100个命令。&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/Users/hulifa/code/github/jessehu.github.io/_posts/assets/bg2015120901.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;下面是我整理的常用 Git 命令清单。几个专用名词的译名如下。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;ul&gt;
+    &lt;li&gt;Workspace：工作区&lt;/li&gt;
+    &lt;li&gt;Index / Stage：暂存区&lt;/li&gt;
+    &lt;li&gt;Repository：仓库区（或本地仓库）&lt;/li&gt;
+    &lt;li&gt;Remote：远程仓库&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;一新建代码库&quot;&gt;一、新建代码库&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# 在当前目录新建一个Git代码库&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git init
+
+&lt;span class=&quot;c&quot;&gt;# 新建一个目录，将其初始化为Git代码库&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git init &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;project-name]
+
+&lt;span class=&quot;c&quot;&gt;# 下载一个项目和它的整个代码历史&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git clone &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;url]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;二配置&quot;&gt;二、配置&lt;/h2&gt;
+
+&lt;p&gt;Git的设置文件为&lt;code class=&quot;highlighter-rouge&quot;&gt;.gitconfig&lt;/code&gt;，它可以在用户主目录下（全局配置），也可以在项目目录下（项目配置）。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# 显示当前的Git配置&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git config &lt;span class=&quot;nt&quot;&gt;--list&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# 编辑Git配置文件&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git config &lt;span class=&quot;nt&quot;&gt;-e&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# 设置提交代码时的用户信息&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git config &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; user.name &lt;span class=&quot;s2&quot;&gt;&quot;[name]&quot;&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git config &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;--global&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; user.email &lt;span class=&quot;s2&quot;&gt;&quot;[email address]&quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;三增加删除文件&quot;&gt;三、增加/删除文件&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# 添加指定文件到暂存区&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git add &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;file1] &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;file2] ...
+
+&lt;span class=&quot;c&quot;&gt;# 添加指定目录到暂存区，包括子目录&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git add &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;dir&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# 添加当前目录的所有文件到暂存区&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git add &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# 添加每个变化前，都会要求确认&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# 对于同一个文件的多处变化，可以实现分次提交&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git add &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# 删除工作区文件，并且将这次删除放入暂存区&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git &lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;file1] &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;file2] ...
+
+&lt;span class=&quot;c&quot;&gt;# 停止追踪指定文件，但该文件会保留在工作区&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git &lt;span class=&quot;nb&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--cached&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;file]
+
+&lt;span class=&quot;c&quot;&gt;# 改名文件，并且将这个改名放入暂存区&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git &lt;span class=&quot;nb&quot;&gt;mv&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;file-original] &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;file-renamed]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;四代码提交&quot;&gt;四、代码提交&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# 提交暂存区到仓库区&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git commit &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;message]
+
+&lt;span class=&quot;c&quot;&gt;# 提交暂存区的指定文件到仓库区&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git commit &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;file1] &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;file2] ... &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;message]
+
+&lt;span class=&quot;c&quot;&gt;# 提交工作区自上次commit之后的变化，直接到仓库区&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git commit &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# 提交时显示所有diff信息&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git commit &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# 使用一次新的commit，替代上一次提交&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# 如果代码没有任何新变化，则用来改写上一次commit的提交信息&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git commit &lt;span class=&quot;nt&quot;&gt;--amend&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-m&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;message]
+
+&lt;span class=&quot;c&quot;&gt;# 重做上一次commit，并包括指定文件的新变化&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git commit &lt;span class=&quot;nt&quot;&gt;--amend&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;file1] &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;file2] ...
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;五分支&quot;&gt;五、分支&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# 列出所有本地分支&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git branch
+
+&lt;span class=&quot;c&quot;&gt;# 列出所有远程分支&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git branch &lt;span class=&quot;nt&quot;&gt;-r&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# 列出所有本地分支和远程分支&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git branch &lt;span class=&quot;nt&quot;&gt;-a&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# 新建一个分支，但依然停留在当前分支&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git branch &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;branch-name]
+
+&lt;span class=&quot;c&quot;&gt;# 新建一个分支，并切换到该分支&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git checkout &lt;span class=&quot;nt&quot;&gt;-b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;branch]
+
+&lt;span class=&quot;c&quot;&gt;# 新建一个分支，指向指定commit&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git branch &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;branch] &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;commit]
+
+&lt;span class=&quot;c&quot;&gt;# 新建一个分支，与指定的远程分支建立追踪关系&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git branch &lt;span class=&quot;nt&quot;&gt;--track&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;branch] &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;remote-branch]
+
+&lt;span class=&quot;c&quot;&gt;# 切换到指定分支，并更新工作区&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git checkout &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;branch-name]
+
+&lt;span class=&quot;c&quot;&gt;# 切换到上一个分支&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git checkout -
+
+&lt;span class=&quot;c&quot;&gt;# 建立追踪关系，在现有分支与指定的远程分支之间&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git branch &lt;span class=&quot;nt&quot;&gt;--set-upstream&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;branch] &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;remote-branch]
+
+&lt;span class=&quot;c&quot;&gt;# 合并指定分支到当前分支&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git merge &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;branch]
+
+&lt;span class=&quot;c&quot;&gt;# 选择一个commit，合并进当前分支&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git cherry-pick &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;commit]
+
+&lt;span class=&quot;c&quot;&gt;# 删除分支&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git branch &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;branch-name]
+
+&lt;span class=&quot;c&quot;&gt;# 删除远程分支&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git push origin &lt;span class=&quot;nt&quot;&gt;--delete&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;branch-name]
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git branch &lt;span class=&quot;nt&quot;&gt;-dr&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;remote/branch]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;六标签&quot;&gt;六、标签&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# 列出所有tag&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git tag
+
+&lt;span class=&quot;c&quot;&gt;# 新建一个tag在当前commit&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git tag &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;tag]
+
+&lt;span class=&quot;c&quot;&gt;# 新建一个tag在指定commit&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git tag &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;tag] &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;commit]
+
+&lt;span class=&quot;c&quot;&gt;# 删除本地tag&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git tag &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;tag]
+
+&lt;span class=&quot;c&quot;&gt;# 删除远程tag&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git push origin :refs/tags/[tagName]
+
+&lt;span class=&quot;c&quot;&gt;# 查看tag信息&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git show &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;tag]
+
+&lt;span class=&quot;c&quot;&gt;# 提交指定tag&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git push &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;remote] &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;tag]
+
+&lt;span class=&quot;c&quot;&gt;# 提交所有tag&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git push &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;remote] &lt;span class=&quot;nt&quot;&gt;--tags&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# 新建一个分支，指向某个tag&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git checkout &lt;span class=&quot;nt&quot;&gt;-b&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;branch] &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;tag]
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;七查看信息&quot;&gt;七、查看信息&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# 显示有变更的文件&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git status
+
+&lt;span class=&quot;c&quot;&gt;# 显示当前分支的版本历史&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git log
+
+&lt;span class=&quot;c&quot;&gt;# 显示commit历史，以及每次commit发生变更的文件&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git log &lt;span class=&quot;nt&quot;&gt;--stat&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# 搜索提交历史，根据关键词&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git log &lt;span class=&quot;nt&quot;&gt;-S&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;keyword]
+
+&lt;span class=&quot;c&quot;&gt;# 显示某个commit之后的所有变动，每个commit占据一行&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git log &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;tag] HEAD &lt;span class=&quot;nt&quot;&gt;--pretty&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;format:%s
+
+&lt;span class=&quot;c&quot;&gt;# 显示某个commit之后的所有变动，其&quot;提交说明&quot;必须符合搜索条件&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git log &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;tag] HEAD &lt;span class=&quot;nt&quot;&gt;--grep&lt;/span&gt; feature
+
+&lt;span class=&quot;c&quot;&gt;# 显示某个文件的版本历史，包括文件改名&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git log &lt;span class=&quot;nt&quot;&gt;--follow&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;file]
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git whatchanged &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;file]
+
+&lt;span class=&quot;c&quot;&gt;# 显示指定文件相关的每一次diff&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git log &lt;span class=&quot;nt&quot;&gt;-p&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;file]
+
+&lt;span class=&quot;c&quot;&gt;# 显示过去5次提交&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git log &lt;span class=&quot;nt&quot;&gt;-5&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--pretty&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;--oneline&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# 显示所有提交过的用户，按提交次数排序&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git shortlog &lt;span class=&quot;nt&quot;&gt;-sn&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# 显示指定文件是什么人在什么时间修改过&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git blame &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;file]
+
+&lt;span class=&quot;c&quot;&gt;# 显示暂存区和工作区的差异&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git diff
+
+&lt;span class=&quot;c&quot;&gt;# 显示暂存区和上一个commit的差异&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git diff &lt;span class=&quot;nt&quot;&gt;--cached&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;file]
+
+&lt;span class=&quot;c&quot;&gt;# 显示工作区与当前分支最新commit之间的差异&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git diff HEAD
+
+&lt;span class=&quot;c&quot;&gt;# 显示两次提交之间的差异&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git diff &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;first-branch]...[second-branch]
+
+&lt;span class=&quot;c&quot;&gt;# 显示今天你写了多少行代码&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git diff &lt;span class=&quot;nt&quot;&gt;--shortstat&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;@{0 day ago}&quot;&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# 显示某次提交的元数据和内容变化&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git show &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;commit]
+
+&lt;span class=&quot;c&quot;&gt;# 显示某次提交发生变化的文件&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git show &lt;span class=&quot;nt&quot;&gt;--name-only&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;commit]
+
+&lt;span class=&quot;c&quot;&gt;# 显示某次提交时，某个文件的内容&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git show &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;commit]:[filename]
+
+&lt;span class=&quot;c&quot;&gt;# 显示当前分支的最近几次提交&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git reflog
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;八远程同步&quot;&gt;八、远程同步&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# 下载远程仓库的所有变动&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git fetch &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;remote]
+
+&lt;span class=&quot;c&quot;&gt;# 显示所有远程仓库&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git remote &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# 显示某个远程仓库的信息&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git remote show &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;remote]
+
+&lt;span class=&quot;c&quot;&gt;# 增加一个新的远程仓库，并命名&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git remote add &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;shortname] &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;url]
+
+&lt;span class=&quot;c&quot;&gt;# 取回远程仓库的变化，并与本地分支合并&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git pull &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;remote] &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;branch]
+
+&lt;span class=&quot;c&quot;&gt;# 上传本地指定分支到远程仓库&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git push &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;remote] &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;branch]
+
+&lt;span class=&quot;c&quot;&gt;# 强行推送当前分支到远程仓库，即使有冲突&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git push &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;remote] &lt;span class=&quot;nt&quot;&gt;--force&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# 推送所有分支到远程仓库&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git push &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;remote] &lt;span class=&quot;nt&quot;&gt;--all&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;九撤销&quot;&gt;九、撤销&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# 恢复暂存区的指定文件到工作区&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git checkout &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;file]
+
+&lt;span class=&quot;c&quot;&gt;# 恢复某个commit的指定文件到暂存区和工作区&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git checkout &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;commit] &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;file]
+
+&lt;span class=&quot;c&quot;&gt;# 恢复暂存区的所有文件到工作区&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git checkout &lt;span class=&quot;nb&quot;&gt;.&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# 重置暂存区的指定文件，与上一次commit保持一致，但工作区不变&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git reset &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;file]
+
+&lt;span class=&quot;c&quot;&gt;# 重置暂存区与工作区，与上一次commit保持一致&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git reset &lt;span class=&quot;nt&quot;&gt;--hard&lt;/span&gt;
+
+&lt;span class=&quot;c&quot;&gt;# 重置当前分支的指针为指定commit，同时重置暂存区，但工作区不变&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git reset &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;commit]
+
+&lt;span class=&quot;c&quot;&gt;# 重置当前分支的HEAD为指定commit，同时重置暂存区和工作区，与指定commit一致&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git reset &lt;span class=&quot;nt&quot;&gt;--hard&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;commit]
+
+&lt;span class=&quot;c&quot;&gt;# 重置当前HEAD为指定commit，但保持暂存区和工作区不变&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git reset &lt;span class=&quot;nt&quot;&gt;--keep&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;commit]
+
+&lt;span class=&quot;c&quot;&gt;# 新建一个commit，用来撤销指定commit&lt;/span&gt;
+&lt;span class=&quot;c&quot;&gt;# 后者的所有变化都将被前者抵消，并且应用到当前分支&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git revert &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;commit]
+
+&lt;span class=&quot;c&quot;&gt;# 暂时将未提交的变化移除，稍后再移入&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git stash
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git stash pop
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+&lt;/blockquote&gt;
+
+&lt;h2 id=&quot;十其他&quot;&gt;十、其他&lt;/h2&gt;
+
+&lt;blockquote&gt;
+  &lt;div class=&quot;language-bash highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c&quot;&gt;# 生成一个可供发布的压缩包&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;$ &lt;/span&gt;git archive
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;  &lt;/div&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><summary type="html">我每天使用 Git ，但是很多命令记不住。</summary></entry><entry><title type="html">C/C++易混淆概念记录</title><link href="http://localhost:4000/learn/2019/08/19/CC++%E6%98%93%E6%B7%B7%E6%B7%86%E7%9A%84%E6%A6%82%E5%BF%B5.html" rel="alternate" type="text/html" title="C/C++易混淆概念记录" /><published>2019-08-19T23:12:00+08:00</published><updated>2019-08-19T23:12:00+08:00</updated><id>http://localhost:4000/learn/2019/08/19/CC++%E6%98%93%E6%B7%B7%E6%B7%86%E7%9A%84%E6%A6%82%E5%BF%B5</id><content type="html" xml:base="http://localhost:4000/learn/2019/08/19/CC++%E6%98%93%E6%B7%B7%E6%B7%86%E7%9A%84%E6%A6%82%E5%BF%B5.html">&lt;h2 id=&quot;基础&quot;&gt;基础&lt;/h2&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
@@ -47,6 +364,7 @@ p[i]=a[i];
     &lt;p&gt;int / long/ long long？&lt;/p&gt;
 
     &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;On major 32-bit platforms:
+   
 int is 32 bits
 long is 32 bits as well
 long long is 64 bits
@@ -56,11 +374,13 @@ On major 64-bit platforms:
 int is 32 bits
 long is either 32 or 64 bits
 long long is 64 bits as well
+   
 Going by the standard:
    
 int must be at least 16 bits
 long must be at least 32 bits
 long long must be at least 64 bits
+   
 Correct me if I'm wrong.
    
 If you need a specific integer size for a particular application, rather than trusting the compiler to pick the size you want, #include &amp;lt;stdint.h&amp;gt; (or &amp;lt;cstdint&amp;gt;) so you can use these types:
@@ -75,9 +395,17 @@ size_t
 ptrdiff_t
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
   &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;数组名为a，a 与 &amp;amp;a的区别？&lt;/p&gt;
+
+    &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;a: 指向数组第一个元素a[0]的指针，即存储了数组第一个元素存放的地址；
+&amp;amp;a: 指向了数组a的指针，存储的是数组首地址；
+a 与 &amp;amp;a都是指针，区别在于指向的类型不同。
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&quot;高级&quot;&gt;高级&lt;/h2&gt;</content><author><name></name></author><summary type="html">基础</summary></entry><entry><title type="html">hadoop streaming 多路输出</title><link href="/learn/2019/06/10/hadoop-streaming-%E5%A4%9A%E8%B7%AF%E8%BE%93%E5%87%BA.html" rel="alternate" type="text/html" title="hadoop streaming 多路输出" /><published>2019-06-10T21:12:00+08:00</published><updated>2019-06-10T21:12:00+08:00</updated><id>/learn/2019/06/10/hadoop-streaming-%E5%A4%9A%E8%B7%AF%E8%BE%93%E5%87%BA</id><content type="html" xml:base="/learn/2019/06/10/hadoop-streaming-%E5%A4%9A%E8%B7%AF%E8%BE%93%E5%87%BA.html">&lt;ol&gt;
+&lt;h2 id=&quot;高级&quot;&gt;高级&lt;/h2&gt;</content><author><name></name></author><summary type="html">基础</summary></entry><entry><title type="html">hadoop streaming 多路输出</title><link href="http://localhost:4000/learn/2019/06/10/hadoop-streaming-%E5%A4%9A%E8%B7%AF%E8%BE%93%E5%87%BA.html" rel="alternate" type="text/html" title="hadoop streaming 多路输出" /><published>2019-06-10T21:12:00+08:00</published><updated>2019-06-10T21:12:00+08:00</updated><id>http://localhost:4000/learn/2019/06/10/hadoop-streaming-%E5%A4%9A%E8%B7%AF%E8%BE%93%E5%87%BA</id><content type="html" xml:base="http://localhost:4000/learn/2019/06/10/hadoop-streaming-%E5%A4%9A%E8%B7%AF%E8%BE%93%E5%87%BA.html">&lt;ol&gt;
   &lt;li&gt;
     &lt;p&gt;多路输出指定outputformat&lt;/p&gt;
 
@@ -91,7 +419,7 @@ ptrdiff_t
   &lt;li&gt;
     &lt;p&gt;坑：对于TextInputFormat，reduce输出数据经常是一行一行的文本，如果一行的中间没有”\t”的话，就代表value为空，如果直接将”#X”后缀放在行尾，”#X”会作为key的一部分而不是value的一部分（因为加上后缀后一行中间仍然没有”\t”）这样会导致出错，解决的方式是在#X后缀前面添加”\t”使它变成value的一部分而不是key的一部分&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><summary type="html">多路输出指定outputformat</summary></entry><entry><title type="html">hadoop partitioner类</title><link href="/learn/2019/06/10/hadoop-Partitioner%E7%B1%BB.html" rel="alternate" type="text/html" title="hadoop partitioner类" /><published>2019-06-10T21:04:00+08:00</published><updated>2019-06-10T21:04:00+08:00</updated><id>/learn/2019/06/10/hadoop-Partitioner%E7%B1%BB</id><content type="html" xml:base="/learn/2019/06/10/hadoop-Partitioner%E7%B1%BB.html">&lt;ol&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">多路输出指定outputformat</summary></entry><entry><title type="html">hadoop partitioner类</title><link href="http://localhost:4000/learn/2019/06/10/hadoop-Partitioner%E7%B1%BB.html" rel="alternate" type="text/html" title="hadoop partitioner类" /><published>2019-06-10T21:04:00+08:00</published><updated>2019-06-10T21:04:00+08:00</updated><id>http://localhost:4000/learn/2019/06/10/hadoop-Partitioner%E7%B1%BB</id><content type="html" xml:base="http://localhost:4000/learn/2019/06/10/hadoop-Partitioner%E7%B1%BB.html">&lt;ol&gt;
   &lt;li&gt;
     &lt;p&gt;指定partitioner类（二次排序）&lt;/p&gt;
 
@@ -111,7 +439,7 @@ ptrdiff_t
 
     &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;num.key.fields.for.partition=2 # 指定使用key的前2个块部分来切分map输出&lt;/code&gt;&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><summary type="html">指定partitioner类（二次排序）</summary></entry><entry><title type="html">taglist-vim快捷键</title><link href="/learn/2019/06/10/taglist-vim%E5%BF%AB%E6%8D%B7%E9%94%AE.html" rel="alternate" type="text/html" title="taglist-vim快捷键" /><published>2019-06-10T21:04:00+08:00</published><updated>2019-06-10T21:04:00+08:00</updated><id>/learn/2019/06/10/taglist-vim%E5%BF%AB%E6%8D%B7%E9%94%AE</id><content type="html" xml:base="/learn/2019/06/10/taglist-vim%E5%BF%AB%E6%8D%B7%E9%94%AE.html">&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">指定partitioner类（二次排序）</summary></entry><entry><title type="html">taglist-vim快捷键</title><link href="http://localhost:4000/learn/2019/06/10/taglist-vim%E5%BF%AB%E6%8D%B7%E9%94%AE.html" rel="alternate" type="text/html" title="taglist-vim快捷键" /><published>2019-06-10T21:04:00+08:00</published><updated>2019-06-10T21:04:00+08:00</updated><id>http://localhost:4000/learn/2019/06/10/taglist-vim%E5%BF%AB%E6%8D%B7%E9%94%AE</id><content type="html" xml:base="http://localhost:4000/learn/2019/06/10/taglist-vim%E5%BF%AB%E6%8D%B7%E9%94%AE.html">&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
 &amp;lt;CR&amp;gt;          跳到光标下tag所定义的位置，用鼠标双击此tag功能也一样
 o             在一个新打开的窗口中显示光标下tag
 &amp;lt;Space&amp;gt;       显示光标下tag的原型定义
@@ -126,7 +454,7 @@ x             taglist窗口放大和缩小，方便查看较长的tag
 ]]            跳到后一个文件
 q             关闭taglist窗口
 &amp;lt;F1&amp;gt;          显示帮助 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">```</summary></entry><entry><title type="html">shell test命令常用条件</title><link href="/learn/2018/09/28/shell-test-condition.html" rel="alternate" type="text/html" title="shell test命令常用条件" /><published>2018-09-28T18:33:00+08:00</published><updated>2018-09-28T18:33:00+08:00</updated><id>/learn/2018/09/28/shell-test-condition</id><content type="html" xml:base="/learn/2018/09/28/shell-test-condition.html">&lt;h2 id=&quot;数值测试&quot;&gt;数值测试&lt;/h2&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">```</summary></entry><entry><title type="html">shell test命令常用条件</title><link href="http://localhost:4000/learn/2018/09/28/shell-test-condition.html" rel="alternate" type="text/html" title="shell test命令常用条件" /><published>2018-09-28T18:33:00+08:00</published><updated>2018-09-28T18:33:00+08:00</updated><id>http://localhost:4000/learn/2018/09/28/shell-test-condition</id><content type="html" xml:base="http://localhost:4000/learn/2018/09/28/shell-test-condition.html">&lt;h2 id=&quot;数值测试&quot;&gt;数值测试&lt;/h2&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -239,7 +567,7 @@ q             关闭taglist窗口
       &lt;td&gt;文件存在且为块特殊文件则为真&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
-&lt;/table&gt;</content><author><name></name></author><summary type="html">数值测试</summary></entry><entry><title type="html">hadoop 常用环境变量</title><link href="/learn/2018/09/28/hadoop%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.html" rel="alternate" type="text/html" title="hadoop 常用环境变量" /><published>2018-09-28T14:53:00+08:00</published><updated>2018-09-28T14:53:00+08:00</updated><id>/learn/2018/09/28/hadoop%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F</id><content type="html" xml:base="/learn/2018/09/28/hadoop%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.html">&lt;table&gt;
+&lt;/table&gt;</content><author><name></name></author><summary type="html">数值测试</summary></entry><entry><title type="html">hadoop 常用环境变量</title><link href="http://localhost:4000/learn/2018/09/28/hadoop%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.html" rel="alternate" type="text/html" title="hadoop 常用环境变量" /><published>2018-09-28T14:53:00+08:00</published><updated>2018-09-28T14:53:00+08:00</updated><id>http://localhost:4000/learn/2018/09/28/hadoop%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F</id><content type="html" xml:base="http://localhost:4000/learn/2018/09/28/hadoop%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.html">&lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th&gt;环境变量名&lt;/th&gt;
@@ -320,7 +648,7 @@ q             关闭taglist窗口
 
 &lt;p&gt;在任务执行期间，应用程序在写文件时可以利用这个特性，比如 通过&lt;a href=&quot;http://hadoop.apache.org/core/docs/r0.18.2/api/org/apache/hadoop/mapred/FileOutputFormat.html#getWorkOutputPath(org.apache.hadoop.mapred.JobConf)&quot;&gt; FileOutputFormat.getWorkOutputPath()&lt;/a&gt;获得${mapred.work.output.dir}目录， 并在其下创建任意任务执行时所需的side-file，框架在任务尝试成功时会马上移动这些文件，因此不需要在程序内为每次任务尝试选取一个独一无二的名字。&lt;/p&gt;
 
-&lt;p&gt;注意：在每次任务尝试执行期间，${mapred.work.output.dir} 的值实际上是 ​${mapred.output.dir}/&lt;em&gt;temporary/&lt;/em&gt;{$taskid}，这个值是Map/Reduce框架创建的。 所以使用这个特性的方法是，在&lt;a href=&quot;http://hadoop.apache.org/core/docs/r0.18.2/api/org/apache/hadoop/mapred/FileOutputFormat.html#getWorkOutputPath(org.apache.hadoop.mapred.JobConf)&quot;&gt; FileOutputFormat.getWorkOutputPath() &lt;/a&gt;路径下创建side-file即可。&lt;/p&gt;</content><author><name></name></author><summary type="html">环境变量名 意义解释 HADOOP_HOME 计算节点上配置的hadoop client路径 LD_LIBRARY_PATH 计算节点上加载库文件的路径列表 PWD 当前工作目录 df_block_size 当前设置的HDFS文件块大小 map_input_file mapper正在处理得输入文件路径，包含文件名 mapred_job_id 当前作业ID mapred_job_name 当前作业名称 mapred_tip_id 当前任务的第几次重试 mapred_task_id 任务ID mapred_task_is_map 当前任务是否为map mapred_output_dir 计算输出路径 mapred_map_tasks 计算的map任务数 mapred_reduce_tasks 计算的reduce的任务数 mapred_work_output_dir task临时输出目录 mapred_output_dir job输出路径</summary></entry><entry><title type="html">你了解字符集、字符编码吗？</title><link href="/learn/2018/09/28/%E4%BD%A0%E4%BA%86%E8%A7%A3%E5%AD%97%E7%AC%A6%E9%9B%86-%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E5%90%97.html" rel="alternate" type="text/html" title="你了解字符集、字符编码吗？" /><published>2018-09-28T12:49:00+08:00</published><updated>2018-09-28T12:49:00+08:00</updated><id>/learn/2018/09/28/%E4%BD%A0%E4%BA%86%E8%A7%A3%E5%AD%97%E7%AC%A6%E9%9B%86%E3%80%81%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E5%90%97%3F</id><content type="html" xml:base="/learn/2018/09/28/%E4%BD%A0%E4%BA%86%E8%A7%A3%E5%AD%97%E7%AC%A6%E9%9B%86-%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E5%90%97.html">&lt;h3 id=&quot;你了解字符集字符编码吗&quot;&gt;你了解字符集、字符编码吗？&lt;/h3&gt;
+&lt;p&gt;注意：在每次任务尝试执行期间，${mapred.work.output.dir} 的值实际上是 ​${mapred.output.dir}/&lt;em&gt;temporary/&lt;/em&gt;{$taskid}，这个值是Map/Reduce框架创建的。 所以使用这个特性的方法是，在&lt;a href=&quot;http://hadoop.apache.org/core/docs/r0.18.2/api/org/apache/hadoop/mapred/FileOutputFormat.html#getWorkOutputPath(org.apache.hadoop.mapred.JobConf)&quot;&gt; FileOutputFormat.getWorkOutputPath() &lt;/a&gt;路径下创建side-file即可。&lt;/p&gt;</content><author><name></name></author><summary type="html">环境变量名 意义解释 HADOOP_HOME 计算节点上配置的hadoop client路径 LD_LIBRARY_PATH 计算节点上加载库文件的路径列表 PWD 当前工作目录 df_block_size 当前设置的HDFS文件块大小 map_input_file mapper正在处理得输入文件路径，包含文件名 mapred_job_id 当前作业ID mapred_job_name 当前作业名称 mapred_tip_id 当前任务的第几次重试 mapred_task_id 任务ID mapred_task_is_map 当前任务是否为map mapred_output_dir 计算输出路径 mapred_map_tasks 计算的map任务数 mapred_reduce_tasks 计算的reduce的任务数 mapred_work_output_dir task临时输出目录 mapred_output_dir job输出路径</summary></entry><entry><title type="html">你了解字符集、字符编码吗？</title><link href="http://localhost:4000/learn/2018/09/28/%E4%BD%A0%E4%BA%86%E8%A7%A3%E5%AD%97%E7%AC%A6%E9%9B%86-%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E5%90%97.html" rel="alternate" type="text/html" title="你了解字符集、字符编码吗？" /><published>2018-09-28T12:49:00+08:00</published><updated>2018-09-28T12:49:00+08:00</updated><id>http://localhost:4000/learn/2018/09/28/%E4%BD%A0%E4%BA%86%E8%A7%A3%E5%AD%97%E7%AC%A6%E9%9B%86%E3%80%81%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E5%90%97%3F</id><content type="html" xml:base="http://localhost:4000/learn/2018/09/28/%E4%BD%A0%E4%BA%86%E8%A7%A3%E5%AD%97%E7%AC%A6%E9%9B%86-%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E5%90%97.html">&lt;h3 id=&quot;你了解字符集字符编码吗&quot;&gt;你了解字符集、字符编码吗？&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;ASCII&lt;/strong&gt;: 使用一个字节表示一个字符，实际使用的只有一个字节的低7位，第8位永远是0，因此最多只能表示2^7=128个字符，主要用来表示基础的拉丁字符，如英文字母，数字等，包括95个可打印字符和33个控制字符；&lt;/li&gt;
@@ -403,7 +731,7 @@ q             关闭taglist窗口
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://blog.jobbole.com/76376/&quot; title=&quot;字符编码常识及问题解析&quot;&gt;http://blog.jobbole.com/76376/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">你了解字符集、字符编码吗？</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="/jekyll/2018/09/23/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2018-09-23T19:27:08+08:00</published><updated>2018-09-23T19:27:08+08:00</updated><id>/jekyll/2018/09/23/welcome-to-jekyll</id><content type="html" xml:base="/jekyll/2018/09/23/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">你了解字符集、字符编码吗？</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/2018/09/23/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2018-09-23T19:27:08+08:00</published><updated>2018-09-23T19:27:08+08:00</updated><id>http://localhost:4000/jekyll/2018/09/23/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/2018/09/23/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
 
 &lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
 
