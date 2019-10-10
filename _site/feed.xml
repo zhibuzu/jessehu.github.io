@@ -1,4 +1,198 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-08-27T21:47:29+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">代码仔</title><subtitle>技术、人生感悟，大数据，架构、策略等</subtitle><entry><title type="html">常用Git命令清单</title><link href="http://localhost:4000/git/2019/08/26/%E5%B8%B8%E7%94%A8Git%E5%91%BD%E4%BB%A4%E6%B8%85%E5%8D%95.html" rel="alternate" type="text/html" title="常用Git命令清单" /><published>2019-08-26T21:16:08+08:00</published><updated>2019-08-26T21:16:08+08:00</updated><id>http://localhost:4000/git/2019/08/26/%E5%B8%B8%E7%94%A8Git%E5%91%BD%E4%BB%A4%E6%B8%85%E5%8D%95</id><content type="html" xml:base="http://localhost:4000/git/2019/08/26/%E5%B8%B8%E7%94%A8Git%E5%91%BD%E4%BB%A4%E6%B8%85%E5%8D%95.html">&lt;p&gt;我每天使用 Git ，但是很多命令记不住。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2019-10-10T21:36:31+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">代码仔</title><subtitle>技术、人生感悟，大数据，架构、策略等</subtitle><entry><title type="html">pixel、分辨率、ppi、dpi、dp、dip区别及转换</title><link href="http://localhost:4000/learn/2019/10/10/%E5%83%8F%E7%B4%A0px-%E5%88%86%E8%BE%A8%E7%8E%87-ppi-dpi-dp(dip).html" rel="alternate" type="text/html" title="pixel、分辨率、ppi、dpi、dp、dip区别及转换" /><published>2019-10-10T20:56:00+08:00</published><updated>2019-10-10T20:56:00+08:00</updated><id>http://localhost:4000/learn/2019/10/10/%E5%83%8F%E7%B4%A0px%E3%80%81%E5%88%86%E8%BE%A8%E7%8E%87%E3%80%81ppi%E3%80%81dpi%E3%80%81dp(dip)</id><content type="html" xml:base="http://localhost:4000/learn/2019/10/10/%E5%83%8F%E7%B4%A0px-%E5%88%86%E8%BE%A8%E7%8E%87-ppi-dpi-dp(dip).html">&lt;p&gt;屏幕尺寸（Screen Size）： 屏幕对角线的长度。iPhone5屏幕尺寸为4英寸、iPhone6屏幕尺寸为4.7英寸，指的是显示屏对角线的长度。 1 inch = 2.54cm = 25.4mm
+分辨率：屏幕上的像素总数。常用的表现形式如：1280x720, 1920x1080等。&lt;/p&gt;
+
+&lt;p&gt;px，pixel，像素，电子屏幕上组成一幅图画或image的基本单元。
+pt， point，点，印刷行业常用单位，等于1/72英寸。
+ppi，pixel per inch，每英寸像素数，值越高，屏幕越细腻。
+dpi， dot per inch，每英寸多少点，该值越高，则图片越细腻。
+dp，dip， Density-independent pixel，安卓开发用的长度单位。以160ppi为标准，和iPhone的scale差不多的意思。安卓用dp适配，系统会自动将dp转换为px。当屏幕像素点密度为160ppi时，1dp=1px。&lt;/p&gt;
+
+&lt;h4 id=&quot;一pt与px--1pt--ppi--72px&quot;&gt;一，pt与px ： 1pt = (ppi / 72)px。&lt;/h4&gt;
+
+&lt;p&gt;当图片的分辨率是72ppi（dpi）时，1pt = 1px；
+当图片的分辨率是72*2ppi（dpi）时，1pt = 2px；&lt;/p&gt;
+
+&lt;h4 id=&quot;二ppi与dpidpippi&quot;&gt;二，ppi与dpi：dpi=ppi&lt;/h4&gt;
+
+&lt;p&gt;dpi最初用于衡量打印物上每英寸的点数密度，DPI值越大图片越精细。当DPI的概念用在计算机屏幕上时，就应称之为ppi。同理： PPI就是计算机屏幕上每英寸可以显示的像素点的数量。在电子屏幕显示中ppi和dpi是一样的。&lt;/p&gt;
+
+&lt;h4 id=&quot;三ppi计算方法&quot;&gt;三，ppi计算方法&lt;/h4&gt;
+
+&lt;p&gt;假设屏幕分辨率为W&lt;em&gt;H(px)，物理尺寸为a&lt;/em&gt;b(inch)，
+则我们常说的屏幕尺寸c（如5.0英寸）其实是对角线的长度，因此&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;c = \sqrt{a^2 + b^2}&lt;/script&gt;
+​&lt;/p&gt;
+
+&lt;p&gt;​											&lt;u&gt;勾股定理&lt;/u&gt;&lt;/p&gt;
+
+&lt;p&gt;则像素密度（PPI），指的是屏幕单位长度的像素数&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;DPI = PPI = W/a = H/b&lt;/script&gt;
+​&lt;/p&gt;
+
+&lt;p&gt;​										&lt;u&gt;屏幕密度&lt;/u&gt;&lt;/p&gt;
+
+&lt;p&gt;由此我们推理出：&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;DPI^2 = PPI^2 = (W/a)^2 = (H/b)^2 = (W^2 + H^2)/(a^2 + b^2) = (W^2 + H^2)/c^2&lt;/script&gt;
+
+&lt;p&gt;​&lt;/p&gt;
+
+&lt;p&gt;​									&lt;u&gt;屏幕密度&lt;/u&gt;&lt;/p&gt;
+
+&lt;p&gt;因此我们可以得出PPI（ DPI）计算公式：&lt;/p&gt;
+
+&lt;p&gt;&lt;script type=&quot;math/tex&quot;&gt;DPI = PPI = \sqrt{W^2 + H^2}/c&lt;/script&gt;
+​&lt;/p&gt;
+
+&lt;p&gt;​									&lt;u&gt;PPI（ DPI）计算公式&lt;/u&gt;&lt;/p&gt;
+
+&lt;p&gt;eg：iphone6分辨率1334*750px，尺寸4.7英寸&lt;/p&gt;
+
+&lt;p&gt;则其
+&lt;script type=&quot;math/tex&quot;&gt;PPI = \sqrt{1334^2+750^2}/4.7 = 326&lt;/script&gt;
+​&lt;/p&gt;
+
+&lt;p&gt;​										&lt;u&gt;iphone6像素密度&lt;/u&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;四px和dp&quot;&gt;四，px和dp&lt;/h4&gt;
+
+&lt;p&gt;dp，独立像素，虚拟单位，又称设备无关像素。1dp的长度相当于一个160dpi的屏幕上一个物理像素的长度。而160dpi的屏幕则是被android定义为基准的屏幕（mdpi）。在app运行的时候，android会将dp转为实际像素进行布局。转换的公式为：
+&lt;script type=&quot;math/tex&quot;&gt;px = dp * (160 / dpi)。&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;dp为安卓开发时的基本长度单位，根据不同的屏幕分辨率，与px有不同的对应关系。根据其像素密度，我们将安卓端屏幕分为以下几种规格：&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/static/images/WX20191010-211819.png&quot; alt=&quot;img&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;1dp即为当屏幕密度值为160ppi时，1pt=1px。则，在上表中，当密度为mdpi时，1dp = 1px。 以mdpi为标准，上表中屏幕的密度值比分别为：&lt;/p&gt;
+
+&lt;script type=&quot;math/tex; mode=display&quot;&gt;ldpi : mdpi : hdpi : xhdpi : xxhpi = 0.75 : 1 : 1.5 : 2 : 3&lt;/script&gt;
+
+&lt;p&gt;即，在xhdpi的密度下，1dp=2px；在hdpi情况下，1dp=1.5px。其他类推。&lt;/p&gt;</content><author><name></name></author><summary type="html">屏幕尺寸（Screen Size）： 屏幕对角线的长度。iPhone5屏幕尺寸为4英寸、iPhone6屏幕尺寸为4.7英寸，指的是显示屏对角线的长度。 1 inch = 2.54cm = 25.4mm 分辨率：屏幕上的像素总数。常用的表现形式如：1280x720, 1920x1080等。</summary></entry><entry><title type="html">进程间通信方式</title><link href="http://localhost:4000/2019/09/25/%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F.html" rel="alternate" type="text/html" title="进程间通信方式" /><published>2019-09-25T00:00:00+08:00</published><updated>2019-09-25T00:00:00+08:00</updated><id>http://localhost:4000/2019/09/25/%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F</id><content type="html" xml:base="http://localhost:4000/2019/09/25/%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F.html">&lt;h2 id=&quot;进程间通信的几种方式&quot;&gt;进程间通信的几种方式&lt;/h2&gt;
+
+&lt;p&gt;介绍一下进程间通信有几种方式&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;共享内存(Share memory)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;匿名管道(pipe)：&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;管道是一种半双工的通信方式，数据只能&lt;strong&gt;单向流动&lt;/strong&gt;，而且只能在具有亲缘关系的进程间使用。进程的亲缘关系通常是指&lt;strong&gt;父子进程关系&lt;/strong&gt;。&lt;/p&gt;
+
+        &lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// 需要的头文件&lt;/span&gt;
+&lt;span class=&quot;cp&quot;&gt;#include &amp;lt;unistd.h&amp;gt;
+&lt;/span&gt;    
+&lt;span class=&quot;c1&quot;&gt;// 通过pipe()函数来创建匿名管道&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// 返回值：成功返回0，失败返回-1&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// fd参数返回两个文件描述符&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// fd[0]指向管道的读端，fd[1]指向管道的写端&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// fd[1]的输出是fd[0]的输入。&lt;/span&gt;
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pipe&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fd&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;————————————————&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;版权声明：本文为&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;CSDN&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;博主「&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Violet&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Guo&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;」的原创文章，遵循&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;CC&lt;/span&gt; &lt;span class=&quot;mf&quot;&gt;4.0&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;BY&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;SA&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;版权协议，转载请附上原文出处链接及本声明。&lt;/span&gt;
+&lt;span class=&quot;err&quot;&gt;原文链接：&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;https&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//blog.csdn.net/violet_echo_0908/article/details/51201278&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;        &lt;/div&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;信号量（Signal）&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;套接字（Socket）&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html">进程间通信的几种方式</summary></entry><entry><title type="html">使用socket实现一个简单的进程间通信程序</title><link href="http://localhost:4000/2019/09/25/%E4%BD%BF%E7%94%A8socket%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1%E7%A8%8B%E5%BA%8F.html" rel="alternate" type="text/html" title="使用socket实现一个简单的进程间通信程序" /><published>2019-09-25T00:00:00+08:00</published><updated>2019-09-25T00:00:00+08:00</updated><id>http://localhost:4000/2019/09/25/%E4%BD%BF%E7%94%A8socket%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1%E7%A8%8B%E5%BA%8F</id><content type="html" xml:base="http://localhost:4000/2019/09/25/%E4%BD%BF%E7%94%A8socket%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E7%AE%80%E5%8D%95%E7%9A%84%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1%E7%A8%8B%E5%BA%8F.html">&lt;ul&gt;
+  &lt;li&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name></name></author><summary type="html"></summary></entry><entry><title type="html">C函数库</title><link href="http://localhost:4000/2019/09/25/c%E5%87%BD%E6%95%B0%E5%BA%93.html" rel="alternate" type="text/html" title="C函数库" /><published>2019-09-25T00:00:00+08:00</published><updated>2019-09-25T00:00:00+08:00</updated><id>http://localhost:4000/2019/09/25/c%E5%87%BD%E6%95%B0%E5%BA%93</id><content type="html" xml:base="http://localhost:4000/2019/09/25/c%E5%87%BD%E6%95%B0%E5%BA%93.html">&lt;ol&gt;
+  &lt;li&gt;
+    &lt;ctype.h&gt;：包含用来测试某个特征字符的函数的函数原型，以及用来转换大小写字母的函数原型；
+&lt;/ctype.h&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;errno.h&gt;：定义用来报告错误条件的宏；
+&lt;/errno.h&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;float.h&gt;：包含系统的浮点数大小限制；
+&lt;/float.h&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;math.h&gt;：包含数学库函数的函数原型；
+&lt;/math.h&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;stddef.h&gt;：包含执行某些计算 C 所用的常见的函数定义；
+&lt;/stddef.h&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;stdio.h&gt;：包含标准输入输出库函数的函数原型，以及他们所用的信息；
+&lt;/stdio.h&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;stdlib.h&gt;：包含数字转换到文本，以及文本转换到数字的函数原型，还有内存分配、随机数字以及其他实用函数的函数原型；
+&lt;/stdlib.h&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;string.h&gt;：包含字符串处理函数的函数原型；
+&lt;/string.h&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;time.h&gt;：包含时间和日期操作的函数原型和类型；
+&lt;/time.h&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;stdarg.h&gt;：包含函数原型和宏，用于处理未知数值和类型的函数的参数列表；
+&lt;/stdarg.h&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;signal.h&gt;：包含函数原型和宏，用于处理程序执行期间可能出现的各种条件；
+&lt;/signal.h&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;setjmp.h&gt;：包含可以绕过一般函数调用并返回序列的函数的原型，即非局部跳转；
+&lt;/setjmp.h&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;locale.h&gt;：包含函数原型和其他信息，使程序可以针对所运行的地区进行修改。
+&lt;/locale.h&gt;
+  &lt;/li&gt;
+  &lt;li&gt;地区的表示方法可以使计算机系统处理不同的数据表达约定，如全世界的日期、时间、美元数和大数字；&lt;/li&gt;
+  &lt;li&gt;
+    &lt;assert.h&gt;：包含宏和信息，用于进行诊断，帮助程序调试。
+&lt;/assert.h&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">：包含用来测试某个特征字符的函数的函数原型，以及用来转换大小写字母的函数原型； ：定义用来报告错误条件的宏； ：包含系统的浮点数大小限制； ：包含数学库函数的函数原型； ：包含执行某些计算 C 所用的常见的函数定义； ：包含标准输入输出库函数的函数原型，以及他们所用的信息； ：包含数字转换到文本，以及文本转换到数字的函数原型，还有内存分配、随机数字以及其他实用函数的函数原型； ：包含字符串处理函数的函数原型； ：包含时间和日期操作的函数原型和类型； ：包含函数原型和宏，用于处理未知数值和类型的函数的参数列表； ：包含函数原型和宏，用于处理程序执行期间可能出现的各种条件； ：包含可以绕过一般函数调用并返回序列的函数的原型，即非局部跳转； ：包含函数原型和其他信息，使程序可以针对所运行的地区进行修改。 地区的表示方法可以使计算机系统处理不同的数据表达约定，如全世界的日期、时间、美元数和大数字； ：包含宏和信息，用于进行诊断，帮助程序调试。</summary></entry><entry><title type="html">CAP定理</title><link href="http://localhost:4000/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/2019/09/06/CAP%E5%AE%9A%E7%90%86.html" rel="alternate" type="text/html" title="CAP定理" /><published>2019-09-06T20:00:00+08:00</published><updated>2019-09-06T20:00:00+08:00</updated><id>http://localhost:4000/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/2019/09/06/CAP%E5%AE%9A%E7%90%86</id><content type="html" xml:base="http://localhost:4000/%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F/2019/09/06/CAP%E5%AE%9A%E7%90%86.html">&lt;h2 id=&quot;cap定理&quot;&gt;CAP定理&lt;/h2&gt;
+
+&lt;p&gt;在&lt;a href=&quot;https://zh.wikipedia.org/wiki/%E7%90%86%E8%AB%96%E8%A8%88%E7%AE%97%E6%A9%9F%E7%A7%91%E5%AD%B8&quot;&gt;理论计算机科学&lt;/a&gt;中，&lt;strong&gt;CAP定理&lt;/strong&gt;（CAP theorem），又被称作&lt;strong&gt;布鲁尔定理&lt;/strong&gt;（Brewer’s theorem），它指出对于一个&lt;a href=&quot;https://zh.wikipedia.org/wiki/%E5%88%86%E5%B8%83%E5%BC%8F%E8%AE%A1%E7%AE%97&quot;&gt;分布式计算系统&lt;/a&gt;来说，不可能同时满足以下三点：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;一致性（Consistency）：每一次读获取写入的最新数据或者一个错误（Every read receives the most recent write or an error）&lt;/li&gt;
+  &lt;li&gt;可用性（Availability）：每次请求都能获取到非错的响应—但是不保证获取的数据为最近写入的最新数据（Every request receives a (non-error) response – without the guarantee that it contains the most recent write）&lt;/li&gt;
+  &lt;li&gt;分区容错性（Partition tolerance）：系统不中断操作，尽管节点间的通信可能出现任意数量的消息被丢失（或延迟）（The system continues to operate despite an arbitrary number of messages being dropped (or delayed) by the network between nodes）&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;当网络分区通信发现错误时，我们可以有两种选择：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;取消当前操作，降低了可用性，但保证了一致性；&lt;/li&gt;
+  &lt;li&gt;继续当前操作，提高了可用性，但保证不了一致性；&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;实际上，CAP定理暗示了在网络分区存在的情况下，要么选择&lt;strong&gt;一致性&lt;/strong&gt; 要么选择&lt;strong&gt;可用性&lt;/strong&gt;。注意这里的&lt;strong&gt;一致性&lt;/strong&gt;不同于&lt;strong&gt;ACID 数据库事物&lt;/strong&gt;中的&lt;strong&gt;一致性&lt;/strong&gt;保证。&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;参考资源&lt;/p&gt;
+
+  &lt;ol&gt;
+    &lt;li&gt;轻松理解CAP理论 - 房东的狗的文章 - 知乎
+https://zhuanlan.zhihu.com/p/50990721&lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/blockquote&gt;</content><author><name></name></author><summary type="html">CAP定理</summary></entry><entry><title type="html">常用Git命令清单</title><link href="http://localhost:4000/git/2019/08/26/%E5%B8%B8%E7%94%A8Git%E5%91%BD%E4%BB%A4%E6%B8%85%E5%8D%95.html" rel="alternate" type="text/html" title="常用Git命令清单" /><published>2019-08-26T21:16:08+08:00</published><updated>2019-08-26T21:16:08+08:00</updated><id>http://localhost:4000/git/2019/08/26/%E5%B8%B8%E7%94%A8Git%E5%91%BD%E4%BB%A4%E6%B8%85%E5%8D%95</id><content type="html" xml:base="http://localhost:4000/git/2019/08/26/%E5%B8%B8%E7%94%A8Git%E5%91%BD%E4%BB%A4%E6%B8%85%E5%8D%95.html">&lt;p&gt;我每天使用 Git ，但是很多命令记不住。&lt;/p&gt;
 
 &lt;p&gt;一般来说，日常使用只要记住下图6个命令，就可以了。但是熟练使用，恐怕要记住60～100个命令。&lt;/p&gt;
 
@@ -419,7 +613,22 @@ a 与 &amp;amp;a都是指针，区别在于指向的类型不同。
   &lt;li&gt;
     &lt;p&gt;坑：对于TextInputFormat，reduce输出数据经常是一行一行的文本，如果一行的中间没有”\t”的话，就代表value为空，如果直接将”#X”后缀放在行尾，”#X”会作为key的一部分而不是value的一部分（因为加上后缀后一行中间仍然没有”\t”）这样会导致出错，解决的方式是在#X后缀前面添加”\t”使它变成value的一部分而不是key的一部分&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><summary type="html">多路输出指定outputformat</summary></entry><entry><title type="html">hadoop partitioner类</title><link href="http://localhost:4000/learn/2019/06/10/hadoop-Partitioner%E7%B1%BB.html" rel="alternate" type="text/html" title="hadoop partitioner类" /><published>2019-06-10T21:04:00+08:00</published><updated>2019-06-10T21:04:00+08:00</updated><id>http://localhost:4000/learn/2019/06/10/hadoop-Partitioner%E7%B1%BB</id><content type="html" xml:base="http://localhost:4000/learn/2019/06/10/hadoop-Partitioner%E7%B1%BB.html">&lt;ol&gt;
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">多路输出指定outputformat</summary></entry><entry><title type="html">taglist-vim快捷键</title><link href="http://localhost:4000/learn/2019/06/10/taglist-vim%E5%BF%AB%E6%8D%B7%E9%94%AE.html" rel="alternate" type="text/html" title="taglist-vim快捷键" /><published>2019-06-10T21:04:00+08:00</published><updated>2019-06-10T21:04:00+08:00</updated><id>http://localhost:4000/learn/2019/06/10/taglist-vim%E5%BF%AB%E6%8D%B7%E9%94%AE</id><content type="html" xml:base="http://localhost:4000/learn/2019/06/10/taglist-vim%E5%BF%AB%E6%8D%B7%E9%94%AE.html">&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&amp;lt;CR&amp;gt;          跳到光标下tag所定义的位置，用鼠标双击此tag功能也一样
+o             在一个新打开的窗口中显示光标下tag
+&amp;lt;Space&amp;gt;       显示光标下tag的原型定义
+u             更新taglist窗口中的tag
+s             更改排序方式，在按名字排序和按出现顺序排序间切换
+x             taglist窗口放大和缩小，方便查看较长的tag
++             打开一个折叠，同zo
+-             将tag折叠起来，同zc
+*             打开所有的折叠，同zR
+=             将所有tag折叠起来，同zM
+[[            跳到前一个文件
+]]            跳到后一个文件
+q             关闭taglist窗口
+&amp;lt;F1&amp;gt;          显示帮助 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">```</summary></entry><entry><title type="html">hadoop partitioner类</title><link href="http://localhost:4000/learn/2019/06/10/hadoop-Partitioner%E7%B1%BB.html" rel="alternate" type="text/html" title="hadoop partitioner类" /><published>2019-06-10T21:04:00+08:00</published><updated>2019-06-10T21:04:00+08:00</updated><id>http://localhost:4000/learn/2019/06/10/hadoop-Partitioner%E7%B1%BB</id><content type="html" xml:base="http://localhost:4000/learn/2019/06/10/hadoop-Partitioner%E7%B1%BB.html">&lt;ol&gt;
   &lt;li&gt;
     &lt;p&gt;指定partitioner类（二次排序）&lt;/p&gt;
 
@@ -439,308 +648,4 @@ a 与 &amp;amp;a都是指针，区别在于指向的类型不同。
 
     &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;num.key.fields.for.partition=2 # 指定使用key的前2个块部分来切分map输出&lt;/code&gt;&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><summary type="html">指定partitioner类（二次排序）</summary></entry><entry><title type="html">taglist-vim快捷键</title><link href="http://localhost:4000/learn/2019/06/10/taglist-vim%E5%BF%AB%E6%8D%B7%E9%94%AE.html" rel="alternate" type="text/html" title="taglist-vim快捷键" /><published>2019-06-10T21:04:00+08:00</published><updated>2019-06-10T21:04:00+08:00</updated><id>http://localhost:4000/learn/2019/06/10/taglist-vim%E5%BF%AB%E6%8D%B7%E9%94%AE</id><content type="html" xml:base="http://localhost:4000/learn/2019/06/10/taglist-vim%E5%BF%AB%E6%8D%B7%E9%94%AE.html">&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&amp;lt;CR&amp;gt;          跳到光标下tag所定义的位置，用鼠标双击此tag功能也一样
-o             在一个新打开的窗口中显示光标下tag
-&amp;lt;Space&amp;gt;       显示光标下tag的原型定义
-u             更新taglist窗口中的tag
-s             更改排序方式，在按名字排序和按出现顺序排序间切换
-x             taglist窗口放大和缩小，方便查看较长的tag
-+             打开一个折叠，同zo
--             将tag折叠起来，同zc
-*             打开所有的折叠，同zR
-=             将所有tag折叠起来，同zM
-[[            跳到前一个文件
-]]            跳到后一个文件
-q             关闭taglist窗口
-&amp;lt;F1&amp;gt;          显示帮助 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">```</summary></entry><entry><title type="html">shell test命令常用条件</title><link href="http://localhost:4000/learn/2018/09/28/shell-test-condition.html" rel="alternate" type="text/html" title="shell test命令常用条件" /><published>2018-09-28T18:33:00+08:00</published><updated>2018-09-28T18:33:00+08:00</updated><id>http://localhost:4000/learn/2018/09/28/shell-test-condition</id><content type="html" xml:base="http://localhost:4000/learn/2018/09/28/shell-test-condition.html">&lt;h2 id=&quot;数值测试&quot;&gt;数值测试&lt;/h2&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;参数&lt;/th&gt;
-      &lt;th&gt;说明&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;-eq&lt;/td&gt;
-      &lt;td&gt;等于则为真&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;-ne&lt;/td&gt;
-      &lt;td&gt;不等&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;-gt&lt;/td&gt;
-      &lt;td&gt;大于&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;-ge&lt;/td&gt;
-      &lt;td&gt;大于等于&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;-lt&lt;/td&gt;
-      &lt;td&gt;小于&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;-le&lt;/td&gt;
-      &lt;td&gt;小于等于&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;字符串测试&quot;&gt;字符串测试&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;参数&lt;/th&gt;
-      &lt;th&gt;说明&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;=&lt;/td&gt;
-      &lt;td&gt;等于则为真&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;!=&lt;/td&gt;
-      &lt;td&gt;不想等&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;-z 字符串&lt;/td&gt;
-      &lt;td&gt;字符串长度为零则为真&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;-n 字符串&lt;/td&gt;
-      &lt;td&gt;字符串长度不为零则为真&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;h3 id=&quot;文件测试&quot;&gt;文件测试&lt;/h3&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;参数&lt;/th&gt;
-      &lt;th&gt;说明&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;-e 文件名&lt;/td&gt;
-      &lt;td&gt;文件存在则为真&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;-r 文件名&lt;/td&gt;
-      &lt;td&gt;文件可读则为真&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;-w 文件名&lt;/td&gt;
-      &lt;td&gt;文件可写则为真&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;-x 文件名&lt;/td&gt;
-      &lt;td&gt;文件可执行则为真&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;-s 文件名&lt;/td&gt;
-      &lt;td&gt;文件存在且至少有一个字符则为真&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;-d 文件名&lt;/td&gt;
-      &lt;td&gt;文件存在且为目录则为真&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;-f 文件名&lt;/td&gt;
-      &lt;td&gt;文件存在且为普通文件则为真&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;-c 文件名&lt;/td&gt;
-      &lt;td&gt;文件存在且为字符型特殊文件？则为真&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;-b 文件名&lt;/td&gt;
-      &lt;td&gt;文件存在且为块特殊文件则为真&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;</content><author><name></name></author><summary type="html">数值测试</summary></entry><entry><title type="html">hadoop 常用环境变量</title><link href="http://localhost:4000/learn/2018/09/28/hadoop%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.html" rel="alternate" type="text/html" title="hadoop 常用环境变量" /><published>2018-09-28T14:53:00+08:00</published><updated>2018-09-28T14:53:00+08:00</updated><id>http://localhost:4000/learn/2018/09/28/hadoop%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F</id><content type="html" xml:base="http://localhost:4000/learn/2018/09/28/hadoop%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.html">&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;环境变量名&lt;/th&gt;
-      &lt;th&gt;意义解释&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;HADOOP_HOME&lt;/td&gt;
-      &lt;td&gt;计算节点上配置的hadoop client路径&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;LD_LIBRARY_PATH&lt;/td&gt;
-      &lt;td&gt;计算节点上加载库文件的路径列表&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;PWD&lt;/td&gt;
-      &lt;td&gt;当前工作目录&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;df_block_size&lt;/td&gt;
-      &lt;td&gt;当前设置的HDFS文件块大小&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;map_input_file&lt;/td&gt;
-      &lt;td&gt;mapper正在处理得输入文件路径，包含文件名&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;mapred_job_id&lt;/td&gt;
-      &lt;td&gt;当前作业ID&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;mapred_job_name&lt;/td&gt;
-      &lt;td&gt;当前作业名称&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;mapred_tip_id&lt;/td&gt;
-      &lt;td&gt;当前任务的第几次重试&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;mapred_task_id&lt;/td&gt;
-      &lt;td&gt;任务ID&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;mapred_task_is_map&lt;/td&gt;
-      &lt;td&gt;当前任务是否为map&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;mapred_output_dir&lt;/td&gt;
-      &lt;td&gt;计算输出路径&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;mapred_map_tasks&lt;/td&gt;
-      &lt;td&gt;计算的map任务数&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;mapred_reduce_tasks&lt;/td&gt;
-      &lt;td&gt;计算的reduce的任务数&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;mapred_work_output_dir&lt;/td&gt;
-      &lt;td&gt;task临时输出目录&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;mapred_output_dir&lt;/td&gt;
-      &lt;td&gt;job输出路径&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;mapred_work_output_dir解释&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;为了避免冲突，Map/Reduce框架为每次尝试执行任务都建立和维护一个特殊的&lt;/p&gt;
-
-&lt;p&gt;${mapred.output.dir}/&lt;em&gt;temporary/&lt;/em&gt;​${taskid}子目录，这个目录位于本次尝试执行任务输出结果所在的FileSystem上，可以通过 ${mapred.work.output.dir}来访问这个子目录。 对于成功完成的任务尝试，只有${mapred.output.dir}/&lt;em&gt;temporary/&lt;/em&gt;${taskid}下的文件会&lt;em&gt;移动&lt;/em&gt;到${mapred.output.dir}。当然，框架会丢弃那些失败的任务尝试的子目录。这种处理过程对于应用程序来说是完全透明的。&lt;/p&gt;
-
-&lt;p&gt;在任务执行期间，应用程序在写文件时可以利用这个特性，比如 通过&lt;a href=&quot;http://hadoop.apache.org/core/docs/r0.18.2/api/org/apache/hadoop/mapred/FileOutputFormat.html#getWorkOutputPath(org.apache.hadoop.mapred.JobConf)&quot;&gt; FileOutputFormat.getWorkOutputPath()&lt;/a&gt;获得${mapred.work.output.dir}目录， 并在其下创建任意任务执行时所需的side-file，框架在任务尝试成功时会马上移动这些文件，因此不需要在程序内为每次任务尝试选取一个独一无二的名字。&lt;/p&gt;
-
-&lt;p&gt;注意：在每次任务尝试执行期间，${mapred.work.output.dir} 的值实际上是 ​${mapred.output.dir}/&lt;em&gt;temporary/&lt;/em&gt;{$taskid}，这个值是Map/Reduce框架创建的。 所以使用这个特性的方法是，在&lt;a href=&quot;http://hadoop.apache.org/core/docs/r0.18.2/api/org/apache/hadoop/mapred/FileOutputFormat.html#getWorkOutputPath(org.apache.hadoop.mapred.JobConf)&quot;&gt; FileOutputFormat.getWorkOutputPath() &lt;/a&gt;路径下创建side-file即可。&lt;/p&gt;</content><author><name></name></author><summary type="html">环境变量名 意义解释 HADOOP_HOME 计算节点上配置的hadoop client路径 LD_LIBRARY_PATH 计算节点上加载库文件的路径列表 PWD 当前工作目录 df_block_size 当前设置的HDFS文件块大小 map_input_file mapper正在处理得输入文件路径，包含文件名 mapred_job_id 当前作业ID mapred_job_name 当前作业名称 mapred_tip_id 当前任务的第几次重试 mapred_task_id 任务ID mapred_task_is_map 当前任务是否为map mapred_output_dir 计算输出路径 mapred_map_tasks 计算的map任务数 mapred_reduce_tasks 计算的reduce的任务数 mapred_work_output_dir task临时输出目录 mapred_output_dir job输出路径</summary></entry><entry><title type="html">你了解字符集、字符编码吗？</title><link href="http://localhost:4000/learn/2018/09/28/%E4%BD%A0%E4%BA%86%E8%A7%A3%E5%AD%97%E7%AC%A6%E9%9B%86-%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E5%90%97.html" rel="alternate" type="text/html" title="你了解字符集、字符编码吗？" /><published>2018-09-28T12:49:00+08:00</published><updated>2018-09-28T12:49:00+08:00</updated><id>http://localhost:4000/learn/2018/09/28/%E4%BD%A0%E4%BA%86%E8%A7%A3%E5%AD%97%E7%AC%A6%E9%9B%86%E3%80%81%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E5%90%97%3F</id><content type="html" xml:base="http://localhost:4000/learn/2018/09/28/%E4%BD%A0%E4%BA%86%E8%A7%A3%E5%AD%97%E7%AC%A6%E9%9B%86-%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E5%90%97.html">&lt;h3 id=&quot;你了解字符集字符编码吗&quot;&gt;你了解字符集、字符编码吗？&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;ASCII&lt;/strong&gt;: 使用一个字节表示一个字符，实际使用的只有一个字节的低7位，第8位永远是0，因此最多只能表示2^7=128个字符，主要用来表示基础的拉丁字符，如英文字母，数字等，包括95个可打印字符和33个控制字符；&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;ISO 8859-n(n=1,2,3…11,13…16,没有12)&lt;/strong&gt;: 利用了ASCII字符集没有使用的最高位，使最多可表示的字符扩展到2^8=256个字符，可以支持许多欧洲国家的语言文字；
-    &lt;ul&gt;
-      &lt;li&gt;其中0x00 ~ 0x7f范围是与ASCII兼容的&lt;/li&gt;
-      &lt;li&gt;0x80 ~ 0xff范围是在ASCII基础上的扩展字符集&lt;/li&gt;
-      &lt;li&gt;ISO 8859-n 字符集有多个系列，分别用于不同的欧洲语言地区，如西欧，北欧，东欧&lt;/li&gt;
-      &lt;li&gt;Latin-1是ISO 8859-1的别名&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;GB2312&lt;/strong&gt;: 为了表示更大规模的汉字字符集，我国制定了国家简体中文字符集，即GB2312，使用一个字节表示拉丁字母来兼容ASCII，汉字使用两个字节表示，因此GB2312是变字节的字符集，但除了简体汉字外，还有繁体汉字及中日韩文字需要表示，因此还有BIG5，GBK，GB18030几种字符集，请看下表它们的区别；&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt; &lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;GB2312&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;BIG5&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;GBK&lt;/th&gt;
-      &lt;th style=&quot;text-align: left&quot;&gt;GB18030&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;作用&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;国家简体中文字符集&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;统一繁体字符集&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;GB2312扩展，加入对繁体字的支持&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;中日韩文字编码&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;字节数&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;变字节：1字节 - 兼容ASCII        2字节 - 汉字&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;2字节&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;2字节&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;变字节：1字节 - 兼容ASCII  2字节，4字节&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;范围&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;能表示7445个符号，包括6763个汉字&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;能表示21886个符号&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;能表示21886个符号&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;能表示27484个符号&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;兼容性&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;兼容ASCII， 0x00 ~ 0x7F 与ASCII保持一致&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;兼容ASCII，但与GB2312有冲突&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;兼容GB2312&lt;/td&gt;
-      &lt;td style=&quot;text-align: left&quot;&gt;兼容GB2312&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tbody&gt;
-&lt;/table&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;Unicode&lt;/strong&gt;： 终极字符集，全世界通用，用4个字节表示一个字符，可以表达的字符数理论上可达21亿左右个。但每个字符用4个字节表示总觉得有些浪费啊，毕竟字节是要占存储空间的啊，还有一个问题是如何让计算机了解你是在用4个字节表示一个字符而不是4个ASCII表示4个字符 ，这两个问题一直困扰着Unicode的发展推广。&lt;/li&gt;
-  &lt;li&gt;&lt;strong&gt;UTF-8&lt;/strong&gt;: 直到出现UTF-8解决这两个问题，UTF-8不是一种字符集，而是对Unicode字符集的一种实现，这也意味着Unicode有其他实现方式，如UTF-16，UTF-32。而如此牛逼的UTF-8，话说当初是大神Ben Thomason吃饭的时候在一张餐巾纸上设计出来的！！UTF-8的实现规则如下：
-    &lt;ul&gt;
-      &lt;li&gt;对单字节字符，字节的第一位为0，后7位为该字符实际的Unicode码，所以对于拉丁字母，UTF-8与ASCII一致。&lt;/li&gt;
-      &lt;li&gt;对于n(n &amp;gt; 1)字节字符，第一个字节前n位都设为1，第n + 1位为0，后面字节的前两位均为10，剩下没有提及的位，就是字符的Unicode编码；&lt;/li&gt;
-      &lt;li&gt;另外需要注意的是：UTF-8与GBK，GB2312这些汉字编码完全不兼容的。&lt;/li&gt;
-      &lt;li&gt;UTF-8字符编码理论可以表示的字符总数为：2^7 + 2^11 + 2^16 + 2^21 = 2164864,  两百多万个！！！&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;常见问题及解答&quot;&gt;常见问题及解答&lt;/h3&gt;
-
-&lt;h3 id=&quot;1windows-notepad中的编码ansi保存选项代表什么含义&quot;&gt;1.windows Notepad中的编码ANSI保存选项，代表什么含义？&lt;/h3&gt;
-
-&lt;p&gt;ANSI是windows的默认的编码方式，对于英文文件是ASCII编码，对于简体中文文件是GB2312编码（只针对Windows简体中文版，如果是繁体中文版会采用Big5码）。所以，&lt;strong&gt;如果将一个UTF-8编码的文件，另存为ANSI的方式，对于中文部分会产生乱码&lt;/strong&gt;。&lt;/p&gt;
-
-&lt;h3 id=&quot;2什么是utf-8的bom&quot;&gt;2.什么是UTF-8的BOM？&lt;/h3&gt;
-
-&lt;p&gt;BOM的全称是Byte Order Mark，BOM是微软给UTF-8编码加上的，用于标识文件使用的是UTF-8编码，即在UTF-8编码的文件起始位置，加入三个字节“EE BB BF”。这是微软特有的，标准并不推荐包含BOM的方式。采用加BOM的UTF-8编码文件，对于一些只支持标准UTF-8编码的环境，可能导致问题。比如，在Go语言编程中，对于包含BOM的代码文件，会导致编译出错。详细可见我的&lt;a href=&quot;http://sharecore.info/blog/2013/04/05/parse-csv-to-sql-for-insert/&quot;&gt;这篇文章&lt;/a&gt;。&lt;/p&gt;
-
-&lt;h3 id=&quot;参考资料&quot;&gt;参考资料&lt;/h3&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href=&quot;http://blog.jobbole.com/76376/&quot; title=&quot;字符编码常识及问题解析&quot;&gt;http://blog.jobbole.com/76376/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">你了解字符集、字符编码吗？</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="http://localhost:4000/jekyll/2018/09/23/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2018-09-23T19:27:08+08:00</published><updated>2018-09-23T19:27:08+08:00</updated><id>http://localhost:4000/jekyll/2018/09/23/welcome-to-jekyll</id><content type="html" xml:base="http://localhost:4000/jekyll/2018/09/23/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
-
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
-
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry></feed>
+&lt;/ol&gt;</content><author><name></name></author><summary type="html">指定partitioner类（二次排序）</summary></entry></feed>
