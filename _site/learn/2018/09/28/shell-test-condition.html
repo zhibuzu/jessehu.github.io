@@ -41,26 +41,133 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <article class="post">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title">About</h1>
+    <h1 class="post-title p-name" itemprop="name headline">shell test命令常用条件</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2018-09-28T18:33:00+08:00" itemprop="datePublished">Sep 28, 2018
+      </time></p>
   </header>
 
-  <div class="post-content">
-    <p>This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at <a href="https://jekyllrb.com/">jekyllrb.com</a></p>
+  <div class="post-content e-content" itemprop="articleBody">
+    <h2 id="数值测试">数值测试</h2>
 
-<p>You can find the source code for Minima at GitHub:
-<a href="https://github.com/jekyll">jekyll</a> /
-<a href="https://github.com/jekyll/minima">minima</a></p>
+<table>
+  <thead>
+    <tr>
+      <th>参数</th>
+      <th>说明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>-eq</td>
+      <td>等于则为真</td>
+    </tr>
+    <tr>
+      <td>-ne</td>
+      <td>不等</td>
+    </tr>
+    <tr>
+      <td>-gt</td>
+      <td>大于</td>
+    </tr>
+    <tr>
+      <td>-ge</td>
+      <td>大于等于</td>
+    </tr>
+    <tr>
+      <td>-lt</td>
+      <td>小于</td>
+    </tr>
+    <tr>
+      <td>-le</td>
+      <td>小于等于</td>
+    </tr>
+  </tbody>
+</table>
 
-<p>You can find the source code for Jekyll at GitHub:
-<a href="https://github.com/jekyll">jekyll</a> /
-<a href="https://github.com/jekyll/jekyll">jekyll</a></p>
+<h3 id="字符串测试">字符串测试</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>参数</th>
+      <th>说明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>=</td>
+      <td>等于则为真</td>
+    </tr>
+    <tr>
+      <td>!=</td>
+      <td>不想等</td>
+    </tr>
+    <tr>
+      <td>-z 字符串</td>
+      <td>字符串长度为零则为真</td>
+    </tr>
+    <tr>
+      <td>-n 字符串</td>
+      <td>字符串长度不为零则为真</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="文件测试">文件测试</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>参数</th>
+      <th>说明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>-e 文件名</td>
+      <td>文件存在则为真</td>
+    </tr>
+    <tr>
+      <td>-r 文件名</td>
+      <td>文件可读则为真</td>
+    </tr>
+    <tr>
+      <td>-w 文件名</td>
+      <td>文件可写则为真</td>
+    </tr>
+    <tr>
+      <td>-x 文件名</td>
+      <td>文件可执行则为真</td>
+    </tr>
+    <tr>
+      <td>-s 文件名</td>
+      <td>文件存在且至少有一个字符则为真</td>
+    </tr>
+    <tr>
+      <td>-d 文件名</td>
+      <td>文件存在且为目录则为真</td>
+    </tr>
+    <tr>
+      <td>-f 文件名</td>
+      <td>文件存在且为普通文件则为真</td>
+    </tr>
+    <tr>
+      <td>-c 文件名</td>
+      <td>文件存在且为字符型特殊文件？则为真</td>
+    </tr>
+    <tr>
+      <td>-b 文件名</td>
+      <td>文件存在且为块特殊文件则为真</td>
+    </tr>
+  </tbody>
+</table>
 
 
-  </div>
-
+  </div><a class="u-url" href="/learn/2018/09/28/shell-test-condition.html" hidden></a>
 </article>
 
       </div>

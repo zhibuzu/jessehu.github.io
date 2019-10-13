@@ -41,26 +41,40 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <article class="post">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title">About</h1>
+    <h1 class="post-title p-name" itemprop="name headline">hadoop partitioner类</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-06-10T21:04:00+08:00" itemprop="datePublished">Jun 10, 2019
+      </time></p>
   </header>
 
-  <div class="post-content">
-    <p>This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at <a href="https://jekyllrb.com/">jekyllrb.com</a></p>
+  <div class="post-content e-content" itemprop="articleBody">
+    <ol>
+  <li>
+    <p>指定partitioner类（二次排序）</p>
 
-<p>You can find the source code for Minima at GitHub:
-<a href="https://github.com/jekyll">jekyll</a> /
-<a href="https://github.com/jekyll/minima">minima</a></p>
+    <p><code class="highlighter-rouge">-partitioner org.apache.hadoop.mapred.lib.KeyFieldBasedPartitioner</code></p>
+  </li>
+  <li>
+    <p>指定自定义方法切分行来形成key/value对</p>
 
-<p>You can find the source code for Jekyll at GitHub:
-<a href="https://github.com/jekyll">jekyll</a> /
-<a href="https://github.com/jekyll/jekyll">jekyll</a></p>
+    <p><code class="highlighter-rouge">-jobconf stream.reduce.output.field.separator=SEP # 指定分隔符，默认是tab符</code></p>
+
+    <p><code class="highlighter-rouge">-jobconf stream.num.reduce.output.fields=NUM # 指定在第n（n&gt;=1）个分隔符分隔，而不是默认的第1个</code></p>
+  </li>
+  <li>
+    <p>指定map输出数据分桶的列数（基于key值的前缀）</p>
+
+    <p><code class="highlighter-rouge">map.output.key.field.separator=. # 指定切分map输出的分隔符为. </code></p>
+
+    <p><code class="highlighter-rouge">num.key.fields.for.partition=2 # 指定使用key的前2个块部分来切分map输出</code></p>
+  </li>
+</ol>
 
 
-  </div>
-
+  </div><a class="u-url" href="/learn/2019/06/10/hadoop-Partitioner%E7%B1%BB.html" hidden></a>
 </article>
 
       </div>

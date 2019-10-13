@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>代码仔 | 技术、人生感悟，大数据，架构、策略等</title>
+<meta name="generator" content="Jekyll v3.8.4" />
+<meta property="og:title" content="代码仔" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="技术、人生感悟，大数据，架构、策略等" />
+<meta property="og:description" content="技术、人生感悟，大数据，架构、策略等" />
+<link rel="canonical" href="/" />
+<meta property="og:url" content="/" />
+<meta property="og:site_name" content="代码仔" />
+<script type="application/ld+json">
+{"url":"/","headline":"代码仔","description":"技术、人生感悟，大数据，架构、策略等","name":"代码仔","@type":"WebSite","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="代码仔" /></head>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        inlineMath: [['$','$']]
+      }
+    });
+  </script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script> 
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">代码仔</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">你了解字符集、字符编码吗？</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2018-09-28T12:49:00+08:00" itemprop="datePublished">Sep 28, 2018
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <h3 id="你了解字符集字符编码吗">你了解字符集、字符编码吗？</h3>
+
+<ul>
+  <li><strong>ASCII</strong>: 使用一个字节表示一个字符，实际使用的只有一个字节的低7位，第8位永远是0，因此最多只能表示2^7=128个字符，主要用来表示基础的拉丁字符，如英文字母，数字等，包括95个可打印字符和33个控制字符；</li>
+  <li><strong>ISO 8859-n(n=1,2,3…11,13…16,没有12)</strong>: 利用了ASCII字符集没有使用的最高位，使最多可表示的字符扩展到2^8=256个字符，可以支持许多欧洲国家的语言文字；
+    <ul>
+      <li>其中0x00 ~ 0x7f范围是与ASCII兼容的</li>
+      <li>0x80 ~ 0xff范围是在ASCII基础上的扩展字符集</li>
+      <li>ISO 8859-n 字符集有多个系列，分别用于不同的欧洲语言地区，如西欧，北欧，东欧</li>
+      <li>Latin-1是ISO 8859-1的别名</li>
+    </ul>
+  </li>
+  <li><strong>GB2312</strong>: 为了表示更大规模的汉字字符集，我国制定了国家简体中文字符集，即GB2312，使用一个字节表示拉丁字母来兼容ASCII，汉字使用两个字节表示，因此GB2312是变字节的字符集，但除了简体汉字外，还有繁体汉字及中日韩文字需要表示，因此还有BIG5，GBK，GB18030几种字符集，请看下表它们的区别；</li>
+</ul>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left"> </th>
+      <th style="text-align: left">GB2312</th>
+      <th style="text-align: left">BIG5</th>
+      <th style="text-align: left">GBK</th>
+      <th style="text-align: left">GB18030</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">作用</td>
+      <td style="text-align: left">国家简体中文字符集</td>
+      <td style="text-align: left">统一繁体字符集</td>
+      <td style="text-align: left">GB2312扩展，加入对繁体字的支持</td>
+      <td style="text-align: left">中日韩文字编码</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">字节数</td>
+      <td style="text-align: left">变字节：1字节 - 兼容ASCII        2字节 - 汉字</td>
+      <td style="text-align: left">2字节</td>
+      <td style="text-align: left">2字节</td>
+      <td style="text-align: left">变字节：1字节 - 兼容ASCII  2字节，4字节</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">范围</td>
+      <td style="text-align: left">能表示7445个符号，包括6763个汉字</td>
+      <td style="text-align: left">能表示21886个符号</td>
+      <td style="text-align: left">能表示21886个符号</td>
+      <td style="text-align: left">能表示27484个符号</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">兼容性</td>
+      <td style="text-align: left">兼容ASCII， 0x00 ~ 0x7F 与ASCII保持一致</td>
+      <td style="text-align: left">兼容ASCII，但与GB2312有冲突</td>
+      <td style="text-align: left">兼容GB2312</td>
+      <td style="text-align: left">兼容GB2312</td>
+    </tr>
+  </tbody>
+</table>
+
+<ul>
+  <li><strong>Unicode</strong>： 终极字符集，全世界通用，用4个字节表示一个字符，可以表达的字符数理论上可达21亿左右个。但每个字符用4个字节表示总觉得有些浪费啊，毕竟字节是要占存储空间的啊，还有一个问题是如何让计算机了解你是在用4个字节表示一个字符而不是4个ASCII表示4个字符 ，这两个问题一直困扰着Unicode的发展推广。</li>
+  <li><strong>UTF-8</strong>: 直到出现UTF-8解决这两个问题，UTF-8不是一种字符集，而是对Unicode字符集的一种实现，这也意味着Unicode有其他实现方式，如UTF-16，UTF-32。而如此牛逼的UTF-8，话说当初是大神Ben Thomason吃饭的时候在一张餐巾纸上设计出来的！！UTF-8的实现规则如下：
+    <ul>
+      <li>对单字节字符，字节的第一位为0，后7位为该字符实际的Unicode码，所以对于拉丁字母，UTF-8与ASCII一致。</li>
+      <li>对于n(n &gt; 1)字节字符，第一个字节前n位都设为1，第n + 1位为0，后面字节的前两位均为10，剩下没有提及的位，就是字符的Unicode编码；</li>
+      <li>另外需要注意的是：UTF-8与GBK，GB2312这些汉字编码完全不兼容的。</li>
+      <li>UTF-8字符编码理论可以表示的字符总数为：2^7 + 2^11 + 2^16 + 2^21 = 2164864,  两百多万个！！！</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="常见问题及解答">常见问题及解答</h3>
+
+<h3 id="1windows-notepad中的编码ansi保存选项代表什么含义">1.windows Notepad中的编码ANSI保存选项，代表什么含义？</h3>
+
+<p>ANSI是windows的默认的编码方式，对于英文文件是ASCII编码，对于简体中文文件是GB2312编码（只针对Windows简体中文版，如果是繁体中文版会采用Big5码）。所以，<strong>如果将一个UTF-8编码的文件，另存为ANSI的方式，对于中文部分会产生乱码</strong>。</p>
+
+<h3 id="2什么是utf-8的bom">2.什么是UTF-8的BOM？</h3>
+
+<p>BOM的全称是Byte Order Mark，BOM是微软给UTF-8编码加上的，用于标识文件使用的是UTF-8编码，即在UTF-8编码的文件起始位置，加入三个字节“EE BB BF”。这是微软特有的，标准并不推荐包含BOM的方式。采用加BOM的UTF-8编码文件，对于一些只支持标准UTF-8编码的环境，可能导致问题。比如，在Go语言编程中，对于包含BOM的代码文件，会导致编译出错。详细可见我的<a href="http://sharecore.info/blog/2013/04/05/parse-csv-to-sql-for-insert/">这篇文章</a>。</p>
+
+<h3 id="参考资料">参考资料</h3>
+
+<ul>
+  <li><a href="http://blog.jobbole.com/76376/" title="字符编码常识及问题解析">http://blog.jobbole.com/76376/</a></li>
+</ul>
+
+
+  </div><a class="u-url" href="/learn/2018/09/28/%E4%BD%A0%E4%BA%86%E8%A7%A3%E5%AD%97%E7%AC%A6%E9%9B%86-%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E5%90%97.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">代码仔</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">代码仔</li><li><a class="u-email" href="mailto:hu2014jesse@gmail.com">hu2014jesse@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/zhibuzu"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">zhibuzu</span></a></li><li><a href="https://www.twitter.com/None"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">None</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>技术、人生感悟，大数据，架构、策略等</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>代码仔 | 技术、人生感悟，大数据，架构、策略等</title>
+<meta name="generator" content="Jekyll v3.8.4" />
+<meta property="og:title" content="代码仔" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="技术、人生感悟，大数据，架构、策略等" />
+<meta property="og:description" content="技术、人生感悟，大数据，架构、策略等" />
+<link rel="canonical" href="/" />
+<meta property="og:url" content="/" />
+<meta property="og:site_name" content="代码仔" />
+<script type="application/ld+json">
+{"url":"/","headline":"代码仔","description":"技术、人生感悟，大数据，架构、策略等","name":"代码仔","@type":"WebSite","@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link rel="stylesheet" href="/assets/main.css"><link type="application/atom+xml" rel="alternate" href="/feed.xml" title="代码仔" /></head>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+      tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        inlineMath: [['$','$']]
+      }
+    });
+  </script>
+  <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script> 
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">代码仔</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">pixel、分辨率、ppi、dpi、dp、dip区别及转换</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-10-10T20:56:00+08:00" itemprop="datePublished">Oct 10, 2019
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>屏幕尺寸（Screen Size）： 屏幕对角线的长度。iPhone5屏幕尺寸为4英寸、iPhone6屏幕尺寸为4.7英寸，指的是显示屏对角线的长度。 1 inch = 2.54cm = 25.4mm
+分辨率：屏幕上的像素总数。常用的表现形式如：1280x720, 1920x1080等。</p>
+
+<p>px，pixel，像素，电子屏幕上组成一幅图画或image的基本单元。
+pt， point，点，印刷行业常用单位，等于1/72英寸。
+ppi，pixel per inch，每英寸像素数，值越高，屏幕越细腻。
+dpi， dot per inch，每英寸多少点，该值越高，则图片越细腻。
+dp，dip， Density-independent pixel，安卓开发用的长度单位。以160ppi为标准，和iPhone的scale差不多的意思。安卓用dp适配，系统会自动将dp转换为px。当屏幕像素点密度为160ppi时，1dp=1px。</p>
+
+<h4 id="一pt与px--1pt--ppi--72px">一，pt与px ： 1pt = (ppi / 72)px。</h4>
+
+<p>当图片的分辨率是72ppi（dpi）时，1pt = 1px；
+当图片的分辨率是72*2ppi（dpi）时，1pt = 2px；</p>
+
+<h4 id="二ppi与dpidpippi">二，ppi与dpi：dpi=ppi</h4>
+
+<p>dpi最初用于衡量打印物上每英寸的点数密度，DPI值越大图片越精细。当DPI的概念用在计算机屏幕上时，就应称之为ppi。同理： PPI就是计算机屏幕上每英寸可以显示的像素点的数量。在电子屏幕显示中ppi和dpi是一样的。</p>
+
+<h4 id="三ppi计算方法">三，ppi计算方法</h4>
+
+<p>假设屏幕分辨率为W<em>H(px)，物理尺寸为a</em>b(inch)，
+则我们常说的屏幕尺寸c（如5.0英寸）其实是对角线的长度，因此</p>
+
+<p><script type="math/tex">c = \sqrt{a^2 + b^2}</script>
+​</p>
+
+<p>​											<u>勾股定理</u></p>
+
+<p>则像素密度（PPI），指的是屏幕单位长度的像素数</p>
+
+<p><script type="math/tex">DPI = PPI = W/a = H/b</script>
+​</p>
+
+<p>​										<u>屏幕密度</u></p>
+
+<p>由此我们推理出：</p>
+
+<script type="math/tex; mode=display">DPI^2 = PPI^2 = (W/a)^2 = (H/b)^2 = (W^2 + H^2)/(a^2 + b^2) = (W^2 + H^2)/c^2</script>
+
+<p>​</p>
+
+<p>​									<u>屏幕密度</u></p>
+
+<p>因此我们可以得出PPI（ DPI）计算公式：</p>
+
+<p><script type="math/tex">DPI = PPI = \sqrt{W^2 + H^2}/c</script>
+​</p>
+
+<p>​									<u>PPI（ DPI）计算公式</u></p>
+
+<p>eg：iphone6分辨率1334*750px，尺寸4.7英寸</p>
+
+<p>则其
+<script type="math/tex">PPI = \sqrt{1334^2+750^2}/4.7 = 326</script>
+​</p>
+
+<p>​										<u>iphone6像素密度</u></p>
+
+<h4 id="四px和dp">四，px和dp</h4>
+
+<p>dp，独立像素，虚拟单位，又称设备无关像素。1dp的长度相当于一个160dpi的屏幕上一个物理像素的长度。而160dpi的屏幕则是被android定义为基准的屏幕（mdpi）。在app运行的时候，android会将dp转为实际像素进行布局。转换的公式为：
+<script type="math/tex">px = dp * (160 / dpi)。</script></p>
+
+<p>dp为安卓开发时的基本长度单位，根据不同的屏幕分辨率，与px有不同的对应关系。根据其像素密度，我们将安卓端屏幕分为以下几种规格：</p>
+
+<p><img src="/static/images/WX20191010-211819.png" alt="img" /></p>
+
+<p>1dp即为当屏幕密度值为160ppi时，1pt=1px。则，在上表中，当密度为mdpi时，1dp = 1px。 以mdpi为标准，上表中屏幕的密度值比分别为：</p>
+
+<script type="math/tex; mode=display">ldpi : mdpi : hdpi : xhdpi : xxhpi = 0.75 : 1 : 1.5 : 2 : 3</script>
+
+<p>即，在xhdpi的密度下，1dp=2px；在hdpi情况下，1dp=1.5px。其他类推。</p>
+
+  </div><a class="u-url" href="/learn/2019/10/10/%E5%83%8F%E7%B4%A0px-%E5%88%86%E8%BE%A8%E7%8E%87-ppi-dpi-dp(dip).html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">代码仔</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">代码仔</li><li><a class="u-email" href="mailto:hu2014jesse@gmail.com">hu2014jesse@gmail.com</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/zhibuzu"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">zhibuzu</span></a></li><li><a href="https://www.twitter.com/None"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#twitter"></use></svg> <span class="username">None</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>技术、人生感悟，大数据，架构、策略等</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

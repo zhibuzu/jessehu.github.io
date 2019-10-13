@@ -41,26 +41,100 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <article class="post">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title">About</h1>
+    <h1 class="post-title p-name" itemprop="name headline">hadoop 常用环境变量</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2018-09-28T14:53:00+08:00" itemprop="datePublished">Sep 28, 2018
+      </time></p>
   </header>
 
-  <div class="post-content">
-    <p>This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at <a href="https://jekyllrb.com/">jekyllrb.com</a></p>
+  <div class="post-content e-content" itemprop="articleBody">
+    <table>
+  <thead>
+    <tr>
+      <th>环境变量名</th>
+      <th>意义解释</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HADOOP_HOME</td>
+      <td>计算节点上配置的hadoop client路径</td>
+    </tr>
+    <tr>
+      <td>LD_LIBRARY_PATH</td>
+      <td>计算节点上加载库文件的路径列表</td>
+    </tr>
+    <tr>
+      <td>PWD</td>
+      <td>当前工作目录</td>
+    </tr>
+    <tr>
+      <td>df_block_size</td>
+      <td>当前设置的HDFS文件块大小</td>
+    </tr>
+    <tr>
+      <td>map_input_file</td>
+      <td>mapper正在处理得输入文件路径，包含文件名</td>
+    </tr>
+    <tr>
+      <td>mapred_job_id</td>
+      <td>当前作业ID</td>
+    </tr>
+    <tr>
+      <td>mapred_job_name</td>
+      <td>当前作业名称</td>
+    </tr>
+    <tr>
+      <td>mapred_tip_id</td>
+      <td>当前任务的第几次重试</td>
+    </tr>
+    <tr>
+      <td>mapred_task_id</td>
+      <td>任务ID</td>
+    </tr>
+    <tr>
+      <td>mapred_task_is_map</td>
+      <td>当前任务是否为map</td>
+    </tr>
+    <tr>
+      <td>mapred_output_dir</td>
+      <td>计算输出路径</td>
+    </tr>
+    <tr>
+      <td>mapred_map_tasks</td>
+      <td>计算的map任务数</td>
+    </tr>
+    <tr>
+      <td>mapred_reduce_tasks</td>
+      <td>计算的reduce的任务数</td>
+    </tr>
+    <tr>
+      <td>mapred_work_output_dir</td>
+      <td>task临时输出目录</td>
+    </tr>
+    <tr>
+      <td>mapred_output_dir</td>
+      <td>job输出路径</td>
+    </tr>
+  </tbody>
+</table>
 
-<p>You can find the source code for Minima at GitHub:
-<a href="https://github.com/jekyll">jekyll</a> /
-<a href="https://github.com/jekyll/minima">minima</a></p>
+<ol>
+  <li>mapred_work_output_dir解释</li>
+</ol>
 
-<p>You can find the source code for Jekyll at GitHub:
-<a href="https://github.com/jekyll">jekyll</a> /
-<a href="https://github.com/jekyll/jekyll">jekyll</a></p>
+<p>为了避免冲突，Map/Reduce框架为每次尝试执行任务都建立和维护一个特殊的</p>
 
+<p>${mapred.output.dir}/<em>temporary/</em>​${taskid}子目录，这个目录位于本次尝试执行任务输出结果所在的FileSystem上，可以通过 ${mapred.work.output.dir}来访问这个子目录。 对于成功完成的任务尝试，只有${mapred.output.dir}/<em>temporary/</em>${taskid}下的文件会<em>移动</em>到${mapred.output.dir}。当然，框架会丢弃那些失败的任务尝试的子目录。这种处理过程对于应用程序来说是完全透明的。</p>
 
-  </div>
+<p>在任务执行期间，应用程序在写文件时可以利用这个特性，比如 通过<a href="http://hadoop.apache.org/core/docs/r0.18.2/api/org/apache/hadoop/mapred/FileOutputFormat.html#getWorkOutputPath(org.apache.hadoop.mapred.JobConf)"> FileOutputFormat.getWorkOutputPath()</a>获得${mapred.work.output.dir}目录， 并在其下创建任意任务执行时所需的side-file，框架在任务尝试成功时会马上移动这些文件，因此不需要在程序内为每次任务尝试选取一个独一无二的名字。</p>
 
+<p>注意：在每次任务尝试执行期间，${mapred.work.output.dir} 的值实际上是 ​${mapred.output.dir}/<em>temporary/</em>{$taskid}，这个值是Map/Reduce框架创建的。 所以使用这个特性的方法是，在<a href="http://hadoop.apache.org/core/docs/r0.18.2/api/org/apache/hadoop/mapred/FileOutputFormat.html#getWorkOutputPath(org.apache.hadoop.mapred.JobConf)"> FileOutputFormat.getWorkOutputPath() </a>路径下创建side-file即可。</p>
+
+  </div><a class="u-url" href="/learn/2018/09/28/hadoop%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.html" hidden></a>
 </article>
 
       </div>

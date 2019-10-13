@@ -41,26 +41,56 @@
 </header>
 <main class="page-content" aria-label="Content">
       <div class="wrapper">
-        <article class="post">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title">About</h1>
+    <h1 class="post-title p-name" itemprop="name headline">进程间通信的几种方式</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2019-10-13T21:13:00+08:00" itemprop="datePublished">Oct 13, 2019
+      </time></p>
   </header>
 
-  <div class="post-content">
-    <p>This is the base Jekyll theme. You can find out more info about customizing your Jekyll theme, as well as basic Jekyll usage documentation at <a href="https://jekyllrb.com/">jekyllrb.com</a></p>
+  <div class="post-content e-content" itemprop="articleBody">
+    <h2 id="进程间通信的几种方式">进程间通信的几种方式</h2>
 
-<p>You can find the source code for Minima at GitHub:
-<a href="https://github.com/jekyll">jekyll</a> /
-<a href="https://github.com/jekyll/minima">minima</a></p>
+<p>介绍一下进程间通信有几种方式</p>
 
-<p>You can find the source code for Jekyll at GitHub:
-<a href="https://github.com/jekyll">jekyll</a> /
-<a href="https://github.com/jekyll/jekyll">jekyll</a></p>
+<ul>
+  <li>
+    <p>共享内存(Share memory)</p>
+  </li>
+  <li>
+    <p>匿名管道(pipe)：</p>
 
+    <ul>
+      <li>
+        <p>管道是一种半双工的通信方式，数据只能<strong>单向流动</strong>，而且只能在具有亲缘关系的进程间使用。进程的亲缘关系通常是指<strong>父子进程关系</strong>。</p>
 
-  </div>
+        <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// 需要的头文件</span>
+<span class="cp">#include &lt;unistd.h&gt;
+</span>    
+<span class="c1">// 通过pipe()函数来创建匿名管道</span>
+<span class="c1">// 返回值：成功返回0，失败返回-1</span>
+<span class="c1">// fd参数返回两个文件描述符</span>
+<span class="c1">// fd[0]指向管道的读端，fd[1]指向管道的写端</span>
+<span class="c1">// fd[1]的输出是fd[0]的输入。</span>
+<span class="kt">int</span> <span class="nf">pipe</span> <span class="p">(</span><span class="kt">int</span> <span class="n">fd</span><span class="p">[</span><span class="mi">2</span><span class="p">]);</span>
+<span class="err">————————————————</span>
+<span class="err">版权声明：本文为</span><span class="n">CSDN</span><span class="err">博主「</span><span class="n">Violet</span><span class="o">-</span><span class="n">Guo</span><span class="err">」的原创文章，遵循</span> <span class="n">CC</span> <span class="mf">4.0</span> <span class="n">BY</span><span class="o">-</span><span class="n">SA</span> <span class="err">版权协议，转载请附上原文出处链接及本声明。</span>
+<span class="err">原文链接：</span><span class="n">https</span><span class="o">:</span><span class="c1">//blog.csdn.net/violet_echo_0908/article/details/51201278</span>
+</code></pre></div>        </div>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>信号量（Signal）</p>
+  </li>
+  <li>
+    <p>套接字（Socket）</p>
+  </li>
+</ul>
 
+  </div><a class="u-url" href="/basic_development_knowledge/2019/10/13/%E8%BF%9B%E7%A8%8B%E9%97%B4%E9%80%9A%E4%BF%A1%E6%96%B9%E5%BC%8F.html" hidden></a>
 </article>
 
       </div>
