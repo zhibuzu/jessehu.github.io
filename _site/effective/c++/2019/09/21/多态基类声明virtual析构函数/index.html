@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>多态基类声明virtual析构函数 | Your title</title>
+<meta name="generator" content="Jekyll v3.8.6" />
+<meta property="og:title" content="多态基类声明virtual析构函数" />
+<meta name="author" content="Your Name" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="[TOC]" />
+<meta property="og:description" content="[TOC]" />
+<link rel="canonical" href="http://localhost:4000/effective/c++/2019/09/21/%E5%A4%9A%E6%80%81%E5%9F%BA%E7%B1%BB%E5%A3%B0%E6%98%8Evirtual%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0/" />
+<meta property="og:url" content="http://localhost:4000/effective/c++/2019/09/21/%E5%A4%9A%E6%80%81%E5%9F%BA%E7%B1%BB%E5%A3%B0%E6%98%8Evirtual%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0/" />
+<meta property="og:site_name" content="Your title" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-09-21T04:23:00-07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="多态基类声明virtual析构函数" />
+<meta name="twitter:site" content="@mytwitter" />
+<meta name="twitter:creator" content="@Your Name" />
+<script type="application/ld+json">
+{"description":"[TOC]","@type":"BlogPosting","headline":"多态基类声明virtual析构函数","dateModified":"2019-09-21T04:23:00-07:00","datePublished":"2019-09-21T04:23:00-07:00","url":"http://localhost:4000/effective/c++/2019/09/21/%E5%A4%9A%E6%80%81%E5%9F%BA%E7%B1%BB%E5%A3%B0%E6%98%8Evirtual%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0/","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/effective/c++/2019/09/21/%E5%A4%9A%E6%80%81%E5%9F%BA%E7%B1%BB%E5%A3%B0%E6%98%8Evirtual%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0/"},"author":{"@type":"Person","name":"Your Name"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Your title" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/logos/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/logos/favicon-16x16.png">
+  </head>
+
+  <body>
+    <main class="page-content" aria-label="Content">
+      <div class="main-wrapper">
+        <article class="post">
+  <header>
+    <div class="header-small">
+      <a href="http://localhost:4000">Your title</a>
+    </div>
+
+    <div class="page-title">多态基类声明virtual析构函数</div>
+
+    <span class="page-date">
+      <time>21 Sep 2019</time>
+    </span>
+  </header>
+
+  <div class="page-content">
+    <p>[TOC]</p>
+
+<h2 id="一原则">一、原则</h2>
+
+<ol>
+  <li>
+    <p>多态基类要声明virtual析构函数</p>
+
+    <p>​		为了实现多态特性，我们通常声明一个基类包含要提供给外部使用的接口/功能（具体形式为基类中声明的特定公共成员函数），然后由派生类来各自实现这些接口。如一个支付类，提供支付功能，而具体是微信支付还是支付宝支付由不同的派生类实现，而调用者并不需要知道实现细节。</p>
+
+    <p>​		调用者得到一个基类指针，指向的可以是不同派生类对象，通过这个基类指针调用虚函数方法时，实际调用的是相应派生类的方法，从而实现了多态：使用同一个基类指针，根据指向派生类对象的不同，调用不同的方法实现。</p>
+
+    <p>​		假设以下这种情况，</p>
+
+    <div class="language-c++ highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// Base class: Animal</span>
+<span class="k">class</span> <span class="nc">Animal</span> <span class="p">{</span>
+<span class="nl">public:</span>
+  	<span class="n">Animal</span><span class="p">()</span> <span class="p">{}</span>
+  	<span class="o">~</span><span class="n">Animal</span><span class="p">()</span> <span class="p">{}</span>
+  	<span class="k">virtual</span> <span class="kt">void</span> <span class="n">shout</span><span class="p">()</span> <span class="p">{}</span>
+<span class="p">};</span>
+   
+<span class="c1">// Cat</span>
+<span class="k">class</span> <span class="nc">Cat</span> <span class="o">:</span> <span class="k">public</span> <span class="n">Animal</span> <span class="p">{</span>
+<span class="nl">public:</span>
+  	<span class="n">Cat</span><span class="p">()</span> <span class="p">{}</span>
+  	<span class="o">~</span><span class="n">Cat</span><span class="p">()</span> <span class="p">{}</span>
+  	<span class="kt">void</span> <span class="n">shout</span><span class="p">()</span> <span class="p">{</span>
+      	<span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"miao miao~~</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+   
+<span class="c1">// Dog</span>
+<span class="k">class</span> <span class="nc">Dog</span> <span class="o">:</span> <span class="k">public</span> <span class="n">Animal</span> <span class="p">{</span>
+<span class="nl">public:</span>
+  	<span class="n">Dog</span><span class="p">()</span> <span class="p">{}</span>
+  	<span class="o">~</span><span class="n">Dog</span><span class="p">()</span> <span class="p">{}</span>
+  	<span class="kt">void</span> <span class="n">shout</span><span class="p">()</span> <span class="p">{</span>
+      	<span class="n">std</span><span class="o">::</span><span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"hou hou~~</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="p">};</span>
+   
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span>
+  	<span class="n">Animal</span> <span class="n">a</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Cat</span><span class="p">();</span>
+  	<span class="n">a</span><span class="o">-&gt;</span><span class="n">shout</span><span class="p">();</span>
+  	<span class="k">delete</span> <span class="n">a</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+
+    <p>​		如果多态基类Animal没有将析构函数声明为virtual，当delete a；语句销毁对象的时候，只能调用的是Animal基类析构函数，释放Animal基类申请的资源，而无法调用派生类Cat类的析构函数，释放Cat类申请的资源，从而造成<strong>局部销毁</strong>现象，引发资源泄露问题。</p>
+
+    <p>​		所以多态基类的析构函数要声明为virtual函数，一个原则就是如果基类中有至少一个virtual函数，那么其析构函数也应该声明为virtual。</p>
+  </li>
+  <li>
+    <p>非基类或不打算实现多态的基类不要声明virtual函数（包括virtual析构函数）</p>
+  </li>
+</ol>
+
+
+
+    
+
+    
+  </div>
+</article>
+<div class="footer">
+  <hr />
+    © 2019 Your Name. All rights reserved.
+</div>
+</div>
+    </main>
+  </body>
+
+  
+
+  
+</html>

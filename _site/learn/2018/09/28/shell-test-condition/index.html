@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"><!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>shell test命令常用条件 | Your title</title>
+<meta name="generator" content="Jekyll v3.8.6" />
+<meta property="og:title" content="shell test命令常用条件" />
+<meta name="author" content="Your Name" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="数值测试" />
+<meta property="og:description" content="数值测试" />
+<link rel="canonical" href="http://localhost:4000/learn/2018/09/28/shell-test-condition/" />
+<meta property="og:url" content="http://localhost:4000/learn/2018/09/28/shell-test-condition/" />
+<meta property="og:site_name" content="Your title" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2018-09-28T18:33:00-07:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="shell test命令常用条件" />
+<meta name="twitter:site" content="@mytwitter" />
+<meta name="twitter:creator" content="@Your Name" />
+<script type="application/ld+json">
+{"description":"数值测试","@type":"BlogPosting","headline":"shell test命令常用条件","dateModified":"2018-09-28T18:33:00-07:00","datePublished":"2018-09-28T18:33:00-07:00","url":"http://localhost:4000/learn/2018/09/28/shell-test-condition/","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/learn/2018/09/28/shell-test-condition/"},"author":{"@type":"Person","name":"Your Name"},"@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+<link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Your title" />
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/logos/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/logos/favicon-16x16.png">
+  </head>
+
+  <body>
+    <main class="page-content" aria-label="Content">
+      <div class="main-wrapper">
+        <article class="post">
+  <header>
+    <div class="header-small">
+      <a href="http://localhost:4000">Your title</a>
+    </div>
+
+    <div class="page-title">shell test命令常用条件</div>
+
+    <span class="page-date">
+      <time>28 Sep 2018</time>
+    </span>
+  </header>
+
+  <div class="page-content">
+    <h2 id="数值测试">数值测试</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>参数</th>
+      <th>说明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>-eq</td>
+      <td>等于则为真</td>
+    </tr>
+    <tr>
+      <td>-ne</td>
+      <td>不等</td>
+    </tr>
+    <tr>
+      <td>-gt</td>
+      <td>大于</td>
+    </tr>
+    <tr>
+      <td>-ge</td>
+      <td>大于等于</td>
+    </tr>
+    <tr>
+      <td>-lt</td>
+      <td>小于</td>
+    </tr>
+    <tr>
+      <td>-le</td>
+      <td>小于等于</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="字符串测试">字符串测试</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>参数</th>
+      <th>说明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>=</td>
+      <td>等于则为真</td>
+    </tr>
+    <tr>
+      <td>!=</td>
+      <td>不想等</td>
+    </tr>
+    <tr>
+      <td>-z 字符串</td>
+      <td>字符串长度为零则为真</td>
+    </tr>
+    <tr>
+      <td>-n 字符串</td>
+      <td>字符串长度不为零则为真</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="文件测试">文件测试</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>参数</th>
+      <th>说明</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>-e 文件名</td>
+      <td>文件存在则为真</td>
+    </tr>
+    <tr>
+      <td>-r 文件名</td>
+      <td>文件可读则为真</td>
+    </tr>
+    <tr>
+      <td>-w 文件名</td>
+      <td>文件可写则为真</td>
+    </tr>
+    <tr>
+      <td>-x 文件名</td>
+      <td>文件可执行则为真</td>
+    </tr>
+    <tr>
+      <td>-s 文件名</td>
+      <td>文件存在且至少有一个字符则为真</td>
+    </tr>
+    <tr>
+      <td>-d 文件名</td>
+      <td>文件存在且为目录则为真</td>
+    </tr>
+    <tr>
+      <td>-f 文件名</td>
+      <td>文件存在且为普通文件则为真</td>
+    </tr>
+    <tr>
+      <td>-c 文件名</td>
+      <td>文件存在且为字符型特殊文件？则为真</td>
+    </tr>
+    <tr>
+      <td>-b 文件名</td>
+      <td>文件存在且为块特殊文件则为真</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+    
+
+    
+  </div>
+</article>
+<div class="footer">
+  <hr />
+    © 2019 Your Name. All rights reserved.
+</div>
+</div>
+    </main>
+  </body>
+
+  
+
+  
+</html>

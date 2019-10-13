@@ -1,4 +1,85 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2019-08-20T17:34:06+08:00</updated><id>/feed.xml</id><title type="html">代码仔</title><subtitle>技术、人生感悟，大数据，架构、策略等</subtitle><entry><title type="html">C/C++易混淆概念记录</title><link href="/learn/2019/08/19/CC++%E6%98%93%E6%B7%B7%E6%B7%86%E7%9A%84%E6%A6%82%E5%BF%B5.html" rel="alternate" type="text/html" title="C/C++易混淆概念记录" /><published>2019-08-19T23:12:00+08:00</published><updated>2019-08-19T23:12:00+08:00</updated><id>/learn/2019/08/19/CC++%E6%98%93%E6%B7%B7%E6%B7%86%E7%9A%84%E6%A6%82%E5%BF%B5</id><content type="html" xml:base="/learn/2019/08/19/CC++%E6%98%93%E6%B7%B7%E6%B7%86%E7%9A%84%E6%A6%82%E5%BF%B5.html">&lt;h2 id=&quot;基础&quot;&gt;基础&lt;/h2&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en-US"><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en-US" /><updated>2019-09-22T02:34:32-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Your title</title><subtitle>A description for your page.
+</subtitle><author><name>Your Name</name></author><entry><title type="html">你的存在本身就是世界上最大的奇迹</title><link href="http://localhost:4000/%E6%84%9F%E6%82%9F/2019/09/21/%E4%BD%A0%E7%9A%84%E5%AD%98%E5%9C%A8%E6%9C%AC%E8%BA%AB%E5%B0%B1%E6%98%AF%E4%B8%96%E7%95%8C%E4%B8%8A%E6%9C%80%E5%A4%A7%E7%9A%84%E5%A5%87%E8%BF%B9/" rel="alternate" type="text/html" title="你的存在本身就是世界上最大的奇迹" /><published>2019-09-21T19:51:00-07:00</published><updated>2019-09-21T19:51:00-07:00</updated><id>http://localhost:4000/%E6%84%9F%E6%82%9F/2019/09/21/%E4%BD%A0%E7%9A%84%E5%AD%98%E5%9C%A8%E6%9C%AC%E8%BA%AB%E5%B0%B1%E6%98%AF%E4%B8%96%E7%95%8C%E4%B8%8A%E6%9C%80%E5%A4%A7%E7%9A%84%E5%A5%87%E8%BF%B9</id><content type="html" xml:base="http://localhost:4000/%E6%84%9F%E6%82%9F/2019/09/21/%E4%BD%A0%E7%9A%84%E5%AD%98%E5%9C%A8%E6%9C%AC%E8%BA%AB%E5%B0%B1%E6%98%AF%E4%B8%96%E7%95%8C%E4%B8%8A%E6%9C%80%E5%A4%A7%E7%9A%84%E5%A5%87%E8%BF%B9/">&lt;p&gt;当我们混成了一个格子间的上班族，每天沿着一成不变的线路，一动不动的车流或人肉罐头似的地铁去贩卖我们的时间，赚取生存、养家的资本，难免在某些时刻觉得自己平庸，但在大部分时刻麻木如地上的蚂蚁。&lt;/p&gt;
+
+&lt;p&gt;可是突然有一天我想到此刻你自觉平庸的自己存在于世本身就是世界上最大的奇迹。往上追溯的话，你经历了人类几百万年来从未中断的生息繁衍，这件事你仔细想想有多难！你的祖先中从原始人开始，任何一个人被狼豺虎豹吃掉，被森林大火烧死，无法适应从树上到地上直立行走的生活，你就不可能存在，存在也不是现在的你。穿过强敌环伺，天地不仁的环境，在幽暗的时间长河里，奇迹延续着发生，还能有你。&lt;/p&gt;
+
+&lt;p&gt;所以让你这个奇迹继续发生下去吧！&lt;/p&gt;</content><author><name>Your Name</name></author><category term="生活感悟" /><category term="灵感" /><summary type="html">当我们混成了一个格子间的上班族，每天沿着一成不变的线路，一动不动的车流或人肉罐头似的地铁去贩卖我们的时间，赚取生存、养家的资本，难免在某些时刻觉得自己平庸，但在大部分时刻麻木如地上的蚂蚁。</summary></entry><entry><title type="html">多态基类声明virtual析构函数</title><link href="http://localhost:4000/effective/c++/2019/09/21/%E5%A4%9A%E6%80%81%E5%9F%BA%E7%B1%BB%E5%A3%B0%E6%98%8Evirtual%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0/" rel="alternate" type="text/html" title="多态基类声明virtual析构函数" /><published>2019-09-21T04:23:00-07:00</published><updated>2019-09-21T04:23:00-07:00</updated><id>http://localhost:4000/effective/c++/2019/09/21/%E5%A4%9A%E6%80%81%E5%9F%BA%E7%B1%BB%E5%A3%B0%E6%98%8Evirtual%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0</id><content type="html" xml:base="http://localhost:4000/effective/c++/2019/09/21/%E5%A4%9A%E6%80%81%E5%9F%BA%E7%B1%BB%E5%A3%B0%E6%98%8Evirtual%E6%9E%90%E6%9E%84%E5%87%BD%E6%95%B0/">&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;h2 id=&quot;一原则&quot;&gt;一、原则&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;多态基类要声明virtual析构函数&lt;/p&gt;
+
+    &lt;p&gt;​		为了实现多态特性，我们通常声明一个基类包含要提供给外部使用的接口/功能（具体形式为基类中声明的特定公共成员函数），然后由派生类来各自实现这些接口。如一个支付类，提供支付功能，而具体是微信支付还是支付宝支付由不同的派生类实现，而调用者并不需要知道实现细节。&lt;/p&gt;
+
+    &lt;p&gt;​		调用者得到一个基类指针，指向的可以是不同派生类对象，通过这个基类指针调用虚函数方法时，实际调用的是相应派生类的方法，从而实现了多态：使用同一个基类指针，根据指向派生类对象的不同，调用不同的方法实现。&lt;/p&gt;
+
+    &lt;p&gt;​		假设以下这种情况，&lt;/p&gt;
+
+    &lt;div class=&quot;language-c++ highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// Base class: Animal&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Animal&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;public:&lt;/span&gt;
+  	&lt;span class=&quot;n&quot;&gt;Animal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+  	&lt;span class=&quot;o&quot;&gt;~&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Animal&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+  	&lt;span class=&quot;k&quot;&gt;virtual&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;shout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+   
+&lt;span class=&quot;c1&quot;&gt;// Cat&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Cat&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Animal&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;public:&lt;/span&gt;
+  	&lt;span class=&quot;n&quot;&gt;Cat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+  	&lt;span class=&quot;o&quot;&gt;~&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Cat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+  	&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;shout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      	&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;miao miao~~&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+   
+&lt;span class=&quot;c1&quot;&gt;// Dog&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Dog&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Animal&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;public:&lt;/span&gt;
+  	&lt;span class=&quot;n&quot;&gt;Dog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+  	&lt;span class=&quot;o&quot;&gt;~&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;Dog&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{}&lt;/span&gt;
+  	&lt;span class=&quot;kt&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;shout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      	&lt;span class=&quot;n&quot;&gt;std&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;cout&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;hou hou~~&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\n&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+   
+&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  	&lt;span class=&quot;n&quot;&gt;Animal&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Cat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+  	&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;shout&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+  	&lt;span class=&quot;k&quot;&gt;delete&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;    &lt;/div&gt;
+
+    &lt;p&gt;​		如果多态基类Animal没有将析构函数声明为virtual，当delete a；语句销毁对象的时候，只能调用的是Animal基类析构函数，释放Animal基类申请的资源，而无法调用派生类Cat类的析构函数，释放Cat类申请的资源，从而造成&lt;strong&gt;局部销毁&lt;/strong&gt;现象，引发资源泄露问题。&lt;/p&gt;
+
+    &lt;p&gt;​		所以多态基类的析构函数要声明为virtual函数，一个原则就是如果基类中有至少一个virtual函数，那么其析构函数也应该声明为virtual。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;非基类或不打算实现多态的基类不要声明virtual函数（包括virtual析构函数）&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;</content><author><name>Your Name</name></author><summary type="html">[TOC]</summary></entry><entry><title type="html">C++虚函数/纯虚函数详解</title><link href="http://localhost:4000/learn/cpp/2019/09/20/C++%E8%99%9A%E5%87%BD%E6%95%B0%E7%BA%AF%E8%99%9A%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3/" rel="alternate" type="text/html" title="C++虚函数/纯虚函数详解" /><published>2019-09-20T18:55:00-07:00</published><updated>2019-09-20T18:55:00-07:00</updated><id>http://localhost:4000/learn/cpp/2019/09/20/C++%E8%99%9A%E5%87%BD%E6%95%B0%E7%BA%AF%E8%99%9A%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3</id><content type="html" xml:base="http://localhost:4000/learn/cpp/2019/09/20/C++%E8%99%9A%E5%87%BD%E6%95%B0%E7%BA%AF%E8%99%9A%E5%87%BD%E6%95%B0%E8%AF%A6%E8%A7%A3/">&lt;p&gt;[TOC]&lt;/p&gt;
+
+&lt;h2 id=&quot;一基本概念&quot;&gt;一、基本概念&lt;/h2&gt;
+
+&lt;h3 id=&quot;1-什么是虚函数&quot;&gt;1. 什么是虚函数？&lt;/h3&gt;
+
+&lt;h3 id=&quot;2-什么是纯虚函数&quot;&gt;2. 什么是纯虚函数？&lt;/h3&gt;
+
+&lt;h2 id=&quot;二使用模式与最佳实践&quot;&gt;二、使用模式与最佳实践&lt;/h2&gt;
+
+&lt;h3 id=&quot;1-如何创建虚函数纯虚函数&quot;&gt;1. 如何创建虚函数、纯虚函数？&lt;/h3&gt;
+
+&lt;p&gt;###&lt;/p&gt;
+
+&lt;p&gt;// todo&lt;/p&gt;
+
+&lt;h2 id=&quot;三底层实现原理&quot;&gt;三、底层实现原理&lt;/h2&gt;
+
+&lt;p&gt;// todo&lt;/p&gt;
+
+&lt;h2 id=&quot;四总结&quot;&gt;四、总结&lt;/h2&gt;</content><author><name>Your Name</name></author><summary type="html">[TOC]</summary></entry><entry><title type="html">C/C++易混淆概念记录</title><link href="http://localhost:4000/learn/2019/08/19/CC++%E6%98%93%E6%B7%B7%E6%B7%86%E7%9A%84%E6%A6%82%E5%BF%B5/" rel="alternate" type="text/html" title="C/C++易混淆概念记录" /><published>2019-08-19T08:12:00-07:00</published><updated>2019-08-19T08:12:00-07:00</updated><id>http://localhost:4000/learn/2019/08/19/CC++%E6%98%93%E6%B7%B7%E6%B7%86%E7%9A%84%E6%A6%82%E5%BF%B5</id><content type="html" xml:base="http://localhost:4000/learn/2019/08/19/CC++%E6%98%93%E6%B7%B7%E6%B7%86%E7%9A%84%E6%A6%82%E5%BF%B5/">&lt;h2 id=&quot;基础&quot;&gt;基础&lt;/h2&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
@@ -77,7 +158,7 @@ ptrdiff_t
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h2 id=&quot;高级&quot;&gt;高级&lt;/h2&gt;</content><author><name></name></author><summary type="html">基础</summary></entry><entry><title type="html">hadoop streaming 多路输出</title><link href="/learn/2019/06/10/hadoop-streaming-%E5%A4%9A%E8%B7%AF%E8%BE%93%E5%87%BA.html" rel="alternate" type="text/html" title="hadoop streaming 多路输出" /><published>2019-06-10T21:12:00+08:00</published><updated>2019-06-10T21:12:00+08:00</updated><id>/learn/2019/06/10/hadoop-streaming-%E5%A4%9A%E8%B7%AF%E8%BE%93%E5%87%BA</id><content type="html" xml:base="/learn/2019/06/10/hadoop-streaming-%E5%A4%9A%E8%B7%AF%E8%BE%93%E5%87%BA.html">&lt;ol&gt;
+&lt;h2 id=&quot;高级&quot;&gt;高级&lt;/h2&gt;</content><author><name>Your Name</name></author><summary type="html">基础</summary></entry><entry><title type="html">hadoop streaming 多路输出</title><link href="http://localhost:4000/learn/2019/06/10/hadoop-streaming-%E5%A4%9A%E8%B7%AF%E8%BE%93%E5%87%BA/" rel="alternate" type="text/html" title="hadoop streaming 多路输出" /><published>2019-06-10T06:12:00-07:00</published><updated>2019-06-10T06:12:00-07:00</updated><id>http://localhost:4000/learn/2019/06/10/hadoop-streaming-%E5%A4%9A%E8%B7%AF%E8%BE%93%E5%87%BA</id><content type="html" xml:base="http://localhost:4000/learn/2019/06/10/hadoop-streaming-%E5%A4%9A%E8%B7%AF%E8%BE%93%E5%87%BA/">&lt;ol&gt;
   &lt;li&gt;
     &lt;p&gt;多路输出指定outputformat&lt;/p&gt;
 
@@ -91,7 +172,22 @@ ptrdiff_t
   &lt;li&gt;
     &lt;p&gt;坑：对于TextInputFormat，reduce输出数据经常是一行一行的文本，如果一行的中间没有”\t”的话，就代表value为空，如果直接将”#X”后缀放在行尾，”#X”会作为key的一部分而不是value的一部分（因为加上后缀后一行中间仍然没有”\t”）这样会导致出错，解决的方式是在#X后缀前面添加”\t”使它变成value的一部分而不是key的一部分&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><summary type="html">多路输出指定outputformat</summary></entry><entry><title type="html">hadoop partitioner类</title><link href="/learn/2019/06/10/hadoop-Partitioner%E7%B1%BB.html" rel="alternate" type="text/html" title="hadoop partitioner类" /><published>2019-06-10T21:04:00+08:00</published><updated>2019-06-10T21:04:00+08:00</updated><id>/learn/2019/06/10/hadoop-Partitioner%E7%B1%BB</id><content type="html" xml:base="/learn/2019/06/10/hadoop-Partitioner%E7%B1%BB.html">&lt;ol&gt;
+&lt;/ol&gt;</content><author><name>Your Name</name></author><summary type="html">多路输出指定outputformat</summary></entry><entry><title type="html">taglist-vim快捷键</title><link href="http://localhost:4000/learn/2019/06/10/taglist-vim%E5%BF%AB%E6%8D%B7%E9%94%AE/" rel="alternate" type="text/html" title="taglist-vim快捷键" /><published>2019-06-10T06:04:00-07:00</published><updated>2019-06-10T06:04:00-07:00</updated><id>http://localhost:4000/learn/2019/06/10/taglist-vim%E5%BF%AB%E6%8D%B7%E9%94%AE</id><content type="html" xml:base="http://localhost:4000/learn/2019/06/10/taglist-vim%E5%BF%AB%E6%8D%B7%E9%94%AE/">&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&amp;lt;CR&amp;gt;          跳到光标下tag所定义的位置，用鼠标双击此tag功能也一样
+o             在一个新打开的窗口中显示光标下tag
+&amp;lt;Space&amp;gt;       显示光标下tag的原型定义
+u             更新taglist窗口中的tag
+s             更改排序方式，在按名字排序和按出现顺序排序间切换
+x             taglist窗口放大和缩小，方便查看较长的tag
++             打开一个折叠，同zo
+-             将tag折叠起来，同zc
+*             打开所有的折叠，同zR
+=             将所有tag折叠起来，同zM
+[[            跳到前一个文件
+]]            跳到后一个文件
+q             关闭taglist窗口
+&amp;lt;F1&amp;gt;          显示帮助 
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Your Name</name></author><summary type="html">```</summary></entry><entry><title type="html">hadoop partitioner类</title><link href="http://localhost:4000/learn/2019/06/10/hadoop-Partitioner%E7%B1%BB/" rel="alternate" type="text/html" title="hadoop partitioner类" /><published>2019-06-10T06:04:00-07:00</published><updated>2019-06-10T06:04:00-07:00</updated><id>http://localhost:4000/learn/2019/06/10/hadoop-Partitioner%E7%B1%BB</id><content type="html" xml:base="http://localhost:4000/learn/2019/06/10/hadoop-Partitioner%E7%B1%BB/">&lt;ol&gt;
   &lt;li&gt;
     &lt;p&gt;指定partitioner类（二次排序）&lt;/p&gt;
 
@@ -111,22 +207,7 @@ ptrdiff_t
 
     &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;num.key.fields.for.partition=2 # 指定使用key的前2个块部分来切分map输出&lt;/code&gt;&lt;/p&gt;
   &lt;/li&gt;
-&lt;/ol&gt;</content><author><name></name></author><summary type="html">指定partitioner类（二次排序）</summary></entry><entry><title type="html">taglist-vim快捷键</title><link href="/learn/2019/06/10/taglist-vim%E5%BF%AB%E6%8D%B7%E9%94%AE.html" rel="alternate" type="text/html" title="taglist-vim快捷键" /><published>2019-06-10T21:04:00+08:00</published><updated>2019-06-10T21:04:00+08:00</updated><id>/learn/2019/06/10/taglist-vim%E5%BF%AB%E6%8D%B7%E9%94%AE</id><content type="html" xml:base="/learn/2019/06/10/taglist-vim%E5%BF%AB%E6%8D%B7%E9%94%AE.html">&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
-&amp;lt;CR&amp;gt;          跳到光标下tag所定义的位置，用鼠标双击此tag功能也一样
-o             在一个新打开的窗口中显示光标下tag
-&amp;lt;Space&amp;gt;       显示光标下tag的原型定义
-u             更新taglist窗口中的tag
-s             更改排序方式，在按名字排序和按出现顺序排序间切换
-x             taglist窗口放大和缩小，方便查看较长的tag
-+             打开一个折叠，同zo
--             将tag折叠起来，同zc
-*             打开所有的折叠，同zR
-=             将所有tag折叠起来，同zM
-[[            跳到前一个文件
-]]            跳到后一个文件
-q             关闭taglist窗口
-&amp;lt;F1&amp;gt;          显示帮助 
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name></name></author><summary type="html">```</summary></entry><entry><title type="html">shell test命令常用条件</title><link href="/learn/2018/09/28/shell-test-condition.html" rel="alternate" type="text/html" title="shell test命令常用条件" /><published>2018-09-28T18:33:00+08:00</published><updated>2018-09-28T18:33:00+08:00</updated><id>/learn/2018/09/28/shell-test-condition</id><content type="html" xml:base="/learn/2018/09/28/shell-test-condition.html">&lt;h2 id=&quot;数值测试&quot;&gt;数值测试&lt;/h2&gt;
+&lt;/ol&gt;</content><author><name>Your Name</name></author><summary type="html">指定partitioner类（二次排序）</summary></entry><entry><title type="html">shell test命令常用条件</title><link href="http://localhost:4000/learn/2018/09/28/shell-test-condition/" rel="alternate" type="text/html" title="shell test命令常用条件" /><published>2018-09-28T18:33:00-07:00</published><updated>2018-09-28T18:33:00-07:00</updated><id>http://localhost:4000/learn/2018/09/28/shell-test-condition</id><content type="html" xml:base="http://localhost:4000/learn/2018/09/28/shell-test-condition/">&lt;h2 id=&quot;数值测试&quot;&gt;数值测试&lt;/h2&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -239,7 +320,7 @@ q             关闭taglist窗口
       &lt;td&gt;文件存在且为块特殊文件则为真&lt;/td&gt;
     &lt;/tr&gt;
   &lt;/tbody&gt;
-&lt;/table&gt;</content><author><name></name></author><summary type="html">数值测试</summary></entry><entry><title type="html">hadoop 常用环境变量</title><link href="/learn/2018/09/28/hadoop%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.html" rel="alternate" type="text/html" title="hadoop 常用环境变量" /><published>2018-09-28T14:53:00+08:00</published><updated>2018-09-28T14:53:00+08:00</updated><id>/learn/2018/09/28/hadoop%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F</id><content type="html" xml:base="/learn/2018/09/28/hadoop%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F.html">&lt;table&gt;
+&lt;/table&gt;</content><author><name>Your Name</name></author><summary type="html">数值测试</summary></entry><entry><title type="html">hadoop 常用环境变量</title><link href="http://localhost:4000/learn/2018/09/27/hadoop%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/" rel="alternate" type="text/html" title="hadoop 常用环境变量" /><published>2018-09-27T23:53:00-07:00</published><updated>2018-09-27T23:53:00-07:00</updated><id>http://localhost:4000/learn/2018/09/27/hadoop%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F</id><content type="html" xml:base="http://localhost:4000/learn/2018/09/27/hadoop%E5%B8%B8%E7%94%A8%E7%8E%AF%E5%A2%83%E5%8F%98%E9%87%8F/">&lt;table&gt;
   &lt;thead&gt;
     &lt;tr&gt;
       &lt;th&gt;环境变量名&lt;/th&gt;
@@ -320,7 +401,7 @@ q             关闭taglist窗口
 
 &lt;p&gt;在任务执行期间，应用程序在写文件时可以利用这个特性，比如 通过&lt;a href=&quot;http://hadoop.apache.org/core/docs/r0.18.2/api/org/apache/hadoop/mapred/FileOutputFormat.html#getWorkOutputPath(org.apache.hadoop.mapred.JobConf)&quot;&gt; FileOutputFormat.getWorkOutputPath()&lt;/a&gt;获得${mapred.work.output.dir}目录， 并在其下创建任意任务执行时所需的side-file，框架在任务尝试成功时会马上移动这些文件，因此不需要在程序内为每次任务尝试选取一个独一无二的名字。&lt;/p&gt;
 
-&lt;p&gt;注意：在每次任务尝试执行期间，${mapred.work.output.dir} 的值实际上是 ​${mapred.output.dir}/&lt;em&gt;temporary/&lt;/em&gt;{$taskid}，这个值是Map/Reduce框架创建的。 所以使用这个特性的方法是，在&lt;a href=&quot;http://hadoop.apache.org/core/docs/r0.18.2/api/org/apache/hadoop/mapred/FileOutputFormat.html#getWorkOutputPath(org.apache.hadoop.mapred.JobConf)&quot;&gt; FileOutputFormat.getWorkOutputPath() &lt;/a&gt;路径下创建side-file即可。&lt;/p&gt;</content><author><name></name></author><summary type="html">环境变量名 意义解释 HADOOP_HOME 计算节点上配置的hadoop client路径 LD_LIBRARY_PATH 计算节点上加载库文件的路径列表 PWD 当前工作目录 df_block_size 当前设置的HDFS文件块大小 map_input_file mapper正在处理得输入文件路径，包含文件名 mapred_job_id 当前作业ID mapred_job_name 当前作业名称 mapred_tip_id 当前任务的第几次重试 mapred_task_id 任务ID mapred_task_is_map 当前任务是否为map mapred_output_dir 计算输出路径 mapred_map_tasks 计算的map任务数 mapred_reduce_tasks 计算的reduce的任务数 mapred_work_output_dir task临时输出目录 mapred_output_dir job输出路径</summary></entry><entry><title type="html">你了解字符集、字符编码吗？</title><link href="/learn/2018/09/28/%E4%BD%A0%E4%BA%86%E8%A7%A3%E5%AD%97%E7%AC%A6%E9%9B%86-%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E5%90%97.html" rel="alternate" type="text/html" title="你了解字符集、字符编码吗？" /><published>2018-09-28T12:49:00+08:00</published><updated>2018-09-28T12:49:00+08:00</updated><id>/learn/2018/09/28/%E4%BD%A0%E4%BA%86%E8%A7%A3%E5%AD%97%E7%AC%A6%E9%9B%86%E3%80%81%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E5%90%97%3F</id><content type="html" xml:base="/learn/2018/09/28/%E4%BD%A0%E4%BA%86%E8%A7%A3%E5%AD%97%E7%AC%A6%E9%9B%86-%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E5%90%97.html">&lt;h3 id=&quot;你了解字符集字符编码吗&quot;&gt;你了解字符集、字符编码吗？&lt;/h3&gt;
+&lt;p&gt;注意：在每次任务尝试执行期间，${mapred.work.output.dir} 的值实际上是 ​${mapred.output.dir}/&lt;em&gt;temporary/&lt;/em&gt;{$taskid}，这个值是Map/Reduce框架创建的。 所以使用这个特性的方法是，在&lt;a href=&quot;http://hadoop.apache.org/core/docs/r0.18.2/api/org/apache/hadoop/mapred/FileOutputFormat.html#getWorkOutputPath(org.apache.hadoop.mapred.JobConf)&quot;&gt; FileOutputFormat.getWorkOutputPath() &lt;/a&gt;路径下创建side-file即可。&lt;/p&gt;</content><author><name>Your Name</name></author><summary type="html">环境变量名 意义解释 HADOOP_HOME 计算节点上配置的hadoop client路径 LD_LIBRARY_PATH 计算节点上加载库文件的路径列表 PWD 当前工作目录 df_block_size 当前设置的HDFS文件块大小 map_input_file mapper正在处理得输入文件路径，包含文件名 mapred_job_id 当前作业ID mapred_job_name 当前作业名称 mapred_tip_id 当前任务的第几次重试 mapred_task_id 任务ID mapred_task_is_map 当前任务是否为map mapred_output_dir 计算输出路径 mapred_map_tasks 计算的map任务数 mapred_reduce_tasks 计算的reduce的任务数 mapred_work_output_dir task临时输出目录 mapred_output_dir job输出路径</summary></entry><entry><title type="html">你了解字符集、字符编码吗？</title><link href="http://localhost:4000/learn/2018/09/27/%E4%BD%A0%E4%BA%86%E8%A7%A3%E5%AD%97%E7%AC%A6%E9%9B%86-%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E5%90%97/" rel="alternate" type="text/html" title="你了解字符集、字符编码吗？" /><published>2018-09-27T21:49:00-07:00</published><updated>2018-09-27T21:49:00-07:00</updated><id>http://localhost:4000/learn/2018/09/27/%E4%BD%A0%E4%BA%86%E8%A7%A3%E5%AD%97%E7%AC%A6%E9%9B%86%E3%80%81%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E5%90%97%3F</id><content type="html" xml:base="http://localhost:4000/learn/2018/09/27/%E4%BD%A0%E4%BA%86%E8%A7%A3%E5%AD%97%E7%AC%A6%E9%9B%86-%E5%AD%97%E7%AC%A6%E7%BC%96%E7%A0%81%E5%90%97/">&lt;h3 id=&quot;你了解字符集字符编码吗&quot;&gt;你了解字符集、字符编码吗？&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;strong&gt;ASCII&lt;/strong&gt;: 使用一个字节表示一个字符，实际使用的只有一个字节的低7位，第8位永远是0，因此最多只能表示2^7=128个字符，主要用来表示基础的拉丁字符，如英文字母，数字等，包括95个可打印字符和33个控制字符；&lt;/li&gt;
@@ -403,16 +484,4 @@ q             关闭taglist窗口
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://blog.jobbole.com/76376/&quot; title=&quot;字符编码常识及问题解析&quot;&gt;http://blog.jobbole.com/76376/&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name></name></author><summary type="html">你了解字符集、字符编码吗？</summary></entry><entry><title type="html">Welcome to Jekyll!</title><link href="/jekyll/2018/09/23/welcome-to-jekyll.html" rel="alternate" type="text/html" title="Welcome to Jekyll!" /><published>2018-09-23T19:27:08+08:00</published><updated>2018-09-23T19:27:08+08:00</updated><id>/jekyll/2018/09/23/welcome-to-jekyll</id><content type="html" xml:base="/jekyll/2018/09/23/welcome-to-jekyll.html">&lt;p&gt;You’ll find this post in your &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll serve&lt;/code&gt;, which launches a web server and auto-regenerates your site when a file is updated.&lt;/p&gt;
-
-&lt;p&gt;To add new posts, simply add a file in the &lt;code class=&quot;highlighter-rouge&quot;&gt;_posts&lt;/code&gt; directory that follows the convention &lt;code class=&quot;highlighter-rouge&quot;&gt;YYYY-MM-DD-name-of-post.ext&lt;/code&gt; and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.&lt;/p&gt;
-
-&lt;p&gt;Jekyll also offers powerful support for code snippets:&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;nb&quot;&gt;puts&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Hi, &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;name&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;print_hi&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'Tom'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;#=&amp;gt; prints 'Hi, Tom' to STDOUT.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Check out the &lt;a href=&quot;https://jekyllrb.com/docs/home&quot;&gt;Jekyll docs&lt;/a&gt; for more info on how to get the most out of Jekyll. File all bugs/feature requests at &lt;a href=&quot;https://github.com/jekyll/jekyll&quot;&gt;Jekyll’s GitHub repo&lt;/a&gt;. If you have questions, you can ask them on &lt;a href=&quot;https://talk.jekyllrb.com/&quot;&gt;Jekyll Talk&lt;/a&gt;.&lt;/p&gt;</content><author><name></name></author><summary type="html">You’ll find this post in your _posts directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run jekyll serve, which launches a web server and auto-regenerates your site when a file is updated.</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Your Name</name></author><summary type="html">你了解字符集、字符编码吗？</summary></entry></feed>
